@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.20)  21 AUG 2026 11:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2026.8.20)  21 AUG 2026 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -937,7 +937,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                p:IV
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 121.
 Package biblatex Info: Reference segment=0 on input line 121.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 125.
@@ -1016,9 +1024,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
  []
 
 
-LaTeX Warning: Citation 'wendl_open_2009' on page 3 undefined on input line 112.
-
-
 LaTeX Warning: Reference `l:radial_coo' on page 3 undefined on input line 116.
 
 [3]
@@ -1031,15 +1036,6 @@ LaTeX Warning: Reference `f:' on page 4 undefined on input line 136.
 
 
 LaTeX Warning: Reference `l:localasymptotics' on page 4 undefined on input line 138.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 4 undefined on input line 139.
-
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 4 undefined on input line 139.
-
-
-LaTeX Warning: Citation 'wendl_holomorphic_2010' on page 4 undefined on input line 139.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 136--141
@@ -1157,12 +1153,6 @@ LaTeX Warning: Reference `l:negative_int' on page 8 undefined on input line 287.
 LaTeX Warning: Reference `p:I' on page 8 undefined on input line 8.
 
 
-LaTeX Warning: Citation 'bao_definition_2018' on page 8 undefined on input line 8.
-
-
-LaTeX Warning: Citation 'bao_semi-global_2023' on page 8 undefined on input line 8.
-
-
 LaTeX Warning: Reference `p:VI' on page 8 undefined on input line 8.
 
 
@@ -1174,21 +1164,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 
-LaTeX Warning: Citation 'wendl_open_2009' on page 8 undefined on input line 14.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
 [8]
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 9 undefined on input line 33.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 9 undefined on input line 40.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
@@ -1276,9 +1256,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-
-LaTeX Warning: Citation 'cieliebak_stein_2012' on page 11 undefined on input line 131.
-
 [11]
 Underfull \hbox (badness 10000) in paragraph at lines 151--154
 
@@ -1297,18 +1274,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
 [12]
 
 LaTeX Warning: Reference `p:VI' on page 13 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 13 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'moreno_holomorphic_2019' on page 13 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 13 undefined on input line 200.
-
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 13 undefined on input line 200.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 200--201
@@ -1342,69 +1307,16 @@ LaTeX Warning: Reference `prop:lift_methodFLOW' on page 14 undefined on input li
 
 [14]
 
-LaTeX Warning: Citation 'roux_cas_nodate' on page 15 undefined on input line 298.
-
-
-LaTeX Warning: Citation 'moreno_holomorphic_2019' on page 15 undefined on input line 298.
-
-
-LaTeX Warning: Citation 'dugast_sutured_2026' on page 15 undefined on input line 298.
-
-
-Overfull \hbox (17.67648pt too wide) in paragraph at lines 298--299
-\T1/cmr/m/n/10 based on [[]] and [[]] ; see also [[]]
- []
-
-
 LaTeX Warning: Reference `p:VI' on page 15 undefined on input line 310.
-
-
-LaTeX Warning: Citation 'bao_definition_2018' on page 15 undefined on input line 314.
-
-
-LaTeX Warning: Citation 'bao_semi-global_2023' on page 15 undefined on input line 314.
-
-
-Overfull \hbox (143.21185pt too wide) in paragraph at lines 314--315
-\T1/cmr/m/n/10 very close to the no-tion of $\OML/cmm/m/it/10 L$\T1/cmr/m/n/10 -simple al-most com-plex struc-tures used by Bao-Honda [[]],[[]]
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
-
-LaTeX Warning: Citation 'bao_definition_2018' on page 15 undefined on input line 316.
-
-
-LaTeX Warning: Citation 'bao_semi-global_2023' on page 15 undefined on input line 316.
-
-
-Overfull \hbox (110.47543pt too wide) in paragraph at lines 316--317
-\T1/cmr/m/n/10 nents in the 3-dimensional man-i-fold $\OML/cmm/m/it/10 M$\T1/cmr/m/n/10 . We re-call first the def-i-ni-tions from [[]],[[]]
- []
-
-
-LaTeX Warning: Citation 'bao_definition_2018' on page 15 undefined on input line 330.
-
-
-LaTeX Warning: Citation 'bourgeois_compactness_2003' on page 15 undefined on input line 332.
-
 [15]
 
 LaTeX Warning: Reference `prop:rigid_pages_eigenfunc' on page 16 undefined on input line 349.
-
-
-LaTeX Warning: Citation 'siefring_intersection_2011' on page 16 undefined on input line 382.
-
-
-LaTeX Warning: Citation 'zhou_unknottedness_2025' on page 16 undefined on input line 382.
-
-
-Overfull \hbox (84.41112pt too wide) in paragraph at lines 382--383
-\T1/cmr/m/n/10 hence we can make use of this the-ory as usual even for such mod-els near the ends. See also [[]],
- []
 
 
 LaTeX Warning: Reference `d:simple_mod' on page 16 undefined on input line 390.
@@ -1459,15 +1371,6 @@ LaTeX Warning: Reference `prop:rigid_pages_eigenfunc' on page 19 undefined on in
 
 LaTeX Warning: Reference `prop: properties_hypersurfaces' on page 19 undefined on input line 505.
 
-
-LaTeX Warning: Citation 'zhou_unknottedness_2025' on page 19 undefined on input line 512.
-
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 19 undefined on input line 512.
-
-
-LaTeX Warning: Citation 'zhou_unknottedness_2025' on page 19 undefined on input line 513.
-
 [19]
 
 LaTeX Warning: Reference `p:V' on page 20 undefined on input line 517.
@@ -1475,17 +1378,6 @@ LaTeX Warning: Reference `p:V' on page 20 undefined on input line 517.
 ) (./sections/III_FEF.tex
 
 LaTeX Warning: Reference `p:II' on page 20 undefined on input line 8.
-
-
-LaTeX Warning: Citation 'siefring_intersection_2011' on page 20 undefined on input line 12.
-
-
-LaTeX Warning: Citation 'wendl_contact_2019' on page 20 undefined on input line 12.
-
-
-Overfull \hbox (4.39253pt too wide) in paragraph at lines 12--13
-\T1/cmr/m/n/10 sec-tion the-ory in di-men-sion $\OT1/cmr/m/n/10 3$\T1/cmr/m/n/10 , and re-fer to [[]] or [[]]
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -1538,16 +1430,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--42
  []
 
 [21]
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 22 undefined on input line 43.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
-
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 22 undefined on input line 45.
 
 
 LaTeX Warning: Reference `subp:simple_acs' on page 22 undefined on input line 53.
@@ -1565,20 +1450,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 22 undefined on input line 71.
-
 [22]
-
-LaTeX Warning: Citation 'hutchings_gluing_2007' on page 23 undefined on input line 89.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
-
-
-LaTeX Warning: Citation 'wendl_contact_2019' on page 23 undefined on input line 104.
 
 
 LaTeX Warning: Reference `l:index_computation_rigid' on page 23 undefined on input line 110.
@@ -1594,35 +1469,12 @@ LaTeX Warning: Reference `l:index_computation_rigid' on page 24 undefined on inp
 LaTeX Warning: Reference `l:gluing_rigid_pages' on page 24 undefined on input line 130.
 
 
-LaTeX Warning: Citation 'SOBD2' on page 24 undefined on input line 133.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
 LaTeX Warning: Reference `p:V' on page 24 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 24 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'wendl_compactness_2008' on page 24 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'cioba_nicely_nodate' on page 24 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 24 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'hofer_properties_nodate' on page 24 undefined on input line 155.
-
-
-Overfull \hbox (64.61826pt too wide) in paragraph at lines 154--156
-\T1/cmr/m/n/10 main in-gre-di-ent in that case will be an in-equal-ity on the fol-low-ing quan-ti-ties, de-fined in [[]]. 
- []
 
 [24]
 
@@ -1632,9 +1484,6 @@ LaTeX Warning: Reference `p:V' on page 25 undefined on input line 189.
 Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
-
-
-LaTeX Warning: Citation 'wendl_compactness_2008' on page 25 undefined on input line 191.
 
 
 LaTeX Warning: Reference `l:gluing_rigid_pages' on page 25 undefined on input line 212.
@@ -1661,9 +1510,6 @@ LaTeX Warning: Reference `r:lift_pages' on page 26 undefined on input line 222.
 
 
 LaTeX Warning: Reference `t:compactness_nice' on page 26 undefined on input line 222.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 26 undefined on input line 222.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
@@ -1707,9 +1553,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
  []
 
 
-LaTeX Warning: Citation 'wendl_contact_2019' on page 27 undefined on input line 236.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
@@ -1730,38 +1573,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--243
  []
 
 
-LaTeX Warning: Citation 'wendl_strongly_2010' on page 28 undefined on input line 258.
-
-
 LaTeX Warning: Reference `l:intersection_gluing_others' on page 28 undefined on input line 262.
 
 
 LaTeX Warning: Reference `d:simple_mod' on page 28 undefined on input line 266.
 
-[28]) (./sections/IV_ Structure of BBD.tex
-
-LaTeX Warning: Citation 'SOBD1' on page 29 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 29 undefined on input line 6.
-
-
-Overfull \hbox (77.59981pt too wide) in paragraph at lines 6--7
-[]\T1/cmr/m/n/10 The pur-pose of this sec-tion is to in-ves-ti-gate the con-nec-tion be-tween spinal open book decompositions[[]],[[]],
- []
-
-
-LaTeX Warning: Citation 'SOBD1' on page 29 undefined on input line 10.
-
+) (./sections/IV_ Structure of BBD.tex [28]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 18.
 
 [29]
-
-LaTeX Warning: Citation 'SOBD1' on page 30 undefined on input line 64.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
@@ -1778,35 +1600,16 @@ LaTeX Warning: Reference `d:multiplicity_SOBD' on page 30 undefined on input lin
 LaTeX Warning: Reference `r:liouville_form' on page 30 undefined on input line 76.
 
 
-LaTeX Warning: Citation 'SOBD2' on page 30 undefined on input line 77.
-
-
-LaTeX Warning: Citation 'Latschev_2011' on page 30 undefined on input line 92.
+LaTeX Warning: Reference `d:contact_form_SOBD' on page 30 undefined on input line 100.
 
 [30]
-
-LaTeX Warning: Reference `d:contact_form_SOBD' on page 31 undefined on input line 100.
-
-
-LaTeX Warning: Citation 'SOBD1' on page 31 undefined on input line 112.
-
 
 LaTeX Warning: Reference `d:spinal_to_BBD' on page 31 undefined on input line 112.
 
 
-LaTeX Warning: Citation 'SOBD1' on page 31 undefined on input line 121.
-
-
-LaTeX Warning: Citation 'SOBD1' on page 31 undefined on input line 129.
-
-
 LaTeX Warning: Reference `d:contact_form_SOBD' on page 31 undefined on input line 131.
 
-[31]
-
-LaTeX Warning: Citation 'SOBD1' on page 32 undefined on input line 137.
-
-[32]
+[31] [32]
 
 LaTeX Warning: Reference `d:contact_form_SOBD' on page 33 undefined on input line 175.
 
@@ -1825,15 +1628,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--180
  []
 
 
-LaTeX Warning: Citation 'geiges_introduction_nodate' on page 33 undefined on input line 181.
-
-
 LaTeX Warning: Reference `l:contact_BBD_to_SOBD' on page 33 undefined on input line 181.
-
-
-Overfull \hbox (24.75993pt too wide) in paragraph at lines 181--182
-[]\T1/cmr/m/n/10 Starting of the stan-dard proof of Gray's the-o-rem us-ing the Moser trick, see [[]]
- []
 
 [33]
 
@@ -1850,30 +1645,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
  []
 
 
-LaTeX Warning: Citation 'SOBD2' on page 37 undefined on input line 279.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 37 undefined on input line 308.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
 [37]
-
-LaTeX Warning: Citation 'SOBD2' on page 38 undefined on input line 328.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
-
-
-LaTeX Warning: Citation 'colin_existence_2022' on page 38 undefined on input line 344.
-
-
-LaTeX Warning: Citation 'SOBD1' on page 38 undefined on input line 365.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 365--366
@@ -1911,30 +1690,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--396
  []
 
 
-LaTeX Warning: Citation 'SOBD2' on page 39 undefined on input line 407.
-
-
 LaTeX Warning: Reference `t:théorème_1' on page 39 undefined on input line 407.
 
-[39]) (./sections/V_Fillings of BBD.tex
-
-LaTeX Warning: Citation 'wendl_strongly_2010' on page 40 undefined on input line 7.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 40 undefined on input line 7.
-
-
+) (./sections/V_Fillings of BBD.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
-
-
-LaTeX Warning: Citation 'wendl_holomorphic_2018' on page 40 undefined on input line 13.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
@@ -1950,9 +1716,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 
-LaTeX Warning: Citation 'min_spinal_2024' on page 40 undefined on input line 17.
-
-[40]
 Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
@@ -1962,24 +1725,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
+[40]
 
 LaTeX Warning: Reference `f' on page 41 undefined on input line 42.
 
 
 LaTeX Warning: Reference `d:exotic_coo' on page 41 undefined on input line 53.
 
-[41]
 
-LaTeX Warning: Reference `r:encode_sectorial' on page 42 undefined on input line 62.
+LaTeX Warning: Reference `r:encode_sectorial' on page 41 undefined on input line 62.
 
 
-LaTeX Warning: Reference `p:IV' on page 42 undefined on input line 62.
+LaTeX Warning: Reference `p:IV' on page 41 undefined on input line 62.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
+[41]
 
 LaTeX Warning: Citation 'p:IV' on page 42 undefined on input line 78.
 
@@ -2013,18 +1777,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 LaTeX Warning: Reference `t:théorème_1' on page 44 undefined on input line 129.
 
 
-LaTeX Warning: Citation 'SOBD2' on page 44 undefined on input line 142.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
 LaTeX Warning: Reference `t:filling' on page 44 undefined on input line 145.
-
-
-LaTeX Warning: Citation 'wendl_strongly_2010' on page 44 undefined on input line 145.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--146
@@ -2039,21 +1797,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[44]
+
 Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 
-LaTeX Warning: Reference `p:I' on page 45 undefined on input line 152.
+LaTeX Warning: Reference `p:I' on page 44 undefined on input line 152.
 
-
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
-
-
-LaTeX Warning: Citation 'SOBD2' on page 45 undefined on input line 174.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 179--181
@@ -2065,7 +1820,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--194
 
  []
 
-[45]
+
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
@@ -2075,7 +1830,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--201
 
  []
 
-
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
@@ -2096,100 +1851,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
  []
 
 
-LaTeX Warning: Citation 'SOBD2' on page 46 undefined on input line 215.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 [46]
-
-LaTeX Warning: Citation 'SOBD2' on page 47 undefined on input line 248.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 47 undefined on input line 264.
-
-[47]
 Underfull \hbox (badness 10000) in paragraph at lines 273--274
 
  []
 
-
-LaTeX Warning: Citation 'SOBD2' on page 48 undefined on input line 281.
-
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 48 undefined on input line 290.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 48 undefined on input line 298.
-
-[48]
-
-LaTeX Warning: Citation 'SOBD2' on page 49 undefined on input line 324.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 49 undefined on input line 335.
-
-[49]
-
-LaTeX Warning: Citation 'SOBD2' on page 50 undefined on input line 347.
-
-
+[47] [48] [49]
 Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
-[50]
-
-LaTeX Warning: Citation 'SOBD2' on page 51 undefined on input line 370.
-
-
-LaTeX Warning: Citation 'wendl_contact_2019' on page 51 undefined on input line 375.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 51 undefined on input line 379.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 51 undefined on input line 386.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 51 undefined on input line 397.
-
-[51]
-
-LaTeX Warning: Citation 'wendl_automatic_2009' on page 52 undefined on input line 429.
-
-[52]
+[50] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
 
-
-LaTeX Warning: Citation 'SOBD2' on page 53 undefined on input line 447.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 53 undefined on input line 457.
-
-
+[52]
 Underfull \hbox (badness 10000) in paragraph at lines 457--460
 
  []
 
 [53]
-
-LaTeX Warning: Citation 'SOBD2' on page 54 undefined on input line 470.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
-
-
-LaTeX Warning: Citation 'SOBD2' on page 54 undefined on input line 484.
-
-
-LaTeX Warning: Citation 'SOBD2' on page 54 undefined on input line 493.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 493--494
@@ -2201,35 +1890,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 495--496
 
  []
 
-
-LaTeX Warning: Citation 'min_spinal_2024' on page 54 undefined on input line 497.
-
 [54]) (./sections/VI_Weinstein and OBG.tex
-
-LaTeX Warning: Citation 'abbas_weinstein_2005' on page 55 undefined on input line 9.
-
-
-LaTeX Warning: Citation 'abbas_weinstein_2005' on page 55 undefined on input line 11.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
 [55]
-
-LaTeX Warning: Citation 'acu_weinstein_2017' on page 56 undefined on input line 37.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
-
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 56 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 56 undefined on input line 39.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 39--41
@@ -2237,27 +1906,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
  []
 
 
-LaTeX Warning: Citation 'roux_cas_nodate' on page 56 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'wendl_open_2009' on page 56 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'wendl_holomorphic_2010' on page 56 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'geiges_introduction_nodate' on page 56 undefined on input line 61.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 [56]
-
-LaTeX Warning: Citation 'roux_cas_nodate' on page 57 undefined on input line 63.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
@@ -2298,14 +1951,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
  []
 
 
-LaTeX Warning: Citation 'SOBD1' on page 59 undefined on input line 12.
-
-[59]
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
@@ -2331,10 +1981,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
  []
 
 [61]) (./sections/VIII_Conclusion.tex) [62]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 136.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Overfull \hbox (21.452pt too wide) in paragraph at lines 136--136
+[]\T1/cmr/m/n/10 Bahar Acu. \T1/cmr/m/it/10 The We-in-stein con-jec-ture for it-er-ated pla-nar con-tact struc-tures\T1/cmr/m/n/10 . en. arXiv:1710.07724
+ []
 
-LaTeX Warning: Empty bibliography on input line 136.
+[63]
+Overfull \hbox (13.90395pt too wide) in paragraph at lines 136--136
+[]\T1/cmr/m/n/10 Chris Wendl. \T1/cmr/m/it/10 Open book de-com-po-si-tions and sta-ble Hamil-to-nian struc-tures\T1/cmr/m/n/10 . en. arXiv:0808.3220
+ []
 
-(./main.aux)
+
+Overfull \hbox (38.30118pt too wide) in paragraph at lines 136--136
+[]\T1/cmr/m/n/10 Chris Wendl. \T1/cmr/m/it/10 Con-tact 3-manifolds, holo-mor-phic curves and in-ter-sec-tion the-ory\T1/cmr/m/n/10 . en. arXiv:1706.05540
+ []
+
+
+Overfull \hbox (22.28815pt too wide) in paragraph at lines 136--136
+[]\T1/cmr/m/n/10 Zhengyi Zhou. \T1/cmr/m/it/10 Un-knot-ted-ness of sym-plec-tic sub-man-i-fold fill-ings\T1/cmr/m/n/10 . en. arXiv:2506.06807 [math.SG].
+ []
+
+[64] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2362,18 +2032,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25352 strings out of 478287
- 452999 string characters out of 5849289
+ 25526 strings out of 478287
+ 459552 string characters out of 5849289
  1288252 words of memory out of 5000000
- 42867 multiletter control sequences out of 15000+600000
- 493537 words of font info for 99 fonts, out of 8000000 for 9000
+ 43007 multiletter control sequences out of 15000+600000
+ 494523 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,81p,2691b,1451s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (62 pages, 619987 bytes).
+ 75i,12n,81p,2691b,1471s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (64 pages, 679034 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 548 compressed objects within 6 object streams
- 282 named destinations out of 1000 (max. 500000)
+ 873 PDF objects out of 1000 (max. 8388607)
+ 752 compressed objects within 8 object streams
+ 311 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

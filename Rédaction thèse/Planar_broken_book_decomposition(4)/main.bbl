@@ -16,5 +16,1311 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{anyt/global//global/global}
+    \entry{abbas_weinstein_2005}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=8033e55d1a7f8742c0464494af7ca137}{%
+           family={Abbas},
+           familyi={A\bibinitperiod},
+           given={Casim},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f4875faa2748610c0abd3ba413f96174}{%
+           family={Cieliebak},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=6052a64f8ffb02499d6f70c176a8b881}{%
+           family={Hofer},
+           familyi={H\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \strng{fullhash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \strng{bibnamehash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \strng{authorbibnamehash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \strng{authornamehash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \strng{authorfullhash}{fc80ff1fb8fe1038e18fbc3324508ea1}
+      \field{labelalpha}{ACH05}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we describe a general strategy for approaching the Weinstein conjecture in dimension three. We apply this approach to prove the Weinstein conjecture for a new class of contact manifolds (planar contact manifolds). We also discuss how the present approach reduces the general Weinstein conjecture in dimension three to a compactness problem for the solution set of a ﬁrst order elliptic PDE.}
+      \field{annotation}{Comment: 19 pages, corrected some typos}
+      \field{month}{3}
+      \field{note}{arXiv:math/0409355}
+      \field{title}{The {Weinstein} {Conjecture} for {Planar} {Contact} {Structures} in {Dimension} {Three}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2005}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.math/0409355
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/43HMEYBU/Abbas et al. - 2005 - The Weinstein Conjecture for Planar Contact Structures in Dimension Three.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/math/0409355
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/math/0409355
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{acu_weinstein_2017}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0bee477f715be9c8e22693ddeb0fcb83}{%
+           family={Acu},
+           familyi={A\bibinitperiod},
+           given={Bahar},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \strng{fullhash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \strng{bibnamehash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \strng{authorbibnamehash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \strng{authornamehash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \strng{authorfullhash}{0bee477f715be9c8e22693ddeb0fcb83}
+      \field{labelalpha}{Acu17}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we introduce the notions of an iterated planar open book decomposition and an iterated planar Lefschetz ﬁbration and prove the Weinstein conjecture for contact manifolds supporting an open book that has iterated planar pages. For n ě 1, we show that a p2n ` 1q-dimensional contact manifold M supporting an iterated planar open book decomposition satisﬁes the Weinstein conjecture.}
+      \field{annotation}{Comment: 43 pages, 14 figures}
+      \field{month}{10}
+      \field{note}{arXiv:1710.07724 [math]}
+      \field{title}{The {Weinstein} conjecture for iterated planar contact structures}
+      \field{urlday}{6}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1710.07724
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/Z57C8U75/Acu - 2017 - The Weinstein conjecture for iterated planar contact structures.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1710.07724
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1710.07724
+      \endverb
+      \keyw{Mathematics - Geometric Topology,Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{bao_definition_2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=cbbbb398271d14be0b69b8ed5d3f340d}{%
+           family={Bao},
+           familyi={B\bibinitperiod},
+           given={Erkao},
+           giveni={E\bibinitperiod}}}%
+        {{hash=40512299c430caefe31193a701a5f394}{%
+           family={Honda},
+           familyi={H\bibinitperiod},
+           given={Ko},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{fullhash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{bibnamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authorbibnamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authornamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authorfullhash}{6800a571146fa58061bd859d35cac5a3}
+      \field{extraname}{1}
+      \field{labelalpha}{BH18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we give a rigorous deﬁnition of cylindrical contact homology for contact 3-manifolds that admit nondegenerate contact forms with no contractible Reeb orbits, and show that the cylindrical contact homology is an invariant of the contact structure.}
+      \field{annotation}{Comment: A figure and some details are added to increase readability. This version is accepted for publication by the Journal of Topology}
+      \field{issn}{1753-8416, 1753-8424}
+      \field{journaltitle}{Journal of Topology}
+      \field{month}{12}
+      \field{note}{arXiv:1412.0276 [math.SG]}
+      \field{number}{4}
+      \field{title}{Definition of {Cylindrical} {Contact} {Homology} in dimension three}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1002\bibrangedash 1053}
+      \range{pages}{52}
+      \verb{doi}
+      \verb 10.1112/topo.12077
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/H97UM7PY/Bao et Honda - 2018 - Definition of Cylindrical Contact Homology in dimension three.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1412.0276
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1412.0276
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{bao_semi-global_2023}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=cbbbb398271d14be0b69b8ed5d3f340d}{%
+           family={Bao},
+           familyi={B\bibinitperiod},
+           given={Erkao},
+           giveni={E\bibinitperiod}}}%
+        {{hash=40512299c430caefe31193a701a5f394}{%
+           family={Honda},
+           familyi={H\bibinitperiod},
+           given={Ko},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{fullhash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{bibnamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authorbibnamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authornamehash}{6800a571146fa58061bd859d35cac5a3}
+      \strng{authorfullhash}{6800a571146fa58061bd859d35cac5a3}
+      \field{extraname}{2}
+      \field{labelalpha}{BH23}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We deﬁne the contact homology algebra for any contact manifold and show that it is an invariant of the contact manifold. More precisely, given a contact manifold (M, ξ) and some auxiliary data D, we deﬁne an algebra HC(D). If D1 and D2 are two choices of auxiliary data for (M, ξ), then HC(D1) and HC(D2) are isomorphic. We use a simpliﬁed version of Kuranishi perturbation theory, consisting of semi-global Kuranishi charts.}
+      \field{annotation}{Comment: fixed a latex error for index of notations}
+      \field{month}{1}
+      \field{note}{arXiv:1512.00580 [math.SG]}
+      \field{title}{Semi-global {Kuranishi} charts and the definition of contact homology}
+      \field{urlday}{9}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1512.00580
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/AFJ4I8MS/Bao et Honda - 2023 - Semi-global Kuranishi charts and the definition of contact homology.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1512.00580
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1512.00580
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{bourgeois_compactness_2003}{article}{}
+      \name{author}{5}{}{%
+        {{hash=3052fc046f2d01c83a325c3919ecabd4}{%
+           family={Bourgeois},
+           familyi={B\bibinitperiod},
+           given={Frederic},
+           giveni={F\bibinitperiod}}}%
+        {{hash=060fa0ee9c773cc9ac08f1b76b526db7}{%
+           family={Eliashberg},
+           familyi={E\bibinitperiod},
+           given={Yakov},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6052a64f8ffb02499d6f70c176a8b881}{%
+           family={Hofer},
+           familyi={H\bibinitperiod},
+           given={Helmut},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5f16c5bf04b33112f2be9931e945c307}{%
+           family={Wysocki},
+           familyi={W\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+        {{hash=95d3edd1f89ebfd683bad74be9d0bf51}{%
+           family={Zehnder},
+           familyi={Z\bibinitperiod},
+           given={Eduard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5ddfae709583374268d366e4d663ecd0}
+      \strng{fullhash}{a97e7233d301ee2910f10578097d4376}
+      \strng{bibnamehash}{5ddfae709583374268d366e4d663ecd0}
+      \strng{authorbibnamehash}{5ddfae709583374268d366e4d663ecd0}
+      \strng{authornamehash}{5ddfae709583374268d366e4d663ecd0}
+      \strng{authorfullhash}{a97e7233d301ee2910f10578097d4376}
+      \field{labelalpha}{Bou+03}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This is one in a series of papers devoted to the foundations of Symplectic Field Theory sketched in [4]. We prove compactness results for moduli spaces of holomorphic curves arising in Symplectic Field Theory. The theorems generalize Gromov’s compactness theorem in [8] as well as compactness theorems in Floer homology theory, [6, 7], and in contact geometry, [9, 19].}
+      \field{issn}{1364-0380, 1465-3060}
+      \field{journaltitle}{Geometry \& Topology}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Compactness results in {Symplectic} {Field} {Theory}}
+      \field{urlday}{16}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \field{pages}{799\bibrangedash 888}
+      \range{pages}{90}
+      \verb{doi}
+      \verb 10.2140/gt.2003.7.799
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/ZQFMUVS7/Bourgeois et al. - 2003 - Compactness results in Symplectic Field Theory.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.msp.org/gt/2003/7-2/p09.xhtml
+      \endverb
+      \verb{url}
+      \verb http://www.msp.org/gt/2003/7-2/p09.xhtml
+      \endverb
+    \endentry
+    \entry{colin_existence_2022}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2e8a0d6742d62accb7c5443b2d9335f7}{%
+           family={Colin},
+           familyi={C\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d5a746c839ef03606961fadea8b5922a}{%
+           family={Dehornoy},
+           familyi={D\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=09dd0910c3e133c82ffe96b4ce76c677}{%
+           family={Rechtman},
+           familyi={R\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{64022305d8d98c0b68c3272f904f4ad4}
+      \strng{fullhash}{64022305d8d98c0b68c3272f904f4ad4}
+      \strng{bibnamehash}{64022305d8d98c0b68c3272f904f4ad4}
+      \strng{authorbibnamehash}{64022305d8d98c0b68c3272f904f4ad4}
+      \strng{authornamehash}{64022305d8d98c0b68c3272f904f4ad4}
+      \strng{authorfullhash}{64022305d8d98c0b68c3272f904f4ad4}
+      \field{labelalpha}{CDR22}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove that in dimension 3 every nondegenerate contact form is carried by a broken book decomposition. As an application we obtain that on a closed 3-manifold, every nondegenerate Reeb vector ﬁeld has either two or inﬁnitely many periodic orbits, and two periodic orbits are possible only on the tight sphere or on a tight lens space. Moreover we get that if M is a closed oriented 3-manifold that is not a graph manifold, for example a hyperbolic manifold, then every nondegenerate Reeb vector ﬁeld on M has positive topological entropy.}
+      \field{month}{3}
+      \field{note}{arXiv:2001.01448 [math]}
+      \field{title}{On the existence of supporting broken book decompositions for contact forms in dimension 3}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2001.01448
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/4JQEQDB2/Colin et al. - 2022 - On the existence of supporting broken book decompositions for contact forms in dimension 3.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2001.01448
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2001.01448
+      \endverb
+      \keyw{Mathematics - Geometric Topology,Mathematics - Symplectic Geometry,Mathematics - Dynamical Systems}
+    \endentry
+    \entry{cieliebak_stein_2012}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f4875faa2748610c0abd3ba413f96174}{%
+           family={Cieliebak},
+           familyi={C\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=060fa0ee9c773cc9ac08f1b76b526db7}{%
+           family={Eliashberg},
+           familyi={E\bibinitperiod},
+           given={Yakov},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Providence, Rhode Island}%
+      }
+      \list{publisher}{1}{%
+        {American Mathematical Society}%
+      }
+      \strng{namehash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \strng{fullhash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \strng{bibnamehash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \strng{authorbibnamehash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \strng{authornamehash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \strng{authorfullhash}{4cff91f6dbef11611fd6862be1d4a8bb}
+      \field{labelalpha}{CE12}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8218-8533-8 978-1-4704-1582-2}
+      \field{month}{12}
+      \field{note}{ISSN: 0065-9258}
+      \field{series}{Colloquium {Publications}}
+      \field{title}{From {Stein} to {Weinstein} and {Back}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1090/coll/059
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/Q4S6I7YP/Cieliebak et Eliashberg - 2012 - From Stein to Weinstein and Back.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.ams.org/coll/059
+      \endverb
+      \verb{url}
+      \verb http://www.ams.org/coll/059
+      \endverb
+    \endentry
+    \entry{cioba_nicely_nodate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d791a53cf714aab0f4f9e006d1545406}{%
+           family={Cioba},
+           familyi={C\bibinitperiod},
+           given={Alexandru},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d791a53cf714aab0f4f9e006d1545406}
+      \strng{fullhash}{d791a53cf714aab0f4f9e006d1545406}
+      \strng{bibnamehash}{d791a53cf714aab0f4f9e006d1545406}
+      \strng{authorbibnamehash}{d791a53cf714aab0f4f9e006d1545406}
+      \strng{authornamehash}{d791a53cf714aab0f4f9e006d1545406}
+      \strng{authorfullhash}{d791a53cf714aab0f4f9e006d1545406}
+      \field{labelalpha}{Cio}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nicely {Embedded} {Curves} in {Symplectic} {Cobordisms}}
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/YVJELZ5B/Cioba - Nicely Embedded Curves in Symplectic Cobordisms.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{dugast_sutured_2026}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5309fba34bc586a4a8e30cf4f0d72ce8}{%
+           family={Dugast},
+           familyi={D\bibinitperiod},
+           given={Romain},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \strng{fullhash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \strng{bibnamehash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \strng{authorbibnamehash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \strng{authornamehash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \strng{authorfullhash}{5309fba34bc586a4a8e30cf4f0d72ce8}
+      \field{labelalpha}{Dug26}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the topology of sutured contact manifolds, In preparation}
+      \field{year}{2026}
+    \endentry
+    \entry{geiges_introduction_nodate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=72ed0165cf29bee226502a859633f51c}{%
+           family={Geiges},
+           familyi={G\bibinitperiod},
+           given={Hansjorg},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{72ed0165cf29bee226502a859633f51c}
+      \strng{fullhash}{72ed0165cf29bee226502a859633f51c}
+      \strng{bibnamehash}{72ed0165cf29bee226502a859633f51c}
+      \strng{authorbibnamehash}{72ed0165cf29bee226502a859633f51c}
+      \strng{authornamehash}{72ed0165cf29bee226502a859633f51c}
+      \strng{authorfullhash}{72ed0165cf29bee226502a859633f51c}
+      \field{labelalpha}{Gei}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An {Introduction} to {Contact} {Topology}}
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/H6SW2T8G/Geiges - An Introduction to Contact Topology.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{hutchings_gluing_2007}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=e216f52f26869bc5b263e24f10950665}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b21cc84b98bc4c9f845c80eb2d5fba4d}{%
+           family={Taubes},
+           familyi={T\bibinitperiod},
+           given={Clifford\bibnamedelima Henry},
+           giveni={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{19544c79228b5812fe760ab1e5f52cde}
+      \strng{fullhash}{19544c79228b5812fe760ab1e5f52cde}
+      \strng{bibnamehash}{19544c79228b5812fe760ab1e5f52cde}
+      \strng{authorbibnamehash}{19544c79228b5812fe760ab1e5f52cde}
+      \strng{authornamehash}{19544c79228b5812fe760ab1e5f52cde}
+      \strng{authorfullhash}{19544c79228b5812fe760ab1e5f52cde}
+      \field{labelalpha}{HT07}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper and its sequel prove a generalization of the usual gluing theorem for two index 1 pseudoholomorphic curves u+ and u− in the symplectization of a contact 3-manifold. We assume that for each embedded Reeb orbit γ, the total multiplicity of the negative ends of u+ at covers of γ agrees with the total multiplicity of the positive ends of u− at covers of γ. However, unlike in the usual gluing story, here the individual multiplicities are allowed to diﬀer. In this situation, one can often glue u+ and u− to an index 2 curve by inserting genus zero branched covers of R-invariant cylinders between them. We establish a combinatorial formula for the signed count of such gluings. As an application, we deduce that the diﬀerential ∂ in embedded contact homology satisﬁes ∂2 = 0.}
+      \field{annotation}{Comment: 100 pages; slightly revised with new pictures following referee's suggestions; to appear in Journal of Symplectic Geometry}
+      \field{month}{7}
+      \field{note}{arXiv:math/0701300}
+      \field{title}{Gluing pseudoholomorphic curves along branched covered cylinders {I}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2007}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.math/0701300
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/MZTX7TK3/Hutchings et Taubes - 2007 - Gluing pseudoholomorphic curves along branched covered cylinders I.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/math/0701300
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/math/0701300
+      \endverb
+      \keyw{Mathematics - Geometric Topology,Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{hofer_properties_nodate}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6bd1093320360137c60e491abf64c240}{%
+           family={Hofer},
+           familyi={H\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5d629cb39c7d9bbe0ba5acf7467fe1c7}{%
+           family={Wysocki},
+           familyi={W\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+        {{hash=27063e7997ac56dbfd69491bca5d5bea}{%
+           family={Zehnder},
+           familyi={Z\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \strng{fullhash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \strng{bibnamehash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \strng{authorbibnamehash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \strng{authornamehash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \strng{authorfullhash}{a05a828f5812f2bbc1e27b726098d8e9}
+      \field{labelalpha}{HWZ}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Properties of pseudo-holomorphic curves in symplectisations {II}: {Embedding} controls and algebraic invariants}
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/TYYZE48V/Hofer et al. - Properties of pseudo-holomorphic curves in symplectisations II Embedding controls and algebraic inv.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{SOBD1}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=cfd530c20d29accde30a0bb267517fd0}{%
+           family={Lisi},
+           familyi={L\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8c60e3b646191481f692069e1736a9e9}{%
+           family={Horn-Morris},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={Jeremy\bibnamedelima Van},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{fullhash}{04768df932eed7f45289f9ea53066d10}
+      \strng{bibnamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authorbibnamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authornamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authorfullhash}{04768df932eed7f45289f9ea53066d10}
+      \field{extraname}{1}
+      \field{labelalpha}{LHW18}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.SG}
+      \field{eprinttype}{arXiv}
+      \field{title}{On symplectic fillings of spinal open book decompositions I: Geometric constructions}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1810.12017
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1810.12017
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1810.12017
+      \endverb
+    \endentry
+    \entry{SOBD2}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=cfd530c20d29accde30a0bb267517fd0}{%
+           family={Lisi},
+           familyi={L\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8c60e3b646191481f692069e1736a9e9}{%
+           family={Horn-Morris},
+           familyi={H\bibinithyphendelim M\bibinitperiod},
+           given={Jeremy\bibnamedelima Van},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{fullhash}{04768df932eed7f45289f9ea53066d10}
+      \strng{bibnamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authorbibnamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authornamehash}{04768df932eed7f45289f9ea53066d10}
+      \strng{authorfullhash}{04768df932eed7f45289f9ea53066d10}
+      \field{extraname}{2}
+      \field{labelalpha}{LHW20}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.SG}
+      \field{eprinttype}{arXiv}
+      \field{title}{On symplectic fillings of spinal open book decompositions II: Holomorphic curves and classification}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2010.16330
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2010.16330
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2010.16330
+      \endverb
+    \endentry
+    \entry{Latschev_2011}{article}{}
+      \name{author}{3}{}{%
+        {{hash=53439d761a233898d509b74c34f1c783}{%
+           family={Latschev},
+           familyi={L\bibinitperiod},
+           given={Janko},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e216f52f26869bc5b263e24f10950665}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \strng{fullhash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \strng{bibnamehash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \strng{authorbibnamehash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \strng{authornamehash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \strng{authorfullhash}{ab0e4270cfb7143947d3a170e2e404ac}
+      \field{labelalpha}{LWH11}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1420-8970}
+      \field{journaltitle}{Geometric and Functional Analysis}
+      \field{number}{5}
+      \field{title}{Algebraic Torsion in Contact Manifolds}
+      \field{volume}{21}
+      \field{year}{2011}
+      \field{pages}{1144\bibrangedash 1195}
+      \range{pages}{52}
+      \verb{doi}
+      \verb 10.1007/s00039-011-0138-3
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s00039-011-0138-3
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s00039-011-0138-3
+      \endverb
+    \endentry
+    \entry{min_spinal_2024}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=5a994ed2d5f63eb4e635948c9e95162e}{%
+           family={Min},
+           familyi={M\bibinitperiod},
+           given={Hyunki},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ffd6c941b5825157a8f198c542b7a0f8}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Agniva},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3597097af3adc88076e541dc77afd93b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Luya},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \strng{fullhash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \strng{bibnamehash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \strng{authorbibnamehash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \strng{authornamehash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \strng{authorfullhash}{11e7ca7625748a6ef5e745e61009e8bd}
+      \field{labelalpha}{MRW24}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Spinal open book decompositions provide a natural generalization of open book decompositions. We show that any minimal symplectic filling of a contact 3-manifold supported by a planar spinal open book is deformation equivalent to the complement of a positive multisection in a bordered Lefschetz fibration, which generalizes a result of Wendl [Wen10c]. Along the way, we give an explicit local model for a non-compactly supported “singularity at infinity” in a generalized version of bordered Lefschetz fibrations, given by pseudoholomorphic foliations associated to the spinal open books. This provides new tools to classify symplectic fillings of a contact 3-manifold that is not supported by an amenable spinal open book, by studying monodromy factorizations in the newly defined spinal mapping class group. As an application, we complete the classification of strong fillings of all parabolic torus bundles, and make progress towards classifying symplectic fillings of contact 3-manifolds supported by non-planar open books.}
+      \field{annotation}{Other 53 pages, 15 figures, fixed typos, expanded on introduction and proof of Theorem E}
+      \field{note}{Version Number: 2}
+      \field{title}{Spinal open books and symplectic fillings with exotic fibers}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2410.10697
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/JCMKWWM4/Min et al. - 2024 - Spinal open books and symplectic fillings with exotic fibers.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2410.10697
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2410.10697
+      \endverb
+      \keyw{FOS: Mathematics,Geometric Topology (math.GT),Symplectic Geometry (math.SG)}
+    \endentry
+    \entry{moreno_holomorphic_2019}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b8a925d6fbfc77b2e43a6080272af5f0}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Agustin},
+           giveni={A\bibinitperiod}}}%
+        {{hash=546adab528dd242e2d8d9e6ed5cc87c3}{%
+           family={Siefring},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{6f2c18e5496440e567860d7ac3402334}
+      \strng{fullhash}{6f2c18e5496440e567860d7ac3402334}
+      \strng{bibnamehash}{6f2c18e5496440e567860d7ac3402334}
+      \strng{authorbibnamehash}{6f2c18e5496440e567860d7ac3402334}
+      \strng{authornamehash}{6f2c18e5496440e567860d7ac3402334}
+      \strng{authorfullhash}{6f2c18e5496440e567860d7ac3402334}
+      \field{labelalpha}{MS19}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove a result which establishes restrictions on the pseudoholomorphic curves which can exist in a stable Hamiltonian manifold in the presence of certain R-invariant foliations of the symplectization by holomorphic hypersurfaces. This result has applications in the ﬁrst author’s work [7, 6] on algebraic torsion in higher dimensional contact manifolds.}
+      \field{annotation}{Comment: 14 pages; adapted from Appendix C of arXiv:1711.01562 (the first author's PhD thesis)}
+      \field{month}{2}
+      \field{note}{arXiv:1902.02700 [math.SG]}
+      \field{title}{Holomorphic curves in the presence of holomorphic hypersurface foliations}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1902.02700
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/YIGNK3GZ/Moreno et Siefring - 2019 - Holomorphic curves in the presence of holomorphic hypersurface foliations.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1902.02700
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1902.02700
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{roux_cas_nodate}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d57bcd36ef117c2b1e6b7750011ac270}{%
+           family={Roux},
+           familyi={R\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \strng{fullhash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \strng{bibnamehash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \strng{authorbibnamehash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \strng{authornamehash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \strng{authorfullhash}{d57bcd36ef117c2b1e6b7750011ac270}
+      \field{labelalpha}{Rou}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Un cas particulier de la conjecture de {Weinstein} en grande dimension}
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/FGS2PKJ4/Roux - Un cas particulier de la conjecture de Weinstein en grande dimension.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{siefring_intersection_2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=546adab528dd242e2d8d9e6ed5cc87c3}{%
+           family={Siefring},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \strng{fullhash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \strng{bibnamehash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \strng{authorbibnamehash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \strng{authornamehash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \strng{authorfullhash}{546adab528dd242e2d8d9e6ed5cc87c3}
+      \field{labelalpha}{Sie11}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1364-0380, 1465-3060}
+      \field{journaltitle}{Geometry \& Topology}
+      \field{month}{12}
+      \field{note}{Publisher: Mathematical Sciences Publishers}
+      \field{number}{4}
+      \field{title}{Intersection theory of punctured pseudoholomorphic curves}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{15}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{2351\bibrangedash 2457}
+      \range{pages}{107}
+      \verb{doi}
+      \verb 10.2140/gt.2011.15.2351
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/WVKIUP8J/Siefring - 2011 - Intersection theory of punctured pseudoholomorphic curves.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.msp.org/gt/2011/15-4/p15.xhtml
+      \endverb
+      \verb{url}
+      \verb http://www.msp.org/gt/2011/15-4/p15.xhtml
+      \endverb
+    \endentry
+    \entry{wendl_compactness_2008}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{1}
+      \field{labelalpha}{Wen08}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove a compactness theorem for holomorphic curves in 4–dimensional symplectizations that have embedded projections to the underlying 3–manifold. It strengthens the cylindrical case of the SFT compactness theorem [BEH+03] by using intersection theory to show that degenerations of such sequences never give rise to multiple covers or nodes, so transversality is easily achieved. This has application to the theory of stable ﬁnite energy foliations introduced in [HWZ03], and also suggests a new approach to deﬁning SFT-type invariants for contact 3–manifolds, or more generally, 3–manifolds with stable Hamiltonian structures.}
+      \field{annotation}{Comment: 32 pages, 4 figures; v.3 includes some minor improvements to the exposition suggested by the referee}
+      \field{month}{3}
+      \field{note}{arXiv:math/0703509}
+      \field{title}{Compactness for {Embedded} {Pseudoholomorphic} {Curves} in 3-manifolds}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.math/0703509
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/MCZR7A43/Wendl - 2008 - Compactness for Embedded Pseudoholomorphic Curves in 3-manifolds.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/math/0703509
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/math/0703509
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry,Mathematics - Analysis of PDEs}
+    \endentry
+    \entry{wendl_automatic_2009}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{2}
+      \field{labelalpha}{Wen09}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We derive a numerical criterion for J–holomorphic curves in 4–dimensional symplectic cobordisms to achieve transversality without any genericity assumption. This generalizes results of Hofer-LizanSikorav [HLS97] and Ivashkovich-Shevchishin [IS99] to allow punctured curves with boundary that generally need not be somewhere injective or immersed. As an application, we combine this with the intersection theory of punctured holomorphic curves to prove that certain geometrically natural moduli spaces are globally smooth orbifolds, consisting generically of embedded curves, plus unbranched multiple covers that form isolated orbifold singularities.}
+      \field{annotation}{Comment: 58 pages; v.4 replaces the proof of Lemma 3.3 with one that is not obviously wrong; to appear in Comment. Math. Helv}
+      \field{month}{8}
+      \field{note}{arXiv:0802.3842 [math]}
+      \field{title}{Automatic {Transversality} and {Orbifolds} of {Punctured} {Holomorphic} {Curves} in {Dimension} {Four}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.0802.3842
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/RI5QYM98/Wendl - 2009 - Automatic Transversality and Orbifolds of Punctured Holomorphic Curves in Dimension Four.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0802.3842
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0802.3842
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry,Mathematics - Analysis of PDEs,Mathematics - Functional Analysis}
+    \endentry
+    \entry{wendl_open_2009}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{3}
+      \field{labelalpha}{Wen09}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that every open book decomposition of a contact 3–manifold can be represented (up to isotopy) by a smooth R–invariant family of pseudoholomorphic curves on its symplectization with respect to a suitable stable Hamiltonian structure. In the planar case, this family survives small perturbations, and thus gives a concrete construction of a stable ﬁnite energy foliation that has been used in various applications to planar contact manifolds, including the Weinstein conjecture [ACH05] and the equivalence of strong and Stein ﬁllability [Wenb].}
+      \field{annotation}{Comment: 13 pages, 2 figures; v3 includes some added details on implicit function theorems for punctured pseudoholomorphic curves; to appear in Expos. Math}
+      \field{month}{6}
+      \field{note}{arXiv:0808.3220 [math]}
+      \field{title}{Open book decompositions and stable {Hamiltonian} structures}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2009}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.0808.3220
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/ERMQJ2G6/Wendl - 2009 - Open book decompositions and stable Hamiltonian structures.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0808.3220
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0808.3220
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry,Mathematics - Analysis of PDEs}
+    \endentry
+    \entry{wendl_holomorphic_2010}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{4}
+      \field{labelalpha}{Wen10}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{1}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We use contact ﬁber sums of open book decompositions to deﬁne an inﬁnite hierarchy of ﬁlling obstructions for contact 3manifolds, called planar k-torsion for integers k ≥ 0, all of which cause the contact invariant in Embedded Contact Homology to vanish. Planar 0-torsion is equivalent to overtwistedness, while every contact manifold with Giroux torsion also has planar 1-torsion, and we give examples of contact manifolds that have planar k-torsion for any k ≥ 2 but no Giroux torsion, leading to many new examples of nonﬁllable contact manifolds. We show also that the complement of the binding of a supporting open book never has planar torsion. The technical basis of these results is an existence and uniqueness theorem for J-holomorphic curves with positive ends approaching the (possibly blown up) binding of an ensemble of open book decompositions.}
+      \field{annotation}{Comment: This preprint is now superseded by the paper "A Hierarchy of Local Symplectic Filling Obstructions for Contact 3-Manifolds", arXiv:1009.2746}
+      \field{month}{9}
+      \field{note}{arXiv:1001.4109 [math]}
+      \field{title}{Holomorphic {Curves} in {Blown} {Up} {Open} {Books}}
+      \field{urlday}{18}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1001.4109
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/FT4YAN3X/Wendl - 2010 - Holomorphic Curves in Blown Up Open Books.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1001.4109
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1001.4109
+      \endverb
+      \keyw{Mathematics - Geometric Topology,Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{wendl_strongly_2010}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{5}
+      \field{labelalpha}{Wen10}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove that every strong symplectic ﬁlling of a planar contact manifold admits a symplectic Lefschetz ﬁbration over the disk, and every strong ﬁlling of T 3 similarly admits a Lefschetz ﬁbration over the annulus. It follows that strongly ﬁllable planar contact structures are also Stein ﬁllable, and all strong ﬁllings of T 3 are equivalent up to symplectic deformation and blowup. These constructions result from a compactness theorem for punctured J–holomorphic curves that foliate a convex symplectic manifold. We use it also to show that the compactly supported symplectomorphism group on T ∗T 2 is contractible, and to deﬁne an obstruction to strong ﬁllability that yields a nongauge-theoretic proof of Gay’s recent nonﬁllability result [Gay06] for contact manifolds with positive Giroux torsion.}
+      \field{annotation}{Comment: 44 pages, 2 figures; v.3 has a few significant improvements to the main results: We now classify all strong fillings and exact fillings of T{\textasciicircum}3 (without assuming Stein), and also show that a planar contact manifold is strongly fillable if and only if all its planar open books have monodromy generated by right-handed Dehn twists. To appear in Duke Math. J}
+      \field{issn}{0012-7094}
+      \field{journaltitle}{Duke Mathematical Journal}
+      \field{month}{2}
+      \field{note}{arXiv:0806.3193 [math]}
+      \field{number}{3}
+      \field{title}{Strongly {Fillable} {Contact} {Manifolds} and {J}-holomorphic {Foliations}}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{volume}{151}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1215/00127094-2010-001
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/TF93BV7E/Wendl - 2010 - Strongly Fillable Contact Manifolds and J-holomorphic Foliations.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0806.3193
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0806.3193
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry,Mathematics - Analysis of PDEs}
+    \endentry
+    \entry{wendl_holomorphic_2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{6}
+      \field{labelalpha}{Wen18}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-91369-8 978-3-319-91371-1}
+      \field{series}{Lecture {Notes} in {Mathematics}}
+      \field{title}{Holomorphic {Curves} in {Low} {Dimensions}}
+      \field{urlday}{22}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{2216}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-319-91371-1
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/Y4XY56BA/Wendl - 2018 - Holomorphic Curves in Low Dimensions.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-319-91371-1
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-319-91371-1
+      \endverb
+    \endentry
+    \entry{wendl_contact_2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5a7b0ec96c2af30ca82e02e7e6f78ee6}{%
+           family={Wendl},
+           familyi={W\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{fullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{bibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorbibnamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authornamehash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \strng{authorfullhash}{5a7b0ec96c2af30ca82e02e7e6f78ee6}
+      \field{extraname}{7}
+      \field{labelalpha}{Wen19}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This is a revision of some expository lecture notes written originally for a 5-hour minicourse on the intersection theory of punctured holomorphic curves and its applications in 3-dimensional contact topology. The main lectures are aimed primarily at students and require only a minimal background in holomorphic curve theory, as the emphasis is on topological rather than analytical issues. Some of the gaps in the analysis are then ﬁlled in by the appendices, which include self-contained proofs of the similarity principle and positivity of intersections, and conclude with a “quick reference” for the beneﬁt of researchers, detailing the basic facts of Siefring’s intersection theory.}
+      \field{annotation}{Comment: 170 pages, 20 figures; v2 is an extensive revision, with a new introduction and expanded appendices (including a self-contained proof of positivity of intersections, new material on intersection products of holomorphic buildings, and a comparison of conventions with the ECH literature). To appear as a book in the Cambridge Tracts in Mathematics series with Cambridge University Press}
+      \field{month}{8}
+      \field{note}{arXiv:1706.05540 [math]}
+      \field{title}{Contact 3-manifolds, holomorphic curves and intersection theory}
+      \field{urlday}{11}
+      \field{urlmonth}{7}
+      \field{urlyear}{2025}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1706.05540
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/H9FTH5XB/Wendl - 2019 - Contact 3-manifolds, holomorphic curves and intersection theory.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1706.05540
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.05540
+      \endverb
+      \keyw{Mathematics - Geometric Topology,Mathematics - Symplectic Geometry}
+    \endentry
+    \entry{zhou_unknottedness_2025}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b59ff2db462546e41c7ce88a69831cd5}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Zhengyi},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{b59ff2db462546e41c7ce88a69831cd5}
+      \strng{fullhash}{b59ff2db462546e41c7ce88a69831cd5}
+      \strng{bibnamehash}{b59ff2db462546e41c7ce88a69831cd5}
+      \strng{authorbibnamehash}{b59ff2db462546e41c7ce88a69831cd5}
+      \strng{authornamehash}{b59ff2db462546e41c7ce88a69831cd5}
+      \strng{authorfullhash}{b59ff2db462546e41c7ce88a69831cd5}
+      \field{labelalpha}{Zho25}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that any symplectic ﬁlling of the standard contact submanifold (S2n−1, ξstd) of (S2n+1, ξstd) in (Dn+1, ωstd) is smoothly unknotted if n ≥ 2. We also give a self-contained proof of the Siefring intersection formula between punctured holomorphic curves and holomorphic hypersurfaces used in the proof using the L-simple setup of Bao-Honda.}
+      \field{annotation}{Comment: 27 pages, comments welcome!}
+      \field{month}{6}
+      \field{note}{arXiv:2506.06807 [math.SG]}
+      \field{title}{Unknottedness of symplectic submanifold fillings}
+      \field{urlday}{16}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2506.06807
+      \endverb
+      \verb{file}
+      \verb PDF:/home/E18F527X/snap/zotero-snap/common/Zotero/storage/RANNFPXE/Zhou - 2025 - Unknottedness of symplectic submanifold fillings.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2506.06807
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2506.06807
+      \endverb
+      \keyw{Mathematics - Symplectic Geometry}
+    \endentry
+  \enddatalist
+  \missing{p:IV}
+\endrefsection
 \endinput
 
