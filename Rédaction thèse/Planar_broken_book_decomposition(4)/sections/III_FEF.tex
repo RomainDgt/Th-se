@@ -1,0 +1,270 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Finite energy foliations}\label{p:III}
+
+In this section we finally use the work done in part \ref{p:II} to lift the rigid pages as holomorphic curves, in order to get a full finite energy foliation on $\R\times M$. This is essentially based on a simple gluing argument, and some intersection theory showing that all curves are isotopic to pages. \textbf{From now on, we will assume that all pages have genus 0}. The following method works for both the exact and interpolation models. In what follows we may sometimes write "rigid pages" instead of "holomorphic lifts of rigid pages" to lighten the proofs.
+
+\subsection{Gluing rigid pages}
+
+The goal of this part is to recollect a sequence of regular pages from two rigid pages having a common asymptotic orbit, being negative for one and positive for the other. We will make use of Siefring's intersection theory in dimension $3$, and refer to \cite{siefring_intersection_2011} or \cite{wendl_contact_2019} for reference. We will mostly use the notation of the latter, and will denote by $u*v$ the intersection product between $u$ and $v$. \\
+
+\begin{lemma}\label{l:index_computation_rigid}
+Let $u$ be a lifted rigid (positive or negative) page as given by proposition \ref{prop:lift_stein}. Then $u$ is embedded, its Fredholm index is $1$, and its linearized Cauchy-Riemann operator is surjective (we will say that $u$ is Fredholm regular). Moreover, any two rigid curves $u,v$ (potentially equal) verify : $u*v = 0$.
+\end{lemma}
+
+\begin{proof}
+We start by computing the Fredholm indices of such curves. Let $u$ be a rigid page, that we can assume without loss of generality to be positive (the computations are the same in the negative case). Then $u$ has one positive end on an hyperbolic Reeb orbit corresponding to the broken binding component, and a certain number of ends on elliptic Reeb orbits corresponding to radial binding components. \\
+
+We fix asymptotic trivialization given by the pages, i.e in the radial case the pages are $\phi = Cst$ and in the broken case the same is true for rigid pages only, which is enough to define a trivialization up to homotopy (which does not change the definition of the quantities below), which we will denote by $\tau$. \\
+
+Let us first compute the Conley-Zehnder index in this trivialization for the hyperbolic end $\gamma$. It is in fact always $0$. In the case of the interpolation model, this can be computed directly as we have explicit formulas for everything. In general, consider an eigenvector of the first return map, which is hyperbolic. Then this eigenvector is in a quadrant delimited by the four rigid pages. Now notice that following the linearized flow of the Reeb vector field, the direction of the four rigid pages are constant by definition of the trivialization. Recall that the Conley-Zehnder index of the orbit is given by the number of half-turns of an eigenvector in the trivialization $\tau$ following the flow along the full Reeb orbit considered. Hence to conclude, it suffices to notice that the eigenvector cannot cross two successive directions given by rigid pages (say $\phi = \pi/2$ and $\phi = \pi$). However, the eigenvectors correspond to tangent vectors to stable and unstable manifolds of the hyperbolic orbit $\gamma$, and such tangent vectors cannot "cross" two consecutive directions given by rigid pages. If it were the case, looking close enough from $\gamma$, we would be able to find an embedded Reeb orbit inside the (un)stable manifold which we consider, crossing two successive rigid pages in the same sense, i.e for example verifying $d\phi(R_\alpha)$ on two successive rigid pages. This is not possible as the sign of rigid pages alternates. Hence the eigendirection cannot make a full half-turn, and the Conley-Zehnder index has to be zero.\\
+
+In the case of an elliptic end (recall that it can be positive or negative), we already saw that the Conley-Zehnder index was $\pm1$ depending on the sign of the end. This was either a consequence of the hypotheses made in the theorem for the exact model, or a consequence of the choices made on the maps $f$ and $g$ in the interpolation in lemmas \ref{l:radial_mod} and \ref{l:negative_int}.\\
+
+We now show that the relative first Chern number of the normal bundle of $u$ with respect to these trivializations is zero. This is rather straightforward as one can exhibit a non-vanishing vector field in the normal bundle. Indeed, away from binding components one can take $R_\alpha$ as a positive normal vector field, and near the binding components one can interpolate (by positive transverse vector fields) $R_\alpha$ with $-gR_\alpha + f\partial_\phi\in \xi$, given that the interpolation is made close enough from the orbit $\gamma $ considered (so that $g$ is small enough compared to $f$). $-gR_\alpha + f\partial_\phi$ is a transverse vector field and is constant "at infinity" (equal to $b\partial_\phi$ where $b = b(\gamma)$ is the action of the orbit) in the trivialization considered. This proves that $c_1^\tau(N_u) = 0$.
+
+Hence we can compute the Fredholm index of our curves : denote by $k_+$ the number of radial positive ends, $k_-$ the number of radial negative ends. Then the index is :
+
+$$\text{Ind}(u) = \chi(\dot \Sigma) + c_1^\tau(N_u) + (k_+ + k_- - 1) = (2-k_+ - k_-) + (k_+ + k_- -1) = 1$$
+
+Hence the index is always $1$ for this kind of curves. Note that positive and negative orbits play the same role in the computation of the index, because negative orbits have opposite Conley-Zehnder index than positive orbits.\\    
+
+Now we compute the intersection number $u*v$ for $u,v$ two such (lifted) rigid curves, where $u$ and $v$ might be the same curve. We know that $u$ and $v$ only have simple ends, and we have :
+$$u*v = u\bullet_\tau v - \sum_{(z,\zeta)\in\Gamma^\pm_u\times \Gamma^\pm_v}\Omega_\pm^\tau(\gamma_z,\gamma_\zeta)$$
+where $u\bullet_\tau v = 0$ as it corresponds to the algebraic intersection number of $u$ and a perturbation of $v$ given by the trivialization $\tau$, which gives $0$ by definition of the trivialization $\tau$. In our case, the quantities $\Omega_\pm^\tau(\gamma_z,\gamma_\zeta)$ are simply defined by: $$\Omega_\pm^\tau(\gamma_z,\gamma_\zeta) := \alpha_\mp^\tau(\gamma)$$
+if $\gamma= \gamma_z = \gamma_\zeta$ corresponds to a common end for both $u$ and $v$ with the same sign (i.e it corresponds to a positive or a negative ends for both); otherwise the quantity $\Omega_\pm^\tau(\gamma_z,\gamma_\zeta)$ is zero. Here the $\alpha_\pm^\tau(\gamma)$ are the extremal winding numbers in the considered trivialization. 
+Now we know that the extremal winding numbers are always $0$ in our chosen trivialization. Indeed, use the relation for any asymptotic orbit $\gamma$: $\mu_{CZ}^\tau(\gamma) =2\alpha_\mp^\tau(\gamma) \pm p(\gamma) $ where $p(\gamma)\in\{0,1\}$ is the parity of $\gamma$. For a hyperbolic orbit, $p(\gamma) = 0$, and $\mu_{cz}^\tau(\gamma) = 0$, hence the extremal winding numbers are both $0$, and for an elliptic orbit, $p (\gamma) = 1$ and $\mu_{CZ}^\tau(\gamma) = \pm 1$, hence the extremal winding numbers are $-1$ and $0$ for a negative end, and $0$ and $1$ for a positive end. In each case, the extremal winding number we are interested in for the computation of $\Omega_\pm^\tau(\gamma_z,\gamma_\zeta)$ is $0$. This gives us the result we wanted, namely: $u*v = 0$. \\
+
+We can now use the adjunction formula for asymptotically cylindrical curves in dimension $4$, which reads as follows for our curves with only simple ends: $u*u = 2[\delta(u) + \delta_\infty(u)] + c_N(u)$, where $\delta(u)$ is the count of self-intersection and critical points, and $\delta_\infty(u)$ is the count of self-intersections "hidden at infinity". By the previous computations, this gives : $\delta(u) + \delta_\infty(u) = 0$, and because both quantities are non-negative, we get $\delta(u) = 0$, which implies that $u$ is embedded.\\
+
+Now we look at the normal first Chern number (see \cite{wendl_automatic_2009}) $c_N(u)$, defined by: $2c_N(u) := \ind(u) - 2 + 2g + \#\Gamma_0(u)$ where $g$ is the genus (here $0$), and $\#\Gamma_0(u)$ is the number of even Reeb orbits in the asymptotics of $u$, here $1$. Hence we get $c_N(u) = 0$.\\
+
+Finally, we can show that $u$ is Fredholm regular. We use the automatic transversality criterion from \cite{wendl_automatic_2009}. We have: $\ind(u) = 1, \,c_N(u) = 0$ and $\delta(u) = 0$. Hence we get: $\ind(u) > c_N(u) + Z(du)$ where $Z(du) $ is the count of critical points of $u$, so the criterion is verified and $u$ is regular. This concludes the proof of the theorem. 
+\end{proof}
+
+\begin{remark}\label{r:CZ_hyperbolic}
+The computation of the Conley-Zehnder index in the hyperbolic case shows in fact that the index of any over of the same orbit is also zero.
+\end{remark}
+
+\begin{remark}
+The interpretation of the Conley-Zehnder indices as some number of turns or half-turns for the first return map may not be valid \textit{a priori} for the simple models detailed in subsection \ref{subp:simple_acs}. However, in these cases we can make explicit computations: namely, in the hyperbolic case, both extremal eigenfunctions are constant so they have the same winding number $0$ which implies $\mu_{CZ}^\tau(\gamma) = \alpha_-^\tau(\gamma) + \alpha_+^\tau(\gamma) = 0$ where $\alpha_\pm^\tau(\gamma)$ corresponds to the extremal winding numbers. This is all we need for now, and we will make the remaining computations in part \ref{VI} for the indices of curves in the $6$-dimensional symplectization.
+\end{remark}
+
+\begin{remark}
+   As noticed at the end of the last part, we can apply exactly the same construction for regular pages, considering only asymptotic radial binding components. In that case, the very same index computation raises : $\text{Ind}(u) = 2$. Hence our construction allows us in fact to lift an arbitrary finite number of curves of the broken book, rigid or regular, as a $1$-parameter family of holomorphic curves in the symplectization with Fredholm index $1$ or $2$. 
+\end{remark}
+
+\begin{lemma}\label{l:gluing_rigid_pages}
+For any pair of rigid pages $(u_-,u_+)$, we can glue them and get a sequence $u_n$ breaking onto $(u_-,u_+)$. Moreover, any such sequence verifies that the curves $u_n$ are embedded Fredholm regular index-2 curves.
+\end{lemma}
+
+\begin{proof}
+The first part is just a consequence of the previous lemma, as both components of the building are Fredholm regular, which allow to "solve the gluing problem" by the Fredholm implicit function theorem. Note that by additivity of the Fredholm index, we indeed get a 1-parameter family of index-2 curves converging to $(u_-,u_+)$. \\
+
+The embeddedness follows from the adjunction formula for asymptotically cylindrical curves and the homotopy invariance of the different quantities used in this formula. \\
+Indeed, choose some $u = u_n$ for some $n$, and write : $u*u = 2[\delta(u) + \delta_\infty(u)] + c_N(u) $ which is the adjunction formula for curves with simple ends, where $\delta(u)$ and $\delta_\infty(u)$ are again as before a non-negative count of self-intersections, critical points and intersections "hidden at infinity". Now we also have, by definition : $2c_N(u) = \ind(u) -2 + 2g  = 0$ if $u$ has genus $0$. Moreover, by continuity of the intersection product extended to holomorphic buildings (see the beginning of the next section), we have $u*u = 0$. This implies $\delta(u) = \delta_\infty(u) = 0$, hence $u$ is embedded.
+\\
+
+Finally, note that these curves are also Fredholm regular as we showed $c_N(u) =0$, hence $\ind(u) > c_N(u)$ and again because $u$ is embedded, the automatic transversality criterion\cite{wendl_automatic_2009} gives us the Fredholm regularity of the curves.
+\end{proof}
+
+We finally give a last result which illustrates the control we have on sequences of curves degenerating to rigid pages.
+
+\begin{lemma}
+If a sequence of planar curves $\{u_n\}$ converges to a building $(u_-,...,u_+)$ in the SFT topology, then it converges to $(u_-,u_+)$.
+\end{lemma}
+
+\begin{proof}
+Suppose we have such a sequence, then because the curves have genus $0$ the intermediate levels can only be a succession of cylinders with extremities at the hyperbolic Reeb orbit. This is not possible except if they are all trivial cylinders, as the ends of $u_-$ and $u_+ $ are simple so they are not nontrivial branched covers of trivial cylinders, and all curves which are not covers of trivial cylinders have positive $d\alpha$-energy, which is not the case here by Stoke's theorem because the positive and negative ends are the same.
+\end{proof}
+
+\begin{remark}
+This result also holds in the simple setting as we also have $u^*d\alpha > 0$ in that case.
+\end{remark}
+
+\begin{remark}
+    The gluing method gives us at least one way to glue our rigid pages, but one could wonder if there is actually more than one. Using the fact that we have index $2$ curves in symplectization, one could use arguments similar than \cite{hutchings_gluing_2007}, part 7, in order to show that the gluing map is bijective and hence that there is indeed a single way to glue. However, more straightforward intersection theoretic arguments in next part will allow us to get this result in a simpler way. 
+\end{remark}
+
+
+% Finally, notice that a little bit of ECH theory gives us embeddedness of the curves obtained in the previous sequence. Indeed, $u_-$ and $u_+$ are both embedded  hence $I(u_-) = I(u_+) = \text{Ind}(u_-) = \text{Ind}(u_+) = 1$, where $I(u)$ is the ECH index. Now by additivity property of this index, if $u$ is some curve "close to breaking", with $[u] = [u_-] + [u_+]$, then $I(u) = 2 = \text{Ind}(u)$, hence $u$ is embedded. We refer to \cite{hutchings_lecture_2014} for details on the ECH index.
+
+% \begin{remark}
+% In the last part we will make use of Siefring's intersection theory rather than ECH, and the embeddedness property of the curves could also be proved quickly with the adjonction formula in that case.
+% \end{remark}
+
+\subsection{Recollecting the full foliation }
+
+
+In this last part we finally lift the full foliation. All the curves will be denoted with the notation $u = (a,f)$, with $a$ the symplectization coordinate and $f$ the projection on $M$.\\
+
+First we recall some notions from \cite{wendl_contact_2019}, section C.5, on the intersection product of holomorphic buildings. We will denote in this context $u\odot v$ for the concatenation of two levels $u$ and $v$ with corresponding ends to produce a new holomorphic building.
+
+\begin{definition}\text{}\\
+- If $u = u_1\odot ...\odot u_N$ is a holomorphic building, an extension of $u$ is a new building constructed from $u$ by adding a certain number of intermediate levels with only trivial cylinders.\\
+- If $u,v$ are two holomorphic buildings, we define the intersection product $u*v$ by first taking extensions of $u$ and $v$ so that we can assume that $u = u_1\odot...u_N,\,v = v_1\odot ...\odot v_N$ have the same number of levels, and then use the formula: 
+$$u*v := \sum_{i = 1}^Nu_i\bullet_\tau v_i - \sum_{(z,\zeta)\in \Gamma^+_{u_N}\times \Gamma^+_{v_N}}\Omega_+^\tau(\gamma_z,\gamma_\zeta) - \sum_{(z,\zeta)\in \Gamma^-_{u_1}\times \Gamma^-_{v_1}}\Omega_-^\tau(\gamma_z,\gamma_\zeta)$$
+where the $\Omega_\pm^\tau$ are as in the proof of lemma \ref{l:index_computation_rigid}.
+\end{definition}
+
+\begin{proposition}\label{p:building_intersection}\text{}\\
+- The intersection product $u*v$ does not depend on the choice of extensions.\\
+- It is continuous with respect to the SFT-topology.\\
+- We have: $$(u_1\odot u_2)*(v_1\odot v_2) = u_1*v_1 + u_2*v_2 + \displaystyle\sum_{(z,\zeta)\in\Gamma^+_{u_1}\times \Gamma^+_{v_1}} Br(\gamma_z,\gamma_\zeta)$$ where $Br(\gamma,\gamma') = \Omega^\tau_+(\gamma,\gamma') + \Omega_-^\tau(\gamma,\gamma')$ is the breaking contribution. 
+\end{proposition}
+
+In particular, if $\gamma = \gamma'$ is a simple orbit and a binding component for a broken book decomposition, then: $Br(\gamma) = 1$ if $\gamma$ is elliptic, and $Br(\gamma) = 0$ if $\gamma$ is hyperbolic.\\
+By the previous definition and proposition, it is interesting to understand the intersection number between our curves and trivial cylinders over binding components. The following lemma gives the expected answer in this direction.
+
+\begin{lemma}\label{l:intersection_trivial_rigid}
+Suppose $u$ is a lift of a rigid page as defined in the previous section, and $\gamma$ is a closed Reeb orbit asymptotic to $u$. Let $u_\gamma$ be the trivial cylinder over $\gamma$. Then $u*u_\gamma = 0$.
+\end{lemma}
+\begin{proof}
+We simply use the definition of the intersection product as in the proof of lemma \ref{l:index_computation_rigid}. Suppose $\gamma$ is a positive end for $u$ (note that $u$ could have several positive ends at $\gamma$ if $\gamma$ is elliptic, but cannot have positive and negative ends at the same time by construction of a broken book decomposition). We have: $$u*u_\gamma = u\bullet_\tau u_\gamma - \alpha_\mp^\tau(\gamma)$$
+Now $u\bullet _\tau u_\gamma$ is zero by construction, as one can push the trivial cylinder in a direction constant in the trivialization $\tau$, such that $u_\gamma$ and $u$ do not intersect. Moreover, by the same arguments than in the proof of lemma \ref{l:index_computation_rigid}, all considered winding numbers are zero, which concludes. The same works for a negative end.
+\end{proof}
+\begin{lemma}\label{l:intersection_gluing_others}
+Take $u$ to be the gluing of $(u_-,u_+)$ as defined in lemma \ref{l:gluing_rigid_pages}, for gluing parameters large enough (i.e $u$ is close enough from $(u_-,u_+)$. Then the intersection number of $u$ and any other rigid curve, or any trivial cylinder over binding orbits is zero.
+\end{lemma}
+\begin{proof}
+Consider $\gamma$ a binding orbit, and $u_\gamma$ the trivial cylinder over it. Then by continuity of the intersection product, $u*u_\gamma = (u_-\odot u_+) *(\emptyset\odot u_\gamma) = u_+*u_\gamma = 0$. The rest of the statement follows as in lemma 2.10 of \cite{SOBD2}, namely consider $v$ a rigid page, and compute: $(w_1\odot u)*(v\odot w_2)$ where $w_1$ and $w_2$ are collections of trivial cylinders over asymptotic orbits of $u$ and $v$. By construction of a broken book decomposition, there cannot be negative orbits for $u$ that are positive ends for $v$, hence the breaking contribution is $0$ and: $u*v = u*w_2 + v*w_1$ which is zero by the first part of proof.
+\end{proof}
+
+Finally, we state for reference the following lemma, which is a direct computation from the definition or the adjunction formula.
+
+\begin{lemma}
+Let $\gamma$ be a binding orbit, and $u_\gamma$ the trivial cylinder over $\gamma$. Then if $\gamma$ is radial, $u_\gamma*u_\gamma = -1$, and if $\gamma$ is broken, $u_\gamma*u_\gamma = 0$.
+\end{lemma}
+
+In particular, because the breaking contribution of an radial binding component is $1$, this means that we can ignore ignore intersections of trivial cylinders with themselves in the extensions we choose of the buildings $u$ and $v$, as these intersections cancels with the breaking contributions of the orbits.\\
+
+
+% \begin{proof}
+% Consider the extension $u\odot v$ where $v$ is a union of trivial cylinders over the ends of $u$. We compute $u*(u_-\odot u_+) = (u\odot v)*(u_-\odot u_+) = (u_-\odot u_+\odot v)*(u_-\odot u_+\odot v) = u_-*u_- + u_+*u_+ = 0$, using the previous lemma to ignore trivial cylinders over elliptic orbits in the computations. Now we also have: $u*(u_-\odot u_+) = (\emptyset\odot u)*(u_-\odot u_+) = u*u_+ = (u\odot v)*(u_-\odot u_+) = u*u_- = 0$, which proves the claim on the intersection numbers.
+% \end{proof}
+
+We now review certain properties of so-called \textit{nicely embedded curves}, which will also be useful in part \ref{p:V}. These are embedded curves verifying certain intersection theoretic conditions, expected to be verified by leaves of a finite energy foliations, which makes them particularly convenient to manipulate. This notion was first introduced in \cite{wendl_automatic_2009} (with a slightly more restrictive definition), then in \cite{wendl_compactness_2008},\cite{cioba_nicely_nodate}. We also refer to \cite{SOBD2}, part 2.3, for a quick overview of the subject. The main definition is the following:
+\begin{definition}
+$u:\dot\Sigma\rightarrow \widehat{W}$ is said to be nicely embedded if it is somewhere injective, $u*u \leq 0$ and $\delta(u) = \delta_\infty(u) = 0$.
+\end{definition}
+
+In this part, we will be particularly interested in the behavior of such curves in symplectizations.
+The main ingredient in that case will be an inequality on the following quantities, defined in \cite{hofer_properties_nodate}.
+
+\begin{definition}
+Let $\mathcal{H}$ is a stable hamiltonian structure and $J\in\J(\mathcal{H})$ in the symplectization, then for any $J$-holomorphic curve $u$ define:
+\begin{itemize}
+    \item $\wind_\pi(u)$ is the signed count of zeros of $\pi\circ Tu$ where $\pi : \R\times TM\rightarrow \xi$ is the projection parallel to the Reeb vector field and the $\R$-direction.
+    \item $\tdef_\infty(u) := \displaystyle\sum_{z\in\Gamma}|\alpha_\mp^\tau(\gamma_z) - \wind^\tau(f_z)|$ where $f_z$ is the eigenfunction appearing in the formula: $h(s,t) = e^{\lambda_z s}(f_z(t) + r(s,t))$ where $\lambda_z$ is an eigenvalue for the asymptotic operator $A_z$, and $h$ is an asymptotic representative of $u$ at the puncture $z$.
+\end{itemize}
+Both terms are non-negative. Moreover, we have: $c_N(u) = \wind_\pi(u) + \tdef_\infty(u)$. In particular, $c_N(u)\geq 0$.
+\end{definition}
+
+\begin{remark}
+This result also holds in the simple setting. As all the algebraic computations work the same, the only thing to verify is that asymptotically, $\pi\circ Tu$ is non-vanishing for a holomorphic end in a simple neighborhood. This is indeed the case as we have an explicit Fourier expansion of the normal component. Hence the same arguments than in the compatible case are enough to conclude.
+\end{remark}
+
+Using the adjunction formula and the previous notions, we obtain a reformulation of the definition of nicely embedded curves in the case of a symplectization: 
+\begin{definition}
+$u: \dot\Sigma\rightarrow \R\times M$ is said to be nicely embedded if it is somewhere injective and: $u*u = 0$ or $u$ is a trivial cylinder.
+\end{definition}
+
+The following properties are direct consequences of the definitions and remarks we made, combined with automatic transversality.
+
+\begin{lemma}\label{l:properties_nice}
+If $u$ is a nicely embedded curve, then it verifies that: $c_N(u) \leq 0$ and $\ind(u) \leq 2$. \\
+Moreover, if $u = (a,f)$ is nicely embedded inside a symplectization, then:
+
+\begin{itemize}
+    \item $\wind_\pi(u) = \tdef_\infty(u) = 0$, hence $f$ is an embedding, and the Reeb flow is transverse to the image of $f$
+    \item $c_N(u) = 0$.
+    \item If $\ind(u)> 0$, $u$ is Fredholm regular.
+    \item $\ind(u) \in\{0,1,2\}$. If $u$ is regular, then $\ind(u) = 0$ if and only if $u$ is a trivial cylinder, and $u$ has a single even end if it has index one and none otherwise. Moreover, in that case, $u$ has genus $0$. 
+\end{itemize}
+\end{lemma}
+
+In part \ref{p:V}, we will also derive other constraints for certain type of nicely embedded curves in a strong symplectic filling.\\
+
+Finally we give a few compactness results for moduli spaces of nicely embedded curves. These results are given in \cite{wendl_compactness_2008}.
+
+\begin{definition}
+    A stable J-holomorphic building in $\R\times M$ is said to be nicely embedded if :
+    \begin{enumerate}
+        \item It has no nodes.
+        \item Any connected component is nicely embedded.
+        \item The projections on $M$ of $2$ distinct components are identical or disjoint.
+        \item Any breaking orbit is even and simply covered or even and a double cover of an odd hyperbolic orbit (in particular, in the latter case it is a bad orbit in the SFT terminology).
+    \end{enumerate}
+\end{definition}
+
+\noindent The following result works only in the setting of a symplectization and not in an arbitrary symplectic cobordism.
+
+\begin{theorem}\label{t:compactness_nice}
+    Suppose that $(u_n)$ is a sequence of nicely embedded curves with $u_n : \dot\Sigma \rightarrow \R\times M$ and suppose that $u_n\rightarrow u$ where $u$ is a stable $J$-holomorphic building. Then $u$ is nicely embedded.
+\end{theorem}
+
+Finally, we have the following fact, which is a straightforward consequence of the computations done before.
+
+\begin{lemma}\label{l:lifted_nice_curves}
+The lifted rigid pages or the curves obtained by gluing them as in lemma \ref{l:gluing_rigid_pages} are nicely embedded curves. 
+\end{lemma}
+
+Now that we have the necessary convergence results, we are ready for the proof of theorem \ref{t:théorème_1}. First we introduce a bit of terminology for broken book decompositions. Consider $(M,\alpha)$ with supporting broken book decomposition. Then we will use the fact that $M$ has a decomposition in several "sectors" delimited by $4$ rigid pages. To define such a sector, take any regular page and notice than pushing it by a reparameterization of the Reeb flow allows to recollect the nearby pages, as long as they are transverse to the Reeb flow. If at some point the foliation cannot be obtained that way, it means that some part of the foliation is not transverse to the Reeb flow anymore, which can only happen at a broken binding component. \\
+Hence if $F$ is a regular page, we have $2$ possibilities : either there is no problem of transversality whatsoever, and in this case $F$ is a Birkhoff section, and we have a nice open book decomposition ; or we get a sector of $M$ on which the fol.iation is $]0,1[\times M$, and which has boundary components consisting of $2$ rigid pages, asymptotic to the same broken binding component with ends of opposite sign. Note that because of the local model around a broken binding component, the boundaries at $\{0\}$ and the boundaries at $\{1\}$ cannot be the same. \\
+Finally, because any point in $M$ belongs to a page, we get that $M$ can be divided into a finite number of such sectors, "glued" to each other along rigid pages and binding components. In the following, we will use this notion of sectors even for the interpolation model, where the Reeb flow might not be transverse to the pages anymore near hyperbolic Reeb orbits. This is not an issue as it suffices to define the sectors using the initial Reeb flow before interpolation.\\
+
+\begin{proof}\textit{of theorem \ref{t:théorème_1}:\\}
+By what has been shown before, we will consider either the exact or interpolation model here without distinction, as in both cases (with additional hypotheses for the exact model), we can lift and glue rigid pages. When we will use arguments on pages using the flow of the Reeb vector field, it will sometimes be necessary, for the interpolation model, as above, to use instead the Reeb vector field of the initial contact form without interpolation. \\
+
+First, if the broken book is in fact a genuine open book, then consider any regular page $u$, that we know that we can lift by remark \ref{r:lift_pages}. We get a 2-parameter family of translation invariant, index-2 curves in the symplectization. As seen in the construction done before, we can choose our almost complex structure $J$ to be generic except on $u$. Consider the moduli space $\M^u$ which corresponds to the connected component of $u$ in the moduli space of curves with the same asymptotic and same relative homology class. All the curves inside this moduli space are nicely embedded, have index two and are transversally cut out. Consider a sequence $(u_n)$ of curves inside this moduli space. Suppose it breaks on $u_\infty$. Consider a breaking orbit $\gamma$. By theorem \ref{t:compactness_nice}, $\gamma$ cannot be a binding orbit as it must be a cover of a hyperolic orbit. Hence it intersects $u$, so a component of $u_\infty$ also intersects $u$ or one of its translates, which is not possible. This implies that $u_\infty$ has a single level which is a nicely embedded curve of index two, hence an element of $\M^u$, which proves that $\M^u/\R$ is a one-dimensional compact manifold, hence a circle. Moreover, the set of points of $\R\times (M\backslash B)$ by which passes a curve of $\M^u$ is open and closed, hence it is $\R\times M\backslash B$. Define the projection: $\pi : M\backslash B\rightarrow \M^u/\R$ that associates to each point the curve the goes through this point. This define an open book, which is isotopic to the initial one. Note that this gives in particular another proof of the result of \cite{wendl_open_2009}. \\
+
+From now on we will consider that there is at least one broken component in the broken book decomposition, hence at least one rigid page. We make a choice of a sector $S$. We denote as $F$ some regular page, and $F_-^0, F_+^0,F_-^1,F_+^1$, the four rigid pages delimiting the sector. These four pages can be lifted as  $u_-^0, u_+^0,u_-^1,u_+^1$, which are $J$-holomorphic curves for some $J\in \J(\alpha)$, with a hyperbolic end $\gamma_b^i$. Denote $A = [F] = [u_-] + [u_+] \in H_2(M,\cup_i\gamma_i)$ where the $\gamma_i$ are the radial binding components, which are also the asymptotic orbits of $F$. \\
+    
+Take $u_-^0$ and $u_+^0$ connected at a broken binding orbit $\gamma_b^0$; the previous part gives us $(u_n)$ index-2 curves such that $[u_n] = A$ and $u_n\rightarrow u_\infty = (u_-^0,u_+^0)$ in the classical SFT-comptactness sense. We know that $u_n$ are embedded curves in the symplectization, and for $n$ large enough, we claim that their image belong to $\R\times S$. Indeed, suppose $n$ is large enough and take $u := u_n$, then we can look at $u  = (a,f)$ in the local hyperbolic model around $\gamma_b$. Denote as $\U_i$ the considered neighborhood. If $\text{Im}(u)\cap (\R\times \U_i) $ is not entirely in $\R\times S$, then by definition of the local model, $u$ has to intersect a lift of a rigid page, which contradicts the previous intersection considerations. Moreover, away from the breaking orbit, $u$ has to stay "on the same side" of a rigid page, again because it cannot intersect it. This proves that $f$ has its image inside $S$. Moreover, by lemma \ref{l:gluing_rigid_pages} that $u$ is nicely embedded hence $f$ is an embedding.\\
+
+Now denote by $\mathcal{M}(A,J)$ the connected component of $u$ in the moduli space of asymptotically cylindrical curves with homology class $A$ modulo translation in the symplectization. This is a one-dimensional manifold by computation of the Fredholm index and regularity of the curves. Let us show that its boundary can be identified with the union of $2$-level buildings : $(u_-^0,u_+^0)\cup(u_-^1,u_+^1)$.\\ 
+
+First note that $\mathcal{M}(A,J)$ has non-empty boundary. If not, we could look at the evaluation map : $$ev : \mathcal{M}_1(A,J)\rightarrow M$$ where $\mathcal{M}_1(A,J)$ is the moduli space of curves in $\mathcal{M}(A,J)$ with one marked point, modulo reparameterization. Notice that this space has compactification that we can write : $\overline{\mathcal{M}_1(A,J)} = \mathcal{M}_1(A,J)\cup (\bigcup\gamma_i)$ where we identified the asymptotic orbits of $u$ with the trivial cylinders covering them. The evaluation map extends trivially on this space, and is smooth with degree one, hence by every point of $M$, we can find a curve in the homology class of $u$ which passes through that point. This is a contradiction because $u$ cannot cross any rigid page by intersection property. Hence $\mathcal{M}(A,J)$ is a connected $1$-manifold with boundary $u_\infty^0\cup u^1_\infty$. By the same intersection argument, any regular curve of $\mathcal{M}(A,J)$ has image inside $\R\times S$.\\
+
+Suppose $v_n$ is a sequence of $\mathcal{M}(A,J)$ converging to $u_\infty$ (meaning $u_\infty^0$ or $u_\infty^1$). By genericity of the almost complex structure away from the rigid pages, we can assume that any somewhere injective curve is Fredholm regular, hence has positive Fredholm index if it is not a trivial cylinder. We know that $v_n$ is a sequence of stable, nicely embedded curves because they are in the same moduli space connected component as $u$. We apply theorem \ref{t:compactness_nice}, which tells us at first that there can be no node in $u_\infty$ (note that there cannot be bubbles either as we are in a symplectization). \\
+
+Now suppose $v_n$ breaks into a $N$-level holomorphic building, which is therefore nicely embedded. Then we claim that the only orbit that can be involved in the intermediate levels is $\gamma_b^0$ or $\gamma_b^1$. Indeed, $v_n$ breaks on orbits in $\overline{S}$, which are all binding components. The previous theorem tells us that the sequence can only break on even Reeb orbits or double covers of odd hyperbolic orbits, however there are no odd hyperbolic orbits in the binding so it can only break on even Reeb orbits. Then because radial binding components are supposed elliptic and odd, we get that the breaking can only happen on $\gamma_b^0$ or $\gamma_b^1$. \\
+
+If we now assume that $(v_n)$ breaks on $\gamma_b^0$, then it cannot break on $\gamma_b^1$ as this would force $u_\infty$ to cross $u$ at some point which would contradict the self-intersection computation (as explained in \cite{wendl_contact_2019}, the intersection product extend to holomorphic buildings, and by proposition $C.6$, $0 = u*u = v_n*u\rightarrow u_\infty*u= 0$, which implies that no level intersects $u$). Hence $(v_n)$ can only break on $\gamma_b^0$. We must show that the limit building is then $(u_-^0,u_+^0)$. First look at the local model around $\gamma_0^b$. If a non-constant component of the limit building were distinct from $u^0_+$ or $u_-^0$, because it has to be in $S$, that means it crosses some curve $u_n$ for $n$ large enough. This is not possible, still by the same properties of the intersection product for holomorphic buildings. Indeed, the limit building has intersection $0$ with $u_n$ by continuity property of the intersection product, and by superadditivity this implies that the intersection product of $u_n$ with all non-trivial components of the building is $0$. Then for multiplicity reasons the only possible limit building is $(u_-^0,u_+^0)$. The exact same reasoning holds if $(v_n)$ breaks on $\gamma_b^1$. \\
+
+Therefore we know that if the sequence $(v_n)$ breaks, it has to be on $\gamma_b^0$ or $\gamma_b^1$ and the limit building has to be $(u_-^0,u_+^0)$ or $(u_-^1,u_+^1)$. Moreover it is easy to see that the $2$ components of $\partial\overline{\mathcal{M}(A,J)}$ cannot be the same (S is divided in $2$ parts by $f$, and each boundary component is in one of these parts so they cannot be the same) from which we deduce that $\partial\overline{\mathcal{M}(A,J)} = (u_-^0,u_+^0)\cup(u_-^1,u_+^1)$. \\
+
+Looking at the moduli space of marked curves again, we get an evaluation map : $ev :\overline{\mathcal{M}_1(A,J)}\rightarrow \overline{S}$ which has degree one (here the degree is defined between compact manifolds with boundary). Hence it is surjective, and any point in $S$ belong in the image of some curve (more precisely to the projection of a 1-parameter family of curves in the symplectization) of $\mathcal{M}(A,J)$. Moreover, 2 such curves are either disjoint or the same, hence exactly one curve passes through every point, and $S\simeq \text{Im}(f)\times ]0,1[$ (and even more : $\overline{S} \simeq \text{Im}(f)\times [0,1]$ topologically, by considering $u_-^0\#u_+^0$ and $u_-^1\#u_+^1$). \\
+
+Now we can apply this construction to all sectors in the manifold. We thus get a finite energy foliation of $M$ as wanted. The last thing that remains to prove is that this foliation is isotopic to the initial broken book decomposition. This is fairly straightforward as we know the Reeb vector field is transverse to both foliations, except maybe in a small neighborhood around the broken binding components in the interpolation model. However, in the latter case we can look at this small neighborhood and we know that the pages and the curves are isotopic by construction, hence we can perturb slightly the Reeb vector field so that it remains transverse to both foliations on this neighborhood. Hence we will assume it is always transverse to the two foliations on a whole sector.\\
+
+Chose some sector $S$, and take some Reeb orbit $\gamma$ which is not an asymptotic orbit of any page in the sector (rigid or regular), with $\text{Im}(\gamma)\subset \overline{S}$, and such that $\gamma(0)$ and $\gamma(1)$ belong to different rigid pages of $\overline{S}$. Denote as $\F$ the foliation of the broken book decomposition, and $\F'$ the foliation induced by the projection of the holomorphic curves. Then define : 
+$$\pi : S \rightarrow [0,1]$$
+
+\noindent by associating to a point $x$ the time $t$ for which $\gamma(t) \in \F_x$ with $\F_x$ the page containing $x$. Because the Reeb vector field is transverse to $\F$, this is well defined and smooth. Consider $h : S \rightarrow \R$ such that $d_x\pi(R_\alpha) = h\partial_t$ with $\partial_t$ corresponding to the $[0,1]$-coordinate. In the same way one can define $\pi'$ and $h'$ associated to $\F '$. Now consider the map :  
+
+\begin{align*}
+    F : \quad  &S\times [0,1]\longrightarrow S\\
+    &(x,s) \longmapsto\phi_{\pi(x)}^{\frac{s}{h}R_\alpha  }\circ\phi^{\frac{1-s}{h'}R_\alpha}_{\pi'(x)}\circ\phi_{\pi(x)}^{-\frac{R_\alpha}{h}}(x)
+\end{align*}
+
+This gives the isotopy we wanted. Because $F$ is the identity on the rigid pages and on the binding orbits, we can compose all the isotopies of the different sectors to get a $\mathcal{C}^0$-isotopy between the projection of the finite energy foliation and the broken book decomposition. This isotopy can be chosen smooth away from the binding orbits up to reparametrizing the previous path $\gamma$, in such a way that $\pi$ and $\pi'$ are "flat" on the rigid pages. 
+\end{proof}
+
+\begin{remark}
+Note that with the terminology of \cite{wendl_strongly_2010}, this finite energy foliation could be neither stable nor asymptotically stable, as  not all curves have index two (otherwise we are in the case of an open book) and some pages may have several ends on the same binding component.
+\end{remark}
+
+\begin{remark}
+By the same computations than in lemma \ref{l:intersection_gluing_others}, we get that for any pair of lifted pages or trivial cylinders over binding orbits $u,v$, potentially equal, we have: $u*v = 0$ except if $u = v = u_\gamma$ with $\gamma$ elliptic, in which case $u*v = -1$.
+\end{remark}
+
+\begin{remark}
+Here again the result is also true in the case of a simple almost complex structure as defined in definition \ref{d:simple_mod}.
+\end{remark}
+
+\end{document}
+

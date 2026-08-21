@@ -1,0 +1,522 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Almost complex structures and lift of rigid pages}\label{p:II}
+
+In this section we build the compatible almost complex structures that we will use in order to lift the pages as a finite energy foliation, and then study the extension of this foliation in the case of a symplectic filling. We start by recalling the standard model for the almost complex structure near the ends with the coordinates built in part \ref{p:I}. We then explain how to suitable almost complex structures away from the ends on rigid pages. We also explain how to extend this construction in dimension $5$, and we give in the last part another model, derived from the so-called \textit{L-simple structures} from \cite{bao_definition_2018}, \cite{bao_semi-global_2023}. This new model will allow to apply the obstruction bundle gluing arguments necessary for the proof of the Weinstein conjecture in part \ref{p:VI}, and will also allow to lighten the hypothesis necessary for the method used in part \ref{p:V}. 
+
+\subsection{Almost complex structures and lift near the ends}
+
+The purpose of these two first subsections is to explain how to choose appropriate almost complex structures around rigid pages so that we can lift them as a translation invariant 1-parameter family in the symplectization. \\
+
+First, in the case of a classic radial model around a binding orbit in an open book, we recall how to construct an suitable almost complex structure, following the construction in \cite{wendl_open_2009}. Let $\gamma$ be the binding orbit, coordinates $(\rho,\phi,\theta)$ around it as before on a neighborhood $\U$ of $\gamma$, and take $\alpha = f(\rho)d\theta + g(\rho)d\phi$. Denote $D = fg' - gf' > 0$ as usual.\\
+
+\begin{definition}\label{d:exact_acs}
+Define a \textit{model almost complex structure} $J$ on $\U$ by the following formula : 
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha = \frac{1}{D}(g'\partial_\theta - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{D}(-g\partial_\theta + f\partial_\phi) 
+    \end{array}
+\right.
+\end{equation}
+As a consequence of this definition, we also have the following relations : 
+\begin{itemize}
+    \item $J\partial_\theta = -f\partial_a - f'\partial_\rho =: -V$                       \inlineitem $J\partial_\phi = -g'\partial_\rho -g\partial_a$
+\end{itemize}
+\end{definition}
+
+\begin{remark}\label{r:BorD1}
+Usually, like in \cite{wendl_open_2009}, the almost complex structure is defined by $J\partial_\rho = \frac{1}{B}(-g\partial_\theta+ f\partial_\phi)$, where $B = B(\rho)$ is a map equivalent to $\rho$ near $0$, and equal to one away from $0$. In fact, we will use this model later in the 5-dimensional case. The reason why we do not use this here is that $D$ is also equivalent to a constant times $\rho$ near $0$, hence the almost complex structure is well-defined, but this expression allow to simplify the formulas for $J\partial_\rho$ and $J\partial_\phi$, which will be necessary in what follows.
+\end{remark}
+
+\begin{remark}
+This model will be valid for positive and negative ends alike, as this only changes the sign of $f'$.
+\end{remark}
+
+Now when one has an almost complex structure of this form, it is possible to lift the ends $\{\phi = Cst\}$ as holomorphic curves in the symplectization. There are two ways to do this. The first one is the method used in \cite{wendl_open_2009}. 
+
+\begin{proposition}\label{prop:lift_methodCReq}
+Ends of pages $\{\phi = \phi_0\}$ can be parametrized by maps $u$ of the form : 
+\begin{align*}
+    u :& \R_+\times \Sp^1\rightarrow \R\times \U \\
+    & (s,t)\mapsto (a(s),\rho(s),0,t)
+\end{align*}
+If $a$ and $\rho$ verify the equations : 
+$$\frac{da}{ds} = f>0\quad\quad\quad \frac{d\rho}{ds} = f'(\rho) < 0$$
+then $u$ is a holomorphic parametrization of these surfaces.
+\end{proposition}
+
+Note that these equations are order $1$ ODEs, hence we can always find solutions.\\
+
+Another way to define a holomorphic parametrization of the ends, which will be more suitable to higher dimension, is to use the flow of the vector field $V$ defined in definition \ref{d:exact_acs}.
+
+\begin{proposition}\label{prop:lift_methodFLOW}
+Define the line $L = (a = a_0,\rho = \rho_0,\phi = \phi_0,\theta\in \Sp^1)$ and consider the surface : $S = (\phi_t^V(L))_{t\in R_+}$. \\Then $S$ is a smooth holomorphic parametrization of the end $\{\phi = \phi_0\}$, and is asymptotic to $\gamma$.\\
+\end{proposition}
+
+
+\begin{remark}\label{r:theta_dependancy}
+Here we see with the two methods what happens if one uses the formula $J\partial_\rho = \frac{1}{B}(-g\partial_\theta + f\partial_\phi)$ as mentioned in remark \ref{r:BorD1}. In the Cauchy-Riemann equations, this leads to : $\frac{d\rho}{ds} = \frac{B}{D} f'$, and the vector fields $V$ becomes : $V = f\partial_a + B\frac{f'}{D}\partial_\rho$. This becomes an issue when working with functions $f,g$ which depends on $\theta$ (which implies that $D$ also depends on $\theta$). In this case, the equations cannot be solved as simply as before, and the flow method cannot be applied as the Lie bracket $[V,\partial_\theta]$ is not $0$ anymore. Note that by taking $B = D$, requiring $\partial_\theta f = 0$ is enough is enough in order to apply the previous methods (as it also implies $\partial_\theta (\partial_\rho f) = 0$ on a fixed page.
+\end{remark}
+
+\begin{remark}
+In both cases, this gives asymptotically cylindrical (open) finite energy curves. The fact that they have finite energy can be seen by applying Stoke's theorem as the curves are topologically asymptotic to $\gamma$ is the completion $\overline{R}\times M$.\\
+It can also be checked by hand that the Hofer energy is finite: 
+take $\varphi : \R\rightarrow ]-1,1[$ strictly increasing and look at :
+
+$$E_\varphi(u) = \int_{\R_+\times \Sp^1}{u^*\omega_\varphi} = \int_{\R_+\times \Sp^1}{\varphi'(a\circ u)e^{\varphi(a\circ u)}u^*(da\wedge \alpha)} + \int_{\R_+\times \Sp^1}{e^{\varphi(a\circ u)}u^*d\alpha}$$
+
+Using the same parametrization of the cylindrical end $(s,t)\in\R_+\times \Sp^1$ as before, we have : $u^*(da\wedge \alpha) = (f\circ u)^2 ds \wedge dt$, and $(f\circ u)^2\leq C < +\infty$ with $C$ some positive constant. Hence the first integral is finite. For the second one, $u^*d\alpha = (\partial_\rho f)^2(\rho(s))ds\wedge dt = (\frac{d\rho}{ds}\partial_\rho f\circ \rho)ds\wedge dt = \partial_s(f\circ \rho)$, and indeed $\displaystyle\int_{R_+}\partial_s(f\circ\rho)ds < + \infty$ as $f\rightarrow 1$ when $\rho \rightarrow 0$ i.e $s\rightarrow +\infty$. This shows the second integral is also finite, and that $E_\varphi(u)$ can be bounded by some constant independent on $\varphi$, which shows that the Hofer energy is finite.
+\end{remark}
+
+Let us now use this model almost complex structure and the local models of part \ref{p:I} in order to lift the ends of our rigid pages. Once again we will do this for both the interpolation and the exact models. Consider a rigid page $P$ with an end (positive or negative) asymptotic to $\gamma$. We denote $P_\infty = P\cap \U$
+
+\begin{lemma}\label{l:lift_ends}
+There exists an almost complex structure $J_\infty$ on $P_\infty$ such that $J_\infty$ is $\alpha'_i$-compatible in the interpolation case, or $\alpha$-compatible in the exact case, and such that there is a lift of $P_\infty$ as a $1$-parameter family of holomorphic curves in the symplectization, whose projection onto $M$ is $P_\infty$. \\
+More precisely, on $P_\infty$, $\alpha$ (or $\alpha'_i$) can be written as $fd\theta + gd\phi$, and the almost complex structure has the same form as in \ref{d:exact_acs}, replacing $f'$ by $\partial_\rho f$.
+\end{lemma}
+
+\begin{proof}
+It suffices to notice that lifting methods used in the previous propositions \ref{prop:lift_methodCReq},\ref{prop:lift_methodFLOW} can still be used in more general setting than the one of definition \ref{d:exact_acs}. Indeed, suppose without loss of generality that the page is $\{\phi = 0\}$. Then we only need the following \textbf{on $P_\infty$ only}:
+\begin{enumerate}
+\item $\partial_\rho\in \xi$, so $\alpha = fd\theta + gd\phi$
+\item $R_\alpha$ is transverse to $P_\infty$.
+\item $d\rho(R_\alpha) = 0$.
+\item $f$ does not depend on $\theta$.
+\end{enumerate}
+
+Conditions $1,2$ and $3$ ensure that the Reeb flow has the right form, and that the asymptotic behavior of $f$ and $g$ are as in lemma \ref{l:localasymptotics}. This implies that we can define the almost complex structure $J$ on $P_\infty$ with the same formulas the in definition \ref{d:exact_acs}, replacing $f'$ by $\partial_\rho f$. The last condition is the only additional constraints one needs in order to apply the lifting methods, as noticed in remark \ref{r:theta_dependancy}. Hence we only need to check that these conditions are verified in the different models defined in part \ref{p:I}.\\
+
+
+Consider first the interpolation model, and the case of a radial binding component. The contact form given by lemma \ref{l:radial_mod} has the form $f(\rho)d\theta + g(\rho) d\phi$ as in the exact model. Hence we can use the exact same definition as in \ref{d:exact_acs} and get the wanted almost complex structure. Note that this also works in the case of a negative radial end as noticed before. Still in the interpolation model, but for a broken component, the contact form given by lemma \ref{l:localmodhyp} had a form which was either $(b +\epsilon(x^2-y^2))d\theta + \rho^2d\phi = f(\rho,\phi)d\theta + g(\rho)d\phi$, or $be^{\epsilon H}(d\theta + \rho^2d\phi) = f(\rho,\phi)d\theta + g(\rho,\phi)d\phi$. There is no dependency in $\theta$, hence we can again define the same almost complex structures as before, replacing $f'$ by $\partial_\rho f$. Notice that on the rigid pages, corresponding to $\phi = 0,\pi,\pm\frac{\pi}{2}$, we have : $f = b + \epsilon \rho^2$ or $f= be^{\epsilon \rho^2}$ and $g = \rho^2$ or $g = be^{\epsilon \rho^2}\rho^2$ so these maps obviously satisfy the same asymptotic estimates than in lemma \ref{l:localasymptotics}.\\
+
+Consider now the exact model. It turns out that all necessary hypotheses were already verified in lemma \ref{l:localmodelnoint}. Hence in the same way we can define a compatible almost complex structure on the ends. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\subsection{Almost complex structures on rigid pages}
+
+
+So far we have explained how to lift the ends of a rigid page. We now lift see how to lift a page away from the binding in a way such that everything can be attached smoothly. In fact, we will prove that we can lift any embedded surface with the right asymptotic behavior. This is expreseed by the following proposition.
+
+\begin{proposition}\label{prop:lift_stein}
+\text{}
+\newline
+Let $(M^3,\alpha)$ be a contact $3$-manifold, and $P$ be a smooth embedded compact surface with boundary, transverse to the Reeb flow on its interior, and with closed non-degenerate simple Reeb orbits as boundary components. \\
+Then there exists $J\in \mathcal{J}(\alpha)$ such that $P$ can be lifted (up to isotopy) to a translation invariant $1$-parameter family of $J$-holomorphic curves in the symplectization. Moreover, we can require that $J\in\mathcal{J}(\alpha)$ is only fixed on $P$, and can be chosen arbitrarily elsewhere.
+\end{proposition}
+
+
+\begin{proof}
+First notice that on any such surface, one can define the model from \ref{l:localmodelnoint}, hence it suffices to consider the case where $P$ is a page of some broken book decomposition (in fact, rigid or not, this does not change anything as we can lift the ends either way and the interior behaves the same).  
+
+Therefore, choose such a rigid page $P$, with boundary components Reeb orbits $\gamma_i$, and associated neighborhoods $\U_i$ such that on $P\cap\U_i$ we have a fixed almost complex structure which lift the ends of $P$. We need to define an almost complex structure on the interior of $P$, and to verify it can be glued smoothly to the one defined before.\\
+
+We will use the notation $\dot{\Sigma} := \Sigma\backslash\Gamma$, where $\Sigma$ is a compact Riemann surface, $\Gamma = \Gamma^+ \cup \Gamma^- = \{z_1^+,... z_r^+\}\cup\{z_1^-,...,z_s^-\}$ a collection of points of $\Sigma$, and $\dot{\Sigma}$ the associated punctured Riemann surface, such that topologically, $\dot\Sigma \simeq P$, and with the puncture in $1-1$ correspondance with the ends of $P$ (with $r$ the number of positive ends and $s$ the number of negative ends). When denoting some puncture $z_i$, we refer to any puncture, positive or negative alike. We also take some initial complex structure $j$ on $\dot \Sigma$.\\
+
+Choose some function $h = (a_0,h_0) : \dot{\Sigma}\rightarrow \R\times M$ such that near each $z_i$, there is a cylindrical neighborhood which $h$ sends in $\R\times \U_i$, and on which $h$ coincides with the lifted holomorphic curve $(a(s),\rho(s),0,\pm t)$ in local coordinates $(\rho,\phi,\theta)$ as constructed before around the binding orbit $\gamma_i$ associated to $z_i$. Extend this local parametrization smoothly outside of $R\times \U_i$, such that $h_0$ is an embedding and $\text{Im}(h_0) = P$. On each $\R\times (P\cap\U_i)$, we built some $\alpha$-compatible almost complex structure, which we can extend as a $\alpha$-compatible almost complex structure $J_0$ on $\R\times P$ (because the fiber bundle of compatible almost complex structures is contractible). Consider the Liouville manifold $(\dot\Sigma,h^*\alpha,h^*d\alpha)$. Note that $h$ is $(j,J_0)$-holomorphic near the punctures, where some vector fields $(\partial_s,\partial_t)$ associated to a set of cylindrical $j$-complex coordinates $(s,t)\in\R_\pm \times \Sp^1$ is sent to $(f\partial_a + (\partial_\rho f)\partial_\rho,\pm\partial_\theta)$ (the signs depend on the positivity of the end). We build an adapted Morse function $\psi$ in the following way : we want $\psi\equiv a$ on the cylindrical ends, and we extend it elsewhere by asking that the vector field $X$ such that $\alpha = \iota_Xd\alpha$ is a pseudo-gradient for $\psi$, which is always possible up to an isotopy of $P$. Indeed, such a vector field generates the caracteristic foliation on $P$, and up to isotopy we can assume the only singularities are saddles and nodes, which are also the possible singularities of a Morse function. Note that $a$ is Morse with pseudo-gradient $X$ near the ends as we have : $-da\circ j = u^*\alpha$ by the Cauchy-Riemann equations, hence is even already a Stein potential near the ends. Hence we get $(\dot\Sigma,h^*\alpha,h^*d\alpha,\psi)$ a Weinstein manifold. We define a new complex structure $j_0$ on $\dot \Sigma$ by keeping $j$ on $h^{-1}(\R\times \U_i)$, and extending it elsewhere as a $u^*d\alpha$-compatible almost complex structure, which is automatically integrable.\\
+
+We now use the existence theorem from \cite{cieliebak_stein_2012} (Theorem 13.8). There exists $h_1:\dot \Sigma \rightarrow \dot\Sigma$ such that $(\dot\Sigma,h_1^*j_0,h_1^*(h^*\alpha),h_1^*(h^*d\alpha),\psi)$ is a Stein manifold, and with $h_1$ preserving the positive and negative ends. We define the following almost complex structure $J$ on $P$ : 
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha \\
+        & J(v - \alpha(v)R_\alpha) = (h_*j_0)v - \alpha((h_*j_0)v)R_\alpha \quad \forall v \in TP
+    \end{array}
+\right.$$
+
+\begin{lemma}\label{l:technical_stein_gluing}{\text{  }}
+
+\noindent This is a well-defined $\alpha$-compatible almost complex structure along $P = (h\circ h_1)(\dot\Sigma)$ which coincides on $\R\times \U_i$ with the previously defined almost complex structure.\\ Moreover, denoting by $\tau_a$ the translation by $a$ in the $\R$-direction, $u := \tau_\psi (h\circ h_1)$ is $(h_1^*j_0,J)$-holomorphic, and coincides with the previous lift of $P$ near the ends. 
+
+\end{lemma}
+
+\begin{proof}
+
+Denote $J_* := (h_*j_0)$.\\
+$J$ is well-defined because $v\mapsto v-\alpha(v)R_\alpha$ is an isomorphism between $TP$ and $\xi$, and $J(J_*v - \alpha(J_*v)R_\alpha) = J_*^2v - \alpha(J_*^2v)R_\alpha$, but $J_*^2 = -Id$ hence $J$ is a well-defined $\alpha$-compatible almost complex structure. Now on $\R\times \U_i$, we have : $$J(\partial_\rho) = J_*\partial_\rho - \alpha(J_*\partial_\rho)R_\alpha - \alpha(\partial_\rho)\partial_a$$ with the definition above. Hence : $$J(\partial_\rho) = J_*\partial_\rho - \frac{1}{D}\alpha(J_*\partial_\rho)(g'\partial_\theta - f'\partial_\phi)$$
+However, we have $$J_* \partial_\rho = J_*(dh(\pm\frac{1}{\partial_\rho f}\partial_s)) = \frac{1}{\partial_\rho f}dh(\pm j_0\partial_s) = \frac{1}{\partial_\rho f}\partial_\theta$$
+Hence :
+$$J(\partial_\rho) = \frac{1}{\partial_\rho f}\partial_\theta - \frac{f}{D\partial_\rho f} (\partial_\rho g \partial_\theta - \partial_\rho f\partial_\phi) = \frac{1}{D}(f\partial_\phi- g\partial_\theta)$$
+which is exactly the same formula than for the structure defined previously on $\U_i$. Hence $J$ is an $\alpha$-compatible almost complex structure well-defined on $P$. \\
+Now, we know that $\psi = a$ on $(h\circ h_1)^{-1}(\R\times \U_i)$, $h_1$ is the identity on $(h\circ h_1)^{-1}(\R\times \U_i)$, and $h$ coincides with the lifted holomorphic curve in the local model defined before. Hence $(\psi,h\circ h_1)$ is a smooth extension of the cylindrical curves defined in the local model. \\
+
+Finally, let us show that the Cauchy-Riemann equations hold in local complex coordinates $(s,t)$ : 
+$$du = (d\psi)\partial_a + d(h\circ h_1)$$
+$$J\circ du(\partial_s) = d\psi(\partial_s)R_\alpha + J_*d(h\circ h_1)(\partial_s) - \alpha(J_*d(h\circ h_1)(\partial_s))R_\alpha - \alpha(d(h\circ h_1)(\partial_s))\partial_a$$
+But :
+$$J_*d(h\circ h_1)(\partial_s) = dh\circ j_0\,\circ dh_1(\partial_s) = d(h\circ h_1)(h_1^*j_0)(\partial_s)$$
+So :
+$$\alpha(J_* d(h\circ h_1)(\partial_s)) = (h\circ h_1)^*\alpha(h_1^*j_0)(\partial_s) = -d\psi\circ (h_1^*j_0)(\partial_t) = d\psi(\partial_s)$$
+by definition of a Stein manifold, and of the complex coordinates $(s,t)$. Hence we have :
+$$J\circ du(\partial_s) = d\psi(\partial_s)R_\alpha + d(h\circ h_1)(\partial_t) -d\psi(\partial_s)R_\alpha + d\psi(\partial_t)\partial_a $$
+
+Now compute :
+$$du\circ j(\partial_s) = du(\partial_t) = d\psi(\partial_t)\partial_a + d(h\circ h_1)(\partial_t) = J\circ du(\partial_s)$$
+which proves that $u$ verifies the Cauchy-Riemann equations.
+
+\end{proof}
+
+This concludes the lifting of a single rigid page $P$. Now we can apply this process to define a $\alpha$-compatible almost complex structure on all rigid pages at the same time, and then extend it (by contractibility of the bundle of compatible almost complex structure) as a smooth structure on the whole space $\R\times M$. The only thing one has to check before extending it is that it is actually smooth on an orbit asymptotic to several rigid pages (e.g a broken binding component). \\
+
+Recall that on a rigid page in a local model, the almost complex structure is given by 
+
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha= \frac{1}{D}(g'\partial_\theta - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{D}(-g\partial_\theta + f\partial_\phi) 
+    \end{array}
+\right.$$
+
+The first equation $J\partial_a = R_\alpha$ is indeed smooth on $\rho = 0$. For the second one, notice that $f$ and $g$ can be extended smoothly on $\U_i$ by writing $\alpha = fd\theta + gd\phi + hd\rho$ on the whole neighborhood ; moreoever $(\rho,\phi,\theta)$ are smooth coordinates on $\U_i$, hence the almost complex structure is smooth at $\rho = 0$ as wanted. \\
+
+The construction presented in this first part gives us a $\alpha$-compatible almost complex structure $J\in\J(\alpha)$, or $J\in \mathcal{J}(\alpha'_i)$, such that the rigid pages (up to isotopy, which does not change the global structure of the broken book decomposition) are lifted to a 1-parameter translation invariant family of $J$-holomorphic curves. 
+
+
+\begin{remark}\label{r:lift_pages}
+\text{}
+\newline
+   1) This proposition can be applied on the rigid pages, either for $\alpha$ directly in the case of the exact model, or for the different contact forms obtained by interpolation, as the construction was made so that the Reeb flow is always transverse to the rigid pages.\\
+    2) Note that in general we have no control on the Fredholm index of the holomorphic curves we construct with this method. This is why in the case of the exact model, we need additional assumptions on the Conley-Zehnder indices of the binding components for $\alpha$, otherwise we have to interpolate to have the right asymptotic behavior for the Reeb flow.\\
+    3) We can also apply this proposition on regular pages. As we will see in the next section, this will give embedded index-2 regular curves. 
+\end{remark}
+    
+\end{proof}
+
+
+\subsection{Generalization in dimension 5}
+
+In this subsection we explain how to generalize the construction done before in the case of a $5$-dimensional contact manifold supported by an open book decomposition. This will allow us to study the $5$-dimensional Weinstein conjecture in part \ref{p:VI}. We will use a model very similar to the one used in dimension $3$. This idea is that one can lift the $4$-dimensional page of a $5$-dimensional open book as asymptotically cylindrical complex surfaces in the symplectization, such that the induced complex structure on these lift is the initial compatible almost complex structure on the Weinstein manifold. In this way, any holomorphic curve living in the initial 4-dimensional Weinstein domain will be lifted to a curve in the $6$-dimensional symplectization. It will also allow us to apply arguments from higher dimensional intersection theory, as in \cite{roux_cas_nodate}, \cite{moreno_holomorphic_2019}. The model that follows is essentially a summary of \cite{wendl_open_2009} and its adaptation in dimension $5$ in \cite{roux_cas_nodate}, part 3.3.\\
+
+Let $(M^5,\xi)$ be a closed $5$-dimensional manifold with contact structure supported by an open book decomposition. We will denote by $\Gamma$ for the binding, $W$ for a page, which corresponds to some Weinstein domain with an exact symplectic form $\omega = d\beta$, and is also a strong symplectic filling of $(\Gamma,\xi_\Gamma)$. We will use coordinates $a,\phi$ for the symplectization direction and the fibration over $\Sp^1$ of the open book respectively. Finally, the monodromy corresponds to the data of an exact symplectomorphism of $(W,\omega = d\beta)$ which we denote by $\Psi$. Consider a neighborhood $\Gamma\times \D^2$ of $\Gamma$ with coordinates $(x,\rho,\phi)$. We denote by $\lambda$ a contact form on $\Gamma$ such that $\xi_{\Gamma} = \Ker(\lambda)$.
+
+\begin{definition}\label{d:SHS_5D}
+We define a stable hamiltonian structure on $M$, $(\alpha_0,\omega_0)$ by the following :
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+     & d\phi \mbox{ for  } \rho\geq 1-\delta\\ 
+     & f\lambda + gd\phi \mbox{ for } \rho \leq 1-\delta 
+    \end{array}
+\right.
+\end{equation}
+where $\delta> 0$ is a small constant, and with $f,g$ verifying similar conditions to those in lemma \ref{l:radial_mod} with the last condition replaced by: 
+\begin{itemize}
+    \item There exists $\eta > 0$ such that: $-\frac{g'(\rho)}{f'(\rho)}\leq \frac{1}{b} + \eta\in \R\backslash \mathbb{Q}$ for $\rho \leq 1-\delta$, with equality for $\rho\leq \frac{2}{3}$.
+    \item For $\rho \geq \frac{2}{3}$, we have: $g(\rho)\geq \frac{2}{3}$ and $f(\rho)\leq \frac{b}{3}$.
+\end{itemize}.
+The taming 2-form $\omega_0$ is defined by: 
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+     & d\alpha_0 \mbox{ for  } \rho\geq 1-\delta'\\ 
+     & d(\tilde f \lambda) \mbox{ for } \rho \in [1-\delta',1+\delta] \\
+     & \epsilon_0\omega \mbox{ for } \rho > 1+\delta
+    \end{array}
+\right.
+\end{equation}
+with $\delta'< \delta$, $\epsilon_0 > 0$ small constants, and $\tilde{f}$ a decreasing map which coincides with $f$ for $\rho \leq 1-\delta'$ and with $\epsilon_0e^{1-\delta - \rho}$ for $\rho \geq 1-\delta$.
+\end{definition}
+
+These new conditions on $f$ and $g$ allow this time to ensure that the orbits in $\Gamma\times \{0\}$ are non-degenerate, and that they have smaller action than the other orbits created by this model, while keeping a control on Conley-Zehnder indices as we will see in part \ref{p:VI}.\\
+
+This stable hamiltonian structure is contact for $\rho \leq 1-\delta $, and will allow us to define easily an almost complex structure such that the holomorphic curves living in the completion $\widehat{W}$ can be lifted to the $6$-dimensional symplectization. Now we need to perturb this stable hamiltonian structure to a contact structure. We will write $\Psi^*\beta = \beta + dF$ by definition of an exact symplectomorphism, and we can require $F$ to be equal to a constant $C$ for $\rho \leq 1+\delta$.
+
+\begin{definition}
+We define a family of perturbations of $(\alpha_0,\omega_0)$ which we denote $(\alpha_\epsilon,\omega_\epsilon)$, such that $\alpha_\epsilon$ is contact for all $\epsilon > 0$. \\
+
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+     & \epsilon[\beta + d(F\phi)] + d\phi \mbox{ for  } \rho\geq 1-\delta\\ 
+     & f_\epsilon\lambda + g_\epsilon d\phi \mbox{ for } \rho \leq 1-\delta 
+    \end{array}
+\right.
+\end{equation}
+where $f_\epsilon = \frac{\epsilon}{\epsilon_0}\tilde{f}(\rho) + (1-\frac{\epsilon}{\epsilon_0})f(\rho)$, $g_\epsilon  = g(\rho ) + \epsilon C \tau(\rho)$, with $\tau$ increasing, being $0$ near $1-\delta''$ and $1$ near $1-\delta '$, $\delta''<\delta'$.
+
+The taming 2-form $\omega_\epsilon$ is defined by: 
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+     &  d\alpha_\epsilon\mbox{ for  } \rho\geq 1-\delta'\\ 
+     & d(\tilde f \lambda) \mbox{ for } \rho \in [1-\delta',1+\delta] \\
+     & \epsilon_0\omega \mbox{ for } \rho > 1+\delta
+    \end{array}
+\right.
+\end{equation}
+
+\end{definition}
+
+Finally, by Giroux-Mohsen correspondance, the contacts structures $\xi_\epsilon = \Ker(\alpha_\epsilon)$ are isotopic to the original one on $M$. \\
+
+Consider an almost complex structure on $\widehat{W}$, which is $\lambda$-compatible near the end, and $\omega$-comatible everywhere. We can define an explicit almost complex structure adapted to $(\alpha_0,\omega_0)$, esentially in the same way as before, which will allow us to lift $J_0$-holomorphic curves as $J$-holomorphic curves in dimension $6$. 
+
+\begin{definition}\label{d:SHS_ACS_5D}
+Let $J$ be the almost complex structure on $M$ defined by : 
+
+For $\rho \geq 1+\delta$ :
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+    & J_{|TW} = J_0   \\
+    & J\partial_a = \partial_\phi
+    \end{array}
+\right.
+\end{equation}
+For $\rho \leq 1+ \delta$ :
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha = \frac{1}{D}(g'R_\lambda - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{B}(-gR_\lambda + f\partial_\phi) \\
+        & J = J_0 \mbox{ on } \xi_\Gamma
+    \end{array}
+\right.
+\end{equation}
+where, as mentioned before, $B$ is such that $B\sim \rho$ near $\rho = 0$, and $B \equiv 1$ away from $\rho = 0$.
+
+\end{definition}
+
+A crucial point of this construction is that, as we did in dimension $3$, we will be able to lift the hypersurfaces $\{\phi = Cst\}$ as holomorphic hypersurfaces in $\R\times M$. Indeed, we have the following, which can be proved using the exact same method as in proposition \ref{prop:lift_methodFLOW}.
+
+\begin{proposition}
+For any $\phi \in [0,1]$, we can construct a 1-parameter family of holomorphic hypersurfaces in $\R\times M$, denoted by $\hat{P_\phi^a}$ in the following way: for $\rho \geq 1+ \delta$, $\hat{P}_\phi^a$ is the page corresponding to $\phi$ and height $a$ in the symplectization. Then extend this using the flow of $V:= f\partial_a + B\frac{f'}{D}\partial_\rho$ on $\hat{P}_\phi^a\cap \{\rho = 1+\delta\}$, where $V = -JR_\lambda$ by definition. 
+\end{proposition}
+
+We sum up in the next proposition the results we will need on these holomorphic hypersurfaces. This is based on \cite{roux_cas_nodate} and \cite{moreno_holomorphic_2019} ; see also \cite{dugast_sutured_2026} for other details.
+
+\begin{proposition}\label{prop: properties_hypersurfaces}
+The family of hypersurfaces $\hat{P_\phi^a}$ verifies the following properties:
+
+\begin{enumerate}
+    \item $(\hat{P}_\phi^a,J_{|\hat{P_\phi^a}})$ is biholomorphic to $(\widehat{W},J_0)$ ; in particular the coordinate of the Liouville flow in $\widehat{W}$ coincides with the coordinate given by the flow of $V$ is the previous construction.
+    \item If $u : \dot \Sigma \rightarrow R\times M$ is an asymptotically cylincrical $J$-holomorphic map, with only \textbf{positive} ends and all asymptotic orbits in $(\Gamma, \lambda)$, then $u$ is entirely contained in a $\hat{P}_\phi^a$ for some $a,\phi$.
+\end{enumerate}
+    
+\end{proposition}
+
+We will use this model in part \ref{p:VI} to prove the Weinstein conjecture in dimension $5$. To complete what we just did, it will also be necessary to have a more explicit description of the Cauchy-Riemann operator associated to $J$-holomorphic curves, and to compute the index of such curves. In the next subsection we adapt this model so that the almost complex structure $J$ takes a \textit{simple} form, which will be important to get a precise asymptotic control on the end of the holomorphic curves we will consider.
+
+\subsection{Simple tamed almost complex structures}\label{subp:simple_acs}
+
+We give in this section a different type of almost complex structure which has a simpler form near the end, which will allow us to control precisely the asymptotic behavior of the lifted rigid pages. This is very close to the notion of $L$-simple almost complex structures used by Bao-Honda \cite{bao_definition_2018},\cite{bao_semi-global_2023} with the same purpose to have simple asymptotic expressions. \\
+
+First we start by changing the local form of the almost complex structure near broken binding components in the 3-dimensional manifold $M$. We recall first the definitions from \cite{bao_definition_2018},\cite{bao_semi-global_2023} that we will need.
+
+\begin{definition}
+An almost complex structure $J$ on $\R\times M$ is $\alpha$-tamed if the following is verified :
+\begin{enumerate}
+    \item $J$ is $\R$-invariant.
+    \item $J\partial_a = h(x)R_\alpha$ where $h$ is a smooth positive function on $M$.
+    \item $J\xi' = \xi'$ for $\xi'$ oriented plane field on which $d\alpha_{|\xi'}$ is symplectic, and $d\alpha(v,Jv) > 0$ for $v\in \xi'$.
+\end{enumerate}
+\end{definition}
+
+The interesting feature of these structures is that one does not need to take $\xi' = \xi$, and can in fact take $\xi'$ to be integrable for instance; while a compactness result still holds for holomorphic curves associated with tame almost complex structures. \\
+One crucial fact that makes these structures convenient to use is the following :
+
+\begin{theorem}(\cite{bao_definition_2018})
+\newline
+Suppose $J$ is $\alpha$-tame. Then the SFT compactness result of \cite{bourgeois_compactness_2003} still holds. 
+\end{theorem}
+
+Now in general the usual theory of moduli spaces of such holomorphic curves may fail because of the lack of control of the asymptotics of such holomorphic curves. Namely, we need the linearized Cauchy-Riemann operator to be asymptotic to an asymptotic operator with "good properties" on the ends. This is solved by Bao and Hoda by introducing the notion of "L-simple" structure, which ensures a sufficiently simple form for the $\overline{\partial}$-operator so that we can compute explicitly the associated asymptotic operators, and still have the desired properties. In fact, in their setup, the Cauchy-Riemann operator becomes linear near the ends, hence one can easily read the asymptotic operator from this. Our five-dimensional setup will be slightly different and not strictly speaking "L-simple", but will be close enough so that the method still works. We start by reviewing explicitly our structure in dimension $3$, which corresponds to a L-simple setting.
+
+\begin{definition}\label{d:simple_mod}
+Consider $\gamma$ an hyperbolic orbit corresponding to a broken binding component. We will only consider the interpolation model here and suppose that $\alpha$ can be written as $(b+ \epsilon (x^2 - y^2))d\theta + \frac{1}{2}(xdy - ydx)$ near $\gamma$, and the rigid pages are $\phi \in \{0,\pi/2,\pi,-\pi/2\}$. Define $J_0$ such that : 
+\begin{equation*}
+\left\{
+\begin{array}{ll}
+    & J_0\partial_a = \partial_\theta - 2\epsilon(y\partial_x + x\partial_y) \\
+    & J_0\partial_x= \partial_y
+\end{array}
+\right.
+\end{equation*}
+\end{definition}
+
+Here we took $h = b$ in order to simplify the notations. We will explain in the proof of proposition \ref{prop:rigid_pages_eigenfunc} how to interpolate between the almost complex structure defined before and this new one on rigid pages, near hyperbolic orbits.
+
+\begin{proposition}
+In such a neighborhood, the Cauchy-Riemann equations are linear, and we can compute explicitly the asymptotic operator $A$, and its eigenvalues and eigenfunctions. In particular, any holomorphic curve with an end at $\gamma$ admits a Fourier expansion in the basis of eigenfunctions for $A$.   
+\end{proposition}
+
+
+\begin{proof}
+Denote by $j_0$ the standard complex structure on $\C$. The Cauchy-Riemann equations in our model become: for $u(s,t) = (a(s,t),\theta(s,t),\eta(s,t))$: 
+\begin{equation*}
+\left\{
+\begin{array}{lll}
+    &\overline{\partial}(a,\theta) = 0 \\
+    & \partial_s\eta + j_0\partial_t\eta + S\eta = 0 \\
+\end{array}
+\right.
+\end{equation*}
+where the first equation allow us to assume that $a = s,\theta = t$ and with :
+$$S = 2\epsilon\begin{pmatrix}
+    -1&0\\
+    0&1
+\end{pmatrix}$$
+Hence the normal linearized Cauchy-Riemann operator near the end is : 
+$$
+\begin{array}{ll}
+D_u^N : &W^{k,p}(N_u) \rightarrow W^{k-1,p}(\overline{Hom}(\dot \Sigma,N_u))\\
+&\eta \mapsto \partial_s\eta + j_0\partial_t\eta + S\eta
+
+\end{array}
+$$
+where we looked at the normal Cauchy-Riemann operator on the generalized normal bundle $N_u$, as we know that regularity of the full linearized Cauchy-Riemann operator is equivalent to the regularity of the linearized Cauchy-Riemann operator. Now this formula tells us that $D_u^N = \partial_s\eta - A\eta$ where $A = -j_0\partial_t - S$ is the asymptotic operator to which $D_u^N$ is asymptotic. \\
+We can actually compute the eigenvalues and eigenfunctions of $A$. We will only be interested in the extremal eigenvalues. A short computation, and taking into account periodic conditions, shows that: $\lambda_{\pm1} = \pm2\epsilon$ and : $f_{1}(t) = (x_0,0)$ and $f_{-1}(t) = (0,y_0)$.
+
+Now we now that our Cauchy-Riemann operator is asymptotic to an explicit asymptotic operator, this is all that is necessary in order to use the usual analysis and show that it is Fredholm, and get the usual regularity results on moduli spaces. Moreover, the Fourier expansion we have for the ends is essentially all that is necessary in order to use Siefring's intersection theory \cite{siefring_intersection_2011}, hence we can make use of this theory as usual even for such models near the ends. See also \cite{zhou_unknottedness_2025}, part 2, for more details on this.
+\end{proof}
+
+\begin{proposition}\label{prop:rigid_pages_eigenfunc}
+If $P$ is a page with an end on an hyperbolic orbit $\gamma$ around which we use a simple tame almost complex structure as defined above, then it is still possible to lift $P$ as a 1-parameter family of holmorphic curves in the symplectization, such that the asymptotic representative of $P$ at $\gamma$ is an extremal eigenfunction of $A$ (i.e associated with the eigenvalues $2\epsilon$ or $-2\epsilon$).
+\end{proposition}
+
+\begin{proof}
+We first have to lift an end near a hyperbolic orbit with a model as defined above \ref{d:simple_mod}, and then to show that the method used in the proof of proposition \ref{prop:lift_stein} in order to extend the lift to the rest of the page still works.\\
+
+Consider a neighborhood $\U$ of $\gamma$ with coordinates, contact form and simple almost complex structure as above. In order to lift the page, it suffices to notice that the Cauchy-Riemann equations in this model are already linear, and that we already exhibited special solutions which corresponds exactly to the rigid pages, namely $f_{\pm 1}$. More precisely, we have that : 
+$$
+\begin{array}{ll}
+u_- : &\R_+ \times \Sp^1\rightarrow \R\times \U\\
+&(s,t)\mapsto (s,t,e^{2\epsilon s}x_0,0)
+
+\end{array}
+$$
+and 
+$$
+\begin{array}{ll}
+u_+: &\R_+ \times \Sp^1\rightarrow \R\times \U\\
+&(s,t)\mapsto (s,t,0,e^{-2\epsilon s}y_0)
+\end{array}
+$$
+are holomorphic parametrization of the rigid negative ends and rigid positive ends respectively, with the choice of page in a pair given by the sign of $x_0$ or $y_0$. Indeed, one can verify directly that $\overline{\partial}u_\pm = 0$, or write for instance for $u_-$ : $u_-(s,t) = \exp_{u_\gamma}(h(s,t))$ where $u_\gamma$ is the trivial cylinder over $\gamma$, the exponential is the Riemannian exponential given by the euclidean metric in the coordinates chosen, and $h$ is an \textit{asymptotic representative} of $u_-$ given by : $h(s,t) = e^{2\epsilon s}(x_0,0)$. Here we recognize $(x_0,0)$ as an eigenfunction for the eigenvalue $-1$ for $A$, and $2\epsilon$ is the asymptotic decay rate of $u_-$. The same is true for $u_+$ which has asymptotic decay rate $-2\epsilon$. Hence the rigid pages are lifted near the ends, and their asymptotic representative are extremal eigenfunctions of $A$ as wanted. In particular, this implies that their Fourier decomposition in the basis of eigenfunctions of $A$ is trivial. \\
+
+In order to lift the rest of the page, we interpolate our simple model almost complex structure with the one defined in lemma \ref{l:lift_ends} on rigid pages. Namely, we want to interpolate $J$ given by : $J \partial_a =R_\alpha, \,J\partial_\rho = \frac{1}{b\rho}(-\frac{\rho^2}{2}\partial_\theta + (b+\epsilon(x^2-y^2))\partial_\phi)$ and $J_0$ given by $J_0\partial_a = bR_\alpha, \,J_0\partial_\rho = \frac{1}{\rho}\partial_\phi $. The constraints on this interpolation is that the almost complex structure must remain $\alpha$-tamed, and the holomorphic lifts of rigid pages must be well-defined. We see first that going from $J\partial_a = R_\alpha$ to $J\partial_a = bR_\alpha$ directly verifies this two conditions. Hence we only need to interpolate from $J\partial_\rho$ to $J_0\partial_\rho$ (this amounts to interpolate between $\xi$ and $\langle\partial_x,\partial_y\rangle$). \\
+In order to do this, notice that if we take $\tau = \tau(\rho)$ which varies from $0$ to $1$ on the interpolation domain as before and $\{J_\tau\}$ the almost complex structures interpolating, then if one has $J_\tau\partial_\rho =  h_1\partial_\phi + h_2\partial_\theta $ and $\alpha = fd\theta + gd\phi$, then $d\alpha(\partial_\rho,J_\tau\partial_\rho) = (\partial_\rho f) h_2 + (\partial_\rho g) h_1$, hence we only need to verify that this quantity is always positive. Moreover, on rigid pages, we have : $\partial_\rho g = \rho$ and $\partial_\rho f = \pm 2\epsilon \rho$ so this condition is actually : $Q :=\pm 2\epsilon \rho h_2 + \rho h_1> 0$ where the sign is corresponds to the sign of the end of the rigid page.\\
+For $J_0$, we have $h_1 = \frac{1}{\rho}$ and $h_2 = 0$ so this is indeed verified, and for $J_1:= J$, we have (on the rigid pages): $h_1 = \frac{b \pm\epsilon\rho^2}{b\rho}$ and $h_2 = \frac{-\rho}{2b}$, so $Q = 1$ is also positive. An easy way to interpolate is then to consider: $h_1^\tau = \frac{1}{\rho} \pm \frac{\epsilon \rho \tau}{b}$ and $h_2^\tau = -\frac{\rho \tau}{2b}$, which gives $Q= 1$ at all time. \\
+                
+We finally remark that during the interpolation, we can still lift the rigid pages. Indeed, after a short computation we see that : $J_\tau \partial_\theta = (-1 \mp \frac{\epsilon \rho^2\tau}{b})\partial_a \mp 2\epsilon \rho\partial_\rho$. This expression implies that we can use the method of proposition \ref{prop:lift_methodFLOW} in order to lift the positive/negative end of rigid pages. It coincides with the lift studied above by continuation principle, as $\partial_\theta$ is in the tangent space of all the curves defined. This proves that we can interpolate the almost complex structure on the pages, hence that we can lift the rigid pages as we wanted.
+\end{proof}
+
+\begin{remark}
+This model also gives us a collection of holomorphic discs corresponding to the coordinates $(x,y)$ for all values of $a$ and $\theta$. This may prove useful in part \ref{p:V} for intersection arguments.
+\end{remark}
+
+Now that we've established the 3-dimensional model, we can use this to get a simple $5$-dimensional model. Consider as before $(M^5,\xi)$ supported by an open book decomposition. In the previous subsection, we defined\ref{d:SHS_ACS_5D} a suitable stable hamiltonian structure $(\alpha_0,\omega_0)$ and a compatible almost complex structure $J$. The purpose here is to simplify this almost complex structure in the setting of simple almost complex structures. We will use coordinates $(x_1,y_1)$ or $(\rho_1,\phi_1)$ for a neighborhood of a binding component $\gamma$ inside $\Gamma$, and coordinates $(x_2,y_2)$ or $(\rho_2,\phi_2)$ for the coordinates of the $5$-dimensional open book. 
+
+\begin{lemma}\label{l:simple_acs_5D}
+We can define an $\alpha_0$-tame almost complex structure $J'$ as follows: for $\rho\geq 1-\delta$, take $J'$ to be $J$. For $\rho \leq 1-\delta'$, with $\delta'> \delta$, take $J'$ to be such that :
+\begin{equation}
+\left\{
+    \begin{array}{ll}
+        & J'\partial_{x_2} = \partial_{y_2} \\
+        & J'_{|\xi_\Gamma} = J_{0|\xi_\Gamma} \\
+        & J'\partial_a = R_\lambda - \frac{f'}{g'}\partial_{\phi_2}
+    \end{array}
+\right.
+\end{equation}
+\\
+Finally, we interpolate on $[1-\delta ',1-\delta]$.
+\end{lemma}
+
+\begin{remark}
+Note that near broken binding components, $J_0$ does \textbf{not} preserve $\xi_{\Gamma}$.
+\end{remark}
+
+\begin{remark}
+The results about tame almost complex structures mentioned before still hold in this context as $(\alpha_0,\omega_0)$ is a contact structure near $\Gamma$. 
+\end{remark}
+
+\begin{remark}
+Near $\Gamma\times \{0\}$, $\alpha_0 = f((1+ Q_1)d\theta + \frac{1}{2}(x_1dy_1 -y_1dx_1)) + gd\phi_2$, with $Q_1$ quadratic. By choosing $g = r^2/2$ near the binding (which can be done up to a few adaptations on the conditions on $f$ and $g$), we can arrange that $\alpha_0 = f(1+Q_1)d\theta + f\beta_1 + \beta_2$ where $\beta_i = \frac{1}{2}(x_idy_i - y_idx_i)$. This does not correspond to the exact definition of a L-simple form, even though we will show in the following computations that everything works the same. 
+\end{remark}
+
+\begin{proof}
+It is straightforward to check that for $\rho \leq 1-\delta'$, $J$ is $\alpha_0$-tamed.\\
+The only thing that remains to be verified is that we can interpolate between $J$ and $J'$. We use the same method we used in dimension $3$. We have : $J\partial_{\rho_2} = \frac{1}{B}(-gR_\lambda + f\partial_\phi)$, and $J'\partial_{\rho_2} = \frac{1}{\rho_2}\partial_{\phi_2}$. \\
+Similar than in the proof of proposition \ref{prop:rigid_pages_eigenfunc}, we have $\alpha_0 = f\lambda + gd\phi$, so $d\alpha(\partial_{\rho_2},J_\tau\partial_{\rho_2}) = f'(\rho_2)h_2 + g'(\rho_2)h_1$ for an interpolating family $\{J_\tau\}$, and $J_\tau \partial_{\rho_2} =  h_1\partial_{\phi_2} + h_2R_\lambda$. For $\rho \geq 1-\delta$, $h_1 = \frac{f}{B}$ and $h_2 = -\frac{g}{B}$, so $ f'(\rho_2)h_2 + g'(\rho_2)h_1 = \frac{D}{B}> 0$. 
+% However, the only conditions we put on $B$ are that it is positive, that $B\equiv 1$ for $\rho_2$ big enough, and $B(\rho_2)\sim \rho_2$ near $0$. Hence we can also ask that $B\equiv D$ for $\rho_2 \in [1-\delta',1-\delta]$, which implies that $f'(\rho_2)h_2 + g'(\rho_2)h_1 = 1$. 
+For $\rho\leq 1-\delta'$, we have : $f'(\rho_2)h_2 + g'(\rho_2)h_1 = \frac{g'(\rho_2)}{\rho_2} > 0$. Now interpolate by taking : $h_1(\rho_2) = \frac{1}{\rho_2} + \frac{f\tau}{B}(\rho_2)$ and $h_2(\rho_2) = -\frac{g\tau}{B}(\rho_2)$ with $\tau(1-\delta') = 0$ and $\tau(1-\delta) = 1$ as usual. We then get : $f'(\rho_2)h_2 + g'(\rho_2)h_1 = \frac{g'(\rho_2)}{\rho_2} + \tau(\rho_2)\frac{D}{B} > 0$. This concludes on the interpolation, and the definition of $J$.
+\end{proof}
+
+\begin{remark}
+We can again define the complex hypersurfaces $\hat{P}_\phi^a$ by the following computation: $J'R_\lambda = -\partial_a -\frac{f'}{g'}\rho_2\partial_{\rho_2}$, which allows to define complex subspaces as $f'$ and $g'$ only depend on $\rho_2$. We will see that the results of \ref{prop: properties_hypersurfaces} remain valid for this new almost complex structure.
+\end{remark}
+
+It remains therefore to study what happens when $\rho_2\rightarrow 0$ for the Cauchy-Riemann equations, namely to establish the properties for asymptotic operators and holomorphic curves similar to what we did in dimension three. Before doing this, we recall that in the setup we defined, if one has an holomorphic curve asymptotic to a broken binding component in $\Gamma$, then it is immersed asymptotically near its end, and its normal bundle can be decomposed as $N_1 \oplus N_2$ with $N_1 = \langle\partial_{x_1},\partial_{y_1}\rangle$ and $N_2 = \langle \partial_{x_2},\partial_{y_2}\rangle$. 
+
+We then have the following proposition, which is analogous to proposition \ref{prop:rigid_pages_eigenfunc}. 
+
+\begin{proposition}\label{prop:simple_asymptotic_5D}
+Consider an end in $\{\rho_2\leq 1-\delta'\}\cap \{\rho_1\leq 1-\delta\}$ where $(\rho_1,\phi_1,\theta)$ correspond to coordinates for a simple model around a broken binding component $\gamma\subset \Gamma\times \{0\}$, with action $b$. Then the Cauchy-Riemann equations for such an end are linear, and the normal Cauchy-Riemann operator is asymptotic to $$A = -j_0\partial_t - \begin{pmatrix}
+-2\epsilon/b&0&0&0\\
+0&2\epsilon/b&0&0\\
+0&0&f'/g'&0\\
+0&0&0&f'/g'
+\end{pmatrix}$$ In particular, the ends of rigid curves in $\Gamma\times \{0\}$ corresponds to extremal eigenfunctions for $A_\gamma$.
+\end{proposition}
+
+\begin{proof}
+We proceed as in proposition \ref{prop:rigid_pages_eigenfunc} and start by rewriting the Cauchy-Riemann equations for an end of the form : $u(s,t) = (a(s,t),\theta(s,t),\eta_1(s,t),\eta_2(s,t))$ where $\eta_1= (x_1,y_1)$ and $\eta_2 = (x_2,y_2)$. Near $\{\rho_2 = 0\}\cap\{\rho_1 = 0\}$, the almost complex structure is:
+\begin{equation*}
+\left\{
+\begin{array}{lll}
+    & J'\partial_{x_i} = \partial_{y_i}\mbox{ i = 1,2}\\
+    & J'\partial_a = \frac{1}{b}\partial_\theta - \frac{2\epsilon}{b}(y_1\partial_{x_1} + x_1\partial_{y_1}) -\frac{f'}{g'}\partial_{\phi_2}
+\end{array}
+\right.
+\end{equation*}
+hence the Cauchy-Riemann equations become: 
+\begin{equation*}
+\left\{
+\begin{array}{lll}
+    &\overline{\partial}(a,b\theta) = 0 \\
+    & \partial_s\eta_1 + j_0\partial_t\eta_1 + S_1\eta_1 = 0 \\
+    &\partial_s\eta_2 + j_0\partial_t\eta_2 + S_2\eta_2 = 0
+\end{array}
+\right.
+\end{equation*}
+with $S_1= \begin{pmatrix}-2\epsilon/b&0\\0&2\epsilon/b\end{pmatrix}$ and $S_2 = \begin{pmatrix}
+f'/g'&0\\0&f'/g'
+\end{pmatrix}$.
+Hence here again we can take $(a,\theta ) = (s,t)$, and the normal Cauchy-Riemann operator is linear, hence $D^N = \begin{pmatrix}
+    D_1&0\\0&D_2
+\end{pmatrix}$
+with $D_i = \partial_s - A_i$, and $A_i = -j_0\partial_t - S_i$. Hence $D^N$ is asymptotic to $A = \begin{pmatrix}
+    S_1&0\\0&S_2
+\end{pmatrix}$. An important point here is that we took $\frac{f'}{g'}$ to be constant for $\rho_2$ small enough, otherwise these equations would not be linear. Recall that we chose: $\frac{f'}{g'} = -\frac{b_0}{1 + \eta b_0}$ for $\rho_2$ small enough, with $\eta$ and $b_0$ small positive constants. In what follows, we will denote $c := -\frac{b_0}{1+\eta b_0}$. We already discussed about the eigenfunctions and eigenvalues of $A_1$, and one could also do this for $A_2$, leading to a Fourier expansion for $\eta_i$, $i = 1,2$. In particular, the largest negative eigenvalue is $c$, and the associated eigenspace is two-dimensional and consist of all constants maps. Now we are interested in the asymptotic of the curves in $\Gamma\times \{0\}$. For the latter, we have that $\eta_2 = 0$, hence by the computations already done in the proof of proposition \ref{prop:rigid_pages_eigenfunc}, we get that negative rigid curves in $\Gamma\times \{0\}$ corresponds to an eigenfunction of $A$, and that a pair of negative rigid curves corresponds to opposite eigenfunctions. 
+\end{proof}
+
+Finally, the following proposition is the counterpart of proposition \ref{prop: properties_hypersurfaces} in the simple case. 
+
+\begin{proposition}
+If $u$ has only positive asymptotic orbits, all inside $\Gamma\times \{0\}$, then $u$ is contained inside a single leaf $\hat{P}_\phi^a$ for some $(a,\phi)$.
+\end{proposition}
+
+\begin{proof}
+This is essentially just a consequence of the method used in \cite{zhou_unknottedness_2025}, part 2, combined with the same reasoning than in \cite{roux_cas_nodate}, of which we give the outline here.\\
+It is essentially based on two observations. First, if $u$ is as above, then we can look at its normal component $u_\perp$ with respect to $H$, which is some page $\hat{P}_\phi^a$. This corresponds to the $\eta_2$ component we defined in the previous proof. Then if $u$ is not contained in $H$ but intersects $H$, then we can define the intersection number $u* H = \delta(u,H) + \delta_\infty(u,H)$ where $\delta$ is the count of intersections, and $\delta_\infty$ is the count of intersections "hidden at infinity". These two counts are non-negative, hence $u$ is either contained in a page, or there is one such that $u*H > 0$. In the latter case, because the intersection product is invariant by homotopy of smooth maps, we can homotope $u$ so that it coincides with a trivial cylinder for $a$ larger than some constant. Hence we have: $u*H = \sum_\gamma u_\gamma*H$ with $u_\gamma$ is the trivial cylinder over $\gamma$, and the sum is over the asymptotic orbits of $u$. Now to compute the intersection product, it suffices to notice that by definition (see definition 2.5 of \cite{zhou_unknottedness_2025}), we have that $u_\gamma*H$ is the count of intersection of $u_\gamma$ pushed in the direction of an eigenfunction for $A_2$ associated with the largest negative eigenvalue, with $H$. However, $A_2$ is elliptic so such an eigenfunction is constant as explained before. Now the constant can be chosen so that the pushed version of $u_\gamma$ does not intersect $H$. This proves that $u_\gamma*H = 0$, hence $u*H = 0$ and this proves that $u$ has its full image inside a single page.  
+\end{proof}
+
+\begin{remark}
+Note that this also proves that the only $J'$-holomorphic curves are the lifted $J_0$ holomorphic curves. Hence if we determine all the curves appearing inside a Weinstein filling of $\Gamma$, we also get all the curves in dimension $6$. This will be one of the purpose of part \ref{p:V}. 
+\end{remark}
+
+This concludes the definitions of the necessary almost complex structures. We are now ready to recollect the full finite energy foliation. 
+
+\end{document}

@@ -1,0 +1,578 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\begin{section}{Spinal open books and broken book decompositions}\label{p:IV}
+
+The purpose of this section is to investigate the connection between spinal open book decompositions\cite{SOBD1},\cite{SOBD2}, and open book decompositions. It turns out that spinal open book decompositions are exactly broken book decompositions whose negative rigid pages are all cylinders, and without negative radial components. With this correspondence at hand, we use methods coming from spinal open books to deduce certain properties for broken book decompositions.
+
+\subsection{Spinal open books}
+
+We start by recalling the basic definitions and properties of spinal open book decompositions from \cite{SOBD1}.
+
+\begin{definition}
+A spinal open book decomposition of $M^3$ is a decomposition $M = M_\Sigma\cup M_P$, the spine and the paper, with the following structure:
+\begin{enumerate}
+    \item  $\pi_\Sigma : M_\Sigma\rightarrow \Sigma$ with connected and oriented fibers, where $\Sigma$ is a compact oriented surface with boundary, disconnected if there is more than one spine component.
+    \item $\pi_P : M_P\rightarrow \Sp^1$, whose fibers have connected components with non-empty boundary, such that $M_P\cap M_\Sigma$ consist of the boundaries of these fibers, which are also fibers of $\pi_\Sigma$.
+\end{enumerate}
+We denote by $\boldsymbol{\pi}$ this data.
+\end{definition}
+
+\begin{definition}\label{d:multiplicity_SOBD}
+The multiplicity $m_\gamma$ of $\pi_P$ at a connected component of $M_P\cap M_\Sigma$ is the degree of the map:
+\begin{equation*}
+\begin{array}{ll}
+\textbf{m}_\gamma : &\gamma\subset\partial\Sigma\rightarrow \Sp^1\\
+&\phi \mapsto \pi_P(\pi_\Sigma^{-1}(\phi))
+\end{array}
+\end{equation*}
+\end{definition}
+This multiplicity counts the number of ends 
+
+\begin{remark}
+We list here the different topological properties that are verified by open book decompositions, rational open book decomposition, spinal open book decompositions and broken book decompositions. We do not yet identify spinal open books with a subclass of broken book decompositions, hence the differences.
+\begin{center}
+   \begin{tabular}{| c | c | c | c | c | }
+     \hline
+     &OBD & ROBD & SOBD & BBD \\ \hline
+Spine  & Discs & Discs & Compact surface & Undefined\\ \hline
+Ends     & Positive & Positive & Positive & Positive or negative\\   \hline
+Fibration &&&Yes (fibers may&\\over the circle & Yes & Yes & be disconnected) &  No \\ \hline
+All pages&&&&\\have the same topology & Yes & Yes & No &  No \\ \hline
+Several ends&&&&\\on the same boundary comp.& No & Yes & Yes &  Yes \\ \hline
+Several ends&&&&\\on different boundary comp.&&&&\\of the same spine comp.& No & No & Yes &  - \\ \hline
+Multiplicity&&&&\\for a single end & No & Yes & No &  No \\ \hline
+
+   \end{tabular}
+\end{center}
+The three last rows correspond to three different notions of multiplicity that can be counted for ends of pages. The multiplicity of the previous definition corresponds to the first one (it counts the number of ends of a given page on the same boundary component of a given spine component).
+\end{remark}
+
+\begin{definition}
+Let $\bpi$ be a spinal open book on $M$. A contact form $\alpha$ is supported by $\bpi$ if:
+\begin{enumerate}
+    \item $d\alpha$ is positive on the interior of the pages.
+    \item $R_\alpha$ is positively tangent to the fibers of $\pi_\Sigma : M_\Sigma\rightarrow \Sigma$
+\end{enumerate}
+A contact structure $\xi$ is supported by $\bpi$ if there exists a contact form supported by $\bpi$.
+\end{definition}
+
+\begin{proposition}\label{prop:contact_structure_SOBD}
+Given a spinal open book $\bpi$ on $M$, there exists contact form supported by $\bpi$. Moreover, two contact structures supported by $\bpi$ are isotopic.
+\end{proposition}
+
+Adaptations of the proof of the previous proposition will be used in the next part to show similar results on broken book decompositions. It can be found in \cite{SOBD1}, part 2.3.\\
+
+We will use the following coordinates: near the boundary of $\Sigma$, we have coordinates $(s,\phi)$, we parametrize a neighborhood of the boundary of $M_\Sigma$ by coordinates $(s,\phi,\theta)$, and a neighborhood of the boundary of $M_P$ by $(\phi,t,\theta)$. Here, $\phi$ corresponds to the coordinate defined by the fibration $\pi_P$ and $\theta$ corresponds to the circle coordinate after identifying $M_\Sigma$ with $\Sigma\times \Sp^1$.\\
+
+Moreover, we define another region $M_I$ as a neighborhood of $\partial M_\Sigma$ in $M_\Sigma$ and $M_P$.
+We also give here an explicit formula for a contact form supported by $\bpi$.
+
+\begin{definition}\label{d:contact_form_SOBD}
+\text{}\\
+Let:
+\begin{itemize}
+    \item $H:\Sigma\rightarrow \R_+$ is a smooth map, Morse outside of $\partial\Sigma$, and near $\partial\Sigma$, $H$ depends only on $s$, with $\partial_s H <0 $ except in a smaller neighborhood where it vanishes. We also ask that $H$ has only index $1$ and $2$ critical points. We lift it on $M_\Sigma$ by taking it constant along the fibers of $\pi_\Sigma$.
+    \item $\sigma$ is a Liouville form on $\Sigma$ which is $me^sd\phi$ near the boundary, where $m$ is the multiplicity defined in $\ref{d:multiplicity_SOBD}$. Moreover, we can ask that $\sigma = d(\frac{1}{H})\circ j = $ away from the boundary, where $j$ is a complex structure on $\Sigma$ (see remark \ref{r:liouville_form} below)
+    \item $F_+ = F(\rho) +\epsilon H(F(\rho),\cdot)$, $G_+(\rho) = G(\rho) + \epsilon H(F(\rho),\cdot)$ where $F,G$ are interpolating maps verifying certain conditions, see \cite{SOBD2}, 3.1.
+    \item $\lambda$ is a $1$-form on $M_P$ such that $d\lambda$ is positive on the fibers of $\pi_P$, and is $e^td\theta$ near the boundary.
+    \item $K$ is a constant large enough.
+\end{itemize}
+Then we define the following contact form: 
+\begin{equation*}\label{eq:contact_SOBD}
+\alpha = \left\{\begin{array}{lll}
+     &e^{\epsilon H}(\sigma+\frac{1}{K}d\theta)  \mbox{ on } M_\Sigma \\
+     &me^{F_+(\rho)}d\phi + \frac{1}{K}e^{G_+(\rho)}d\theta \mbox{ on } M_I  \\
+     &d\pi_P + \frac{1}{K}\lambda \mbox{ on } M_p  
+\end{array}\right.
+\end{equation*}
+\end{definition}
+
+\begin{remark}\label{r:liouville_form}
+As stated above, we can choose $\sigma = -d\varphi \circ j$, with $\varphi$ a subharmonic potential on $\Sigma$ which coincides with $\frac{1}{H}$ away from $\partial\Sigma$, and is equal to $e^s$ near the boundary. $j$ is a complex structure which is defined near the boundary by: $j\partial_s = \frac{1}{m}\partial_\phi$. In order to find such a potential, start with a hamiltonian $H$ as before, with the constraint that it is equal to $e^{-s}$ near the boundary, before going to zero. Then post-compose it with a sufficiently convex function (see \cite{Latschev_2011}, lemma 4.1 for example). Note that this construction does not change the gradient flow lines of $H$, nor its critical points. 
+\end{remark}
+
+\subsection{Correspondence and topological simplifications}
+
+In this section we explain how spinal open books can be identified with broken book decompositions whose negative rigid pages are all cylinders. We use this to derive a simplification result for the topological structure of broken book decompositions. A broken book will be called \textit{simple} if all the regular pages only have positive ends, and all negative rigid pages are cylinders.
+
+\begin{definition}\label{d:spinal_to_BBD}
+Let $\boldsymbol{\pi}$ be a spinal open book on $M$. Take a Hamiltonian $H$ as in definition \ref{d:contact_form_SOBD}. \\
+Then one can extend the pages of $M_P$ inside $M_\Sigma$ by gluing it with the product of the fibers of $\pi_\Sigma$ times the gradient flow lines of $H$. \\
+The resulting foliation is a simple broken book decomposition, which we will denote by $B_H(\bpi)$. 
+\end{definition}
+
+This result comes from the fact that pages of a broken book around a broken binding component behaves like the gradient flow line of a Morse function around an index-1 critical point, after taking the product with $\Sp^1$. Moreover, the negative rigid curves obtained that way are all cylinders as they are entirely contained inside the spine, and consist only of gradient flow lines by the condition on the critical point of $H$, hence the broken book is balanced. 
+
+\begin{lemma}\label{l:spinal_to_BBD_contact}
+Let $\bpi$ be a spinal open book decomposition of $M$, and $H$ as in the previous definition. If $\xi $ is supported by $\bpi$, then up to isotopy, it is supported by $B_H(\pi)$.
+\end{lemma}
+
+\begin{proof}
+First note that the notion of supported contact structure for a spinal open book as defined in \cite{SOBD1} differs a bit from definition in the case of a broken book. Suppose $\xi$ is supported by the spinal open book. Then by uniqueness, one can choose any hamiltonian $H$ as in definition \ref{d:spinal_to_BBD} and assume that $\xi$ is defined by a contact form defined by the formulas :
+
+
+
+It suffices to verify that the Reeb flow of this contact form is supported by the broken book decomposition, and by definition one just needs to check this on $M_\Sigma$ and $M_I$. On $M_\Sigma$ the Reeb flow is : $R_\alpha = e^{\epsilon\hat{H} }(1+\epsilon\sigma(X_H)K\partial_\theta - \epsilon X_H)$ where $\epsilon$ is small and $X_H$ is the Hamiltonian vector field for $H$ with respect to the area form $d\sigma$ on $\Sigma$. Now this is indeed positively transverse to the pages of the broken book, or tangent to the binding : if $X_H = 0$, $R_\alpha$ is parallel to $\partial_\theta$ and thus follows a binding orbit, and if $X_H \neq 0$, by definition $X_H$ is in a direction transverse to the one defined by the gradient flow line and the $\Sp^1$-coordinate, by definition of a Hamiltonian vector field. It is positively transverse because the induced area form is $dH\wedge d\theta$ on the page, and any page in this domain is positively asymptotic to a Reeb orbit induced by an index-2 critical point ; hence the natural orientation of the page is also $dH\wedge d\theta$. On $M_I$, the Reeb flow is collinear to: $$-\frac{1}{m}e^{-F_+(\rho)}G'_+(\rho)\partial_\phi + Ke^{-G_+(\rho)}F'_+(\rho)\partial_\theta$$
+Moreover, we have: $G_+'(\rho) = G'(\rho) +\epsilon F'(\rho)\partial_sH$, $G'\leq 0$, $F'\geq 0$, $\partial_s H\leq 0$, and we can ask that $G'$ and $F'\partial_sH$ never vanish at the same time. This proves that $d\phi(R_\alpha)$ is always positive, so $R_\alpha$ is positively transverse to the pages on $M_I$.
+\end{proof}
+
+\color{red}
+In the following, we may need the following assumption: "on negative rigid pages which are cylinders, the characteristic foliation is trivial". This corresponds more or less to the condition $\alpha(\partial_\theta)>0$ in the definition of a Giroux form for a SOBD in \cite{SOBD1}, in section 2.3. Our condition is hopefully sufficient (?), one question is is it necessary ? i.e could one find another "exotic" contact structures supported by the broken book decomposition, with a different characteristic foliation on simple rigid pages? One could try first to work this out in the case of (simple) spinal open books, where the definition of Giroux form is relaxed, hence not allowing the uniqueness proof to work. It would be interesting to find another \textbf{tight} contact structure supported by the spinal/broken book.
+\color{black}
+
+\begin{lemma}\label{l:contact_BBD_to_SOBD}
+Let $\boldsymbol{\pi}$ be a spinal open book on $M^3$. Let $\alpha$ be a contact form such that $R_\alpha$ is supported by a broken book as defined above for a certain choice of hamiltonian $H$ as before. Then $\xi = \Ker(\alpha)$ is supported by $\boldsymbol{\pi}$. 
+\end{lemma}
+
+\begin{proof}
+The proof follows roughly the method from \cite{SOBD1}, lemma 2.8, used to prove the uniqueness of the contact structure supported by a spinal open book. \\
+Take $\alpha$ a contact form as above, and take $\alpha_0$ a Giroux form for the spinal open book decomposition. In particular, $R_{\alpha_0} = \partial_\theta$ on $M_\Sigma$. Moreover, one can arrange that $\alpha(\partial_\theta) >0$. Indeed, this is true near binding components, and around the rigid negative pages, the \color{red}characteristic foliation looks like straight lines going from one end of a cylinder to the other/ the caracteristic foliation can always be chosen to have no singularity A VERIFIER\color{black}. Now taking $\partial_\theta$ always transverse to this foliation ensures that the condition is verified. \\
+Take $j$ and $\sigma$ on $\Sigma$ as in definition \ref{d:contact_form_SOBD}, with $\sigma = -d\varphi\circ j $ and $\varphi = -H$ away from $\partial \Sigma$. \\
+Define $$\beta =
+\left\{\begin{array}{ll}
+&\sigma \,\,\,\;\;\;\mbox{   on  } M_\Sigma\\
+&Gd\phi \mbox{ on } M_P
+\end{array}\right.$$
+where $G$ is a interpolation map which is non-decreasing and goes from $e^\rho$ to $2$ on $M_I$ (see part 2.3 of \cite{SOBD1}).
+
+Let $\gamma = \alpha + K\beta$ and $\gamma_0 = \alpha_0 + K\beta$. Then $\gamma$ and $\gamma_0$ are contact forms. Indeed, we have $\gamma\wedge d\gamma = \alpha\wedge d\alpha + K(\alpha\wedge d\beta + \beta\wedge d\alpha)$ hence it suffices to show that $\alpha\wedge d\beta + \beta \wedge d\alpha $ is non-negative. This is the case for the following reasons :
+\begin{itemize}
+    \item On $M_P$, $\beta = 2d\phi$ and $d\phi\wedge d\alpha > 0$, and $d\phi\wedge d\alpha_0> 0$ by definition of being supported by a SOBD/BBD.
+    \item On $M_I$, $\beta = G(\rho)d\phi$ and $\alpha\wedge d\beta = G'(\rho)\alpha\wedge d\rho\wedge d\phi > 0$ because $\alpha(\partial_\theta)> 0$. The same is true for $\alpha_0$. We also have $\beta\wedge d\alpha > 0$ and $\beta\wedge d\alpha_0$ for the same reason as above.
+    \item On $M_\Sigma$, $\alpha_0\wedge d\beta>0$ and $\alpha\wedge d\beta> 0$ for the same reason. Moreover, $\beta\wedge d\alpha_0 = 0$ because $\beta(R_{\alpha_0}) = \beta(\partial_\theta) = 0$. Finally, $\beta\wedge d\alpha > 0$. Indeed, on the interior of $M_\Sigma$, we can write: $ H^2\beta(R_\alpha) = dH\circ j(R_\alpha) = d\sigma(X_H,-jR_\alpha) = d\sigma(\nabla H ,(-j)(-j)R_\alpha)) = d\sigma(\nabla H,-R_\alpha) > 0$ because $R_\alpha$ is positively transverse to the pages of the broken book.
+\end{itemize}
+
+Now consider $\eta_t = t\gamma + (1-t)\gamma_0$. Denote $\alpha_t = t\alpha + (1-t)\alpha_0$. Then $\eta_t = \alpha_t + K\beta$ so : $d\eta_t = d\alpha_t + Kd\beta$, and : $\eta_t \wedge d\eta_t = \alpha_t\wedge d\alpha_t + K(\alpha_t\wedge d\beta + \beta \wedge d\alpha_t)$. Finally, we have that $(\alpha_t\wedge d\beta + \beta \wedge d\alpha_t)>0$ everywhere, by the arguments given above. Hence we get an homotopy of contact structures, thus Gray's theorem allows us to conclude.
+
+\end{proof}
+To obtain the inverse process, we define some structure than we will be useful later on, and can be seen as a generalization of the spine in the case of broken book decompositions. 
+
+\begin{definition}
+Let $(\K,\F)$ be a BBD. The \textit{generalized spine}, denoted $M_-$, is a thickened compact neighbourhood of the union of the negative pages and binding components. In particular, it is taken in a way such that it is diffeomorphic to $\Sigma\times [-1,1]$ around each negative page $\Sigma$, contains a (smooth) tubular neighbourhood of each boundary component, and the neighbourhood around two different pages which have common ends glue smoothly around this end. \\
+A \textit{generalized spine component} is defined by taking only certain pairs of negative pages or binding components. It is \textit{maximal} if it is a connected component of the generalized spine. \\
+A BBD is said to be \textit{simple} if the generalized spine is $\Sp^1\times \Sigma$ where $\Sigma$ is some compact orientable surface with boundary, or equivalently if all negative rigid pages are cylinders. Similarly, a generalized spine component is simple if all the negative rigid pages it contains are cylinders. 
+\end{definition}
+
+In particular, if the broken book is just a classical open book decomposition, then $M_-$ is just a union of tubular neighbourhood of the binding components, hence a union of $\Sp^1\times \D^2$.
+
+\begin{lemma}
+    Let $(\K,\F)$ be a simple broken book decomposition. Then there exists a spinal open book decomposition $\bpi$, whose spine contains all negative rigid pages, and such that $B_H(\bpi) = (\K,\F)$ for some map $H$ as before. \\In particular, there exists a unique contact structure supported by this broken book.
+\end{lemma}
+
+\begin{proof}
+This simply follows that in this case, the generalized spine $M_-$ turns out to be an actual spine. To see this, identify $M_-$ with $[-1,1]_\phi\times [-1,1]_\rho\times \Sp^1_\theta$ around each negative page, and with $\D^2\times \Sp^1_\theta$ where $\D^2$ has coordinates $(\rho,\phi)$, and such that the coordinates $(\rho,\theta,\phi)$ defined in that way glue smoothly. Then consider the distribution spanned by : $\langle \partial_\phi,\partial_\rho\rangle $ outside of the binding orbits. This is integrable, and if we integrate it, and complete it with the binding orbits, it gives us a surface $\Sigma$ with boundary. Note that it has no corners as all the ends of negative curves are on binding orbits. Now we can identify $M_-$ with $\Sigma\times \Sp^1_\theta$. This corresponds to $M_\Sigma$ for spinal open books. Finally, notice that the regular pages outside of $M_-$ intersect $\partial M_-$ on a union of tori, foliated by circles which can be chosen to follow $\partial_\theta$, which therefore gives us a spinal open book decomposition $\bpi$ on $M = M_\Sigma\cup M_P$. \\
+Now choose a hamiltonian on $\Sigma$ such that $H$ has index $2$ critical points on regular binding components, and index $1$ critical points at broken binding components, and such that the gradient flow lines of $H$ follow the foliation given by the pages. This gives us that $B_H(\bpi)$ is the initial broken book decomposition we started from. Hence by the previous lemmas, 
+\end{proof}
+
+\begin{remark}
+    The surface $\Sigma$ obtained with this construction is obtained by adding 1-handles between disks. Hence any compact surface with non-empty boundary can be obtained this way. Moreover, it can be described using a graph, and this graph is planar if and only if the surface is planar. Note that it is a disk if and only if the graph has no cycle. Finally, the topological type of the compact surfaces $\Sigma$ obtained in that way is uniquely determined, as if $\Sigma$ and $\Sigma'$ are two compact surfaces with the same number of boundary components, $\Sigma\times \Sp^1\simeq \Sigma'\times \Sp^1$ if and only if $\Sigma\simeq \Sigma'$.
+\end{remark}
+
+Finally, we give a little result on the structure of broken books which allow for cancellation moves, in order to simplify the structure of a given broken book decomposition.
+
+\begin{proposition}\label{p:simplification_BBD}
+Let $(\K,\F)$ be a broken book decomposition supporting a contact structure $\xi$. Take $S\simeq \Sigma\times \Sp^1_\theta$ to be a simple generalized spine component. Take a hamiltonian $H: \Sigma\rightarrow \R_ +$ as in definition \ref{d:contact_form_SOBD}. We can define a new broken book decomposition $(\K',\F')$ using $H$. Then up to isotopy, $(\K',\F')$ supports $\xi$ 
+\end{proposition}
+
+\begin{proof}
+Choose a hamiltonian $H_0 : \Sigma\rightarrow \R_+$ such that $(\K,\F)$ is defined by this hamiltonian (i.e the pages are gradient flow lines of $H_0$). Let $\alpha_0$ be a contact form supported by $(\K,\F)$, with $\Ker(\alpha_0) = \xi$. We define a contact form $\alpha$ supported by $(\K',\F')$ by using the same construction as in definition \ref{d:contact_form_SOBD}, and interpolating with $\alpha_0$. Namely, we can define $\alpha$ on $S$ so that near $\partial S$, it has the form: $md\phi + \frac{1}{K}e^{-\rho}d\theta$. We want to interpolate with $\alpha_0$. In order to do this, it suffices to notice that the proof of lemma \ref{l:radial_mod} can be adapted in our setting. \color{red}More precisely, we choose the coordinates $(\rho,\phi,\theta)$ near $\partial S$ so that: $\alpha(\partial_\rho) = 0,\, \alpha(\partial_\phi) > 0, \, \alpha(\partial_\theta)> 0,\, d\theta(R_\alpha) > 0,\,d\phi(R_\alpha) > 0$.  \color{black} This allows to interpolate: in these coordinates, we can write our contact form as $\alpha_0 = f(\rho) d\theta + g(\rho) d\phi$, with $f,g$ positive and respectively decreasing/increasing, and then extend $f$ and $g$ so that we can interpolate with $\alpha$. Note that $\alpha$ can be chosen to have value: $ad\phi + be^{-\rho}d\theta$, with $a$ small enough, and $b$ large enough, so that we can interpolate. We now need to show that the contact structures defined by $\alpha$ and $\alpha_0$ are isotopic. The proof of this relies on a variation of the standard Gray's stability theorem. Take $\delta$ so that for $\rho\geq \delta$, $\alpha = \alpha_0$, and so that $d\phi$ is well-defined on $M_P$ for $\rho \leq \delta$ (recall that if we go too far from the simple generalized spinal component, the coordinate $\phi$ will stop being well-defined if there is a negative rigid page which is not a cylinder, which is why this proof differs a bit from the previous ones). Now for $\rho\leq \delta$ (and inside the generalized spine component), we can isotope both contact structures, using the same method as in the proof of lemma \ref{l:contact_BBD_to_SOBD}. However, this isotopy do not extend to all of $\rho\geq \delta$ as we use the form $d\phi$ in the definition of $\beta$. \\
+
+Starting of the standard proof of Gray's theorem using the Moser trick, see \cite{geiges_introduction_nodate} theorem 2.2.2 for example, we find a suitable time-dependant vector field $X_t$ whose flow will give us the desired isotopy. On $M_\Sigma\cup M_I$, we can find it using the standard method as we have a homotopy of contact structures. Now consider some area $\delta\leq \rho\leq \delta' $ on which we have $\alpha_0 = f(\rho,\phi,\theta)d\theta + g(\rho,\phi,\theta)d\phi$, and $\alpha = \alpha_0$. Then we can compute explicitly the vector field $X_t$ induced by the homotopy on $\rho\leq \delta$: the homotopy is: $\alpha + h(t)d\phi$ where $h:[-1,1]\rightarrow \R_+$ is an even function, increasing on $[-1,-\frac{1}{2}]$ and constant on $[-\frac{1}{2},0]$ (equal to some constant $K$ large enough as before). Hence the derivative $\dot\alpha_t$ is given by: $\dot\alpha_t = h'(t)d\phi$. We have the following defining equation for $X_t\in\xi$: $\forall Y \in \xi, d\alpha_t(X_t,Y) = -\dot\alpha_t(Y) = -h'(t)d\phi(Y)$. Moreover, $\xi$ is spanned by $\partial_\rho$ and $v = -g\partial_\theta + f\partial_\phi$, so a short computation gives: $X_t = -\frac{h'f}{D}\partial_\rho$ where $D = f\partial_\rho g-g\partial_\rho f$ as before. So we can smoothly extend $h$ as $\overline{h}(\rho,t)$ on $\delta'\leq \rho\leq \delta''$ such that: $\overline{h}(\rho,\cdot)$ is even for all $\rho$, and has the same monotonicity properties than $h$; $\overline{h}(\delta',t) = h(t)$ and  $\overline{h}(\delta'',t) = 0$. Then extend $X_t$ using this $\overline{h}$. Now let $\Psi_t$ be the flow at time $t$ of $\{X_t\}$. We verify that we have: $T\Psi_1(\xi_0) = \xi$. For $\rho \leq \delta'$, this is a consequence of the construction of $X_t$ from the homotopy $\{\alpha_t\}$. For $\rho\geq \delta'$, it is a consequence of the parity of $h$, as $\Psi_1$ is in fact equal to the identity if $|h'(t)f/D|$ is small enough. This can be arranged up to multiplying the contact form by a small constant: indeed, in the proof of lemma \ref{l:contact_BBD_to_SOBD}, we want $\alpha_t\wedge d\alpha_t + K(\alpha_t\wedge d\beta + \beta\wedge d\alpha_t)$ to be positive for $K$ large enough. Hence taking $\epsilon \alpha$ instead of $\alpha$ allows to take $\epsilon ^2 K$ instead of $K$, so: $|h'(t) f/D|$ becomes: $|(\epsilon^2h')(\epsilon f)/(\epsilon^2 D)| = |\epsilon h'f/D|$, which can therefore be made as small as we want. This implies the desired contactomorphism, and concludes the proof.
+
+\end{proof}
+
+\begin{remark}
+One specific application is the following: suppose there is a pair of negative rigid pages which have the same negative end, and whose positive ends are different. Then we can simplify the broken book decomposition so that instead of the broken component and the two radial component, there is a single radial component and no rigid page (see figure \ref{}).\\
+More generally, given a compact surface with non-empty boundary, one can always find a "minimal" Morse function with a single index 2 critical point, and exactly $2g + l-1$ index $1$ critical points, where $g$ is the genus and $l$ the number of boundary components. This allows to simplify any broken book with a simple generalized spine component, by reducing the number of negative rigid pages in this component to $4g + 2l-2$.
+\end{remark}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Completely connected broken books}
+
+In this subsection, using again the methods coming from spinal open book decompositions, we establish some results on the existence and uniqueness of a contact structure supported by a given broken book. Recall that a in a broken book decomposition, a "sector" is a connected component of the open subset of $M$ foliated by regular pages; it can be parametrized by $[0,1]\times F$ where $F$ is a regular page inside the sector.
+
+\begin{definition}
+Let $(K,\F)$ be a broken book on a closed oriented smooth $3$-manifold $M$. Recall K is divided in two subsets $K_r\cup K_b$ corresponding to radial and broken binding components. 
+
+\begin{itemize}
+    \item A broken book is said to be \textit{completely connected} if the following condition is verified: for any sector $S$, surface $F$ with the same topological type than the pages of the sector, and homology classes $\alpha,\beta \in H_1(F)$ corresponding to breaking orbits at both ends of the sector, then $\alpha\cdot \beta = 0$.
+
+    \item We denote by $M^N$ the union of the closure of negative rigid pages, and  $M^\#  = M\backslash M^N$. A connected component of $M^\#$ is foliated by pages, some of them rigid positive, whose topology can change. However, we can define a smooth surjective submersion : $\pi : M^\# \rightarrow \Sp^1$ such that the levelsets of $\pi$ are exactly the pages. Note that this is a priori not a fibration as it is not proper (hence allowing the pages to change of topology). Now take $(M_1,\pi_1),(M_2,\pi_2)$ two connected components of $M^\#$. Suppose there exists some radial binding component $\gamma$ such that $\gamma$ is in the closure of both $M_1$ and $M_2$ in $M$. Then by definition of a radial binding orbit, there exists a tubular neighborhood of it and coordinates $(\rho,\phi,\theta)$ such that the pages are given by $\{\phi =Cst\}$. Now look at $d\pi_i(\partial_\phi),\,i  = 1,2$. If both have the same sign, we will say that $\pi_1$ and $\pi_2$ are \textbf{compatible at $\gamma$}. We will say that a broken book is \textbf{oriented} if for $M_1,...,M_r$ the connected components of $M^\#$, there exists a choice of $\pi_i, \, i = 1,...,r$ such that for all $i\neq j$ and $\gamma \in \overline{M_i}\cap\overline{M_j}\cap K_r$, $\pi_i$ and $\pi_j$ are compatible at $\gamma$.
+    
+\end{itemize}
+\end{definition}
+
+
+\begin{remark}
+    If the broken book supports an actual contact structure, it is indeed oriented, with the transverse orientation on each sector given by the Reeb flow. 
+\end{remark}
+
+Before actually building the contact and SHS structures, we start by defining coordinates around binding orbits which will be useful later. Take an oriented broken book on $M$, and let $\gamma$ be a radial binding orbit. We identify a tubular neighbourhood of $\gamma$ as $\psi(\D^2\times \Sp^1_\theta)$ with $\D^2$ the unit disc, and $\psi$ and embedding, such that the $\partial_\theta$ associated to the $\Sp^1$-coordinate is tangent to the pages and to the binding orbit. Define coordinates $\rho \in[-1,1]$ and $\phi \in \Sp^1$ near the boundary, such that $\partial_\rho$ is tangent to the pages and $\partial_\phi$ is transverse to the pages, with a direction compatible with the chosen orientation of the broken book. Define $M_r$ to be the smaller neighbourhood composed of points with $\rho\leq 0$ (extending this coordinate up to the binding), and define $M^I_r = \{-1\leq \rho\leq 1,\phi\in \Sp^1\}$ the boundary annulus.
+
+Now take a broken binding orbit $\gamma$. Define $\Sigma$ to be a hyperbolic octagon corresponding to a Morse chart around an index $1$ critical point of a Morse function (see picture below). This can be described as the set of points : $\{(x,y)\in\R^2 |-1\leq  x^2-y^2\leq 1 \text{ and  } |xy|\leq \cosh(1)\sinh(1)\}$ Now a neighbourhood of $\gamma$ can be described as $\psi(\Sigma\times \Sp^1_\theta)$ with $\psi$ a smooth embedding, in such a way that $\partial_\theta$ is tangent to the pages and to the binding orbit, and the intersection of page with a section $\{\theta = Cst\}$ is either empty, or it consists of a gradient flow line for the function $x^2- y^2$ (this is possible by definition of a broken binding component in an broken book decomposition). Now we can identify $\Sigma$ with a pair of pants with one negative boundary component and two positive in the following way : identify the sides of $\Sigma$ corresponding to $\{x^2-y^2 = -1\}$ and identify both corners of each side $\{x^2- y^2 = 1\}$. Finally, glue the corresponding "oblique sides" so that they become preferred paths linking the three boundary components (see picture below). Now, away from a smaller octagon $\{(x,y)\in \R^2 \,|\, -\epsilon\leq x^2- y^2 \leq \epsilon\text{ and } |xy|\leq \epsilon\cosh(1)\sinh(1)\}$, we can define coordinates $(\rho,\phi,\theta)$ such that : $\partial_\rho$ is tangent to the oblique boundary components, transverse to the others, and tangent to the pages, and $\partial_\phi$ is transverse to the oblique boundary components and to the pages, and is tangent to the vertical and horizontal boundary components. Namely, define the coordinates on some open set of the pair of pant defined before by noticing that on this subset, we can put coordinates $(\rho,\phi)$ where $\rho$ is the height and $\phi$ the angular coordinate as on a cylinder. Finally, we ask that $\rho$ is $-1$ on the vertical boundary, and $1$ on the horizontal boundary. 
+
+
+\color{red}{ A REFAIRE Define $M_b$ to be the union of the subsets $\{(x,y)\in \R^2 \,|\, -\frac{9}{16}\leq x^2- y^2 \leq \frac{9}{16}\text{ and } |xy|\leq \frac{9}{16}\cosh(1)\sinh(1)\}$ for all broken binding components in the BBD. We also define $M^I_b$ to be the union of all the collars $ \psi(\Sigma\times [0,1])\backslash \{(x,y)\in \R^2 \,|\, -\frac{1}{4}\leq x^2- y^2 \leq \frac{1}{4}\text{ and } |xy|\leq \frac{1}{4}\cosh(1)\sinh(1)\}$ for all broken binding orbits.}\\
+\color{black}
+
+Finally, define $M_0$ as $M\backslash{(M_r\cup M_b)}$ and $M^I = M^I_r\cup M^I_b$.
+
+
+\begin{lemma}
+Let $M^3$ be a closed oriented smooth manifold and $(K,\F)$ be an oriented broken book on $M$. Then there exists a vector field $X$ on $M_0$ which coincides with $\partial_\phi$ in $M^I$, and such that the flow of $X$ sends any oblique side of a octagon neighbourhood of a broken binding orbit to another oblique side associated to another broken binding orbit (possibly the same one). In particular, the trajectories of the flow of $X$ are either defined on $\R$ or on a bounded interval.
+\end{lemma}
+
+
+\begin{proof}
+The main idea is a that there is a finite number of homotopy classes of embedded dividing loops on pages, and a finite subset of these that are "associated" to broken binding orbits. Let us clarify this a bit. On each rigid pages $P_i$, there exist a finite number of homotopy classes of loops which are separating curves. For each of these except of the homotopy class corresponding to the boundary component associated to the broken component, choose a representative $\gamma_{i,j}$, and a small tubular neighbourhood $\mathcal{U}_{i,j}\simeq \gamma_{i,j}(\Sp^1)\times[0,1]$. Now consider a sector $S$. The orientation gives a pair of rigid pages at the "back end" of the sector $(P_1,P_2)$ and a pair of rigid pages at the "front end", $(P_3,P_4)$. We have $O_1$ and $O_2$ the $2$ "oblique sides" of the octagonal neighbourhoods around the broken binding components, which are contained in the sector $S$. Consider $\pi_S :S \rightarrow [0,1]$ the associated projection. Now consider a vector field $X$ defined on $S\cap M_0$, which coincides with $\partial_\phi$ inside $M^I$, verifies : $d\pi_S(X) = 1$. Moreover, we ask the it sends any neighbourhood $\mathcal{U}_{i,j}$, $i = 1,2$ on either a neighbourhood $\mathcal{U}_{k,l}$, $k = 3,4$ or on $O_2$. We also ask that $O_1$ is also sent on the neighbourhood corresponding to its homotopy class as a loop contained in a regular page. Now apply this construction to each sector. This is possible by the orientation assumption, and also asking that the vector field $X$ constructed in that way is smooth on rigid pages, which is possible up to choosing well the projection $\pi$ at each sector. \\
+Now take any oblique side $O$, and look at where it is sent by the flow of $X$. If we assume it never reaches another oblique side, then it crosses an infinite number of times some rigid page $P$. But there is only a finite number of neighbourhood on such a page on which it can be sent by construction, hence it has to pass twice through the same neighbourhood $\mathcal{U}_{i,j}$. This implies that it is periodic, which is not possible as we assumed it never comes back to an oblique side. Hence all oblique sides are sent on another oblique side, and for any orbit of $X$, it is either periodic hence defined on $\R$, or it ends at an oblique side at some point, which means it is defined on an interval of $\R$ which is bounded at $\pm \infty$.
+
+
+
+
+\end{proof}
+
+\color{red}
+Now denote as $H$ the union of the octagonal neighbourhoods and of the image of the sides by the flow of $X$. On $H\backslash M_b$ there are coordinates $(\rho,\phi,\theta)$ which are well defined. Define $M_H$ as $\{\rho\leq \}\subset H$, $M^I _H = \{\rho \leq \}\subset H$, and $M^H_0 = M_0\backslash M_H$. We obviously have : $M_b\subset M_H$, $M_b^I\subset M_H^I$ and $M_0^H\subset M_0$.
+\color{black}
+
+\begin{lemma}
+Let $M^3$ be a closed oriented smooth manifold and $(K,\F)$ be an oriented broken book on $M$.
+Chose $M_1\sqcup ...\sqcup M_r = M^\#$ to be the connected components of $M^\#$, and $\{\pi_i\}_i$ compatible associated projections onto $\Sp^1$, which exist by the orientation assumption, and are compatible with the vector $X$ constructed before, i.e $d\pi _i(X) = 1$.\\
+Then there exists a $1$ form $\lambda$ on $M_0^H$ and a constant $K> 0$ such that $\alpha = d\pi_i + \frac{1}{K}\lambda$ is a contact form on $M_0$, which also verifies the following boundary conditions : $$\alpha = d\phi + \frac{1}{K}e^{-\rho}d\theta\,\,\,\;\;\;\text{ on } M^I\cap M_0^H$$
+\end{lemma}
+
+
+\begin{proof}
+
+First notice that even though the projections $\{\pi_i\}$ may not glue well, the $1$-forms $\{d\pi_i\}$ glue as a global $1$-form on $M_0$, which we will denote $\Pi$.\\
+Notice that the connected components of $M_0^H$ are actually of the form $\dot \Sigma \times \Sp^1$, where $\dot \Sigma$ is a compact surface with boundary. Moreover, this identification is given by taking any piece of page $P^0$ which is contained inside a connected component $T$ of $M_0^H$, and taking : \begin{align*}\Psi : &\R \times \dot \Sigma \rightarrow T\\
+&(t,x) \mapsto \phi_t^X(\varphi(x)) \end{align*} where $\varphi$ is any identification of $\dot\Sigma$ with $P^0$. Note that by the hypotheses made on $X$, the flow sends a page on another page. Moreover, notice that the coordinates $(\rho,\phi,\theta)$ are preserved by the flow of $X$ on $M^I$ as $X$ coincides with $\partial_\phi$ on this domain.\\
+Now choose a Liouville form on $P^0$ which verifies the right boundary conditions, namely it is $e^{-\rho}d\theta$ on $M^I$. Extend this form as a $1$ form $\lambda$ on $T$ by pushing it forward with the flow of $X$, and by interpolation when it comes back to the initial page, as for classic open books (the set of Liouville forms with such fixed boundary conditions is convex). Note that this form also verifies the boundary conditions on each page because the coordinates are preserved by the flow of $X$. \\
+Taking $K$ large enough, the form $\alpha = \Pi + \frac{1}{K}\lambda$ is a contact form. Moreover, $\Pi$ is $d\phi$ in $M^I$, hence the normal form of $\alpha$ in $M^I$. 
+
+\end{proof}
+
+We can now show the following :
+
+\begin{lemma}
+Let $M^3$ be a closed oriented smooth manifold and $(K,\F)$ be an oriented broken book on $M$, such that rigid pages have at most one end asymptotic to a broken binding component. Then there exists a contact form $\alpha$ and a stable hamiltonian structure $(\Lambda,d\alpha)$ such that $R_\Lambda$ is supported by the broken book (up to isotopy).
+\end{lemma}
+
+\begin{proof}
+
+We consider Morse functions $H_r : \D^2 \rightarrow \R$ and $H_b : \Sigma_{0,3}\rightarrow \R$ where $\Sigma_{0,3}$ is the 3-punctured sphere, i.e a pair-of-pants.  We impose the following conditions : 
+$H_r$ must have a single index $2$ critical point, and in a neighbourhood of the boundary it must be at first strictly decreasing and then evenly equal to $0$ in a smaller neighbourhood (roughly take $-(x^2 + y^2)$ and extend it with a maps going flatly to $0$). $H_b$ has a single index $1$ critical point, and must be such that it is constant on the boundary equal to $\pm 1$, and equal to $\rho$ away from a small neighbourhood of the critical point which we defined as $\{(x,y)\in \R^2 \,|\, -\epsilon\leq x^2- y^2 \leq \epsilon\text{ and } |xy|\leq \epsilon\cosh(1)\sinh(1)\}$ in the octagon with the identification described before. Note that we can ask $H_r$ and $H_b$ to be $\phi-$invariant where the coordinate is well-defined. \\
+
+Moreover, take Liouville forms $\sigma_r$ and $\sigma_b$ on $\D^2$ and $\Sigma_{0,3}$ such that $\sigma_r$ is $e^{\rho}d\phi$ near the boundary and $\sigma_b$ is $e^{\rho}d\phi$ in the same open set than the one described above (note that both Liouville forms can be described using subharmonic potentials $\psi_r$ and $\psi_b$ and a complex structure $j_r$ and $j_b$ and : $\sigma_{r,b} = -d\psi_{r,b}\circ j_{r,b}$). This will be useful later on to define compatible compatible almost complex structures. \\
+
+Define "interpolation maps": $F,G,\beta,F_{r,b},G_{r,b}$ with the following conditions (cf \cite{SOBD2}) :
+
+
+
+
+
+With these maps, we can define $\hat{H}_{r,b}$ as : $\hat{H}_{r,b}(x,\theta) = H_{r,b}(x)$ away from $M^I\cup M_0$ and $\hat H_{r,b}(\rho,\phi,\theta) = H(F(\rho),\phi)$ inside $M^I$.
+
+Finally, define the following $1$-forms :
+
+$$\Lambda = 
+\left\{
+    \begin{array}{lll}
+    & \Pi &\mbox{ on } \tilde M_0\\
+    & e^{\epsilon \hat H_{r,b}}(\sigma_{r,b} + \frac{1}{K}d\theta)&\mbox{ on } M_r\cup \tilde M_b\\
+    &  e^{F_{r,b}(\rho)}d\phi + \frac{1}{K}e^{G_{r,b}(\rho)}\beta(G_{r,b}(\rho))d\theta &\mbox{ on } \tilde M^I\\
+    \end{array}
+\right.$$
+
+Now take $\alpha_0$ to be the contact one form on $M_0$ given by the previous lemma. We extend it to $M$ by the following formulas : 
+$$\alpha = 
+\left\{
+    \begin{array}{lll}
+      & \alpha_0 &\mbox{ on } \tilde M_0\\
+      &\Lambda &\mbox{ on }  M_r\cup \tilde M_b \\
+      & e^{F_{r,b}(\rho)}d\phi + \frac{1}{K}e^{G_{r,b}(\rho)}d\theta &\mbox{ on } \tilde M^I\\
+    \end{array}
+\right.$$
+
+Because of the boundary conditions on the different Liouville forms used, these formulas define global $1$-forms on $M$. Moreover, even though the $1$-form $\Pi$ may not be exact any more, it is still closed, hence we have a SHS on $\tilde M_0$. On $M_r\cup \tilde M_b$, both forms are contact forms by the same arguments that for $\alpha_0$, and because adding a small hamiltonian perturbation does not change that. Finally, it remains to check that it is a SHS or a contact form on $\tilde M^I$. Around radial binding components, the computation is the same than in \cite{SOBD2} hence the result. Even though it is very similar around $\tilde M_b$, let us detail a little bit what happens. The difference with the radial case is the fact the $\tilde  H_b$ is not $0$ near the boundary. In fact, it is equal to $\rho$ in $M^I$. We must check that $\alpha \wedge d\alpha $ is a volume form, that $\text{Ker}(d\alpha)\subset \text{Ker}(d\Lambda)$ and that $\Lambda\wedge d\alpha > 0$. For the first one, it amounts to noticing that $\partial_\rho F_b - \partial_\rho G_b> 0$. However, this is true for $\partial_\rho F - \partial_\rho G$, hence up to choosing $\epsilon$ small enough, the same holds for the perturbed version. The same reasoning holds for $\Lambda\wedge d\alpha$. Now, in order to show that $\text{Ker}(d\alpha)\subset \text{Ker}(d\Lambda)$, it suffices to notice that because $F_b = F +  H_b(F,\cdot )$, if $\partial_\rho F = 0$, then $\partial_\rho F_b = 0$, independently of the choice of $H_b$. This is the only ingredient necessary to conclude by construction of $\beta, F$ and $G$.\\
+
+\end{proof}
+
+The following lemma follows from a straightforward computation :
+
+\begin{lemma}
+The Reeb vector field $R_\Lambda$ for $(\Lambda,d\alpha)$ is given by : 
+$$R_\Lambda = \left\{
+\begin{array}{lll}
+&X \mbox{ on } \tilde M_0 \\
+&\displaystyle{\frac{1}{\beta(G_{r,b})F'_{r,b} - G'_{r,b}}(-e^{F_{r,b}(\rho)}G'_{r,b}(\rho)\partial_\phi + K e^{-G_{r,b}(\rho)}F'_{r,b}(\rho)\partial_\theta) }\mbox{ on } \tilde M^I\\
+& \displaystyle{e^{-\epsilon \hat H_{r,b}}( (1+\epsilon \sigma(X_{H_{r,b}}))K\partial_\theta - \epsilon X_{H_{r,b}})} \mbox{ on }  M_r\cup \tilde M_b\\
+
+\end{array}\right.$$
+
+with $X_{H_{r,b}}$ the hamiltonian vector field on $\Sigma_{0,3}$ given by $d\sigma_b$ and $H_b$.
+\end{lemma}
+
+\begin{proof}
+The proof is exactly the same than in \cite{SOBD2}, part 3.5, despite the slight changes in $\tilde M_b$.
+\end{proof}
+
+Note that up to rescaling it is the same Reeb vector field than for $(\alpha,d\alpha)$.\\
+
+
+We point out that the radial binding components of the BBD are elliptic closed Reeb orbits for $R_\Lambda$, and broken binding components are hyperbolic orbits. Moreover, we actually built this vector field by fixing the stable and unstable manifolds associated to these hyperbolic orbits. The following lemma is a straightforward consequence of the formulas for $R_\Lambda$. 
+
+\begin{lemma}
+The Reeb vector field along the stable and unstable manifolds associated to a broken binding component is given by :
+$e^{-\epsilon \rho_0}(1+\epsilon )$
+
+Hence these submanifolds have tangent space generated by $\partial_\theta$ and $X$.    
+\end{lemma}
+
+
+Hence for any oriented broken book decomposition, we are able to build a contact structure supported by this broken book, with a Giroux form having the property that the stable and unstable manifolds associated to broken binding components form complete connections (see \cite{colin_existence_2022}). We will see in the following that up to isotopy, there is only one such contact structure supported by a given oriented BBD. Let us finally note the following fact which will be useful for a later purpose :
+
+\begin{lemma}
+Let $X$ and $Y$ be $2$ vector fields satisfying the same conditions, namely they coincide with $\partial_\phi$, create only "connections" between broken binding components, and verify $d\pi_i(X) = d\pi'_i(Y) = 1$ for some families of projections $\{pi_i\}$ and $\{\pi_i'\}$ associated to the different oriented sectors. Then the contact structures built with the method above using $X$ and $Y$ are isotopic. 
+\end{lemma}
+
+\begin{proof}
+Consider the vector field $Z_t = tX + (1-t)Y$ for $t\in[0,1]$. Then $Z_t$ also verifies all the conditions : it is $\partial_\phi$ in $M^I$, creates only connections and : $(t\Pi + (1-t)\Pi')(Z_t) = 1$. Hence we obtain a family of contact forms $\alpha_t$, with associated contact structures $\xi_t$. Hence by Gray theorem, $\xi_0$ and $\xi_1$ are isotopic, which is the result we wanted.
+\end{proof}
+
+In this section we focus on the uniqueness of the contact structure supported by a broken book, and in the interpolation of a given contact form in order to have a normal form near the binding. We will denote by $(K,\mathcal{F})$ the considered BBD, and $\xi_0$ the contact structure constructed in the previous part supported by $(K,\mathcal{F})$. 
+
+\begin{lemma}
+Suppose $\xi$ is a contact structure supported by $(K,\F)$. Suppose also that it admits a Giroux form $\alpha$ such that the stable and unstable manifolds associated to broken components of $K$ form only connections. Then $\xi$ is isotopic to $\xi_0$.
+\end{lemma}
+
+\begin{remark}
+Note that we did not specify which vector field was used in order to build $\xi_0$, which is not important as we showed that all the different contact structures obtained in that way were isotopic. In fact, the beginning of the following proof starts by fixing such a contact structure. 
+\end{remark}
+
+\begin{proof}
+This is essentially the same proof as in \cite{SOBD1}, part 2.3.\\
+
+Consider $\alpha_0$ the Giroux form defined in the previous part, such that $\text{Ker}(\alpha_0) = \xi_0$, where the stable and unstable manifolds of $\alpha_0$ starting and ending at broken binding components are chosen so that they coincide with those of $\alpha$. Let us precise this a little bit : choose projections $\{\pi_i\}$ for each sectors, an associated vector field $X$ which is tangent to the stable and unstable manifolds of $R_\alpha$, is positively transverse to the pages and verify $\Pi(X) = 1$ where $\Pi$ is defined as before. Note that here the orientation of the broken book is given by the flow of $R_\alpha$. Choose small enough neighbourhoods of the binding components and of the stable and unstable manifolds as before, with coordinates $(\rho,\phi,\theta)$ chosen as in the first part, namely $\partial_\rho$ and $\partial_\theta$ are tangent to the pages, $\partial_\phi$ is positively transverse, and $\partial_\theta$ is tangent to the binding components. We can moreover choose the coordinate $\theta$ such that $\alpha(\partial_\theta)>0$ everywhere where it is defined. This is direct in $M_r\cup M_b$ up to choosing sufficiently small neighbourhoods because it is follows the Reeb vector field on the binding, and on the stable and unstable manifolds, it suffices to chose $\theta$ such that $\partial_\theta$ is always transverse to the characteristic foliation on the stable and unstable manifolds, and then to choose a small enough neighbourhood for $M^I$.  Define $g = g(\rho): [0,1[\rightarrow [0,2]$ such that $g(\rho) = e^\rho$ near $0$, $g'(\rho)\geq 0$ for all $\rho$, and $g(\rho) = 2$ for $\rho\geq \delta$, with $\delta> 0$ fixed. Define $G : \tilde M_0 \rightarrow [0,2] $ to be $g$ on $\tilde M^I$ and $2$ elsewhere. Define :
+
+$$\beta = \left\{\begin{array}{lll} 
+&\sigma_{b,r} \mbox{ on } \tilde M_b\cup M_r\\
+& G  \Pi \mbox{  elsewhere}
+\end{array}\right.$$
+
+\begin{lemma}
+The forms $\alpha + K\beta$ and $\alpha_0 + K\beta$ are contact forms for $K\in \R_+$.
+\end{lemma}
+
+\begin{proof}
+Consider first $\gamma = \alpha + K\beta$. Compute : 
+$$d\gamma = d\alpha + Kd\beta$$
+$$\gamma\wedge d\gamma = \alpha\wedge d\alpha + K(\beta \wedge d\alpha + \alpha\wedge d\beta)$$
+Note that the term $\beta\wedge d\beta$ cancels out as $\Pi$ is closed and coincides with $d\phi$ when this coordinate is defined. Hence it suffices to show that $(\beta \wedge d\alpha + \alpha\wedge d\beta)$ is non-negative in order to conclude.\\
+
+First, inside $\tilde M_b\cup M_r$, since $\alpha(\partial_\theta)> 0$, we have $\alpha\wedge d\beta > 0$. Moreover, $d\phi(R_\alpha)> 0$ everywhere where it is defined : indeed, the tangent space of the pages is spanned by $\{\partial_\rho,\partial_\theta\}$, and the Reeb flow is positively transverse to the pages hence $d\phi(R_\alpha)>0$. Hence we have : $d\rho(-j_{r,b}R_\alpha)> 0$ and thus $-d\varphi_{r,b}\circ j_{r,b}(R_\alpha)\geq 0$ everywhere by definition, which amounts to $\sigma_{r,b}(R_\alpha)>0$, and therefore $\beta\wedge d\alpha>0$. \\
+
+Now on $\tilde M_0$, we have that $\beta = \Pi$ is closed, and $\beta\wedge d\alpha$ is positive by construction of $\Pi$ with a vector field $X$ positively transverse to the pages. \\
+
+On $M^I$, we have $\beta = G\Pi$, hence $\beta\wedge d\alpha$ is still non-negative ;  moreover, $\alpha\wedge d\beta = G'(\rho)\alpha\wedge d\rho\wedge \Pi = g'(\rho)\alpha\wedge d\rho\wedge d\phi$. We know that $\alpha(\partial_\theta) > 0$ and $g'>0$ which concludes. \\
+
+The same reasoning applies to $\alpha_0$, with an extra simplification as $d\alpha_0(\partial_\theta,\cdot) = 0$ inside $\tilde M_b\cup M_r$.
+\end{proof}
+
+Finally, it remains to show that for $K$ large enough, $t(\alpha + K\beta) + (1-t) (\alpha_0 + K\beta)$ is a linear interpolation by contact forms of the two contact forms.\\
+
+Write $\eta_t := t(\alpha + K\beta) + (1-t) (\alpha_0 + K\beta)$ and $\gamma_t = t\alpha + (1-t)\alpha_0$. Then $d\eta_t = d\gamma_t +Kd\beta$, and $\eta_t\wedge d\eta_t = \gamma_t\wedge d\gamma_t + K(\gamma_t\wedge d\beta + \beta\wedge d\gamma_t)$. It suffices to show that $(\gamma_t\wedge d\beta +\beta\wedge d\gamma_t)> 0$ in order to conclude. However, this follows directly from the arguments in the proof of the previous lemma, by noticing that with the same notations either $\beta\wedge d\alpha$ or $\alpha\wedge d\beta$ is in fact strictly positive. Hence for $K $ large enough, $\eta_t$ is a contact form for all $t$.\\
+
+This concludes the uniqueness statement as we now have that $\xi$ and $\xi_0$ are homotopic, hence isotopic by Gray's stability theorem.
+
+\end{proof}
+
+\begin{remark}
+Note that it is a priori not true that any 2 contact structures satisfying the previous hypotheses are isotopic. Indeed, it may also depend on the orientation induced on the broken book ; it becomes true if we fix the orientation induced on the rigid pages.
+\end{remark}
+
+
+\begin{remark}
+Following the exact same method as in \cite{SOBD2} part $3$ and $4$, one can use the stable hamiltonian structure defined above to construct an explicit almost complex structure, and explicit lifts of the pages. This gives yet another proof of theorem \ref{t:théorème_1} in the case of an oriented completely connected broken book.
+\end{remark}
+
+% We now show that it is possible to interpolate a given contact form with the right properties with the local model defined in the first part. Using the method used in the first part, this gives yet another proof of the fact one can lift pages of the broken book as a finite energy foliation. 
+
+% \begin{lemma}
+% Let $\xi = \text{Ker}(\alpha)$ be as in the previous lemma. Then there exists a contact form $\alpha'$ supported by $(K,\F)$ such that $\alpha'$ coincides with $\alpha$ on $M_0$, and coincides with $\alpha_0$ inside $\tilde M_b\cup M_r$. In particular, $\alpha'$ defines a contact structure isotopic to $\xi$.
+% \end{lemma}
+
+
+% \begin{proof}
+
+% The proof mainly consists of writing down the good interpolation between $\alpha$ and $\alpha_0$ near binding components or $H$. 
+
+% \color{red}
+% Le seul argument important est l'existence d'un bon champ $\partial_\phi$ tel que $\alpha(\partial_\phi)>0$. Cela nécessite potentiellement des contraintes sur l'indice de Conley-Zehnder du flot de Reeb afin de bien pouvoir définir des coordonnées, et des théorèmes du type Hartman-Grobman ou KAM pour avoir une forme locale du flot de Reeb. A priori ça a l'air de bien marcher mais il faut revoir ça en détail après avoir révisé la 1ère partie. + CF a few remarks on symplectic fillings Eliashberg
+% \color{black}
+
+
+% \end{proof}
+
+
+% \subsection{Compatible complex structure}
+
+% In this section we write down an explicit almost complex structure which allows to lift the pages of the broken book as a finite energy foliation. This therefore concludes the alternative proof that any "good" planar broken book can be lifted as a finite energy foliation. This again is for the most part a simple generalization of \cite{SOBD2}. \\
+
+% We will consider the Stable Hamiltonian Structure $(\Lambda, d\alpha)$ defined in the first part as the plane field is tangent to the pages in $M_0$.\\
+
+% Denote $\xi := \Ker(\Lambda)$. In order to define a $(\Lambda,\Omega)$-compatible almost complex structure, it is sufficient to define it on $\xi$ as a $d\alpha$-compatible almost complex structure. In order to do this, we use the local models defined before. First, on $M_P$, $\xi$ is tangent to the pages, hence we can choose $J_0$ a compatible almost complex structure such that $J_0\partial_\rho = -\partial_\theta$ in $M_P\cap \tilde M_I$ if it is a "positive end" or $J\partial\rho = \partial_\theta$ if it is a "negative end". That is, if $\partial_\rho$ is going toward the interior of $M_P$, we consider it as a positive end, and if it is going outward, it corresponds to a negative end. Note that near $H$, a single page has $2$ ends, one positive and one negative, which we will now link. \\
+% On $\tilde M_{r,b}$, consider the complex structures $j_{r,b}$ defined on $\D^2$ and $\Sigma_{0,3}$. On $M_{r,b}$, we have an isomorphism $\xi \rightarrow T\Sigma$ given by the projection onto $\Sigma$, as $\xi$ is always transverse to $\partial_\theta$. Hence we can define $J_{|\xi}$ to be the pull-back of $j_{r,b}$ by this isomorphism. Moreover, near $H$, we can ask that $j_b$ verifies : $j_b\partial_\rho = \partial_\phi$. On $H\cap \tilde M_b$, $\Lambda$ takes the form $e^{(1+\epsilon)\rho}d\phi + \frac{1}{K}e^{\epsilon \rho}d\theta$, hence the plane field is generated by $\{\partial_\rho, \frac{1}{K}e^{\epsilon \rho}\partial_\phi - e^{(1+\epsilon)\rho} \partial_\theta\}$. Hence we can just impose the condition that $j_b$ verifies $j_b\partial_\rho = \partial_\phi$ near the boundary, and extend the previous definition by : $J\partial_\rho = e^{\epsilon \rho}\partial_\phi - Ke^{(1+\epsilon)\rho}\partial_\theta$.\\
+% Finally, on $M_I$, $\xi$ is spanned by : $\{\partial_\rho, a(\rho)\partial_\phi + b(\rho)\partial_\theta\}$, with $a$ and $b$ smooth maps. Hence define $J_{|\xi} $ by $J\partial_\rho = h(\rho) (a(\rho)\partial_\phi + b(\rho) \partial_\theta)$ where $h$ is a smooth function chosen so that it interpolates smoothly the structure defined on $\tilde M_{r,b}$ and $\tilde M_P$. 
+
+
+% \begin{remark}
+% This is an alternative way to define local models than the one we used in the first part. Indeed, in the case of radial binding components, we could have used the exact same method, but as we need this other approach for the broken binding components, it seemed more coherent to use it for all binding component in this case. Note that in $M_{r,b}$, the method used to obtain the almost complex structure is similar to the "Stein method" that we used on the interior of the pages. 
+% \end{remark}
+
+
+% This ends the definition of the $\Lambda$- compatible almost complex structure $J$. Now define the distribution : 
+% $$\left\{
+% \begin{array}{ll}
+% \xi &\mbox{ on } \tilde M_P\\
+% \langle \partial_\theta,J\partial_\theta\rangle &\mbox{ elsewhere}
+% \end{array}
+% \right.$$
+
+% By definition of $\Lambda$ and $J$ near the boundary of $\tilde M_P$, this defines a smooth distribution, it is also $\R$-invariant and integrable because $[\partial_\theta,J\partial_\theta] = 0$ (see part 1 for more detail, or ...).  The projection of the leaves integrating this distribution is given by the pages, because $J\partial_\theta$ does not have a $\partial_\phi$-term. 
+
+% \begin{lemma}
+%     The leaves of this foliation are embedded finite energy asymptotically cylindrical curves, whose projection onto $M$ corresponds to the pages of the broken book. 
+% \end{lemma}
+
+% \begin{proof}
+% It suffices to show first that it has the right behaviour near the punctures, i.e in $M_{r,b}$, and also that the leaves correspond to pages inside $H$, and hence any extremity can be glued smoothly to another extremity approaching from "the other side".  For the behaviour near the punctures, this is a consequence of the same computations done in \cite{SOBD2}. Basically, it amounts to the following facts : 
+% \begin{itemize}
+%     \item In $M_{r,b}$, the hamiltonians $H_{r,b}$ can be chosen so that $\nabla H_{r,b}$ is tangent to the pages.
+%     \item Inside $\tilde M_{r,b}$, there exist $a,b,c$ with $c\neq 0$ such that : $J\partial_\theta = a\partial_\theta + b\partial_a + c \nabla H$
+%     \item Inside $\tilde M_I$, there exist $b,c$ with $c\neq 0$ such that $J\partial_\theta = b\partial_a + c\partial_\rho$.
+%     \item In $H$, the same happens than in $\tilde M_I$, and we have an explicit formula : \\$\displaystyle J\partial_\theta = \frac{-\epsilon}{Ke^{(1+\epsilon)\rho}} \partial_\rho + e^{-(1+\epsilon)\rho}\partial_a$. 
+% \end{itemize}
+% Finally, this construction gives asymptotically cylindrical curves as the taming $2$-form is exact near the punctures, hence applying Stoke's theorem on the completed symplectization $\overline{\R\times M}$ yields a finite energy for any parametrization of the curves, which implies that it is asymptotically cylindrical. 
+
+% \end{proof}
+
+% Hence we have constructed here again another finite energy foliation from the broken book decomposition in this very special c
+
+
+
+
+
+
+
+
+% \subsection{Structural constraints for fillable planar broken book decompositions}
+ 
+% \color{red}
+% ATTENTION : PLUS UTILE POUR L'INSTANT.
+
+
+% In this section we will show with symplectic capping methods that a fillable contact structure supported by a planar broken book with a completely connected Giroux form implies strong structural constraints on the BBD. Namely, if a sector has planar pages, then all pages are in fact planar ; moreover the BBD is necessarily balanced, and the contact structure cannot be co-fillable. Here again the methods are strongly inspired by \cite{SOBD1}, and also by the works of Etnyre \cite{etnyre_planar_2004} and Eliashberg \cite{eliashberg_few_2004}. \\
+% \color{black}
+
+
+% However, for this specific kind of broken books, it turns out this is a consequence of the results of \cite{SOBD 1}. Indeed, a completely connected broken book is a special case of spinal open book decomposition, where the spines are always planar surfaces. 
+
+% \begin{lemma}
+%     Let $(M,\alpha)$ be a contact manifold with $\alpha$ a completely connected Giroux form supported by a broken book. Then $\alpha$ is supported by a spinal open book with planar spine components. 
+% \end{lemma}
+
+% \begin{proof}
+% We divide $M$ in the following way, with the notations of \cite{SOBD1} : $M_\Sigma$ is the union of tubular neighbourhoods of radial binding components, with tubular neighbourhoods of broken binding components glued with neighbourhoods of the stable and unstable manifolds associated to these orbits. Now consider a connected component $B$ which contains at least one broken binding component. Then there is a well-defined vector field $\partial_\theta$ on this open subset, and we can make this subset invariant by the flow of this vector field. Then $B\simeq \Sigma\times \Sp^1$, where $\Sigma$ is some surface with boundary. It turns out the $\Sigma$ is in fact planar : indeed, with the coordinates defined in the previous part, consider a curve which corresponds to $\rho = Cst\in \R $.
+% Moreover, this defines a spinal open book decompositions as the pages behave in the appropriate manner near the binding components. 
+% \end{proof}
+
+% \begin{lemma}
+% Suppose $(M,\xi = \text{Ker}(\alpha))$ is a fillable contact structure, with $\alpha$ supported by a completely connected broken book, such that there is at least one planar rigid page. Then 
+% \end{lemma}
+
+\end{section}
+\end{document}
+
+
+% OUTDATED : CONSTRUCTION TOUT AUTOUR DES PAGES RIGIDES NEGATIVES
+% The proof mainly consists of chosing the right set of coordinates, in particular near negative rigid pages. This is not surprising given the method used in part $1$ which consisted of first studying the behavior of curves near rigid pages, and then extending the foliation to regular sectors. \\
+
+% We will define at the same time the one form $\Lambda$ and a contact form $\alpha$ under the form of a small perturbation of $\Lambda$, whose exterior derivative $d\alpha$ will serve as a taming $2$-form for $\Lambda$. In order to do this, we will divide our broken book in several domains.\\
+
+% First we build a suitable neighborhood of $M^N$ in $M$. In order to to that, we consider three different domains : $M_r^N$ neighborhood of the radial binding components which are positive ends of negative pages, $M_b^N$ neighborhood of the broken binding components which are negative ends of negative pages, and $M_{int}^N = M^N\backslash (M_b^N\cup M_r^N)$. Moreover, we subdivide all these domains as : $\tilde M^N_r, \tilde M_b^N, \tilde M^N_{int}$ smaller neighborhoods, and $\dot M_r^N = M_r^N\backslash \tilde M^N_r$ (same for $\dot M_b^N $ and $\dot M_{int}^N$). Define $\tilde M^N = \tilde M_r^N\cup \tilde M_b^N\cup \tilde M_{int}^N$ and $\dot M^N = \dot M_r^N\cup \dot M_b^N\cup \dot M_{int}^N$. Take also a subdomain $M^\#_0 := M^\#\backslash \overline{\dot M^N}$. \\
+
+% Let us now precise the sets of coordinates on each of these open subsets, and how they are related.\\
+
+% On $ M_r^N$ we have coordinates $(\rho,\phi,\theta)$ where pages corresponds to coordinates $\{\phi = Cst\}$, $\partial_\theta$ is tangent to each associated radial binding component, and $\partial_\rho, \partial_\theta$ are both tangent to the pages.  \\
+
+% On $M_b^N$, we can also define maps : $\theta : M_b^N\rightarrow \R$ by $\theta$ as before to be tangent to the pages and the the broken binding component, i.e identifying parts of the pages in $M_b^N$ with cylinders, $\theta$ corresponds to the angular coordinate. Now on $\dot M^N_b$ we can also define $\rho  :\dot M^N_b\rightarrow \R$ such that $\partial_\rho$ is tangent to the pages, and $(\partial_\rho,\partial_\theta)$ is a direct basis of the tangent space of the pages. \\ 
+
+% Now take a connected component of $M_{int}^N$, and denote as $\dot \Sigma$ the underlying punctured surface with the same topology as the considered negative rigid page. We can identify $M_{int}^N$ with $\dot \Sigma\times ]-1,1[_\phi$, $\partial_\phi$ hence being transverse to the pages. Now we cannot define the theta coordinate anymore as $\dot\Sigma$ is \textit{a priori} not a cylinder. However, we can still define a map : $\rho : M_{int}^N \rightarrow [a,b],\,\, a<b\in\R$. Indeed, take any Morse function on $\dot \Sigma$ such that it is $a$ on all the boundary components appart from one on which it is $b$, with only index $1$ critical points ; such a map extends well as a $\phi$-invariant map on $M_{int}^N$.\\
+
+% Finally, on a connected component of $M^\#_0$ we saw that we can define a projection $\pi$ onto $\Sp^1$, which will play the role of our $\phi$-coordinate.\\
+
+% Let us now explain how to glue together all these domains and sets of coordinate.\\
+
+% First $\theta$ is only defined locally around binding components so there is nothing to extend here. For the $\phi$ coordinate, notice that is is always transverse to the pages. Moreover, we asked the broken book to be oriented hence we can chose a transverse orientation for the pages, hence a direction for $\phi$, such that this choice of orientation is coherent for all sectors. Now consider a radial binding component. The neighborhood chosen around it is a solid torus with coordinates $(\rho,\phi,\theta)$. It is then possible to chose the coordinates near the boundary of the torus, i.e in $\dot M^N_ r$ such that $\phi$ coincides with $\pi$ where $\pi$ corresponds to the projection on a given sector, or with the $\phi$ coordinate in $\dot\Sigma\times ]0,1[$. Similarly, we can adjust the $\rho$ coordinate near the boundary so that it corresponds to the Morse function on $\dot\Sigma$ defined before. Indeed, one can define coordinates $(\rho,\phi)$ near the boundary of the disc, then extend it to the interior, and define a full set of coordinates $(\rho,\phi,\theta)$ by taking the pushforward of $(\rho,\phi)$ by $\partial_\theta$ ; up to an isotopy of the pages, we can assume $\partial_\phi$ stays positively transverse to them, and $\partial_\rho,\partial_\theta$ tangent.\\
+
+% Near a broken binding component, the same consideration holds for $\partial_\theta$ ; and we can extend the $\rho$ and $\phi$-coordinates at least near the boundary in the same way.\\
+
+% Now let us define the actual contact form and stable hamiltonian structure : we will denote by $\alpha$ the contact form and $(\Lambda,\Omega = d\alpha)$ the stable hamiltonian structure. The following notations and formulas are strongly inspired by \cite{SOBD2} sections $3$ and $4$. For given objects $f_r$ and $f_b$ defined for $M^N_r$ and $M_b^N$, we will denote $f_{r,b}$ for either of them depending on the sector considered, in order to lighten the notations. 
+
+
+% $$\Lambda = 
+% \left\{
+%     \begin{array}{lll}
+%        &d\pi &\mbox{  on } M^\#_0\\
+%        &e^{\epsilon \hat{H}_{r,b}}(\sigma_{r,b} + \frac{1}{K}d\theta) &\mbox{  on } \tilde M_{r,b}^N\\
+%        & e^\rho(d\phi + \frac{1}{K}\lambda) &\mbox{  on } \tilde M_{int}^N\\
+%        & e^{F_{r,b}(\rho)}d\phi + \frac{1}{K}e^{G_{r,b}(\rho)}\beta(G_{r,b})d\theta &\mbox{  on } \dot M_r^N\cup\dot M_b^N\\
+%        & e^{F(h(\rho,\phi))}(d\phi + \frac{1}{K}\beta(G)\lambda) &\mbox{  on } \dot M_{int}^N
+%     \end{array}
+% \right.$$
+
+
+% $$\alpha = 
+% \left\{
+%     \begin{array}{lll}
+%        &d\pi + \frac{1}{K}\lambda &\mbox{  on } M^\#_0\\
+%        & \Lambda &\mbox{  on } \tilde M^N\\
+%        & e^{F_{r,b}(\rho)}d\phi + \frac{1}{K}e^{G_{r,b}(\rho)}d\theta &\mbox{  on } \dot M_r^N\cup\dot M_b^N\\
+%        & e^{F(h(\rho,\phi))}(d\phi + \frac{1}{K}\lambda) &\mbox{  on } \dot M_{int}^N
+%     \end{array}
+% \right.$$
+
+% Let us explain all the different elements appearing in this definition. \\
+
+% $\pi$ is the projection onto $\Sp^1$ of $M^\#_0$, coherent with the orientation of the broken book defined before. $\rho$ and $d\theta$ are the coordinates defined previously. $d\phi$ is well-defined on $\tilde M_{int}^N$ as well as on $\dot M^N$. \\
+% $\sigma_r$ and $\sigma_b$ are Liouville forms on the disc, such that $\sigma_{r,b} = e^\rho d\phi$ near the boundary.ATTENTION C'EST FAUX POUR SIGMAB, AU NIVEAU DU BORD COMMUN AVEC LA PAGE NEGATIVE.\\
+% $\lambda$ is a Liouville form on $\dot \Sigma$, using the same notations as before (hence it depends on the topology of the negative page considered, and can change between sectors). K is a positive constant, large enough so that $d\pi + \frac{1}{K}\lambda$ is a contact form on $M^\#_0$ ; we also ask that $\lambda = e^{-\rho}d\theta$ near the boundary of the domain of the page considered.
+% ATTENTION : DETAILS A ECRIRE ICI POUR BIEN DEF LAMBDA SUR TOUTE LA VARIETE\\
+
+% Define $F,G$ to be "interpolation maps", with value $\rho$ to $0$ for $F$ and $0$ to $-\rho$ for $G$.\\
+% Define $\hat H_r$ and $\hat H_b$ on $M_r^N$ and $M_b^N$ in the following way :  start by defining $H_r$ and $H_b$ on the disc as Morse functions with a single critical point, of index $2$ for $H_b$ and index $1$ for $H_r$, with the additional condition that they are decreasing flatly to $0$ and only depends on $x^2 + y^2$ near the boundary (roughly, those are $x^2+ y^2 $ and $x^2- y^2$ away from the boundary on the disc) ATTENTION : EST-CE POSSIBLE ?. Now extend these on $M_{r,b}^N$ by : $\hat H_{r,b}(x,\theta) = H_{r,b}(x) $ on $\tilde M^N_{r,b}$ and $\hat H(\rho,\phi,\theta) = H(F(\rho),\phi)$.\\
+% Finally, $F_{r,b}(\rho) := F(\rho) + \epsilon H_{r,b}(F(\rho))$, and $G_{r,b}(\rho) := G(\rho) + \epsilon H_{r,b}(G(\rho))$.\\
+
+
+% Let us justify that all these definitions are compatible and give well-defined smooth one forms. Away from $M^N_{int}$, it follows from standard computations. Now we look at the interface between $\tilde M^N_r$ and $\tilde M^N_{int}$. Near the boundary, $\sigma_r$ is $e^\rho d\phi$ while $\lambda$ is $e^{-\rho}d\theta$. Hence both forms can be glued smoothly as long as $\hat H_r$ goes flatly to $0$ at the interface between the 2 domains. \\
+
+% In the same way, at the interface between $\tilde M^N_b$ and $\tilde M^N_{int}$, if we ask that $\sigma_b$ is $e^\rho d\phi$ near the interface and $\hat H_b$ is flatly $0$, then we can glue smoothly the forms. \\
+
+% The interpolation on $\dot M^N$ allows to glue smoothly everything with the one form $d\pi + \frac{1}{K}\lambda$ by definition of $\lambda$, because it has normal form $e^{-\rho}d\theta$ near the interface with $\dot M^N$. \\
+% The only parts that remain to be checked are the intersections of $\dot M^N_{r,b}$ with $\dot M^N_{int}$. Here one need to be a little bit careful in order to interpolate. ATTENTION : A FINIR \\
+
+% Let us now check that we have defined a contact form and a stable hamiltonian structure. For the domains $M^\#_0$ and $\tilde M^N_{r,b}$, it follows from standard calculations (first consider the forms without the hamiltonian perturbation, show it is a contact form and a SHS, then up to chosing $\epsilon$ small enough, the perturbation does not change this fact -  that is because up to chosing $F,G$ and $\beta$ well, we still have $\text{Ker}(d\alpha)\subset d\Lambda$ after the perturbation). 
+% On $\tilde M^N_{int}$, we have, forgetting the hamiltonian perturbation : $\Lambda \wedge d\Lambda = $
+

@@ -1,0 +1,173 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+
+\section{The Weinstein conjecture in dimension 3 and 5}\label{p:VI}
+
+Using the results of the previous sections, we are now able to prove the Weinstein conjecture for certain classes of contact structures in dimension 3 and 5, in the spirit of \cite{abbas_weinstein_2005}. First let us recall the sketch of the proof for planar contact structures in dimension 3.
+
+\begin{theorem}\cite{abbas_weinstein_2005}
+Let $(M^3,\xi)$ be a 3-dimensional contact manifold, supported by a planar open book. Then it verifies the Weinstein conjecture.
+
+\end{theorem}
+
+
+\begin{proof}
+Consider $\alpha_0$ the Giroux form for the planar open book, and $\lambda$ any other contact form for $\xi$. Construct a cobordism $\R_a\times M$, with a positive end isomorphic to the symplectization of $\alpha_0$, and a negative end isomorphic to the symplectization of $\lambda$. This is possible up to multiplying $\alpha_0$ by a constant large enough. Take $J$ a compatible almost complex structure cylindrical on the ends, such that the pages of the planar open book lift as index 2 curves in the positive end. Consider $u_0$ such a curve. $u_0$ is a nicely embedded regular index $2$ curve, with self-intersection $0$.\\
+Consider $\mathcal{M}^{u_0}$ the connected component of $u_0$ inside the moduli space of asymptotically cylindrical finite energy maps with the right asymptotics. For $u = (a,f)\in\mathcal{M}^{u_0}$, define $m(u) := \min\{a(z)\,|\,z\in\dot\Sigma\}$ where $\dot\Sigma$ is the domain of $u$. Define $M = \inf \{m(u)\,|\, u\in\mathcal{M}^{u_0}\}$. Assume $M>+\infty$. Now $\mathcal{M}^{u_0}$ is a $2$-dimensional smooth manifold and each curve inside it is a nicely embedded regular index $2$ curve, and two of these never intersect. Take a sequence $u_n$ such that $m(u_n)\rightarrow M$. Up to a subsequence, $u_n$ convergences to some nodal holomorphic building $u_\infty$. If $u_\infty$ has an underground level, it breaks on a Reeb orbit for $\lambda$ and we get what we want. If not, suppose it has an upper level. Then by intersection theory, it has to be a page of the open book in the symplectization of $\alpha_0$, which is not possible by definition of $u_n$. Hence it only has one level. It is either a curve of $\mathcal{M}^{u_0}$, or a nodal curve with one nodal point, and in any case it verifies $m(u_\infty) = M$. In either case, as we saw in the previous part, a neighborhood of this curve is foliated by elements of $\mathcal{M}^{u_0}$, so there exists $u\in\mathcal{M}^{u_0}$ such that $m(u)<M$, which is a contradiction. Hence $M = -\infty$, and taking again the limit of a sequence $u_n$ such that $m(u_n)\rightarrow -\infty$ yields a Reeb orbit for $\lambda$.
+\end{proof}
+
+By a short adaptation of this proof, we get the same result for broken books.\\
+
+\begin{theorem}
+Let $(M^3,\xi)$ be a contact structure nicely supported by a liftable planar balanced broken book. Then it verifies the Weinstein conjecture. 
+\end{theorem}
+
+\begin{remark}
+Note that in particular contact structures supported by planar spinal open books are included in this theorem.
+\end{remark}
+
+\begin{proof}
+Consider the same cobordism as before, with $\alpha_0$ the Giroux form for the planar balanced broken book, and $\lambda$ any contact form for $\xi$. Consider $\widehat{\M}^{\F}(J)$ the same moduli space as before, i.e the quotiented compactified moduli space of holomorphic curves in the same connected component as the curves of the initial foliation living "at infinity". Now, as in the last proof, define : $M := \inf\{m(u)\,|\, u\in\widehat{M}^\F(J)\}$, where $m := \min\{a(z)\,|\,z\in\dot\Sigma\}$. Suppose $M$ is not $-\infty$, otherwise there is necessarily a closed Reeb orbit for $\lambda$. Then because we know that $\widehat{M}^\F(J)$ is compact, and $m : \widehat{\M}^{\F}(J)$ is continuous, $M$ is in its image. Now take $u$ such that $m(u) = M$. By the compactness results shown in the last part, the main level of $u$ is a nicely embedded curve, and a neighbourhood of the image of $u$ is foliated by holomorphic curves of $\widehat{\M}^\F(J)$ (these results did not depend on the compactness of the symplectic filling). Hence there exists $v$ such that $m(v)<m(u)$, which is a contradiction. 
+\end{proof}
+
+
+Now we want to focus on 5-dimensional contact manifolds. We start by giving the details of the proof, filling in some missing details from \cite{acu_weinstein_2017}. The idea is to perform some sort of "neck-stretching" in the symplectization, and to show that a family of curves will persist throughout the deformation, which shows the existence of a periodic orbit in the end. \\
+
+We start by giving some details on the explicit model we use. This was done in \cite{roux_cas_nodate}, base on \cite{wendl_open_2009} for the 3-dimensional case. See also \color{red}cite(papier variétés suturées)\color{black}\\
+First start with $(M,\xi)$ a $5$-dimensional contact manifold whose contact structure is supported by an open book decomposition $(\Gamma,p)$ such that $(\Gamma,\xi_{|\Gamma})$ is a 3-dimensional planar contact manifold. We will see it as the realization of an abstract open book (here we use the letter $\Gamma$ by analogy with the sutured case).\\
+
+Take $W$ a Weinstein domain corresponding to a page, with symplectic form $\omega = d\beta$, and $\beta = e^{-\rho}\beta_0$ near the boundary (with $\rho$ the coordinate given by Liouville flow in negative time), where $\beta_0$ is contact form on $\Gamma$ such that the pages of the planar open book for $\xi_\Gamma$ lifts as $J_0$-holomorphic curves, with $J_0\in\mathcal{J}(\beta_0)$. Now our open book also depends on a choice of exact symplectomorphism $W_\Psi$ equal to the identity near the boundary (in fact, the exactness assumption is not necessary as up to isotopy one can always arrange for such a symplectomorphism to be exact). Define the mapping torus $W_\Psi$, and the contact form $d\phi +\beta$ where $d\phi$ is the angular coordinate. We can then glue back $\D^2_{(\rho,\phi)}\times \Gamma$, and extend the contact form with the following construction :
+
+
+$$\alpha = \left\{ \begin{array}{lll}
+& d\phi + \beta \;\;\;\mbox{ for }  \\
+& f(\rho) \beta_0 + g(\rho) d\phi \;\;\;\mbox{ for } \rho < 1+ \delta 
+\end{array}
+\right.$$
+
+where $\delta>0$ is small, and $f = f(\rho)$ and $g = g(\rho)$ are smooth maps $[0,1]\rightarrow \R$ verifying the following properties : 
+\begin{enumerate}
+    \item $f$ is decreasing, takes value $b > 1$ at $0$ and coincides with $e^{1-\rho}$ near $1$.
+    \item $g$ is increasing, takes value $0$ at $0$ and $1$ in a neighbourhood of $1$.
+    \item $f(\rho)$ and $\frac{g(\rho)}{\rho^2}$ are smooth at $\rho = 0$. 
+    \item Writing $D(\rho) = fg' - gf'$, then $D > 0$ everywhere.
+    \item $\exists \eta>0$ such that $-\frac{g'}{f'}\leq \frac{1}{b} + \eta\in \mathbb{R}\backslash\mathbb{Q}$, with equality for $\rho\leq \frac{2}{3}$.
+    \item For $\rho \geq \frac{2}{3}$, we have $g(\rho) \geq \frac{2}{3}$ and $f(\rho)\leq 1+\frac{b}{3}$. 
+\end{enumerate}
+
+Such maps exist, see \cite{roux_cas_nodate},\cite{wendl_open_2009},\cite{wendl_holomorphic_2010}. In particular, we have : $D(1) = e^{1-\rho}> 0$, so condition $4)$ is compatible with the others. For another reference of this construction, see \cite{geiges_introduction_nodate}, theorem 7.3.3.\\
+
+From this construction, it is possible to construct an $\alpha$-compatible almost complex structure $J$ which allows one to "lift" pages of the open book as complex hypersurfaces, isomorphic to the completion of the these pages seen as Weinstein domains (see \color{red}article variétés suturées et \cite{roux_cas_nodate}\color{black}). Hence, the finite energy foliation living inside $\R\times \Gamma$ from the planar open book decomposition extends inside each page as a Lefschetz fibration. Moreover, using higher dimensional intersection theory and a little bit of normal bundle analysis \color{red}encore les mêmes articles\color{black}, one can show the following results :
+
+\begin{lemma}
+The curves appearing in the above foliation are regular, and their index is $4$ if they come from regular pages of the initial foliation, $2$ if they come from components of nodal curves (i.e singular fibers of the Lefschetz fibration), and $0$ for those coming from trivial cylinders. 
+\end{lemma}
+
+\begin{lemma}
+Any $J$-holomorphic curve in $\R\times M$ whose positive ends are all binding components inside $\Gamma_0$ is a curve of the previous foliation.
+\end{lemma}
+
+Hence define $\M_+(J)$ the moduli space of all these unparametrized curves modulo $\R$-translation ; it is a smooth manifold whose compactification is diffeomorphic to $\Sp^3$ ($\M_+(J)$ itself is $\Sp^3$ with a finite set of disjoint unlinked unknots removed).\\
+
+Let us now define the defomration of almost complex structure that we will use. Take $\lambda$ a contact form for $\xi$ the same contact structure as before. Take a smooth generic path of almost complex structures $\{J_\tau\}$ on $\R_a\times M$ verifying the following conditions.\\
+
+First, $J_1$ is a generic $\lambda$-compatible almost complex structure. Then, choose an increasing function $h : [0,1[\rightarrow \R$ such that $h(0) < -2$ and $\displaystyle\lim_{\tau\rightarrow 1}h(\tau) = +\infty$. Now for $\tau < 1$, we ask $J_\tau$ to coincide with $J_1$ for $a< h(\tau)$ and with $J$ for $a> h(\tau) + 1$. This is possible up to shinking $\lambda$ enough by a multipicative constant, which does not change the existence or not of a closed Reeb orbit.\\
+
+Now take $x_0\in M$ such that $x_0$ belongs to the image of a regular curve of index $4$, and consider consider $u_0$ the unique curve such that $(0,x_0)\in \text{Im}(u_0)$ in the symplectization (we have uniqueness dues to the previous lemma). The strategy of proof is the following : show that for each time $\tau <1 $, there exists a $J_\tau$-holomorphic curve such that $(\epsilon,x_0)$ is in the image of this curve for $\epsilon$ arbitrarily small. By SFT compactness, this will be enough to conclude as it will show the existence of a $J_1$-holomorphic building with non-empty main level, which implies the existence of a Reeb orbit for $\lambda$. Note that we can apply the SFT compactness theorem as this setting is close enough from to a stretching of the neck : consider the hypersurface $\{h(0)\}\times M$. Then stretching the neck along this hypersurface yields an equivalent deformation of the almost complex structure in the upper part of the symplectization ; the lower part is invariant and $\lambda$-compatible so there is no issue there. \\
+
+Let $(\tau_n)_{n\in \mathbb{N}}$ be a sequence of times such that $\displaystyle\lim_{n\rightarrow +\infty}\tau_n = 1$.
+
+\begin{proposition}
+There exist a small generic perturbation $x$ of $x_0$ and $\epsilon > 0$ arbitrarily small, such that for all $n$, there exists a $J_{\tau_n}$-holomorphic curve which contains $(\epsilon,x)$ in its image.
+\end{proposition}
+
+\begin{proof}
+Define $\M(\{J_\tau\},\bm{\gamma})$ to be the parametric moduli space of tuples $(\tau,u)$ where $\tau\in [0,1]$ and $u$ is $J_\tau$-holomorphic, with positive asymptotic ends at binding orbits of the open book. We will simply write $\M$ for shorthand, and $\M_1$ for the space of curves with a marked point. Chosing our path of almost complex structures generically allows to consider that these moduli spaces are smooth manifolds, as all the curves have simple ends. Moreover, $\M$ is 5 dimensional and $\M_1$ is 7-dimensional.\\
+Fix $n\geq0$ and define : $T= \{\tau \in [0,1]\;|\;\exists (\tau,u_\tau) \in \M, \; s.t \;\;(0,x)\in \text{Im}(u_\tau)\}$. We will show that up to a generic perturbation of $(0,x)$, we have that : $\sup T = 1$, which is sufficient in order to conclude (the supremum is well defined as $0\in T$ as $(0,x)$ belongs to the initial foliation). \\
+
+Consider the following map :
+\begin{align*}
+F: \M_1&\times \U \rightarrow W\times W\\
+&(\tau,[u,z],x)\mapsto (u(z),x)
+\end{align*}
+
+
+where $\U$ is a small neighbourhood around $(0,x_0)$ in $W$. $F$ is obviously transverse to the diagonal, hence $\tilde{M}_1 := F^{-1}(\Delta)$ is a smooth manifold of dimension $7$.\\
+Define :
+\begin{align*}
+\pi : \;\; &\tilde{M}_1 \rightarrow W   \\
+& (\tau,[u,z],x)\mapsto x
+\end{align*}
+
+Then $\pi$ is smooth, and using Sard theorem, we get that its regular values are generic. Moreover, $\U$ is in the image of $\pi$ and is an open set of $W$ hence there is a regular value of $\pi$ inside $\U$ (chosen as a "generic small perturbation of $x_0$"). Indeed, for all $x$ in $\U$, there is a $J_0$-holomorphic curve of $\M$ whose image contain $x$. Choose such an element $x$. Then $\pi^{-1}(x)$ is a smooth $1$-dimensional manifold, which we will denote by $I$. \\
+
+Take the compactification $\overline{\M_1}$ of $\M_1$, and denote by $S$ the set $\overline{\M_1}\backslash \M_1$. If we can show that curves in $I$ cannot converge in the SFT topology to a curve in $S$, then we get the result :  indeed, in that case $I$ is a compact one-dimensional manifold of $\M_1$, with exactly one boundary component which is a $J_0$-holomorphic curve. this means there is another boundary component on the "other side" of $\M_1$, i.e a $J_1$-holomorphic curve which is in $I$, which is what we want. However, in general this might not be the case as some nodal degeneracy can appear. \\
+
+Consider a sequence $(\tau_n,u_n) $ of curves in $I$, which converges for the SFT topology to a curve $(J_\tau,u_\infty)$. 
+
+\begin{lemma}
+$u_\infty$ is a nodal curve with an arbitrary number of nodes (possibly 0) and whose components are either one index-4 curve, or two index-2 curves, and an arbitrary number of index-0 curves and ghost bubbles. 
+\end{lemma}
+
+\begin{proof}
+The main level of $u_\infty$ is non-empty by definition, as $x\in \text{Im}(u_\infty)$. However, because of the asymptotic conditions and intersection properties, no upper level of $u_\infty$ can have a negative end, except if it were a branched cover of a trivial cylinder over a binding orbit, which is also not possible as all ends are simple. Hence because $u_\infty$ is connected, it has no upper level. Now if the main level has nodes, we can assume that all components are regular by the genericity assumption (this is true if we consider them as part of parametric moduli spaces). In this case, nodes have a contribution of 0 to the index. Moreover, because all components are regular "parametrically", they have index at least -1. However, the index formula is :
+$$\ind(u) = (n-3)\chi(\dot\Sigma) + 2c_1^\tau(u) + \displaystyle\sum_{\gamma\in \bm\gamma}\mu_{CZ}^\tau(\gamma)$$
+where $\tau$ is the trivialization naturally induced by the open book construction defined above (in particular, it splits as $\tau_1 \oplus \tau_2$ where $\tau_1$ corresponds to the trivialization coming from the $3$-dimensional open book, and $\tau_2$ comes from the "$5$-dimensional open book"). Here, $n$ is the complex dimension so it is $3$, and all Conley-Zehnder indices are even by construction (in fact it is exactly $2$). Hence the index of all components is always even, and is either $0,2$ or $4$. We know that the sum of these indices is $4$, so we get the result. 
+\end{proof}
+
+We can now finish the proof of the proposition. 
+
+\end{proof}
+
+\begin{remark}
+What makes the proof work here is that the space of singular curves in the compactification has codimension at least $2$, which roughly means that we can ignore them generically. We will see that in the case of broken books, this does not hold anymore because of index-1 curves (the "walls" mentioned in the last part).
+\end{remark}
+
+Let us now consider balanced planar broken books. Suppose there is a contact structure on $M$ which is supported by an open book $(\Gamma,p)$ with $(\Gamma,\xi_{|\Gamma})$ weakly planar. We apply the same construction as before and get a foliation by holomorphic curves of $W := \R\times M$.
+
+\begin{lemma}
+The different type of lifted pages have the following indices :
+\begin{itemize}
+    \item $\ind(u) = 4$ if $u$ is a regular page.
+    \item $\ind(u) = 3$ if $u$ is a positive rigid page.
+    \item $\ind(u) = 1$ if $u$ is a negative ritid page.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+The computation for regular pages is the same than in the previous situation. \\
+If $u$ is a positive rigid page, we have :
+\begin{align*}
+    \ind(u) &= (n-3)\chi(\dot\Sigma) + 2c_1^\tau(u) + \displaystyle\sum_{\gamma\in \Gamma_e^+}\mu_{CZ}^\tau(\gamma) + \mu^\tau_{CZ}(\gamma_h)\\
+        & = 2\chi(\dot\Sigma) + 2c_1^\tau(N_u) +  \displaystyle\sum_{\gamma\in \Gamma_e^+}\mu_{CZ}^\tau(\gamma)+ \mu^\tau_{CZ}(\gamma_h)\\
+        &= 2(2 - k_+ - 1 ) + 2k_+ + 1\\
+        &= 3
+\end{align*}
+where $k_+ = \#\Gamma_e^+$ is the number of positive ends asymptotic to elliptic binding components in $\Gamma_0$, and because the Conley-Zehnder index of the only hyperbolic asymptotic orbit $\gamma_h$ is $1$ in the same trivialization as before. \\
+Similarly, for a lift of a negative rigid page : 
+\begin{align*}
+    \ind(u)  & = 2\chi(\dot\Sigma) + 2c_1^\tau(N_u) +  \displaystyle\sum_{\gamma\in \Gamma_e^+}\mu_{CZ}^\tau(\gamma) - \mu_{CZ}^\tau(\gamma_h)\\
+        &= 2(2 - k_+ - 1 ) + 2k_+ - 1\\
+        &= 1
+\end{align*}
+\end{proof}
+
+Let us now take the same setup as before. 
+
+\begin{proposition}
+
+\end{proposition}
+
+We 
+
+
+\begin{remark}
+As a final remark, it should be possible to extend these results to higher dimensions, with a suitable notion of "iterated weakly planar manifolds". However, this has not yet been fully worked out.
+\end{remark}
+
+\end{document}
+
+

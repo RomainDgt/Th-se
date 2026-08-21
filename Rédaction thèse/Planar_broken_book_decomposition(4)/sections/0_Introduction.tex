@@ -1,0 +1,85 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Introduction}\label{p:Intro}
+
+In this paper we extend the classical finite energy foliations built by Hofer, Abbas, Wendl (\cite{wendl_open_2009},\cite{abbas_holomorphic_2011}) for planar open book decompositions to planar broken book decompositions verifying certain hypotheses. The former is a special case of the latter under these hypotheses, and it was shown in \cite{colin_existence_2022} that many contact form are supported by planar broken book decompositions. In the case of open books decompositions, this construction allows a quite direct proof of the Weinstein conjecture in dimension $3$ for planar contact manifolds \cite{abbas_weinstein_2005} ; it is hoped that our construction is also a first step towards a geometrical proof of Weinstein conjecture in more general cases.\\
+
+The main theorem we show is the following : 
+
+\begin{theorem}\label{t:théorème_1}
+    Let $(M,\alpha)$ be a non-degenerate contact $3$-manifold such that $\alpha$ is supported by a broken book decomposition satisfying the following hypotheses :
+    \begin{itemize}
+        \item The pages have genus 0.
+        \item Any rigid page has only one end aymptotic to a broken binding component.
+        \item If $\gamma$ is a positive (resp negative) radial binding component then it is elliptic. Moreover, if $(\rho,\phi,\theta)$ are local coordinates such that $d\theta(R_\alpha)=1$ on $\gamma$ and the pages are locally $\{\phi = \text{Cst}\}$, then the Conley-Zehnder index of $\gamma$ in this trivialization is $1$ (resp $-1$).
+        \item All broken binding components are positive hyperbolic Reeb orbits.
+    \end{itemize}
+
+    Then, up to a $\mathcal{C}^0$-isotopy smooth away from the binding, there exist a finite energy foliation $\F$ associated to this broken book decomposition, i.e a translation invariant family of finite energy index $1$ or $2$ curves, such that their projections are in $1$-$1$ correspondance with the pages of the broken book. The curves of index $1$ are precisely the lifts of rigid pages, and those of index $2$ are the lifts of regular pages. 
+\end{theorem}
+
+
+Using very recent results on the existence of planar broken book decompositions for all contact structures, we will also get the following:
+
+\begin{theorem}\label{t:théorème_2}
+Any contact manifold $(M,\xi)$ has a finite energy foliation, for some $J\in\J(\alpha)$ where $\xi = \Ker(\alpha)$.
+\end{theorem}
+
+\begin{proof}
+By recent results of \cite{colin_existence_planar_broken_books}, we know that for any contact structure $\xi$ there exists a planar broken book supporting $\xi$. Hence we can apply the previous method and extract a finite energy foliation from this supporting broken book. 
+\end{proof}
+
+
+We then turn to the relation between spinal open book decompositions as introduced in \cite{SOBD1},\cite{SOBD2} and broken book decompositions. It turns out the the first one is a particular case of the latter. Generalizing the method used in \cite{SOBD2}, we then study the symplectic fillings of weakly planar contact manifold. In order to simplify the proof we restrict ourselves to the case of strong symplectic fillings. The main result we get is the following:
+
+\begin{theorem}\label{t:théorème_3}
+Let $W$ be a symplectic filling of $(M,\xi)$ weakly planar balanced. Then their exist a singular foliation by holomorphic curves of $W$, and a smooth map:$\pi :W \rightarrow \Sigma$ where $\Sigma$ is a smooth compact surface with boundary corresponding to the moduli space of the corresponding holomorphic curves, and such that $\pi$ associated to each point $p$ the unique curve in $\Sigma$ going through $p$.
+\end{theorem}
+
+More details on the properties of the map $\pi$ and the notion of broken nearly bordered Lefschetz fibration are given in part \ref{p:V}.\\
+
+Finally, we use this whole machinery to study the Weinstein conjecture for $5$-dimensional contact manifolds supported by an open book decomposition, whose binding is weakly planar. Using a neck-stretching argument, proving the conjecture amounts to studying the deformation of some $1$-parameter family of curves coming from the initial finite energy foliation, lifted in dimension $6$. We review how this works in the case of a true planar binding (which is mentioned in \cite{acu_weinstein_2017}, but has never been written down explicitly to the knowledge of the author), and then turn to the weakly planar case. Here it turns out that a little more work is necessary as some gluing argument for non-transversaly cut out curves is necessary. We make use, in a "simple" form, of the obstruction bundle gluing machinery developed by Hutchings and Taubes \cite{hutchings_gluing_2007}, and used by Bao-Honda \cite{bao_definition_2018},\cite{bao_semi-global_2023}, in order to solve this gluing problem. We thus prove the following theorem.
+
+\begin{theorem}\label{t:théorème_4}
+Let $(M^5,\xi)$ be a contact $5$-manifold supported by an open book decomposition with Weinstein pages, and weakly planar balanced binding. Then $(M,\xi)$ verifies the Weinstein conjecture, i.e the Reeb flow of any contact form defining $\xi$ has a periodic orbit.
+\end{theorem}
+
+
+We conclude this article with a family of examples of weakly planar balanced contact manifolds which are not planar in the usual sense. There is not systematic way for now to build balanced planar broken book for any contact manifold, hence we use an explicit construction using branched multiple covers of the $3$-sphere. This allows us to build obtain Stein filable, non-planar but balanced weakly planar contact manifolds, which therefore also gives a new class of contact $5$-manifolds verifying the Weinstein conjecture by the previous theorem. We get the following result:
+
+\begin{theorem}\label{t:théorème_5}
+Let $\Sigma(2,3,n):=\{(z_1,z_2,z_3)\in \Sp^5\,|\, z_1^2 + z_2^3+ z_3^n = 0 \}$ be a family of Brieskorn manifolds, with their natural tight contact structure coming from their structure of link singularity. Then these manifolds are Stein fillable, non-planar but weakly planar balanced. 
+\end{theorem}
+
+
+% We then extend the construction of Wendl in \cite{} to get a filling by holomorphic curves of certain 4-dimensional symplectic fillings, which we then also extend using the constructions of \cite{},\cite{} to some 5-dimensional open book decompositions and sutured contact manifolds. It is hopped that this construction will bring results towards a geometrical proof of the Weinstein conjecture in such cases.
+
+
+
+\subsection{Planar broken book decompositions}
+
+In this section we recall the main definitions which were introduced in \cite{colin_existence_2022} about broken book decompositions. A broken book decomposition (BBD) of a 3-manifold $M$ is a foliation $(\K,\B)$ where $K$ is a link in $M$ and $B$ is a codimension 1 foliation of $M\backslash K$, such that $\K = \K_r\sqcup \K_b$, where $\K_r$ consists of so-called \textit{radial binding components} and $\K_b$ are the \textit{broken binding components}. Near $\gamma\in \K_r$, the foliation $\B$ (the \textit{pages}) behaves like a rational open book, while near a broken component $\gamma\in\K_b$ it behaves like a local hyperbolic Morse model. There is a finite number of pages with an end in $\K_b$, which are called \textit{rigid}, the other are called regular ; rigid pages delimit "sectors" of regular pages (we come back to that point later).\\
+
+Let $\alpha$ be a contact form on $M$, we say that $\alpha$ (or $R_\alpha$) is carried (resp $\partial$-strongly carried) by a BBD if the binding components are closed Reeb orbits, and if $R_\alpha$ is positively transverse to the pages (resp the same conditions, plus the projection of the integral curves on the blow-up of a binding component are positively transverse to the boundary of the pages). This implies in particular that broken components are always hyperbolic orbits, and thus that the first return map of the Reeb flow on a 2-dimensional plane transverse to the orbit on a small neighborhood is topologically conjugated to a 2-dimensional hyperbolic model. Unlike an open book decomposition, we also allow radial binding components to be negative, which will not affect our construction. However, it may be useful for later purpose to suppose no such component exist (for instance when studying the "propagation" of the finite energy foliation in compact symplectic cobordisms).\\
+
+Finally let us recall one of the main results proved in \cite{colin_existence_2022} which justify the use of BBD : 
+\begin{theorem}
+    On a closed 3-manifold $M$, there is a $\mathcal{C}^1$ neighborhood of the set of non-degenerate Reeb vector fields which contains only Reeb vector field ($\partial$-strongly) carried by a BBD. 
+\end{theorem}
+
+Hence while the class of Reeb flows supported by genuine open book decompositions is fairly limited, a lot more are supported by broken book decompositions. It is also expected that planar broken book decomposition are way more common that planar open book decompositions, which imply in particular certain topological constraints.
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

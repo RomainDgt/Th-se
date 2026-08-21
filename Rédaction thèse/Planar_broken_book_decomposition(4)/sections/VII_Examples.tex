@@ -1,0 +1,115 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Examples}\label{p:VII}
+
+In this section we construct several explicit examples of 3-manifolds with contact structures supported by planar balanced broken books, and deduce explicit contact structures on 5-manifolds for which the Weinstein conjecture holds.\\
+
+\subsection{Mapping tori and circle bundles over surfaces}
+
+One main source of examples that was already studied in \cite{SOBD1} is the one of circle bundles over surfaces. \\
+The data of a circle bundle over a compact surface with non-empty boudary corresponds exactly to an open book decomposition.
+
+
+\subsection{Branched coverings}
+
+Take a broken book decomposition, and a transverse knot embedded inside a regular page. Then the branched double cover of the manifold with branching locus this knot has a natural induced broken book decomposition structure. Moreover, taking the knot transverse to the characteristic foliation ensures that the contact structure lifts to the cover, and is supported by this new broken book decomposition. This gives a whole new class of examples which may be not planar in the usual sense, or in the sense of spinal open books. \\
+
+Let us give a little bit more details on this construction. \\
+
+We first recall the standard construction of a contact structure on the double branched covering of $\Sp^3$ along a transverse knot.
+\begin{lemma}
+Let $K\subset \Sp^3$ be a transverse knot, and let $p : M\rightarrow \Sp^3$  be a branched double cover over $K$, with branching locus the knot $K_1$. Then there exists a contact structure on $M$ which coincides with $p^*\xi$ on $M\backslash K_1$.   
+\end{lemma}
+
+\begin{proof}
+
+\end{proof}
+
+
+In order to show that this contact structure is actually supported by the broken book decomposition, we will need another expression of a defining contact form. \\
+Consider a planar open book decomposition on $\Sp^3$ and $\alpha$ a Giroux form for this open book, and take an embedded transverse loop inside a page. Then a neighbourhood of this loop can be described using coordinates $(t,\tau,\theta)$, where the contact form $\alpha$ can be written under the form :
+
+$$\alpha = dt+ e^{\tau} d\theta$$
+
+Using polar coordinates $(r,\phi)$ for the plane $(t,\tau)$, we can also write $\alpha$ under the form : 
+$$\alpha = \cos(\phi)dr -r\sin(\phi)d\phi + e^{r\sin(\phi)}d\theta$$
+
+Now locally the pages can be arranged so that they are the level sets of $t$, with the page where the loop is being $\{t = 0\}$. Take the branched double cover $M$ over $\Sp^3$, where the branched covering $p$ can locally be described around the branching locus $K_1$ as : $p(r,\phi,\theta) = (r^ 2,2\phi,\theta)$. This amounts to : $p(t,\tau,\theta) = (t^2-\tau^2,2t\tau,\theta)$. Hence level sets for $t$ become level sets for $t^2-\tau^2$, which are hyperbola branches, except for $t = \pm\tau$ which is to the lift of the initial page, and now corresponds to the four rigid pages asymptotic to $K_1$. Hence we get a broken book as expected. It remains to show that the contact structure lifted on $M$ is supported by this broken book. 
+
+\begin{lemma}
+There exists a contact form $\tilde\alpha$ on $M$ such that $\tilde \alpha$ coincides with $p^*\alpha$ away from a neighbourhood of $K_1$, it defines the same contact structure as before, and its Reeb vector field is supported by the broken book decomposition.
+\end{lemma}
+
+\begin{proof}
+First we compute the pullback of the form $\alpha$ away from $K_1$ in coordinates $(t,\tau)$ :
+$$\alpha_0  := p^*\alpha = 2tdt - 2\tau d\tau + e^{2t\tau}d\theta$$
+where we used coordinates $(t,\tau,\theta)$ on $M$ near $K_1$. We have : $d\alpha_0 = e^{2t\tau}(2td\tau\wedge d\theta + 2\tau dt \wedge d\theta)$. This converges to $0$ as $r$ goes to $0$, hence it does not define a contact form. \\
+Now, on $M\backslash K_1$, $\alpha_0$ is supported by the broken book decomposition by definition. In particular, in the neighbourhood of $K_1$ that we consider, we have : $R_{{\alpha_0}} = \frac{1}{2r^2}(t\partial_t - \tau\partial_\tau)$ which corresponds to a "standard hyperbolic model" for a vector field. \\
+Take $\delta<\delta'<1$, $\beta:= f(r)d\phi$ on $\D^2$, where $f$ is a map such that $f = r^2$ for $r<\delta'$, $f = 0$ near $1$, and $f$ is increasing for $r< \delta < 1$.
+
+Now, define : 
+$$
+\tilde{\alpha} := \left\{\begin{array}{ll}
+& p^* \alpha \;\;\mbox{  for  } r\geq 1\\
+& \alpha_0 + \epsilon \beta \;\; \mbox{ for } r\leq 1\\
+\end{array}
+\right.$$
+
+where $\epsilon$ is chosen small enough. 
+
+First notice that $\tilde{\alpha}$ is well defined, by definition of $\beta$. Then, up to choosing $\epsilon $ small enough, we can ask for $\tilde{\alpha}$ to be a contact form for $\delta\leq r$. Moreover, we have : 
+$$\tilde{\alpha}\wedge d\tilde{\alpha} = \alpha_0\wedge d\alpha_0 + \epsilon (\alpha_0\wedge d\beta + \beta\wedge d\alpha_0)$$
+We know that away from $r = 0$, we have $\alpha_0\wedge d\alpha_0> 0$. We also have, for $r< \delta$ : 
+$$\alpha_0\wedge d\beta = e^{2t\tau}f'(r)d\theta\wedge dr\wedge d\phi > 0$$
+Finally, $\beta \wedge d\alpha_0$ happens to be negative sometimes, but we know that $d\alpha_0$ converges to $0$ when $r\rightarrow 0$, and $\beta = r^2d\phi$ on this domain, so it also converges to $0$ at speed "$2r$", hence up to choosing $\delta$ small enough, one can arrange that $\alpha_0 \wedge d\beta + \beta \wedge d\alpha_0$ is positive for $r< \delta $ (in fact this can also be seen easily by writing down the explicit formula for this). Note that here we choose first $\delta$ adapted to $\beta$ and $\alpha_0$, and then fix $\epsilon$ small enough.\\
+
+This proves that $\tilde{\alpha}$ is a contact form on $M$. To show that the associated Reeb vector field is supported by the broken book decomposition, it suffices to notice that $R_{\tilde{\alpha} } = \partial_\theta$ on $\{r = 0\}$. Finally, the Reeb vector field for $r<\delta$ can be written as : 
+$g(t,\tau,\theta) (t\partial_t - \tau\partial_\tau) + h(t,\tau,\theta)\partial_\theta$ where $g$ and $h$ are non-zero functions, which prove that it is always transverse to the pages, hence positively transverse.\\
+
+We now prove that the induced contact structure is the same than the one we built in the first proposition. In order to do this, consider $\alpha_0$ on $M\backslash K_1$. The first construction shows that even though $\alpha_0$ is not a contact form on $K_1$, $\text{Ker}(\alpha_0)$ is a contact structure on all of $M$. Hence, take $\alpha_t = \alpha_0 + t\beta$ for $t\in[0,\epsilon]$ and $(\xi_t)$ is then a homotopy of contact structures, which gives an isotopy by Gray's theorem.\\
+
+
+
+\end{proof}
+
+
+
+This gives a whole class of contact structures on 3-manifolds supported by broken book decompositions which are not spinal open book decompositions in general. Moreover, these broken books are planar and balanced in the sense mentioned in the last parts, hence are well suited to study symplectic fillings. We can classify all manifolds arising from such a construction with the help of the following lemma.
+
+\begin{proposition}
+The contact 3-manifold one can obtain with this construction are exactly :
+-
+-
+-
+-
+\end{proposition}
+
+\begin{proof}
+    
+\end{proof}
+
+
+\begin{remark}
+In certain cases we can actually understand the structure of SNLF induced on such fillings. For instance, take...
+\end{remark}
+
+
+\begin{corollary}
+Take $W$ to be one of the compact symplectic manifolds with boundary cited in the proposition above, and $\psi$ a symplectomorphism equal to the identity near the boundary. Let $M$ be the contact manifold created by the procedure described in the last part, namely one take the mapping torus $W_\psi$, and "fills" it with $\Gamma\times \D^2$ where $\Gamma \simeq \partial W$, with the natural contact structure coming from this procedure. \\
+
+Then $M$ verifies the Weinstein conjecture.
+\end{corollary}
+
+
+\begin{corollary}
+The Weinstein conjecture holds for the following class of contact $5$-manifolds : 
+5 dimensional tori ? would be cool. You would need to show that the contact structure is supported by a cool open book with balanced planar boundary.
+\end{corollary}
+
+
+\end{document}
+
+

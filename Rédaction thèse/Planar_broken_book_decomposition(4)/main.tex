@@ -1,0 +1,142 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{bm}
+\usepackage{ stmaryrd }
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{ amssymb }
+\usepackage{amsthm}
+\usepackage{ mathrsfs }
+\usepackage{amsmath }
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{eurosym}
+\usepackage{indentfirst}
+\usepackage{minted}
+\usepackage{titlesec}
+\usepackage{pifont}
+\usepackage{url}
+\usepackage{epsf}
+\usepackage{ stmaryrd }
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{mathtools,amscd}
+\usepackage{subfiles}
+
+
+\usepackage[inline]{enumitem}   
+\makeatletter
+% This command ignores the optional argument for itemize and enumerate lists
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}%
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+\fi}
+\makeatother
+\parindent=0pt
+
+
+\usepackage[
+backend=biber,
+style=alphabetic,
+]{biblatex}
+\addbibresource{Ma bibliothèque.bib}
+
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\roman{subsubsection}}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+\geometry{hmargin=3cm,vmargin=3cm}
+%\geometry{hmargin=1.8cm,vmargin=1.3cm}
+
+\newcommand{\ind}{\text{ind}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\dE}{\dot{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Sp}{\mathbb{S}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\Lg}{\mathcal{L}_g}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\w}{\omega}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Sig}{\Sigma}
+\newcommand{\dbar}{\bar{\partial}_{J}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\Ker}{\text{Ker}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\preuve}{\textbf{Proof}\\}
+\newcommand{\wind}{\text{wind}}
+\newcommand{\tdef}{\text{def}}
+\newcommand{\bpi}{\boldsymbol{\pi}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exemple}[theorem]{Exemple}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{theoreme}[theorem]{Theorem}
+\newtheorem{property}[theorem]{Property}
+\newtheorem{consequence}[theorem]{Consequence}
+\newtheorem{question}[section]{Question}
+\setlength{\parindent}{0pt}
+
+\title{Finite energy foliations from broken books decompositions}
+\author{Romain Dugast}
+\date{April, 2025}
+
+\begin{document}
+
+
+\maketitle
+\subfile{sections/I_NormalForms}
+\subfile{sections/II_ACS}
+\subfile{sections/III_FEF}
+\subfile{sections/IV_ Structure of BBD}
+\subfile{sections/V_Fillings of BBD}
+\subfile{sections/VI_Weinstein and OBG}
+\subfile{sections/VII_Examples}
+\subfile{sections/VIII_Conclusion.tex}
+
+
+\newpage
+\printbibliography[title=Bibliography]
+
+
+
+
+
+\end{document}

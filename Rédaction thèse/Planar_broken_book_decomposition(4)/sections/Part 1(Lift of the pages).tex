@@ -1,0 +1,341 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+\section{Introduction}
+
+In this paper we extend the classical finite energy foliations built by Hofer, Abbas, Wendl (\cite{wendl_open_2009},\cite{abbas_holomorphic_2011}) for planar open book decompositions to planar broken book decompositions verifying certain hypotheses. The former is a special case of the latter under these hypotheses, and it was shown in \cite{colin_existence_2022} that many contact form are supported by planar broken book decompositions. In the case of open books decompositions, this construction allows a quite direct proof of the Weistein conjecture in dimension $3$ for planar contact manifolds \cite{abbas_weinstein_2005} ; it is hoped that our construction is also a first step towards a geometrical proof of Weinstein conjecture in more general cases.\\
+
+The main theorem we show is the following : 
+
+\begin{theorem}
+    Let $(M,\alpha)$ be a non-degenerate contact $3$-manifold such that $\alpha$ is supported by a broken book decomposition satisfying the following hypotheses :
+    \begin{itemize}
+        \item The radial binding components are all non-rational (they look like the binding of a "true open book").
+        \item The pages are of genus 0 ("planar").
+        \item Any rigid page has only one end aymptotic to a broken binding component.
+        \item If $\gamma$ is a positive (resp negative) radial binding component then it is elliptic. Moreover, if $(\rho,\phi,\theta)$ are local coordinates such that $d\theta(R_\alpha)=1$ on $\gamma$ and the pages are locally $\{\phi = \text{Cst}\}$, then the Conley-Zehnder index of $\gamma$ in this trivialization is $1$ (resp $-1$).
+        \item All broken binding components are positive hyperbolic Reeb orbits.
+    \end{itemize}
+
+    Then, up to a $\mathcal{C}^0$-isotopy smooth away from the binding, there exist a finite energy foliation $\F$ associated to this broken book decomposition, i.e a translation invariant family of finite energy index $1$ or $2$ curves, such that their projections are in $1$-$1$ correspondance with the pages of the broken book. The curves of index $1$ are precisely the lifts of rigid pages, and those of index $2$ are the lifts of regular pages. 
+\end{theorem}
+
+In the following, we will denote by $\phi_t^X$ the flow at time $t$ of the vector field $X$.
+
+
+% We then extend the construction of Wendl in \cite{} to get a filling by holomorphic curves of certain 4-dimensional symplectic fillings, which we then also extend using the constructions of \cite{},\cite{} to some 5-dimensional open book decompositions and sutured contact manifolds. It is hopped that this construction will bring results towards a geometrical proof of the Weinstein conjecture in such cases.
+
+
+\section{Planar broken book decompositions}
+
+In this section we recall the main definitions which were introduced in \cite{colin_existence_2022} about broken book decompositions. A broken book decomposition (BBD) of a 3-manifold $M$ is a foliation $(\K,\B)$ where $K$ is a link in $M$ and $B$ is a codimension 1 foliation of $M\backslash K$, such that $\K = \K_r\sqcup \K_b$, where $\K_r$ consists of so-called \textit{radial binding components} and $\K_b$ are the \textit{broken binding components}. Near $\gamma\in \K_r$, the foliation $\B$ (the \textit{pages}) behaves like a rational open book, while near a broken component $\gamma\in\K_b$ it behaves like a local hyperbolic Morse model. There is a finite number of pages with an end in $\K_b$, which are called \textit{rigid}, the other are called regular ; rigid pages delimit "sectors" of regular pages (we come back to that point later).\\
+
+Let $\alpha$ be a contact form on $M$, we say that $\alpha$ (or $R_\alpha$) is carried (resp $\partial$-strongly carried) by a BBD if the binding components are closed Reeb orbits, and if $R_\alpha$ is positively transverse to the pages (resp the same conditions, plus the projection of the integral curves on the blow-up of a binding component are positively transverse to the boundary of the pages). This implies in particular that broken components are always hyperbolic orbits, and thus that the first return map of the Reeb flow on a 2-dimensional plane transverse to the orbit on a small neighborhood is topologically conjugated to a 2-dimensional hyperbolic model. Unlike an open book decomposition, we also allow radial binding components to be negative, which will not affect our construction. However, it may be useful for later purpose to suppose no such component exist (for instance when studying the "propagation" of the finite energy foliation in compact symplectic cobordisms).\\
+
+Finally let us recall one of the main results proved in \cite{colin_existence_2022} which justify the use of BBD : 
+\begin{theorem}
+    On a closed 3-manifold $M$, there is a $\mathcal{C}^1$ neighborhood of the set of non-degenerate Reeb vector fields which contains only Reeb vector field ($\partial$-strongly) carried by a BBD. 
+\end{theorem}
+
+Hence while the class of Reeb flows supported by genuine open book decompositions is fairly limited, a lot more are supported by broken book decompositions. It is also expected that planar broken book decomposition are way more common that planar open book decompositions, which imply in particular certain topological constraints.
+
+\section{From planar broken books to finite energy foliations}
+
+We now build the expected finite energy foliation. The idea is the following : the regular pages behaves like the pages of a classical open book, and we expect to be able to lift them as index-2 holomorphic curves up to isotopy. We can then expect these curves to break on rigid pages, this breaking being the only possible limit behavior of such curves. \\
+
+Now it turns out it is easier to first lift the rigid pages, and then recollect the regular pages from them. The reason for that is that it is a priori hard to identify 2 limit curves comming from different regular domains, even when they should coincide. Hence we proceed as follow : we first write down an explicit almost complex structure which makes the rigid pages regular holomorphic curves of index 1. Then a classical SFT gluing theorem allows us to recollect the regular pages, and standard holomorphic curves intersection arguments in dimension $4$ allow to get the whole foliation.\\
+
+In order to be able to complete this construction we will make the following assumptions : we consider a supporting broken book decomposition on a non-degenerate contact manifold $(M,\alpha,\xi = \Ker(\alpha))$ with planar (genus 0) pages, such that the radial components of the binding are all non-rational (i.e classical binding components as in a regular open book decomposition) and elliptic. We also assume that given a local trivialization $(\rho,\phi,\theta)$ around any radial binding component such that the pages are level sets for $\phi$, the Conley-Zehnder index of the Reeb orbit in this trivialization is 1 if it is a positive end of the page, or -1 if it is negative. This essentially means that the Reeb flow "turns slower" around the orbit than the pages do. Finally, we assume that each rigid page is asymptotic to exactly one broken binding component, and that all such components are positive hyperbolic Reeb orbits. \\
+
+\textbf{I) \underline{Lifting rigid pages}}
+\newline
+
+Let us consider a rigid page $P_0$, with positive ends on radial binding components $\gamma_1,...,\gamma_r, r \geq 0$, and one positive end on a broken binding component $\gamma_b$. \\
+
+First we build the local model and construct the holomorphic curve near a positive end. We start by defining this in the case of a radial binding component, however the same construction apply for a positive end on the broken binding component. Consider $i\in\llbracket 1,r\rrbracket$ and $\gamma_i$. Take a standard neighborhood $\U_0$ of this orbit with coordinates $(\rho_0,\phi_0,\theta_0)$ such that the pages are $P = \{\phi_0 = \text{Cst}(P)\}$, and at $\rho = 0$, the $\theta_0$ coordinate follows the flow of the Reeb orbit. We can also assume that $\alpha(\partial_{\rho_0})= 0$ everywhere, which means that $\rho_0$ follows the caracteristic foliation on each page. We now start by defining a new system of local coordinates with better properties. \\
+
+
+In order to define this new set of coordinates, we begin by considering a "partial blow-up" of $\gamma_i$, obtained by replacing $\gamma_i$ by a $2-$torus, (this amounts to consider only half-lines instead of full lines inside the tangent bundle in the classical blow-up construction). In that way, the tubular neighborhood becomes a thickened torus $T$, with boundary the disjoint union of 2 tori. Consider $T_0$ the "exceptional divisor". On this torus, we can look at the same time at different foliations induced by the limit at $\rho = 0$ of :
+\begin{itemize}
+    \item The contact plane field ($\F_\xi$)
+    \item The pages ($\F_P$). We denote $\F_{P_0}$ the leaf induced by $P_0$.
+    \item The Reeb vector field $\F_R$
+\end{itemize}
+
+Looking at this torus in the coordinates $(\phi_0,\theta_0)$, the page foliation is horizontal, oriented like $\partial_{\theta_{0}}$ and the one of the surfaces $\{\theta_0 =\text{Cst}\}$ is indeed vertical, oriented like $\partial_{\phi_0}$ (we orient the 2-torus with respect to the outward-pointing normal $-\partial_{\rho_0}$, hence a direct basis is given by $(\partial_{\theta_0},\partial_{\phi_0}))$. Now we look at the contact plane field. The caracteristic foliation can be seen as a smooth vector field X on the torus (for some choice of length, and oriented such that $d\phi_0(X) < 0$ ). By compactness, we can ask that $d\phi_0(X) = -1$ and $d\theta_0(X)$ is bounded from above by some constant $M<0$. Finally, the Reeb vector field prints a foliation directed by a vector field R, with $M'>d\phi_0(R) >0$ and $d\theta_0(R) = 1$ by definition, with the relation : $M' < \frac{1}{M}$ as the Reeb vector field is always positively transverse to the contact plane field, and by the fact that $\partial_{\rho_0}\in \xi$ on $T$.\\
+
+We define a new vector field $Y$ on $T_0$ by taking any smooth vector field which verifies the following conditions : 
+\begin{enumerate}
+    \item It is positively transverse to $\F_P$.
+    \item Near $\F_{P_0}$, the following inequality is verified : $M'<\frac{d\phi_0(Y)}{d\theta_0(Y)}<\frac{1}{M}$.
+    \item It is never colinear to $R$.
+    \item $[Y,\partial_{\theta_0}] = 0$.
+    \item All the orbits of $Y$ are periodic and cross $\F_{P_0}$ exactly once.
+\end{enumerate}
+
+Let us justify the existence of such a vector field. Write it as $Y = \partial_{\phi_0} + b(\phi_0)\partial_{\theta_0}$. Condition $1)$ and condition $4)$ are then automatically verified for a vector field of this form. Conditions $3)$ is implied by $\frac{1}{b} > M'$ or $b < 0$. We can ensure condition $2)$ by taking $b$ positive constant near $\F_{P_0}$, with $M'<\frac{1}{b} < \frac{1}{M}$. Finally, condition $5)$ amounts to having : $\displaystyle\int_0^{2\pi}{b(\phi_0)d\phi_0} = 0$, which we can achieve even with the previous conditions. \\
+
+Conditions $1),4)$ and $5)$ ensure that we can define new coordinates $(\theta,\phi)$ on $T_0$, whose directions are given by $\partial_\phi := Y$ and $\partial_\theta := \partial_{\theta_0}$. Indeed, any point $(\theta_0,\phi_0)$ is sent to $(\theta_0,\phi)$ where $\phi$ is defined as the time of first return to $\phi_0 = 0$ of $(\theta_0,\phi_0)$ by the flow of $-Y$.\\
+
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.2]{Radial positif/Fp.png}
+         \caption{$\F_P$ ($\F_{P_0}$ is the central one)}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.2]{Radial positif/xi.png}
+         \caption{$\F_\xi$}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.2]{Radial positif/ralpha.png}
+         \caption{$R_\alpha$}
+     \end{subfigure}
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.2]{Radial positif/Y.png}
+         \caption{$Y$}
+     \end{subfigure}
+        \caption{The different foliations and vector fields on the exceptional divisor }
+        
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{Radial positif/feuilletage.png}
+    \caption{All the foliations together. Near $\F_{P_0}$, $Y$ is "between" the green and purple foliations.}
+\end{figure}
+
+Now we extend these coordinates to the whole thickened torus. Consider a smooth vector field $Z$ which generates the caracteristic foliation of $\xi$ on every page, pointing outward at $\rho = 0$. Such vector field exists because we know these foliations to be non-singular near $\gamma_i$. Extend $\partial_\phi,\partial_\theta$ using the flow of $Z$. This defines a new set of coordinates on the thickened torus, which we denote by $(\tilde{\rho},\tilde{\phi},\theta)$, with $\partial_{\tilde{\rho}} = Z$. \\
+
+Without loss of generality, we assume from now on that $P_0$ is $\tilde{\phi} = 0$.\\
+
+Finally, we change the coordinates so that the following condition $(\star)$ is verified : 
+$$\text{On } \;TP_0, R_\alpha \in T(\phi_t^{\partial_\rho}(T_0))\; \text{for all time}\; t, \text{where} \;\partial_\rho = h(\tilde{\rho})\partial_{\tilde{\rho}}, \;\text{with}\; h> 0$$
+    
+In order to chose this function $h$, define $g = \frac{d\tilde{\rho}(R_\alpha)}{d\tilde{\phi}(R_\alpha)}$, and chose some function $y = y(\tilde{\rho},\tilde{\phi},\theta)$ such that :
+\begin{itemize}
+    \item $y(\tilde{\rho},\tilde{\phi},\theta) = \tilde{\rho}$ for $\tilde{\phi} = 0$ or $\tilde{\phi}$ large enough (i.e on $P_0$ or away from a small neighborhood of $P_0$).
+    \item $\partial_{\tilde{\phi}}y_{|\tilde{\phi} = 0} = g$ near $P_0$.
+    \item $\partial_{\tilde{\rho}}y > 0$ everywhere.
+\end{itemize}
+
+Define $h = dy(\partial_{\tilde{\rho}})$. Note that $d\tilde{\phi}(R_\alpha) > 0$ on $T$ because $R_\alpha$ is positively transverse to the pages $\{\tilde{\phi} = \text{Cst}\}$, and at $\tilde{\rho} = 0$, $d\tilde{\rho}(R_\alpha) = 0$ because the Reeb vector field is well defined at $\rho = 0$ in the initial model. This implies that $h$ is well-defined, is $1$ on $T_0$ and is always positive. Moreover, for fixed $\tilde{\phi},\tilde{\theta}$, $z(t) = y(t,\tilde{\phi},\tilde{\theta})$ is the solution of $z' = h(z,\tilde{\phi},\tilde{\theta})$ with initial condition $z(0) = 0$, i.e $\phi_t^{h\partial_{\tilde{\rho}}}(0,\tilde{\phi},\tilde{\theta}) = y(t,\tilde{\phi},\tilde{\theta})$.\\
+
+Define $\partial_\rho := h\partial_{\tilde{\rho}}$, $\partial_\phi(\tilde{\rho},\tilde{\phi},\tilde{\theta}) := d_{(0,\tilde{\phi},\tilde{\theta})}\phi_t^{\partial_\rho}(\partial_{\tilde{\phi}})$ and $\partial_\theta(\tilde{\rho},\tilde{\phi},\tilde{\theta}) := d_{(0,\tilde{\phi},\tilde{\theta})}\phi_t^{\partial_\rho}(\partial_{\tilde{\theta}})$ where $t$ is such that $\phi_t^{\partial_\rho}(0,\tilde{\phi},\tilde{\theta}) = (\tilde{\rho},\tilde{\phi},\tilde{\theta})$ (we extend the coordinates $(\phi,\theta)$ defined on $T_0$ to $T$ with the flow of $\partial_\rho)$. This gives a set of coordinates $(\rho,\phi,\theta)$ on $T$.\\
+
+Now we see that on $P_0$, the following happens : $\partial_\rho = \partial_{\tilde{\rho}},\text{ } \partial_\theta = \partial_{\tilde{\theta}}$ and $\partial_\phi = g\partial_{\tilde{\rho}} +  \partial_{\tilde{\phi}} $. To get the latter, notice that : $d\phi^{h\partial_\rho}_t(\partial_{\tilde{\phi}}) - \partial_{\tilde{\phi}}= \displaystyle\lim_{\eps\rightarrow0}\frac{1}{\epsilon}(\phi_t^{h\partial_{\tilde{\rho}}}((0,\epsilon,\tilde{\theta})-\phi_t^{h\partial_{\tilde{\rho}}}((0,0,\tilde{\theta}))) = \displaystyle\lim_{\eps\rightarrow0}\frac{1}{\epsilon}(y(t,\epsilon,\tilde{\theta}) - y(t,0,\tilde{\theta}))\partial_{\tilde{\rho}} = \partial_\phi y(t,0,\tilde{\theta})\partial_{\tilde{\rho}} = \frac{d\tilde{\rho}(R_\alpha)}{d\tilde{\phi}(R_\alpha)}\partial_{\tilde{\rho}}$, so : $\partial_\phi = g\partial_{\tilde{\rho}} + \partial_{\tilde{\phi}}$. We can write : $R_\alpha = d\tilde{\phi}(R_\alpha)(g\partial_{\tilde{\rho}} + \partial_{\tilde{\phi}}) + d\tilde{\theta}(R_\alpha)\partial_\theta = d\tilde{\phi}(R_\alpha)\partial_\phi + d\tilde{\theta}(R_\alpha)\partial_\theta \in \langle\partial_\phi,\partial_\theta\rangle$ so these coordinates verify the condition $(\star)$ we wanted.\\
+
+Finally, we blow down according to these new coordinates to get $(\rho,\phi,\theta)$ coordinates on $\U_0$. Let us sum up what are the different properties of these coordinates that will be useful to us later on (one may need to shrink $\U_0$ in order to have these properties on the whole neighborhood) : 
+\begin{enumerate}
+    \item $d\phi(R_\alpha) > 0$ and $d\theta(R_\alpha) > 0$ everywhere and $R_\alpha = \partial_\theta$ at $\rho = 0$.
+    \item $\alpha(\partial_\phi) > 0$ on $P_0$ for $\rho > 0$.
+    \item $TP_0 = \langle \partial_\theta,\partial_\rho\rangle$ with $\alpha(\partial_\rho) = 0$.
+    \item $d\rho(R_\alpha) = 0$ on $P_0$.
+    \item The Conley-Zehnder index of $\gamma_i$ in this trivialization is $1$ by hypothesis, because the modifications made above do not affect this index. 
+    \item $d\theta(R_\alpha) > 0$ everywhere, and is equally $1$ at $\rho = 0$.
+\end{enumerate}
+
+
+We can now use these coordinates to locally lift part of our rigid page as a holomorphic curve. We can write $\U_i = \{\rho\leq \delta_i\}$ for some $\delta_i> 0$ arbitrarilly small. By all the conditions written above, $\alpha$ has the form $fd\theta + gd\phi$ on $\U_i$, and $d\alpha = \partial_\rho f d\rho \wedge d\theta + \partial_\rho g d\rho \wedge d\phi + (\partial_\phi f - \partial_\theta g) d\phi\wedge d\theta$. 
+\begin{lemma}
+For $\delta$ small enough, we have on $\U_i\cap P_0$ : $$f>0 \quad g\geq 0\quad\partial_\rho f < 0\quad\partial_\rho g > 0$$
+\end{lemma}
+
+\begin{proof}
+We know that $R_\alpha = \partial_\theta$ at $\rho = 1$, hence $f> 0$ for $\rho$ small. Moreover, in order for $\alpha$ to be well-defined, $g$ has to vanish at $\rho = 0$.\\
+
+Suppose $\partial_\rho f = 0$ at some point. Then $d\alpha(R_\alpha,\partial_\rho) = -\partial_\rho g d\phi(R_\alpha) = 0$. Hence $\partial_\rho g = 0$, as we know that $d\phi(R_\alpha) > 0$. However, that means that $d\alpha = (\partial_\phi f -\partial_\theta g)d\phi\wedge d\theta$, so $R_\alpha = \partial_\rho \in \xi$ which is a contradiction. The same result is indeed also true for $\partial_\rho g$ for the same reason, so $\partial_\rho f$ and $\partial_\rho g$ have constant signs. \\
+
+Now compute : $d\rho\wedge d\alpha = (\partial_\phi f - \partial_\theta g) d\rho \wedge d\phi \wedge d\theta$, and we know that $d\rho(R_\alpha) = 0$, so $d\rho\wedge d\alpha(R_\alpha,\cdot,\cdot) = 0$, which means that $(\partial_\phi f - \partial_\theta g) = 0$ because we know that $R_\alpha$ never vanishes.\\
+
+We also have : $d\alpha(\cdot,R_\alpha) = \partial_\rho f d\theta(R_\alpha) + \partial_\rho g d\phi(R_\alpha) = 0$, and because $d\phi(R_\alpha) \geq0$ and $d\theta(R_\alpha) \geq0$ near $P_0$, we get that $\partial_\rho f $ and $\partial_\rho g$ are of opposite signs. \\
+
+Finally, $\alpha(\partial_\phi) > 0$ on $\{\rho > 0\}\cap P_0$, hence $g> 0$ which means that $\partial_\rho g > 0$, and $\partial_\rho f < 0$. 
+
+\end{proof}
+Before going further, we modify once again the previous coordinates in order to remove the dependancy of $f$ in the $\theta$-coordinate on $P_0$. In order to do that, consider again the blow-up neighborhood $T$. We look at the level sets of $f$ on $P_0$. They are all compact and non-singular because of the previous lemma. Hence they are conjugated to circles around $T_0$. Note that on $T_0$, $f = 1$ so $\F_{P_0}$ is a level set of $f$. Now take a diffeomorphism :
+$$\left\{
+    \begin{array}{ll}
+        \Psi : &P_0 \rightarrow  \Psi(P_0)\subset P_0\\
+               &(\rho,\theta)\mapsto (1-f(\rho,\theta),\theta) 
+    \end{array}
+\right.$$
+
+By the previous lemma, this is a well-defined diffeomorphism which extends as the identity on the boundary (i.e on $\gamma_i$). Now look at the pullback of $\partial_\rho$, which is $-\frac{1}{\partial_\rho f}\partial_\rho$. This with the pullback of $\partial_\theta$ define our new set of coordinates on $P_0$. We extend them to $T$ by the applying the same process than before, first extending $\partial_\rho$ such that it always follows the caracteristic foliation, and the using the same method to get coordinates that verify condition $(\star)$. We then get by blow-down a new set of coordinates on $\U_i$, which still have all the properties listed above, and also, by definition of $\Psi$ :\\
+
+$7. \; \partial_\theta f = 0 $ on $P_0$.
+
+\begin{remark}
+    Note that this also implies $\partial_\theta(\partial_\rho f) =0$ on $P_0$.
+\end{remark}
+
+\begin{remark}
+    After using this process, one may need to shrink $\U_i$ or change the value of $\delta_i$ in order for the previous result to still hold.
+\end{remark}
+
+We now have all we need in order to use Wendl's local model \cite{wendl_open_2009}. We recall how to define this structure.\\
+
+We define $J$ to be an $\alpha$-compatible almost complex structure on $\R\times (\overline{P_0}\cap \U_i)$. We will denote $D = f\partial_\rho g - g\partial_\rho f$, and the computation $\alpha\wedge d\alpha = Dd\rho\wedge d\phi\wedge d\theta$ gives $D>0$. Now define :
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\lambda = \frac{1}{D}(g'\partial_\theta - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{D}(-g\partial_\theta + f\partial_\phi) 
+    \end{array}
+\right.$$
+
+This structure is $\alpha$- compatible and well-defined on the whole neighborhood, because $D$ goes to $0$ at speed "at least $\rho$". A quick computation raises :
+$$J\partial_\theta = -f\partial_a - (\partial_\rho f)\partial_\rho := -V$$
+
+Note that in our construction, the functions are not only dependant on $\rho$ but also on $\phi$ and $\theta$. However, on $P_0$, $f$ and $\partial_\rho f$ have no dependency in $\theta$. This allows us to define a holomorphic curve ; this can be done from two different points of view : first one can solve the Cauchy-Riemann equations for a cylindrical curve with coordinates $(s,t)\in \R_+\times \Sp^1$ of the form $u(s,t) = (a(s),\rho(s),0,t)$ which boil down to :
+$$\frac{da}{ds} = f>0\quad\quad\quad \frac{d\rho}{ds} = \partial_\rho f(\rho) < 0$$
+
+This is a well defined order $1$ ODE, and the solutions give the holomorphic curve we wanted 
+\begin{remark}
+    In the initial construction of Wendl, the almost complex structure was defined by the formula $J\partial_\rho = \frac{1}{B}(-g\partial_\theta + f\partial_\phi)$ with $B = B(\rho)$ function chosen such that $B\sim \rho$ near $0$ and $B \equiv 1$ near $1$. However, using this leads to additional $\frac{B}{D}$ terms in the Cauchy-Riemann equations, and $D$ being dependant on $\theta$ (because $g$ is), we cannot solve explicitely the equations anymore (at least not with maps on the form described above). Moreoever, notice that here $D$ goes to $0$ at speed at least $\rho$, and that we do not need the condition near $\rho = 1$ anymore, hence replacing $B$ by $D$ still allows to have a well-defined almost complex structure, while removing the $\theta$-dependency.
+\end{remark}
+
+A solution to these equations has a positive end at $\gamma_i$ as wanted. Let us precise a little bit that point : indeed, $a$ goes to infinity and $\rho$ goes to $0$ as $s$ goes to infinity. Furthermore, this end has finite Hofer energy : take $\varphi : \R\rightarrow ]-1,1[$ strictly increasing and look at :
+
+$$E_\varphi(u) = \int_{\R_+\times \Sp^1}{u^*\omega_\varphi} = \int_{\R_+\times \Sp^1}{\varphi'(a\circ u)e^{\varphi(a\circ u)}u^*(da\wedge \alpha)} + \int_{\R_+\times \Sp^1}{e^{\varphi(a\circ u)}u^*d\alpha}$$
+
+Using the same parametrization of the cylindrical end $(s,t)\in\R_+\times \Sp^1$ as before, we have : $u^*(da\wedge \alpha) = (f\circ u)^2 ds \wedge dt$, and $(f\circ u)^2\leq C < +\infty$ with $C$ some positive constant. Hence the first integral is finite. For the second one, $u^*d\alpha = (\partial_\rho f)^2(\rho(s))ds\wedge dt = (\frac{d\rho}{ds}\partial_\rho f\circ \rho)ds\wedge dt = \partial_s(f\circ \rho)$, and indeed $\displaystyle\int_{R_+}\partial_s(f\circ\rho)ds < + \infty$ as $f\rightarrow 1$ when $\rho \rightarrow 0$ i.e $s\rightarrow +\infty$. This shows the second integral is also finite, and that $E_\varphi(u)$ can be bounded by some constant independant on $\varphi$, which shows that the Hofer energy is finite. This implies that the curve is asymptotically cylindrical \cite{wendl_lectures_nodate}, thus positively asymptotic to $\gamma_i$.\\
+
+Another way to build this cylindrical curve is to look at the line $L = (a = a_0,\rho = \rho_0,\phi = 0,\theta\in \Sp^1)$ and look at the surface : $S = (\phi_t^V(L))_{t\in R_+}$. This surface is smooth by construction, and its tangent space is stable by $J$ by construction. Similar arguments than above then allows one to conclude that we have a finite energy holomorphic curve positively asymptotic to $\gamma_i$. Note that this construction works because $[\partial_\theta,V] = 0$ because we removed the dependency in $\theta$ from the terms in $V$, hence $\partial_\theta$ is preserved along the flow of $V$, so again this construction would not work well without this constraint.\\
+
+We repeat this process with all the $\gamma_i,\quad i = 1,...,r$.\\
+
+Now to extend this construction to the case of a positive end on a broken component, notice that the construction we did is mostly local around $P_0$, and that near a broken binding component, while the local model of the pages is rather different than the radial one, the rigid pages behaves mostly like in the radial case. Hence suppose $P_0$ has a positive end at $\gamma_b$, we can apply exactly the same construction as above, the only caution we have to take being on the choice of the vector field $Y$ on the exceptional divisor ; everything else can be done in that case again without any change. In order to build this vector field, notice that the conditions we put on the choice of $Y$ can also be verified here, because even though the picture of the different foliations (see figure \ref{fighyp}) are quite different for a hyperbolic orbit, near $\F_{P_0}$ the vector field $R$ behaves in the same way than for the radial model. Hence condition $2)$ can be verified with the same construction, conditions $4)$ and $5)$ do not depend on the model so they are not an issue, condition $3)$ can also be verified as the slope in absolute value of $R$ is uniformely bounded on $T_0$ (it is never parallel to $\partial_\phi$), hence $Y$ can be made to have greater slope or negative $\theta$ coordinate as in the elliptic case. Finally, condition $1)$ must be replaced by "$Y$ is positively transverse to the lines $\{\phi = \text{Cst}\}$" as only $4$ of those lines are actually induced by pages (the $4$ rigid pages). Once the set of coordinates is fixed, we define $J$ on $P_0$ and lift $P_0$ in the exact same way as before.\\
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.3]{Brisé/Reebhyp.png}
+        \caption{Rigid pages (red) and the Reeb vector field (purple)}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+          \includegraphics[scale = 0.3]{Brisé/totalhyp.png}
+         \caption{All the foliations on $T_0$ (the same colors as before are used)}
+     \end{subfigure}
+   
+    \caption{Foliations and choice of $Y$ in the case of a hyperbolic broken binding orbit}
+    \label{fighyp}
+\end{figure}
+
+We now want to handle the case of negative ends, whether it is a negative end on a broken binding component, which we need for any broken book, or for a negative radial component, which we may allow here in our construction. To do that, we need first to build an analogue of Wendl's local model in the case of a page with a negative end at some Reeb orbit. First recall that in that case, we can find local coordinates $(\rho,\phi,\theta)$, such that the pages are $\{\phi = cst \}$ and are oriented by $d\rho\wedge d\theta$. In that case, the Reeb vector field verifies $d\phi(R_\alpha) < 0$, and still $d\theta(R_\alpha) > 0$ (and is $1$ at $\rho = 0$). We define a stable hamiltonian structure on the page by : $\lambda = fd\theta + gd\phi$ where $f(\rho),g(\rho)$ verifiy similar conditions than in the classic positive local model : at $0$, we have : $f\rightarrow b>0$, $g\rightarrow 0$, $f'\simeq \rho$ and $g\simeq \rho^2$. We also need $f' > 0$, $g'>0$, and $D = fg' - f'g > 0$. An exemple of such functions is shown below. All these conditions imply that $R_\lambda = \frac{1}{D}(g'\partial_\theta - f'\partial_\phi)$, hence we have $d\phi(R_\lambda)< 0$, and $d\theta(R_\lambda)>0$ as wanted. Moreover, $\lambda \wedge d\lambda = Dd\rho\wedge d\phi\wedge d\theta > 0$ so we do have a contact form (indeed, in order to define such a structure on a whole "generalized" open book, one would need to adjust a little bit $f$ and $g$ near the boundary of the neighborhood, but we will not need this here). \\
+
+
+
+We can then define an $\lambda$-compatible almost complex structure by the following formula :
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\lambda = \frac{1}{D}(g'\partial_\theta - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{B}(-g\partial_\theta + f\partial_\phi) 
+    \end{array}
+\right.$$
+for some choice of function $B$ as mentionned before, i.e $B\sim \rho$ near $0$ and $B\equiv 1$ near $1$ (note that in practice we will take $B = D$ as mentionned above).\\
+
+This almost complex structure is again $\lambda$-compatible, hence we use the same method as before to lift our page as an cylindrical holomorphic curve. Note that we still have : $J\partial_\theta = -f\partial_a - \frac{Bf'}{D}\partial_\rho$, but because $f'$ is positive in that case we get a negative cylindrical end as expected. We will come back on this model later on for index computations.\\
+
+It is now straightforward to lift the negative ends of rigid pages as well : we can use the same constructions as before (for negative ends on radial or broken components), the only difference being the conditions we impose on our coordinates, and the consequences of that on the functions $f$ and $g$. Indeed we want this time $d\phi(R_\alpha) < 0$, and the Conley-Zehnder index in the given trivialization is $-1$. Note that for latter one needs to assume this time that the Conley-Zehnder index is already $-1$ in the trivialization we start with ; this is the same condition than for the positive case as the Reeb vector field "turn" in the same direction than $-\partial_\phi$, but the orientation of the plane field at $\rho = 0$ is still "like $d\rho \wedge d\phi$" hence we get the opposite Conley-Zehnder index ; index -1 hence means that it "turns slower than the pages". We also leave the other conditions unchanged. Now finding a set of coordinates verifying these conditions can easily be done by choosing $Y$ well on the exceptional divisor of the partial blow-up, meaning that on $\F_{P_0}$ it has to be on the "same side" of $\F_\xi$ than $R$, and $\overline{Y} = d\theta_0(Y)\partial_{\theta_0} - d\phi_0(Y)\partial_{\phi_0}$,  has to be "between" $-\partial_{\phi_0} $ and $R$, and extending it well elsewhere (this amounts to choose a vector $Y$ with the same conditions as before but replacing $R$ with $\overline R$).\\
+
+Once a set of coordinates satistfying these conditions is obtained, we can write down $\alpha$ on $P_0$ as $\alpha = fd\theta + gd\phi$. Now the proof of the lemma, with conditions $g> 0, f >0, \partial_\rho f> 0, \partial_\rho g > 0$ is completely analogous, with only one difference : $d\alpha(\cdot, R_\alpha) = \partial_\rho f d\theta(R_\alpha) + \partial_\rho g d\phi(R_\alpha) = 0$ implies that $\partial_\rho f$ and $\partial_\rho g$ have same sign because $d\phi(R_\alpha)<0$ and $d\theta(R_\alpha)>0$. We can then build again the same almost complex structure, and thus obtain part of a finite energy J-holomorphic curve with a negative end in $\gamma_i$. \\
+
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[scale = 0.3]{Radial négatif/ralpha.png}
+        \caption{Reeb vector field}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[scale = 0.3]{Radial négatif/total.png}
+         \caption{All foliations on $T_0$}
+     \end{subfigure}
+   
+    \caption{Foliations and choice of $Y$ for a negative end (everything is the same as in the positive case, only the $\phi$ component of the Reeb vector field is reversed)}
+    \label{figneg}
+    
+\end{figure}
+
+
+
+Hence we have explained how to lift the edges of a rigid page. We now lift see how to lift a page away from the binding in a way such that everything can be attached smoothly.\\
+
+We will use the notation $\dot{\Sigma} := \Sigma\backslash\Gamma$, where $\Sigma$ is a compact Riemann surface, $\Gamma = \Gamma^+ \cup \Gamma^- = \{z_1^+,... z_r^+\}\cup\{z_1^-,...,z_s^-\}$ a collection of points of $\Sigma$, and $\dot{\Sigma}$ the associated punctured Riemann surface, such that topologically, $\dot\Sigma \simeq P_0$, and with the puncture in $1-1$ correspondance with the ends of $P_0$ (with $r$ the number of positive ends and $s$ the number of negative ends). When denoting some puncture $z_i$, we refer to any puncture, positive or negative alike. We also take some initial complex structure $j$ on $\dot \Sigma$.\\
+
+Choose some function $h = (a_0,h_0) : \dot{\Sigma}\rightarrow \R\times M$ such that near each $z_i$, there is a cylindrical neighborhood which $h$ sends in $\R\times \U_i$, and on which $h$ coincides with the lifted holomorphic curve $(a(s),\rho(s),0,\pm t)$ in local coordinates $(\rho,\phi,\theta)$ as constructed before around some binding orbit $\gamma_i$ associated to $z_i$. Extend this local parametrization smoothly outside of $R\times \U_i$, such that $h_0$ is an embedding and $\text{Im}(h_0) = P_0$. On each $\R\times (P_0\cap\U_i)$, we built some $\alpha$-compatible almost complex structure, which we can extend as a $\alpha$-compatible almost complex structure $J_0$ on $\R\times P_0$ (because the fiber bundle of compatible almost complex structures is contractible). Consider the Liouville manifold $(\dot\Sigma,h^*\alpha,h^*d\alpha)$. Note that $h$ is $(j,J_0)$-holomorphic near the punctures, where some vector fields $(\partial_s,\partial_t)$ associated to a set of cylindrical $j$-complex coordinates $(s,t)\in\R_\pm \times \Sp^1$ is sent to $(f\partial_a + (\partial_\rho f)\partial_\rho,\pm\partial_\theta)$ (the signs depend on the positivity of the end). We build an adapted Morse function $\psi$ in the following way : we want $\psi\equiv a$ on the cylindrical ends, and we extend it elsewhere by asking that the vector field $X$ such that $\alpha = \iota_Xd\alpha$ is a pseudo-gradient for $\psi$, which is always possible up to an isotopy of $P_0$. Indeed, such a vector field generates the caracteristic foliation on $P_0$, and up to isotopy we can assume the only singularities are saddles and nodes, which are also the possible singularities of a Morse function. Note that $a$ is Morse with pseudo-gradient $X$ near the ends as we have : $-da\circ j = u^*\alpha$ by the Cauchy-Riemann equations, hence is even already a Stein potential near the ends. Hence we get $(\dot\Sigma,h^*\alpha,h^*d\alpha,\psi)$ a Weinstein manifold. We define a new complex structure $j_0$ on $\dot \Sigma$ by keeping $j$ on $h^{-1}(\R\times \U_i)$, and extending it elsewhere as a $u^*d\alpha$-compatible almost complex structure, which is automatically integrable.\\
+
+We now use the existence theorem from \cite{cieliebak_stein_2012} (Theorem 13.8). There exists $h_1:\dot \Sigma \rightarrow \dot\Sigma$ such that $(\dot\Sigma,h_1^*j_0,h_1^*(h^*\alpha),h_1^*(h^*d\alpha),\psi)$ is a Stein manifold, and with $h_1$ preserving the positive and negative ends. We define the following almost complex structure $J$ on $P_0$ : 
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha \\
+        & J(v - \alpha(v)R_\alpha) = (h_*j_0)v - \alpha((h_*j_0)v)R_\alpha \quad \forall v \in TP_0
+    \end{array}
+\right.$$
+
+\begin{lemma}{\text{  }}
+
+\noindent This is a well-defined $\alpha$-compatible almost complex structure along $P_0 = (\psi,(h\circ h_1))(\dot\Sigma)$ which coincides on $\R\times \U_i$ with the previously defined almost complex structure.\\ Moreover, $u = (\psi,h\circ h_1)$ is $(h_1^*j_0,J)$-holomorphic, and coincides with the previous lift of $P_0$ near the ends. 
+
+\end{lemma}
+
+\begin{proof}
+
+Denote $J_* := (h_*j_0)$.\\
+$J$ is well-defined because $v\mapsto v-\alpha(v)R_\alpha$ is an isomorphism between $TP_0$ and $\xi$, and $J(J_*v - \alpha(J_*v)R_\alpha) = J_*^2v - \alpha(J_*^2v)R_\alpha$, but $J_*^2 = -Id$ hence $J$ is a well-defined $\alpha$-compatible almost complex structure. Now on $\R\times \U_i$, we have : $$J(\partial_\rho) = J_*\partial_\rho - \alpha(J_*\partial_\rho)R_\alpha - \alpha(\partial_\rho)\partial_a$$ with the definition above. Hence : $$J(\partial_\rho) = J_*\partial_\rho - \frac{1}{D}\alpha(J_*\partial_\rho)(g'\partial_\theta - f'\partial_\phi)$$
+Or, we have $$J_* \partial_\rho = J_*(dh(\pm\frac{1}{\partial_\rho f}\partial_s)) = \frac{1}{\partial_\rho f}dh(\pm j_0\partial_s) = \frac{1}{\partial_\rho f}\partial_\theta$$
+Hence :
+$$J(\partial_\rho) = \frac{1}{\partial_\rho f}\partial_\theta - \frac{f}{D\partial_\rho f} (\partial_\rho g \partial_\theta - \partial_\rho f\partial_\phi) = \frac{1}{D}(f\partial_\phi- g\partial_\theta)$$
+which is exactly the same formula than for the structure defined previously on $\U_i$. Hence $J$ is an $\alpha$-compatible almost complex structure well-defined on $P_0$. \\
+Now, we know that $\psi = a$ on $(h\circ h_1)^{-1}(\R\times \U_i)$, $h_1$ is the identity on $(h\circ h_1)^{-1}(\R\times \U_i)$, and $h$ coincides with the lifted holomorphic curve in the local model defined before. Hence $(\psi,h\circ h_1)$ is a smooth extension of the cylindrical curves defined in the local model. \\
+
+Finally, let us show that the Cauchy-Riemann equations hold in local complex coordinates $(s,t)$ : 
+$$du = (d\psi)\partial_a + d(h\circ h_1)$$
+$$J\circ du(\partial_s) = d\psi(\partial_s)R_\alpha + J_*d(h\circ h_1)(\partial_s) - \alpha(J_*d(h\circ h_1)(\partial_s))R_\alpha - \alpha(d(h\circ h_1)(\partial_s))\partial_a$$
+But :
+$$J_*d(h\circ h_1)(\partial_s) = dh\circ j_0\,\circ dh_1(\partial_s) = d(h\circ h_1)(h_1^*j_0)(\partial_s)$$
+So :
+$$\alpha(J_* d(h\circ h_1)(\partial_s)) = (h\circ h_1)^*\alpha(h_1^*j_0)(\partial_s) = -d\psi\circ (h_1^*j_0)(\partial_t) = d\psi(\partial_s)$$
+by definition of a Stein manifold, and of the complex coordinates $(s,t)$. Hence we have :
+$$J\circ du(\partial_s) = d\psi(\partial_s)R_\alpha + d(h\circ h_1)(\partial_t) -d\psi(\partial_s)R_\alpha + d\psi(\partial_t)\partial_a $$
+
+Now compute :
+$$du\circ j(\partial_s) = du(\partial_t) = d\psi(\partial_t)\partial_a + d(h\circ h_1)(\partial_t) = J\circ du(\partial_s)$$
+which proves that $u$ verifies the Cauchy-Riemann equations.
+
+\end{proof}
+
+This concludes the lifting of a single rigid page $P_0$. Now we can apply this process to define a $\alpha$-compatible almost complex structure on all rigid pages at the same time, and then extend it (by contractibility of the bundle of compatible almost complex structure) as a smooth structure on the whole space $\R\times M$. The only thing one has to check before extending it is that it is actually smooth on an orbit asymptotic to several rigid pages (e.g a broken binding component). \\
+
+Recall that on a rigid page in a local model, the almost complex structure is given by 
+
+$$\left\{
+    \begin{array}{ll}
+        & J\partial_a = R_\alpha= \frac{1}{D}(g'\partial_\theta - f'\partial_\phi) \\
+        & J\partial_\rho = \frac{1}{D}(-g\partial_\theta + f\partial_\phi) 
+    \end{array}
+\right.$$
+
+The first equation $J\partial_a = R_\alpha$ is indeed smooth on $\rho = 0$. For the second one, notice that $f$ and $g$ can be extended smoothly on $\U_i$ by writing $\alpha = fd\theta + gd\phi + hd\rho$ on the whole neighborhood ; moreoever $(\rho,\phi,\theta)$ are smooth coordinates on $\U_i$, hence the almost complex structure is smooth at $\rho = 0$ as wanted. \\
+
+The construction presented in this first part gives us a $\alpha$-compatible almost complex structure $J\in\J(\alpha)$ such that the rigid pages (up to isotopy, which does not change the global structure of the broken book decomposition) are lifted to a 1-parameter translation invariant family of $J$-holomorphic curves. 
+
+
+\begin{remark}
+    The construction presented here works in fact in a more general setup. The only thing we really used here is the fact that we had a smooth embedded compact surface with boundary, transverse to the Reeb flow on its interior, and with closed non-degenerate simple Reeb orbits as boundary components. Hence we showed that any such surface in $(M,\alpha)$ 3-dimensional contact manifold can be lifted (up to isotopy) to a translation invariant $1$-parameter family of $J$-holomorphic curves in the symplectization, with $J\in\mathcal{J}(\alpha)$ fixed on the surface and chosen arbitrarily elsewhere. However, we have in general no control on the Fredholm +index of such a curve, which is why we need assumtions on the Conley-Zehnder index in what follows.\\
+\end{remark}
+
+
+
+
+\end{document}

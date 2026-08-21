@@ -1,0 +1,301 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\section{Local models and normal forms}\label{p:I}
+
+In this section, we prove the existence of normal forms for the Reeb flow around binding orbits, which will be useful later on in order to construct the finite energy foliation, and to have a convenient asymptotic model for obstruction bundle gluing methods. These normal forms are designed to be compatible, in some sense, with adapted broken book decomposition. \\
+
+Let $\alpha$ be a non-degenerate contact form, supported by a broken book decomposition $(\K,B)$.
+Throughout this whole section, we will be using tubular neighbourhood of Reeb orbits for $\alpha$,  which we will denote with coordinates $(\rho,\phi,\theta)$, where $\rho$ is the radial coordinate, and $\partial_\theta$ is parallel to $R_\alpha$ at $\rho = 0$. We will assume the binding orbit is non-degenerate, and will establish local models for both elliptic and hyperbolic orbits separately. \\
+
+We will also use "partial blow-up" in order to construct our systems of coordinate. The idea is to replace the binding orbit by a 2-torus with coordinates $(\phi,\theta)$ where $\phi$ and $\theta$ are both uniquely determined up to isotopy. Indeed, $\phi$ corresponds to the "limit" of the directions of the meridians of the tori $\{\rho = Cst\}$ for any system of coordinates, which are unique because they are the only isotopy classes of curves bounding a disc inside their respective torus. The $\theta$-coordinate will also be well-defined as the direction given by the boundary of some radial pages. In this setting, the tubular neighborhood of the Reeb orbit becomes $\T^2\times I$, with $I = [0,1]$. By analogy with the usual blow-up, the tori $\T^2\times \{0\}$ will be called the exceptional divisor.\\
+
+We give the following result about this construction, which will simplify slightly the following proofs:
+
+\begin{lemma}\label{l:blowup}
+If $\gamma$ is a radial binding component, then it is possible to choose coordinates $(\phi,\theta)$ on the exceptional divisor such that $\partial_\phi$ is in $\xi$ and $\partial_\theta$ is tangent to the pages.
+\end{lemma}
+
+\begin{proof}
+Choose a metric $g$ on $M$, and for $x$ in the image of $\gamma$, consider $D_x = \exp_x(t\D_x)$ where $\D_x$ is the unit disc in $\xi_x$ and $t\in\R$. Up to choosing $t$ small enough, this gives a 1-parameter family of disjoint discs, intersecting the binding once, and tangent to $\xi$ at that intersection point. This gives a first parametrization $(\rho_0,\phi_0,\theta_0)$ of a tubular neighbourhood of $\gamma$. Consider the partial blow-up with respect to this parametrization. On the exceptional divisor, $\partial_\phi\in\xi$ by construction, while the intersection with the pages are loops intersecting each meridian curves once (by property of the pages in the radial model). Hence they are tangent to $\partial_\theta + n \partial_\phi$ for some $n$. Now a linear change of coordinates on the 2-torus gives the result.
+\end{proof}
+
+We also give some constraints on local models for contact forms, as an auxiliary lemma which we will use later.
+
+\begin{lemma}\label{l:localasymptotics}
+Suppose $\gamma$ is a Reeb orbit for $\alpha$ around which there are coordinates $(\rho,\phi,\theta)$, such that the Reeb flow is always positively transverse to the surfaces $\{\phi = Cst\}$ (equivalently, $d\phi(R_\alpha) > 0$ for $\rho > 0$), and such that the "pages" $\{\phi = Cst\}$ have a positive end at $\gamma$. Suppose also that $\alpha = f(\rho,\phi,\theta)d\theta + g(\rho,\phi,\theta)d\phi$. Then, for $\rho$ small enough :
+\begin{enumerate}
+    \item $f> 0, g\geq 0$ pour $\rho \geq 0$.
+    \item $\partial_\rho f < 0$, $\partial_\rho g > 0$ for $\rho > 0$.
+    \item $g\displaystyle\sim_{\rho \rightarrow 0} C\rho^2$, and $\partial_\rho g \sim 2C\rho$
+    \item If $D:= f\partial_\rho g - g\partial_\rho f$, then $D\sim C' \rho$
+\end{enumerate}
+where the $C,C'$ are functions of $\phi$ and $\theta$ independent of $\rho$.
+\end{lemma}
+
+\begin{proof}
+Let us first prove the first two points.\\
+One has : 
+
+$$d\alpha = \partial_\rho f (d\rho\wedge d\theta) + \partial_\rho g (d\rho \wedge d\phi) + (\partial_\phi f - \partial_\theta g)(d\phi\wedge d\theta)$$
+and :
+
+$$\alpha\wedge d\alpha = (f\partial_\rho g - g\partial_\rho f)(d\rho\wedge d\phi\wedge d\theta)$$
+
+We know that $R_\alpha = \partial_\theta$ at $\rho = 0$, hence $f> 0$ for $\rho$ small. Moreover, in order for $\alpha$ to be well-defined, $g$ has to vanish at $\rho = 0$.\\
+
+We know that $\gamma$ is a positive end for the pages, hence by definition $d\alpha(\partial_\rho,\partial_\theta) < 0$ for $\rho > 0$. This implies $\partial_\rho f < 0$.\\
+We also have : $d\alpha(\partial_\rho,R_\alpha) = \partial_\rho f d\theta(R_\alpha) + \partial_\rho g d\phi(R_\alpha) = 0$, and because $d\phi(R_\alpha) >0$ and $d\theta(R_\alpha) >0$, we get that $\partial_\rho f $ and $\partial_\rho g$ are of opposite signs and never vanishing for $\rho > 0$. \\
+
+We now prove the last two items. Define $D := f\partial_\rho g - g\partial_\rho f$. It is positive by the contact condition for $\rho > 0$. We know by the construction of lemma \ref{l:blowup} that $\alpha = fd\theta$ at $\rho = 0$, hence $g = o(\rho)$ and $f$ is positive even at $\rho = 0$.\\
+
+Moreover, because $\alpha$ is $\mathcal{C}^1$ at $\rho = 0$, $d\alpha$ is well defined and non-zero on this domain, which implies that $\partial_\rho g$ is a $O(\rho)$, while $\partial_\rho f$ is a $o(1)$. Moreover, $D$ is a $O(\rho)$ at $0$, so combining all this, we get that $\partial_\rho g$ is equivalent to $C\rho$ where $C$ is some positive constant, hence $g\sim (C/2) \rho^2$ and $D\sim C'\rho$ where $C'$ is another positive constant.  \\
+
+
+\end{proof}
+
+
+Finally, we state the following straightforward result.
+
+ \begin{lemma}\label{l:ReebFlowFormula}
+If $\alpha = f(\rho,\phi,\theta)d\phi + g(\rho,\phi,\theta)d\theta$ is a contact form, then its Reeb flow is given by : $$R_\alpha = \frac{1}{D}((\partial_\phi f - \partial_\theta g)\partial_\rho - \partial_\rho f \partial_\phi  + \partial_\rho g\partial_\theta)$$ where $D := f\partial_\rho g - g\partial_\rho f$ as usual.
+ \end{lemma}
+
+\begin{remark}
+In every computation that follows, we will always use the letter $D$ to denote the function $f\partial_\rho g - g\partial_\rho f$, or $fg' - gf'$ when no confusion is possible.
+\end{remark}
+
+We now build a first local model by studying locally what happens around an elliptic binding orbit, which is necessarily a radial binding component. \\
+
+\begin{lemma}\label{l:radial_coo}
+Let $\gamma$ be a radial binding component. Then there exists local coordinates $(\rho,\phi,\theta)$ such that :
+
+\begin{itemize}
+    \item $\xi = \Ker(d\theta + r^2d\phi)$.
+    \item The pages are $\{\phi = Cst\}$.
+\end{itemize}
+
+\end{lemma}
+
+\begin{proof}
+
+Start by taking the partial blow-up as in lemma \ref{l:blowup}, with coordinates $(\phi,\theta)$ on the exceptional divisor, with $\phi$ describing the characteristic foliation and $\theta$ following the boundary of the pages given by the radial model around the binding component. Define $\partial_\rho$ on $\T^2\times I$ as a vector field tangent to the characteristic foliation on the pages. This is possible as we know what this foliation looks like near a binding component (see the drawing below). Now consider the push-forward of $\partial_\phi$ and $\partial_\theta$ by $\partial_\rho$. This defines a new set of coordinates on $\T^2\times I$ (in fact, it might be necessary to modify the neighbourhood near the boundary $\T^2\times \{1\}$ but this does not change the construction). In this set of coordinates, the pages are given by $\{\phi = Cst\}$ as $\partial_\rho$ and $\partial_\theta$ are tangent to them at all point. \\
+
+We can now consider the set of coordinates $(\rho,\phi,\theta)$ induced by the previous construction on the blow-down.\\
+Because $\partial_\rho$ is in $\xi$, the contact plane field is defined by an equation of the form : $fd\theta + gd\phi = 0$ with $f$ and $g$ functions of $\rho,\phi,\theta$. We know that $f$ is non-vanishing up to taking the neighbourhood small enough, as $R_\alpha$ is parallel to $\partial_\theta$ and $\rho = 0$. Hence we can define $h = g/f$ and get : $\xi = \Ker(d\theta + hd\phi)$. \\
+Finally, consider the following change of variables : $$p : (\rho,\phi,\theta)\mapsto (\sqrt{h(\rho,\phi,\theta)},\phi,\theta)$$
+To see that $p$ is a diffeomorphism onto its image for $\rho$ small enough, we compute : 
+$$2f\sqrt{fg} \,\partial_\rho (\sqrt{h}) = f\partial_\rho g - g\partial_\rho f$$
+
+
+Now we use lemma \ref{l:localasymptotics} and get that $g/f\rightarrow 0$ and that $\frac{D}{2f\sqrt{fg}}$ converges to a positive constant when $\rho$ goes to zero. This proves that $p$ sends $\{\rho = 0\}$ to itself, and that $\partial_\rho \sqrt{h}$ is always well-defined and non-zero, which proves that $p$ is indeed a diffeomorphism on the whole domain (i.e for fixed $\phi$ and $\theta$, we can find a smooth inverse in $\rho$ for $\sqrt{h}$).\\
+
+A quick computation yields : $p_*\xi = \Ker(d\theta + \rho^2d\phi) $. Moreover, the change of variables preserves the pages, hence we get a set of coordinates verifying the conditions we wanted.
+    
+\end{proof}
+
+The next lemma allow us to interpolate between any Reeb flow and a standard local model near a radial binding component. This model will be referred to as the "interpolation model" in the following parts.
+
+\begin{lemma}\label{l:radial_mod}
+Take $\alpha$ and $\gamma$ as before. Then there exists a contact form $\alpha'$ such that, in the set of coordinates given by the last lemma :
+\begin{itemize}
+    \item $\alpha' = \alpha$ away from a neighbourhood of $\gamma$
+    \item $R_{\alpha'}$ is supported by the broken book decomposition.
+    \item $\alpha = f(\rho) d\theta + g(\rho) d\phi$ in a smaller neighbourhood around $\gamma$, where $f$ and $g$ are smooth maps verifying certain conditions. In particular, $\gamma$ is elliptic for $\alpha'$. 
+\end{itemize}
+Moreover, for this new contact form, $\gamma$ has an action greater than its initial action which can be chosen arbitrarily large, and we can arrange the model so that the Conley-Zehnder indices of an arbitrarily large number of iterates of $\gamma$ is $1$ (in the trivialization given naturally by the pages).
+\end{lemma}
+
+\begin{remark}
+The conditions verified by $f$ and $g$ will be detailed in the proof ; they correspond to the usual conditions one imposes when constructing a contact form supported by a given open book decomposition (see for example \cite{wendl_open_2009}).
+\end{remark}
+
+\begin{proof}
+Consider the coordinates $(\rho,\phi,\theta)$ given y the previous lemma \ref{l:radial_coo}, for $\rho\leq \delta$. In these coordinates, the contact form can be written $\alpha = h(\rho,\phi,\theta)(d\theta + \rho^2d\phi)$ where $h$ is positive. Denote $\overline{h}(\rho) := \displaystyle\max_{\phi,\theta}h(\rho,\phi,\theta)$. Take $0 < \delta''<\delta'<\delta$ and take $\tau : [\delta'',\delta']\rightarrow 1$ to be a strictly increasing, with value $0$ in a neighborhood of $\delta"$ and value $1$ in a neighborhood of $\delta'$. Define $H(\rho,\phi,\theta) := \tau(\rho)h + (1-\tau(\rho))\overline{h}$ and consider $\overline{\alpha} =H(d\theta + \rho^2d\phi)$. Quick computations give the following : 
+$$\overline{\alpha}\wedge d\overline{\alpha} = 2\rho H^2d\rho\wedge d\phi\wedge d\theta >0$$
+
+ This shows that $\overline{\alpha}\wedge d\overline{\alpha}$ is positive, hence $\overline{\alpha}$ is a contact form. 
+ 
+Applied in our setting this gives :  
+$$d\phi(R_{\overline{\alpha}}) = - \partial_\rho H = - \partial_\rho \overline{h} - \tau '(h-\overline{h} ) - \tau \partial_\rho(h-\overline{h})$$
+
+We know that $\partial_\rho h < 0$ and by definition of $\overline{h}$ : $-\partial_\rho \overline{h}> 0$, $h-\overline{h}< 0$ and $\partial_\rho(h-\overline{h}) < 0$. Combined with $\tau,\tau' \geq 0$, this proves that $d\phi(R_{\overline{\alpha}})> 0$. We conclude that the Reeb flow is positively transverse to the pages, and $\overline{\alpha}$ is supported by the open book decomposition for $\rho \geq \delta''$.\\
+
+Take smooth maps : $f,g : [0,\delta^{(3)}]\rightarrow [0,1]$ where $\delta'' <\delta ^{(3)} < \delta '$ and $\tau = 0$ on $[\delta'',\delta^{(3)}]$, such that :
+\begin{itemize}
+    \item $f'(\rho) < 0,\,\,g'(\rho)> 0$.
+    \item $f(0) = b> 0$, $g(0) = 0$.
+    \item $f = \overline{h}$ et $g = \rho^2\overline{h}$ pour $\rho \in [\delta'',\delta ^{(3)}]$.
+    \item $f$ et $g/\rho^2$ are smooth at $0$.
+    \item $D := fg' - f'g > 0$.
+    \item $-f'/g' = \eta \in\R\backslash\mathbb{Q} $, with $\eta$ arbitrarily small and for $\rho \leq \rho_0$, with $\rho_0$ small enough.
+\end{itemize}
+
+An example of such maps $f,g$ is drawn in figure \ref{f:}.\\
+Finally, define $\alpha_0 := f(\rho)d\theta + g(\rho)d\phi$. 
+We showed that the Reeb flow was supported by the pages of the open book for $\rho > \delta"$, hence by lemma \ref{l:localasymptotics}, $f$ and $g$ are well-defined as the first condition is verified for $\rho \in[\delta'',\delta^{(3)}]$. 
+The different conditions used here appeared in similar forms in \cite{wendl_open_2009},\cite{roux_cas_nodate}, \cite{wendl_holomorphic_2010}. They ensure that $\alpha_0$ is a contact form, with a non-degenerate elliptic orbit $\gamma$ at $\rho = 0$, with action $b$. Notice that $b$ has to be greater than the initial action $\mathcal{A}(\gamma) + \epsilon$, where $\epsilon$ is a small number which can be chosen arbitrarily small by shrinking the neighborhood so that $\displaystyle\max_\U f < \mathcal{A}(\gamma) + \epsilon$ over this neighborhood. As long as $b$ verifies this condition, it can be chosen arbitrarily large. Unlike the references mentioned above, the form chosen for $f'/g'$ here is different and does not allow to control the action of other orbits in a neighborhood of $\gamma$, we just guaranty that $\gamma$ is non-degenerate by asking $\eta \in \R\backslash \mathbb{Q}$.\\
+We now show that the Conley-Zehnder index of $\gamma$ and a certain number of iterates can be chosen to be $1$. A short computation shows that the linearized Reeb flow along $\gamma^r$ corresponds to a rotation of angle: $-\frac{t}{b}\frac{f'}{g'}$, so the first return map corresponds to a rotation of angle $r\eta$, which shows that up to choosing $\eta$ small, the Conley-Zehnder index is $1$. \\
+
+ Finally, the Reeb flow for $\rho\leq \delta ''$ is $R_{\alpha_0} = \frac{1}{D}(g'\partial_\theta - f'\partial_\phi)$, and $-f'$ being positive implies that this flow is supported by the open book decomposition.
+
+
+
+\end{proof}
+
+
+
+\begin{remark}
+Note that this method allows one to transform hyperbolic orbits in the binding into elliptic ones. This process may create new periodic orbits, but it is not an issue as they will have greater action than the binding components.
+\end{remark}
+
+
+Let us now build the model around broken binding components. Recall these orbits are always hyperbolic. We will also be using sometimes coordinates $(x,y)$ instead of $(\rho,\phi)$ as they may be more convenient for hyperbolic models.
+
+%\begin{lemma}\label{l:localcoohyp}
+%Let $\gamma$ be a radial binding component. Then there exists local coordinates $(x,y,\theta)$ around $\gamma$ such that :
+
+%\begin{itemize}
+ %   \item $\xi = \Ker(d\theta + xdy - ydx)$.
+ %   \item The pages are tangent to $\partial_\theta$ and $x\partial_x - y\partial_y$ (i.e their intersection with the discs $\{\theta = Cst\}$ are exactly the level sets of $H(x,y) = xy$ ).
+%\end{itemize}
+
+%\end{lemma}
+
+%\begin{proof}
+
+
+
+%\end{proof}
+
+%% Pour l'instant je ne sais pas comment montrer ce lemme, mais en fait on n'en a pas besoin dans la suite. 
+%% En fait, il suffit que le champ de reeb reste transverse aux pages rigides uniquement. Ceci dit, la suite de la preuve démontre donc le résultat voulu par le gluing et les propriétés des courbes nicely embedded.
+
+
+
+This model allows us to interpolate again in this setting, with particular constraints again on the action and Conley-Zehnder index. 
+
+\begin{lemma}\label{l:localmodhyp}
+Take $\alpha$ and $\gamma$ as before. Then there exists contact forms $\alpha'_i,\,\,i = 1,2$ such that, in the set of coordinates given by lemma \ref{} :
+\begin{itemize}
+    \item $\alpha'_i = \alpha$ away from a neighbourhood of $\gamma$
+    %\item $R_{\alpha'}$ is supported by the broken book decomposition. Idem, plus nécessaire du coup (et potentiellement pas vrai, il faut une isotopie du livre je pense).
+    \item $R_{\alpha'}$ is positively transverse to the rigid pages $\{\phi = 0\}$ and $\{\phi = \pi\}$, and negatively transverse to the pages $\{\phi =\pi/2\}$ and $\{\phi = -\pi/2\}$.
+    \item $\alpha'_1 = (b+\epsilon( x^2-y^2))d\theta + \frac{1}{2}(xdy -ydx)$ where $b$ is the action of $\gamma$ (with respect to $\alpha$), and $\epsilon$ is a small constant, and $\alpha'_2 = be^{\epsilon H}(d\theta + \rho^2d\phi)$ where $H(x,y,\theta) = x^2-y^2$.
+\end{itemize}
+In particular, $\gamma$ is hyperbolic, and its action in the new model is the same than in the initial one.
+\end{lemma}
+
+\begin{remark}
+The Reeb vector field $R_{\alpha'}$ may not be transverse to the pages of the broken book near the binding anymore. This will not be an issue as we only need it to be transverse to the rigid pages. In fact, the arguments from intersection theory that we will use later will show that up to isotopy of the pages, we can still assume that the Reeb vector field for $\alpha'$ is supported by the broken book decomposition. The fact we had a stronger result in the radial case will simply mean that there is no need to isotope the pages near radial binding components, namely the projections of the curves of the finite energy foliation we will obtain will coincide exactly with the pages of the initial broken book near the radial binding, and up to isotopy elsewhere.
+\end{remark}
+
+\begin{remark}
+We can also ask that $\alpha' = be^{\epsilon H}(d\theta + \sigma)$ where $\sigma$ is a Liouville form on the disc $\D_{x,y}$, with an appropriate boundary form, for example $e^\rho d\phi$ like what we will use in part \ref{p:IV}.
+\end{remark}
+
+    
+\begin{proof}
+We start by using the same construction as in lemmas \ref{l:radial_coo},\ref{l:radial_mod}. Indeed, applying the same method on the rigid pages, we can find coordinates $(\rho,\phi,\theta)$ such that the rigid pages with negative ends are exactly $\{\phi= 0\}$ and $\{\phi = \pi\}$ and the rigid pages with positive ends are exactly $\{\phi = \pm\frac{\pi}{2}\}$, and the contact structure is $\Ker(d\theta + \rho^2d\phi)$. Hence $\alpha$ can be written as $f(\rho,\phi,\theta)(d\theta + \rho^2d\phi)$. Moreover, we can assume that at $\rho =0$, $f$ is constant equal to $b$, by taking the coordinate $\theta$ so that $\partial_\theta = R_\alpha$ at $\rho = 0$. \\
+
+We interpolate $\alpha$ with $\alpha_i'$. Consider $\tau : [\delta'',\delta']\rightarrow 1$ as in the proof of lemma \ref{l:radial_mod}, let $\overline{f}(\rho,\phi,\theta) = b + \epsilon (\rho^2\cos(2\phi))$, and $\alpha'_1 = F(d\theta + \rho^2d\phi)$ with $F = \tau f + (1-\tau)\overline{f}$. First, this is a well-defined contact form as up to taking a small enough neighborhood, $f$ is positive on it, and up to choosing $\epsilon$ small enough compared to $b,\,\,\overline{f}$ is too. We only need to check that the Reeb flow remains transverse to the four rigid pages. Notice that for $\rho \leq \delta "$, this is true as the $\partial_\phi$ component of the Reeb flow is $-\partial_\rho(\overline{f}) = -2\epsilon\rho \cos(2\phi)$. Now we have : $\partial_\rho F = (1-\tau)\partial_\rho \overline{f} + \tau \partial_\rho f + \tau'(f-\overline{f})$. Consider first the case $\phi = 0$. We want this page to have a negative end, that means we want $d\phi(R_\alpha) < 0$. But we know that $\partial_\rho f > 0$ and $\partial_\rho \overline{f} > 0$, hence $\tau \partial_\rho f + (1-\tau)\partial_\rho\overline{f}> 0$. It remains to show that $\tau'(f-\overline{f}) > 0$, which is equivalent to $f-\overline{f} > 0$. This can be achieved up to taking $\epsilon$ small enough compared to $b$, as we know that $\partial_\rho f > 0$ on negative pages, so $f> b$ on such a rigid page, and: $f-\overline{f} = f - b- \epsilon \rho^2$. This also works for the positive rigid pages, where the condition becomes $f-\overline{f} < 0$, and because we know that: $\partial_\rho f< 0$, we have: $f-\overline{f} = f - b + \epsilon \rho^2<0$ if $\epsilon$ is small enough. \\
+
+We interpolate again in order to have the right form for $\alpha_1'$. Take $\delta_1<\delta_2<\delta ''$, and $\tau : [\delta_1,\delta_2] \rightarrow [0,1]$ which is $0$ near $\delta_1$ and $1$ near $\delta_2$. Let $\alpha_1' = \overline{f}d\theta + (b+\tau\rho^2\cos(2\phi))\rho^2d\phi$. Note that we do not change the map in front of the $d\theta$ term, hence if we show that we have a contact form, the transversality condition for the Reeb flow and the rigid pages will be automatically verified. Write $\overline{g} := (b+\tau \epsilon (x^2 - y^2))\rho^2$. In order to verify that we have a contact form, it suffices to show that $\overline{f}\partial_\rho \overline{g} - \overline{g}\partial_\rho \overline{f}$ is positive. Because we can choose $\epsilon$ to be as small as necessary compared to $b$, it suffices to look at the term which do not depend on $\epsilon$. A quick computation yields that this term is $2\rho b^2$ which is indeed positive. This concludes on this step of the interpolation. We now have for, $\rho\leq \delta_1$, $\alpha'_1 = \overline{f}d\theta + bd\phi$. \\
+
+Finally, we do one last interpolation. Choose $\delta_3 < \delta _4< \delta_1$, and $\tau :[\delta_3,\delta_4]\rightarrow \R$ such that $\tau$ is monotone, takes value $\frac{1}{2}$ near $\delta_3$ and $b$ near $\delta_4$. More precisely, if $b\geq \frac{1}{2}$, we can assume $\tau' \geq 0$. By the same arguments than before, we only need to check the contact condition, which, keeping only the terms without $\epsilon$, boils down to $(\tau\rho^2)'> 0$. This is indeed verified if $\tau'\geq 0$. Now if $b< \frac{1}{2}$, we take $\tau$ such that $\tau'\leq 0$. Rewriting the condition$(\tau \rho^2)'> 0$, we see that is equivalent to saying that $\frac{1}{\rho^2}$ decreases faster than $\ln(\tau)$. This can indeed be achieved, taking $\delta_3$ sufficiently small. This concludes for $\alpha_1'$.\\
+
+Only the first part of this interpolation is necessary for $\alpha_2'$, and again by taking $\epsilon$ small enough the same method shows the expected result.\\
+
+Notice that this construction does not allow $\gamma$ to have arbitrary small or large action. Indeed, if it were the case, we would be able to construct rigid pages on which the integral of $d\alpha$ would be negative by Stoke's theorem, which is not possible as the Reeb flow is positively transverse to the pages (see also lemma \ref{l:negative_int}).
+\end{proof}
+
+% \begin{remark}\label{r:localmodelhyp}
+% We can rewrite $\alpha'$ as $e^{\epsilon H}(d\theta + \rho^2d\phi)$, where $H$ is some map on the disc. Moreover, looking at the method used in the proof, we see that we could also ask that we have : $\alpha' = e^{\epsilon H}(d\theta + \sigma)$ locally, where $H(x,y) = xy$ and $\sigma$ is a Liouville form equal to $e^\rho d\phi$ away from the binding. This may be useful later on to define explicit almost complex structures. 
+% \end{remark}
+
+\textbf{In the following, when considering this interpolation model, we will assume every broken binding orbit has the same small action b.}\\
+
+We now build a different kind of local model, adapted to radial and broken binding components alike. It will allow us to lift the pages of the broken book as a finite energy foliation for a given almost complex structure compatible with a \textit{fixed} supported contact form $\alpha$ verifying the right conditions on the Conley-Zehnder index near the radial binding components, without modifying it near the binding components. This model will be referred to as the "exact model" in the following parts.
+
+\begin{lemma}\label{l:localmodelnoint}
+Let $\gamma$ be a radial \textbf{or} broken binding component, and a Reeb orbit for $\alpha$ a contact form supported by the broken book decomposition. Choose a finite collection of distinct pages with \textbf{positive }ends at $\gamma$, $\{P_1,...,P_n\}$ that we call "rigid pages" (in the case of a broken binding component, choose the four natural rigid pages). Then there exists local coordinates $(\rho,\phi,\theta)$ around $\gamma$ such that, for all $i$ and $(\rho,\phi,\theta)\in P_i$ :
+\begin{itemize}
+    \item $d\phi(R_\alpha)> 0$ and $d\theta(R_\alpha) >0$, and $R_\alpha$ is collinear to $\partial_\theta$ at $\rho = 0$.
+    \item $\alpha(\partial_\phi)> 0$ for $\rho > 0$.
+    \item $P_i = \{\phi = \phi_i\}$ for some $\phi_i$ fixed constant.
+    \item $\alpha = fd\theta + gd\phi$, and $\partial_\theta f = 0$.
+    \item $d\rho(R_\alpha) = 0$.
+\end{itemize}
+\end{lemma}
+
+\begin{remark}
+Note that all the previous constraints are verified only on the collection of rigid pages chosen. The last two conditions are the additional constraints compared to the models built before.
+\end{remark}
+
+\begin{proof}
+Start as in the beginning of the proof of lemma \ref{l:radial_coo} in order to get coordinates $(\tilde\rho,\tilde\phi,\tilde\theta)$ on the partial blow-up such that $\partial_\rho\in\xi$ and the pages are level sets of $\phi$ (in the radial case one can do this for all pages, in the broken case the construction can be adapted to work on the rigid pages only). The three first conditions are then automatically verified by the arguments already used before. In order to show the two last conditions, we apply again two modifications of the coordinates. We will denote by $T$ the neigborhood and $T_0$ the exceptional divisor of the partial blow-up.\\
+
+We modify the previous coordinates in order to remove the dependency of $f$ in the $\theta$-coordinate on $P_i$. In order to do that, consider again the blow-up neighborhood $T$. We look at the level sets of $f$ on $P_i$. They are all compact by lemma \ref{l:localasymptotics}. Hence they are conjugated to tori around $T_0$. Note that on $T_0$, $f = 1$ so $T_0\cap P_i$ is a level set of $f$. Consider the diffeomorphism :
+
+$$\left\{
+    \begin{array}{ll}
+        \Psi : &P_i \rightarrow  \Psi(P_i)\subset P_i\\
+               &(\rho,\theta)\mapsto (1-f(\rho,\theta),\theta) 
+    \end{array}
+\right.$$
+
+By lemma \ref{l:localasymptotics}, this is a well-defined diffeomorphism which extends as the identity at $\{\rho = 0\}$. Now look at the pullback of $\partial_\rho$, which is $-\frac{1}{\partial_\rho f}\partial_\rho$. This with the pullback of $\partial_\theta$ define our new set of coordinates on $P_i$. We extend them to $T$ by the applying the same process than before.\\
+
+Now, we want the following property to be verified for all $i$ :
+$$\text{On } \;TP_i, R_\alpha \in T(\phi_t^{\partial_\rho}(T_0))\; \text{for all time}\; t, \text{where} \;\partial_\rho = h(\tilde{\rho})\partial_{\tilde{\rho}}, \;\text{with}\; h> 0$$
+    
+In order to chose this function $h$, define $g = \frac{d\tilde{\rho}(R_\alpha)}{d\tilde{\phi}(R_\alpha)}$, and chose some function $y = y(\tilde{\rho},\tilde{\phi},\theta)$ such that :
+\begin{itemize}
+    \item $y(\tilde{\rho},\tilde{\phi},\theta) = \tilde{\rho}$ for $\tilde{\phi} = 0$ or $\tilde{\phi}$ large enough (i.e on $P_i$ or away from a small neighborhood of $P_i$).
+    \item $\partial_{\tilde{\phi}}y_{|\tilde{\phi} = 0} = g$ near $P_i$.
+    \item $\partial_{\tilde{\rho}}y > 0$ everywhere.
+\end{itemize}
+
+Define $h = dy(\partial_{\tilde{\rho}})$. Note that $d\tilde{\phi}(R_\alpha) > 0$ on $T$ because $R_\alpha$ is positively transverse to the pages $\{\tilde{\phi} = \text{Cst}\}$, and at $\tilde{\rho} = 0$, $d\tilde{\rho}(R_\alpha) = 0$ because the Reeb vector field is well defined at $\rho = 0$ in the initial model. This implies that $h$ is well-defined, is $1$ on $T_0$ and is always positive. Moreover, for fixed $\tilde{\phi},\tilde{\theta}$, $z(t) = y(t,\tilde{\phi},\tilde{\theta})$ is the solution of $z' = h(z,\tilde{\phi},\tilde{\theta})$ with initial condition $z(0) = 0$, i.e $\phi_t^{h\partial_{\tilde{\rho}}}(0,\tilde{\phi},\tilde{\theta}) = y(t,\tilde{\phi},\tilde{\theta})$.\\
+
+Define $\partial_\rho := h\partial_{\tilde{\rho}}$, $\partial_\phi(\tilde{\rho},\tilde{\phi},\tilde{\theta}) := d_{(0,\tilde{\phi},\tilde{\theta})}\phi_t^{\partial_\rho}(\partial_{\tilde{\phi}})$ and $\partial_\theta(\tilde{\rho},\tilde{\phi},\tilde{\theta}) := d_{(0,\tilde{\phi},\tilde{\theta})}\phi_t^{\partial_\rho}(\partial_{\tilde{\theta}})$ where $t$ is such that $\phi_t^{\partial_\rho}(0,\tilde{\phi},\tilde{\theta}) = (\tilde{\rho},\tilde{\phi},\tilde{\theta})$ (we extend the coordinates $(\phi,\theta)$ defined on $T_0$ to $T$ with the flow of $\partial_\rho)$. This gives a set of coordinates $(\rho,\phi,\theta)$ on $T$.\\
+
+Now we see that on $P_i$, the following happens : $\partial_\rho = \partial_{\tilde{\rho}},\text{ } \partial_\theta = \partial_{\tilde{\theta}}$ and $\partial_\phi = g\partial_{\tilde{\rho}} +  \partial_{\tilde{\phi}} $. To get the latter, notice that : $d\phi^{h\partial_\rho}_t(\partial_{\tilde{\phi}}) - \partial_{\tilde{\phi}}= \displaystyle\lim_{\eps\rightarrow0}\frac{1}{\epsilon}(\phi_t^{h\partial_{\tilde{\rho}}}((0,\epsilon,\tilde{\theta})-\phi_t^{h\partial_{\tilde{\rho}}}((0,0,\tilde{\theta}))) = \displaystyle\lim_{\eps\rightarrow0}\frac{1}{\epsilon}(y(t,\epsilon,\tilde{\theta}) - y(t,0,\tilde{\theta}))\partial_{\tilde{\rho}} = \partial_\phi y(t,0,\tilde{\theta})\partial_{\tilde{\rho}} = \frac{d\tilde{\rho}(R_\alpha)}{d\tilde{\phi}(R_\alpha)}\partial_{\tilde{\rho}}$, so : $\partial_\phi = g\partial_{\tilde{\rho}} + \partial_{\tilde{\phi}}$. We can write : $R_\alpha = d\tilde{\phi}(R_\alpha)(g\partial_{\tilde{\rho}} + \partial_{\tilde{\phi}}) + d\tilde{\theta}(R_\alpha)\partial_\theta = d\tilde{\phi}(R_\alpha)\partial_\phi + d\tilde{\theta}(R_\alpha)\partial_\theta \in \langle\partial_\phi,\partial_\theta\rangle$ so these coordinates verify the condition we wanted. Notice that we still have $\partial_\theta f = 0$ on $P_i$ as $\partial_{\tilde\theta} = \partial_\theta$ on $P_0$, and $\alpha$, $d\phi$ and $d\theta$ are unchanged.\\
+
+
+
+\end{proof}
+
+Finally, we consider the case of planar broken books where we allow pages to have radial negative ends. As we will see, these kind of broken books can still be lifted as a finite energy foliation, even though it will not be suitable to study symplectic fillings anymore. We consider both situations previously studied. 
+
+\begin{lemma}\label{l:negative_int}
+If $\gamma$ is a negative radial binding component, we can find a contact form interpolating such that all the conditions of lemma \ref{l:radial_mod} are verified, except for the fact that the maps $f,g$ verify instead that $\partial_\rho f, \partial_\rho g$ are both positive, so $f>0$ and $g\geq 0$. The other conditions on $f$ and $g$ are left unchanged. Moreover, the new action can be chosen arbitrarily small as long as it is smaller than the initial action, and the Conley-Zehnder index of a finite number of covers of $\gamma$ can be chosen to be $1$.
+\end{lemma}
+
+\begin{proof}
+The proof is essentially the same than then proof of lemma \ref{l:radial_mod}, reversing some signs. Notice that in the proof of lemma \ref{l:localasymptotics}, we used the fact that we had $d\alpha(\partial_\rho,\partial_\theta)< 0$ in order to get $\partial_\rho f < 0$. In the negative case, this translates as : $d\alpha(\partial_\theta,\partial_\rho)> 0$, hence $\partial_\rho f > 0$. We also ask that $d\phi(R_\alpha) < 0$ which implies $\partial_\rho g > 0$, $f> 0$ and $g\geq 0$ with strict inequality for $\rho \geq 0$. All the other arguments still apply in this setting, with the difference that this time we have an upper bound on the possible action, instead of a lower bound, which is coherent with energy considerations. Moreover, $f'$ is this time positive, hence $-\frac{t}{b}\frac{f'}{g'} = -\frac{\eta t}{b}$, and the first return map of the linearized Reeb flow is a rotation of angle $-\eta r$, so we have a Conley-Zehnder equal to $-1$ if we choose $\eta$ small.
+\end{proof}
+
+\begin{lemma}\label{l:negative_exact}
+Under the same assumptions than in lemma \ref{l:localmodelnoint} but for a negative radial end, there exists coordinates such that on the rigid pages, $\alpha$ verifies all the same conditions than in lemma \ref{l:localmodelnoint}, but with the condition $d\phi(R_\alpha) < 0$ instead.
+\end{lemma}
+
+
+\begin{proof}
+Apply the same proof as for lemma \ref{l:localmodelnoint} but replacing $d\phi(R_\alpha) < 0$ and $\alpha(\partial_\phi) < 0$ like in the proof lemma \ref{l:negative_int}.
+\end{proof}
+
+\begin{remark}\label{r:list_negative}
+We list here the properties verified for $\rho> 0$, in the case of a positive end, for future reference.
+\begin{itemize}
+    \item $\alpha(\partial_\phi) > 0$. \inlineitem $d\phi(R_\alpha) > 0$. \inlineitem f > 0.
+    \item g > 0\hspace{0.65cm}. \inlineitem $\partial_\rho f < 0$.\hspace{0.6cm} \inlineitem $\partial_\rho g > 0$.
+\end{itemize}
+In the case of a negative end, the only differences are : $d\phi(R_\alpha) < 0$ and $\partial_\rho f > 0$. The other conditions are left unchanged.
+\end{remark}
+
+
+
+\end{document}

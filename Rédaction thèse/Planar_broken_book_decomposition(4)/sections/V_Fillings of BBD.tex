@@ -1,0 +1,534 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\section{Extension of the foliation in symplectic fillings}\label{p:V}
+
+We now show that the finite energy foliation built in the previous section foliates any strong symplectic filling of a weakly planar contact manifold $M$. This is a generalization of the same result for planar contact manifolds obtained by Wendl in \cite{wendl_strongly_2010}, and spinal open books \cite{SOBD2}. For simplicity, all symplectic fillings here are considered to be strong fillings. \\
+
+\subsection{Sectorial nearly Lefschetz fibrations}
+
+In this subsection we give some definitions in order to describe the structure induced by a planar balanced broken book on a symplectic filling. This is  a generalization of the structures of Lefschetz fibrations, bordered Lefschetz fibration, and nearly Lefschetz fibrations that appear on symplectic fillings of planar open books, planar Lefschetz-allowable spinal open books, and planar spinal open books respectively.\\
+
+Let us recall quickly where these different objects come from. Suppose $(M,\xi)$ is (strongly) filled by $(W,\omega)$, and that $\xi$ is supported by a planar open book. Then, completing $W$ with cylindrical ends, the curves from the finite energy foliation induced by the pages exist in this completion, and one can show that this foliation extends to the whole manifold. The only degeneracy that can occur is a simple nodal singularity, modelled on a Lefschetz-type singularity $z_1^2 + z_2 ^2 = 0$ (\cite{wendl_holomorphic_2018}, Appendix A). Hence the resulting foliation on $W$ corresponds to a Lefschetz fibration over the disk. \\
+
+If one now suppose $(M,\xi)$ is supported by a planar spinal open book, one can use more elaborated methods, coming from intersection theory in dimension 4 and careful Fredholm analysis, to show that the resulting structure on $W$ is a (nearly) bordered Lefschetz fibration. More precisely, the base of the fibration need not be a disk and can be any compact surface $\Sigma_0$ with an arbitrary number of boundary components, and the fibration restricted to the horizontal boundary of $W$ factors through another surface $\Sigma$ such that the fibers of this new fibration are circles. This is requested as pages can have multiple ends at the same boundary component, as seen in part \ref{p:IV}. Now $\Sigma \rightarrow \Sigma_0$ is \textit{a priori} a branched cover. If this branched cover has no branching point, which corresponds to a condition called \textit{Lefschetz-amenability}, the fibration is an actual true bordered Lefschetz fibration, with once again only Lefschetz-type singularities.\\
+
+However, if the cover has branching points, then a new type of singularity may appear, namely so-called \textit{exotic fibers}. In that case, the resulting structure was called a \textit{nearly Lefschetz fibration} and was studied extensively in \cite{min_spinal_2024}, using asymptotic analysis techniques for holomorphic curves. We recall this model in the following definition:
+
+\begin{definition}\label{d:exotic_coo}
+
+Identify a neighborhood of an exotic fiber near $\partial_h W$ with $(\C\backslash B)\times \C$, where $B$ the radius $\epsilon $ disc, with the radial direction of $\C\backslash B$ being the completion direction, the angular direction is the closed Reeb orbit associated with the exotic fiber, and the other $\C$ component accounts for a trivialization of the normal bundle of this orbit. Then in this neigborhood, the fibers are given by the levelsets of the map: 
+\begin{equation*}
+    \begin{array}{ll}
+        \pi_0 : &(\C\backslash B)\times \C \rightarrow \C\\
+                & (z_1,z_2) \mapsto z_2^2 - z_1
+    \end{array}
+\end{equation*} 
+
+\end{definition}
+\text{}
+\newline
+
+In the rest of this paragraph we introduce the generalized version of "Lefschetz fibration" we will need in order to study symplectic fillings of planar broken book decompositions. The motivations behind the introduction of this structure are given by the following facts:\\
+\begin{itemize}
+    \item The negative rigid pages are in general not cylinders, and a pair of negative pages associated with a positive rigid page are not in general asymptotic to the same Reeb orbits. 
+    \item There is no "spine component" in general : the generalized spine is not equipped with a fibration over $\Sp^1$ (in fact a foliation by circles will always have singularities when there are non-cylinder negative rigid pages). Moreover, the non-existence of \textit{holomorphic vertebrae} makes it difficult to use criterion such as Lefschetz-amenability to prevent exotic fibers from appearing. Hence in general we have to assume they do exist. 
+\end{itemize}
+
+In order to take into account these differences, we introduce the following notions.
+
+\begin{definition}
+Let $\dot \Sigma$ be a compact surface with boundary, and $b$ one fixed boundary component. Let $\widetilde\Sigma$ be the surface obtained by gluing a copy of $\dot{\Sigma}$ with $\dot\Sigma$ at $b$. Consider $D := \widetilde{\Sigma}\times [0,1]$ a small thickening of $\widetilde{\Sigma}$.   by Take a Morse function $f: \widetilde{\Sigma}\rightarrow[0,1]$ with $2\#\partial\dot\Sigma - 1$ index $1$ critical point, and $1$ index $2$ critical point, with at most one critical point in a given levelset and which is constant with no critical point along the boundary. Define a foliation on $\widetilde{\Sigma}$ by taking any metric on $\widetilde{\Sigma}$ and taking as integrable distribution the orthogonal of the gradient of $f$ (see figure \ref{f} below).\\
+The \textit{standard foliation} on $D$ is a thickening of this foliation.
+\end{definition}
+
+\begin{definition}
+Let $W$ be a compact 4-manifold with boundary and corners with $\partial W = \partial_hW\cup \partial_vW$ (horizontal and vertical boundary component), intersecting at a codimension $2$ corner. A sectorial nearly Lefschetz fibration on $W$ (SNLF) is the data of a division $\partial_hW = \partial_h^rW \cup \partial_h^bW$, which we call "regular horizontal boundary" and "broken horizontal boundary", and of a smooth map $\pi : W \rightarrow \Sigma$ where $\Sigma$ is a compact connected oriented surface with boundary, where the following conditions are verified :
+\begin{enumerate}
+    \item All connected components of $\partial_h^bW$ are thickened compact surfaces with an even number of boundary components, which must be at least $4$. 
+    \item $C_r :=\partial\partial_h^rW$ is a disjoint union of tori, $C_b = \partial\partial_h^b W$ intersects $C_r$ at a finite number of embedded annuli, which corresponds to thickened boundary components of the thickened compact surfaces composing $\partial_h^b W$.
+    \item $\partial_vW $ intersects $\partial_hW$ at $C_v = (C_r\cup C_b)\backslash (C_r\cap C_b)$.
+    \item For all $z\in \text{Crit}(\pi)$, $z$ is in the interior of $W$, and there exists local complex coordinates $(z_1,z_2)$ around $z$ such that : $\pi(z_1,z_2) = z_1^2 + z_2^2$.
+    \item $\pi_{|\partial_h^rW}: \partial_h^rW \rightarrow \Sigma$ is a smooth map with isolated critical points, called exotic. Around these singularities, there exists local coordinates in $W$, $(z_1,z_2)\in (\C\backslash B)\times \C$ as in definition \ref{d:exotic_coo} such that $\pi$ is $\pi(z_1,z_2) = z_2^2 - z_1$.
+    \item $\pi_{|\partial_h^bW}: \partial_h^bW \rightarrow \Sigma$ is a smooth map whose fibers give a foliation on $\partial_h^b W$ isotopic to the standard foliation on $\partial_h^b W$. 
+    \item $\pi_{|\partial_vW} : \partial_vW \rightarrow \partial\Sigma$ is a smooth surjective submersion. 
+    \item $\pi^{-1}(\partial\Sigma) = \partial_v W$, and if $z \in\overset\circ \Sigma$, then $\pi^{-1}(\{z\})$ is connected and has boundary inside $\partial_hW$. Moreover, all fibers having their boundary entirely inside $\partial_h^rW$ have the same topology. 
+\end{enumerate}
+
+\end{definition}
+
+\begin{remark}
+i) Let us give some elements to clarify the previous definition (see also remark \ref{r:encode_sectorial} below). The broken horizontal boundary corresponds to thickened pairs of negative rigid pages of the broken book, which are not cylinders. The regular horizontal boundary corresponds to classic "spine components", i.e tubular neighborhood of radial binding components, and of negative rigid pages which are cylinders as in part \ref{p:IV}. $C_r\cap Cb$ corresponds to the intersection of (a thickening of) the negative rigid pages with a tubular neighborhood of their asymptotic radial binding components. The conditions for critical points and exotic fibers than in the spinal case. Finally, conditions $6$ and $7$ accounts for the change of topology of fibers in a component of $M_0$.
+
+ii) In the case where $\partial_b^hW$ is empty, we get back to the nearly Lefschetz case. \\
+
+iii) $\pi$ only has non-degenerate critical points in the interior of $W$, $\pi_{|\partial_v W}$ does not have critical points but isn't proper (we cannot apply Ehresmann fibration theorem), and $\pi_{|\partial_h W}$ only has Morse-Bott critical points, and the families of critical points are either circles in $\partial_h^rW$ is the case of exotic fibers, or curves linking two boundary components in $\partial_h^bW$, corresponding to the standard foliation (i.e to "thickened index-1 critical points" in negative rigid pages).
+\end{remark}
+
+In order to further justify this structure, we explain how to get a broken book decomposition on the boundary of a sectorial nearly Lefschetz fibration.
+
+\begin{lemma}
+Let $W^4$ be a SNLF. Then $M:= \partial W$ admits a natural decomposition by a balanced broken book, with $M_0\simeq \partial_vW$ and $M_- \simeq \partial_hW$. 
+\end{lemma}
+
+\begin{proof}
+It suffices to understand how to glue the different "parts" of the pages, as in a usual Lefschetz fibration.\\
+Recall that in this latter case, the following happens: choose a fiber in each connected component of $\partial_h W$ which will correspond to the binding orbit, then a page can be obtained by taking a fiber inside $\partial_vW$, "glued" with a union of circles inside $\partial_h W$ (and also applying some smoothing operation which we will not describe here).\\
+In the case of a bordered Lefschetz fibration ($\partial_h^bW = \emptyset$), one must first choose a collection of circles in each connected component of $\partial_hW$, which essentially amounts to choosing a hamiltonian on each spine component, with the chosen circles corresponding to index-1 and one index-2 critical points. Then as before, extend the fibers of $\partial_v W$ using unions of fibers in $\partial_h W$ to connect them to the chosen circles (one must also be careful to only link two pages with each index-1 critical point, and the rest to the index-2 critical point). This gives a broken book decomposition where each negative rigid page is a cylinder, which is another interpretation of the construction done in part \cite{p:IV} to go from spinal open books to broken book decompositions.\\
+In the general case, we may have $\partial_h^bW \neq \emptyset$. In that case, a little more care must be taken as the topology of fibers inside $\partial_v W$ may change. By definition, this happens at singularities of the standard foliation of $\partial_h^bW$, as they correspond to critical points of $\pi_{|\partial\partial_vW}$. First choose a collection of fibers in $\overset{\circ}{\partial_h^bW}$, corresponding to critical points of the Morse function used to get the standard foliation, hence we get 2$\#\partial\dot \Sigma-1$ fibers which are a wedge sum of two circles, corresponding to index-1 critical points of $f$, and one circle corresponding to the index-2 critical point. Moreover, consider the thickening of these preferred "index-1" fibers ; this gives for each component of $\partial_v^bW$ a division into different subset, one of which contains the "index-2" fiber. We will denote this subset $(\partial_h^bW)_0$. \\
+From this, we can get the rigid pages: in order to get positive rigid pages, for each component of $\partial_h^b W$, choose a fiber of $\partial_v W$, such that it has an end in $(\partial_h^b W)_0$, and glue it with a union of fibers in $\partial_h^bW$ such that it goes to the chosen circle. Note that there are two connected components in $(\partial_h^b W)_0\cap \partial_vW$, which allows to create a pair of positive rigid pages. In order to get negative rigid pages, just take a collection of fibers between the chosen circles. Once again, we can take two of these by the condition that the number of ends is even, which allows to get the pair of negative rigid pages. Note that we also have to complete the pages by gluing a union of fibers in $\partial_h^rW$ so that the pages are asymptotic to the chosen fibers in $\partial_h^rW$. Finally, complete all the other pages by gluing fibers of $\partial_h^bW$ \\
+
+\end{proof}
+
+\begin{remark}\label{r:encode_sectorial}
+We can encode on $\Sigma$ extra data which allows us to clarify the previous definition. We have three disjoints subsets inside $\Sigma$, which we will denote by $\Sigma^{crit}, \Sigma^{exot}$ and $\Sigma^{w}$. $\Sigma^{crit}\subset \overset \circ{\Sigma}$ is a finite union of disjoint points which are critical values of $\pi$. $\Sigma^{exot}$ is a disjoint union of discs which corresponds to exotic fibers; note that because we are working with a compact domain we do not have a single exotic fiber but a family of these parametrized by a disc, all of which have a different topology than the regular pages. Finally, $\Sigma^w$ corresponds to so-called "walls" that we will encounter again when working with holomorphic curves as $3$-parameter family of rigid curves. Here, it can be described in the following way: $\Sigma^w\subset \Sigma$ consists of a union of embedded strips $[0,1]\times [0,1]$, with $\{0\}\times [0,1]\subset \partial\Sigma$ and $\{1\}\times [0,1]\subset\partial\Sigma$, with the property that if $S$ is such a strip, and $z\in S$, then $\pi^{-1}(z)$ has a different topology than the topology of regular fibers. Note that because $\Sigma^w$ is disjoints from $\Sigma^{crit}\cup\Sigma^{exot}$, this implies that $\pi^{-1}(z)$ has a boundary component in a component of $\partial_h^bW$. Note also that for $z\in ([0,1]\times \{0\})\cup ([0,1]\times \{1\})$, the fiber $\pi^{-1}(z)$ is singular as it contains a critical point of $\pi_{|\partial_h^bW}$ (i.e on of its boundary components is a singular leaf of the standard foliation on a component of $\partial_h^b W$. Finally, we can ask that any two such strips intersect transversally, and that the intersection of any given triple of strips is always empty. The chosen terminology "sectorial" comes from the existence of these walls, which divides $W$ into different sectors where the topology of the pages is the same, each pair of adjacent sectors being separated by such a "thick wall", in which the topology of the pages is different (namely the pages have strictly less boundary components). 
+\end{remark}
+
+
+We now define an extension of these notion to the symplectic/contact case. 
+
+\begin{definition}
+A symplectic sectorial nearly Lefschetz fibration is $(W,\omega)$ strong symplectic filling of $(M=\partial W,\xi )$ such that $\omega = d\lambda$ near the boundary, with $\lambda$ a contact form with $\xi = \text{Ker}(\lambda)$. We also ask that: $d\lambda >0 $ on the fibers in $\partial_v W$, the fibers in $\partial_h^r W$ are closed Reeb orbits, and the Reeb vector field on $\partial_h^bW$ is transverse to the fibers away from the thickened boundary of the underlying surface (near the boundary, it is tangent as in $\partial_h^rW$ as it is close from $C_r$.
+\end{definition}
+
+\begin{lemma}
+    The boundary of a strongly convex SSNLF is naturally equipped with a contact structure supported by the BBD defined before.
+\end{lemma}
+
+\begin{proof}
+This is proved by the same method as in lemmas \ref{l:spinal_to_BBD_contact} and \ref{p:simplification_BBD}, as the only thing that needs to be shown is that we can make the Reeb vector field transverse to the pages in $\partial_h^r W$.
+\end{proof}
+
+\begin{remark}
+Our construction only allows to get supporting broken books for contact structures such that the negative rigid pages which are cylinders have trivial characteristic foliation (see part \ref{IV}).
+\end{remark}
+
+\begin{definition}
+A broken book decomposition is said to be \textit{balanced} if any two negative rigid pages with their negative end at the binding component have the same topology, and if moreover no page have a negative end at a radial binding component.\\
+A broken book decomposition is said to be \textit{strongly balanced} if it it is balanced, and the condition is also verified for positive rigid pages. 
+\end{definition}
+
+\begin{lemma}
+All pages of a strongly balanced broken book have the same topology. 
+\end{lemma}
+
+\begin{proof}
+First note that for a balanced broken book, all pages in a given connected component of $M_0$ have the same topology. Now suppose there exists two connected components $M_0^1$ and $M_0^2$ of $M_0$ such that the pages inside these components have different topologies. \\
+
+We claim that we can assume that these two components are adjacent, meaning that they have a common negative rigid page in their boundary, and in particular a common broken binding component. This is because we can always find a sequence of connected components of $M_0$, $M_0^{i_1},...,M_0^{i_k}$ such that $M_0^{i_1} = M_0^1$, $M_0^{i_k} = M_0^2$ and $M_0^{i_j}$ is adjacent to $M_0^{i_{j+1}}$. Indeed, define an equivalence relation on $\pi_0(M_0)$ by $M^{(i)}\sim M^{(j)}$ if and only if there is such a sequence between $M^{(i)}$ and $M^{(j)}$. Then the union of the closures of the element of an equivalence class is open and closed in $M$ by definition ($\pi_0(M_0)$ is finite, and the union is open by definition of being adjacent). Because $M$ is connected, this proves the claim.\\
+
+However, this contradicts the strongly balanced condition, as this means that topologically the pages are obtained by gluing a given negative rigid page, and one positive rigid page of a pair depending on the component, and we know that both rigid pages of the same pair have the same topology.
+\end{proof}
+
+
+
+The purpose of the following subsections will be to show the following theorem :
+
+\begin{theorem}\label{t:filling}
+    Let $(M,\xi)$ be a weakly planar strongly balanced contact manifold such that a supporting strongly balanced planar broken book verifies the hypotheses of Theorem \ref{t:théorème_1}. Suppose $(M,\xi)$ admits a strong filling $W$. Then "the finite energy foliation extends". \\
+    More precisely, denote as $\overline{\mathcal{M}_{0,1}}$ the compactified moduli spaces of marked unparametrized curves which have the same homology class than a regular page of the foliation defined before. Define an equivalence relation on $\overline{\mathcal{M}_{0,1}}$ by : $[u,z]\sim [v,z'] \Leftrightarrow u(z) = v(z')$, and let $\widetilde{\mathcal{M}_{0,1}} :=\overline{\mathcal{M}_{0,1}}/\sim$. Then :
+    \begin{itemize}
+        \item $\widetilde{\mathcal{M}_{0,1}}$ can be equipped with a smooth structure of manifold with boundary such that $\pi : \overline{\mathcal{M}_{0,1}} \rightarrow \widetilde{\mathcal{M}_{0,1}} $ is smooth and is a diffeomorphism if one restricts both spaces to index-$2$ regular curves.
+        \item $ev : (\widetilde{\mathcal{M}_{0,1}},\partial \widetilde{\mathcal{M}_{0,1}}) \rightarrow (\overline{W},M)$ is well-defined, is a smooth map of degree $1$, and is a diffeomorphism on its image if restricted to index-2 regular curves.
+        \item This foliation induces a structure of symplectic sectorial nearly Lefschetz fibration on an enlarged filling obtained from $W$ by attaching a trivial symplectic cobordism, and the induced broken book decomposition on $M$ is isotopic to the initial one.
+    \end{itemize}
+\end{theorem}
+
+
+
+\subsection{Setup and strategy of proof}
+
+Let us start by explaining the setup and constructing the moduli spaces we will need in the proof. This is an adaptation of the proof done in \cite{SOBD2}, hence we will not give the details for all the arguments and refer to this paper when necessary. We will mostly explain how to generalize their arguments to our context. However, notice that because we are not considering the parametric version nor the case of weak symplectic fillings, many proofs get simpler in our setup. \\
+
+First we define as usual the completion of the symplectic filling, where the curves of the original foliation live.\\
+Let $(M,\xi)$ and $(W,\omega)$ as in the hypothesis of the theorem \ref{t:filling}. Let $Y$ be the Liouville vector field for $\omega$ near $M$. Suppose that the finite energy foliation is well-defined for an almost complex structure compatible with the contact form $\lambda$ on $M$, and that $\iota_{Y}\omega = e^{f}\lambda$ on $M = \partial W$. Then, using the same method as in \cite{wendl_strongly_2010}, we can attach a symplectic cobordism $\mathcal{S}_f^R := \{(a,x)\in\R\times M\,|\,f(x)\leq a \leq R\}$ with symplectic form $d(e^a\lambda)$ and Liouville vector field $\partial_a$, and then another one $\mathcal{S}_R^{+\infty}:= [R,+\infty[ \times M$ with the same symplectic form, which is the positive end of the symplectisation of $(M,\lambda)$. Denote as $\widehat{W}$ the resulting manifold. We will take $J$ generic so that it is $\lambda$-compatible on $\mathcal{S}_R^{+\infty}$, $\omega$-compatible elsewhere, and so that any somewhere injective curve is regular. This construction also allow us to ask that $J$ is such that any closed, non-constant holomorphic curve is contained in the interior of $W$. Finally, we will denote as $J_+$ the $\lambda$-compatible almost complex structure on $\mathcal{S}_R^{+\infty}$, which is also well-defined on the symplectisation of $\lambda$ and cylindrical.\\
+
+Now as seen in part \ref{p:I}, in a neighbourhood of infinity, we have a foliation $\mathcal{F}^+$ which comes from the balanced broken book decomposition. When it is defined, it is invariant by $\R$-translation. However the negative rigid curves are missing as well as the trivial cylinders, as they have negative ends ; hence a neighbourhood of infinity in $\widehat{W}$ minus a neighbourhood of negative rigid curves and binding orbits is foliated by regular holomorphic curves of index 1 or 2. \\
+
+
+Before defining our moduli spaces, we need to make some additional assumptions on the Reeb flow and the broken book.\\
+
+In the following, we will denote as $n$ the number of ends of regular pages (recall it is the same for any regular page). The following lemma is a consequence of the constructions done in part \ref{p:I}.
+
+\begin{lemma}
+We can choose a contact form $\alpha$ supported by the broken book such that, for $k = 1,...,n$ and any radial binding orbit $\gamma$, we have : $\mu_{CZ}^\tau(\gamma^k) =1$ where $\tau$ is the natural trivialization induced by the pages.
+
+\end{lemma}
+
+
+\begin{proof}
+
+\end{proof}
+
+
+Now we define all the relevant moduli spaces that we will need in what follows.\\
+
+\textbf{In the symplectisation :}
+
+Let $\M^{\F_+}(J_+)$ be the space of $J_+$-holomorphic curves that compose the finite energy foliation $\F_+$. Denote as $\overline{\M}^{\F_+}(J_+)$ its closure, in the SFT sense. We consider $\M^{\F_+}_i(J_+)$ for $i = 0,1,2$ to be the subset of index $i$ curves inside $\M^{\F_+}(J_+)$, with 
+$\overline{\M}^{\F_+}_i(J_+)$ their compactification. \\
+Define : $\widehat{\M}^{\F_+}(J_+) := \overline{\M}_2^{\F_+}(J_+) / \sim $ where $2$ buildings are considered to be equivalent if they have the same ground level. We equip this moduli space with the quotient topology. Note that this is a disjoint union of circles, and using the notation of the previous part, each of these circles correspond to a connected component of $M_+$. 
+
+\begin{remark}
+    Here there is a little difference compared to the setup of \cite{SOBD2} : we do not ask for the asymptotic orbits of the upper levels to be the same, as 2 negative rigid pages associated to a same hyperbolic orbit will not have the same asymptotics in general. 
+\end{remark}
+
+\textbf{In $\widehat{W}$ :} 
+
+We define the spaces $\M(J)$, $\overline{\M}(J)$ and $\widehat{\M}(J) := \overline{\M}(J)/\sim$. The first one is the moduli space of unparametrized $J$-holomorphic curves with genus $0$ in $W$ which have asymptotics at binding orbits of the broken book, and has $d\alpha$-energy $E$. The second and third spaces are its compactification and the quotient for the same equivalence relation as before, respectively.\\
+Up to choosing $E$ high enough, we have an inclusion $\widehat{\M}^{\F_+}(J_+)\subset \widehat{\M}(J)$, so we can define $\widehat{M}^{\F}(J)$ to be the connected component of $\widehat{\M}(J)$ containing $\widehat{\M}^{\F_+}(J_+)$. This moduli space corresponds to the curves we can get by "extending the foliation in $W$", and we want to show good properties for curves in this moduli space, namely that they are regular, nicely embedded, foliate the whole space and have intersection number $0$. \\
+
+
+
+\textbf{Nicely embedded curves :}
+
+In order to study the compactness properties of the moduli spaces, we need to restrict the class of curves we will be working with, and for which we will be able to control the behaviour. \\
+Recall that a simple regular $J$-holomorphic curve $u$ in a $4$ manifold with cylindrical ends is said to be \textit{nicely embedded} if it verifies : 
+\begin{itemize}
+    \item $\delta(u) = \delta_\infty(u) = 0$
+    \item $u*u\leq 0$
+\end{itemize}
+We saw that all curves inside $\M^{\F_+}(J_+)$ were nicely embedded, which means that the same curves in the completion of $\widehat{W}$ are too. Moreover, this notion is invariant by homotopy, by properties of the intersection numbers. However, we will have to show that a limit of nicely embedded curves has good properties ; namely we will show that the main level is always nicely embedded.\\
+We can define the moduli spaces : $\M^{nice}(J)\subset\M(J)$ the subset of nicely embedded curves, $\M^{nice}_i(J)$ the moduli spaces of nicely embedded curves of index $i$, and as before take their compactification. \\
+
+Now, we define $\widehat\M^{\F,nice}_i(J)$ to be the subset of  $\widehat\M^{\F}_i(J)$ of buildings whose main components are curves of $\M^{nice}(J)$ of index $i$, except maybe if $i = 0$ in which case we allow such a curve to have 2 index-0 components inside $\M^{nice}(J)$, intersecting each other transversally at a singular node. Finally, take $\widehat\M^{\F,nice}(J)$ to be the closure of $\widehat\M^{\F,nice}_2(J)$ inside $\M^{\F}(J)\backslash\widehat{M}^{\F_+}(J_+)$. \\
+
+\textbf{Strategy of proof :}
+
+In order to show our theorem, we will need to show some properties on the moduli spaces defined above.
+The main steps of the proof are the following :\\
+
+\textbf{1)} Show that the nicely embedded curves involved, and limits of sequences of such curves, have good properties from the point of view of regularity and intersection theory.\\
+
+\textbf{2)} Use this to show that we can describe explicitly the elements of $\overline{\M}_i^{nice}(J)$ for $i = 0,1,2$. \\
+
+\textbf{3)} Because we have enough information near the boundary elements of $\overline{\M}_i^{nice}(J)$, we can show that $\widehat{\M}^{\F,nice}(J)$ is actually equal to $\M^{\F}(J)\backslash\widehat{M}^{\F_+}(J_+)$.\\
+
+\textbf{4)} Now we know that all the curves that we consider are nicely embedded, we can use their properties to show that they foliate $\widehat{W}$.\\
+
+\textbf{5)} Finally, $\widehat{\M}^{\F,nice}(J)$ has a well defined smooth structure, so that there is a well defined smooth projection from a little completion of $W$ to the moduli space. This gives us the desired structure on our space. 
+
+
+\subsubsection{Properties of nicely embedded curves:}
+
+In this section we recall the basic properties of nicely embedded curves, and write the lemmas we will need in the following. We refer to \cite{SOBD2} for many proofs, except for the few ones where our situation differs from theirs.\\
+
+\begin{lemma}
+Consider $u$ is a simple $J$-holomorphic curve in $\widehat{W}$, whose ends are covers of binding orbits. Then $u$ is either a leaf of $\F_ +$ inside the completion, or is intersecting the interior of $W$. In any case, $u$ is regular, and in particular $\ind(u) \geq 0$.
+\end{lemma}
+
+\begin{proof}
+If $u$ intersects the interior of $W$, then it intersects the domain where $J$ is generic, and because $u$ is somewhere injective, it is regular. Suppose now that $u$ does not intersect the interior of $W$, then it can be seen as a curve inside $\R\times M$ which is $J_+$-holomorphic. Moreover, it only has positive ends. Because it is simple, it cannot be a multiple cover of a leaf. If it is not a leaf or a trivial cylinder, then it intersects a regular leaf at a finite number of points. But by intersection theory this is not possible, as by applying a homotopy of curves with cylindrical ends, this would amount to saying that the leaf has non-zero intersection number with the trivial cylinders appearing over its ends. However, we computed in the first part these intersection numbers, which were all zero. Hence $u$ has to be a leaf, and in particular it is regular. 
+
+
+\end{proof}
+
+\begin{remark}
+Using the same proof, we can show that any $J_+$- holomorphic curve in $\R\times M$ whose positive ends are all covers of binding orbits has to be a cover of a leaf. In particular, this applies for upper levels of buildings living in the completion $\widehat{W}$.
+\end{remark}
+
+
+
+\begin{lemma}
+Let $u^\infty\in \overline{\M}(J)$. Then any component in an upper level of $u^\infty$ is a cover of a leaf of $\F_+$. Moreover, the main level of $u^{\infty}$ is empty if and only if the $u^\infty$ is a single regular page or a single positive rigid page. 
+
+\end{lemma}
+
+\begin{proof}
+The first part is a consequence of the previous remark, as the constraint on the energy of the curves in $\overline{\M}(J)$ implies that all positive ends are covers of binding orbits. The second part is a consequence of the fact that we chose all the binding orbits to have the same action, and that all the regular pages have the same number of ends : hence if a component of $u^\infty$ is a regular page, then all other components of $u^\infty$ have energy $0$, so they are unbranched covers of trivial cylinders, which does not exist in $W$, so because $u^\infty$ is connected and regular pages have simple ends, there is none. Similarly, if a component is a positive rigid page, then because of the asymptotic conditions, there need to be another level above this level in which $u^\infty$ has a component which is a single negative rigid page. In that case, component formed with the positive rigid page and the negative rigid page has all the $d\alpha$-energy, hence we conclude in the same manner.\\
+Conversely, if the main level of $u^\infty$ is empty, by the previous lemma the components of $u^\infty$ are covers of leafs of $\F_+$. However, the only leaves without negative ends are regular leaves or positive rigid leaves, hence a component of $u^\infty$ is a regular leaf, which concludes. 
+\end{proof}
+
+\begin{remark}
+    Note that there cannot be multiple covers of such leaves either, as this would contain too much $d\alpha$-energy.
+\end{remark}
+
+
+This second lemma corresponds to lemma 6.12 in \cite{SOBD2}.
+
+\begin{lemma}
+    For $u \in \overline{\M}^{nice}(J)$, all asymptotic orbits of $u$ are at most doubly covered,  $0\leq \ind(u)\leq 2$, $u* u  = 0$ and :
+
+    $$2 = \ind(u) + \#\Gamma_0 + 2\#\Gamma^2$$
+
+    where $\Gamma_0$ is the set of punctures asymptotic to even Reeb orbits, and $\Gamma^2$ corresponds to punctures asymptotic to doubly covered orbits. In particular, if $u$ is a nicely embedded curve, $c_N(u) = - \#\Gamma^2$ hence $u$ has positive index, it is regular.
+\end{lemma}
+
+\begin{proof}
+
+First notice that these properties are invariant by homotopy, hence it suffices to show that it is true for a nicely embedded curve $u$.\\
+By the previous lemma, we have : $\ind(u) \geq 0$, and combining the definition of the normal Chern number with the adjunction formula yields : 
+$$\ind(u) - 2 + \#\Gamma_0  = 2(u*u - [\overline{\sigma}(u) - \#\Gamma])\leq  -2[\overline{\sigma}(u) -\#\Gamma]$$
+
+Hence for the same reason than in \cite{SOBD2}, the result will follow if we can show that for each asymptotic orbit $\gamma^k$ of $u$ with $\gamma$ simple, there exists an asymptotic trivialisation $\tau$ for $\gamma^*\xi$, such that: $\alpha_-^\tau(\gamma^k) = 0$ (here we used the same notation $\tau$ for the trivialisation induced by the initial $\tau$ on $(\gamma^k)^*\xi$). However, because of the relation : $\mu_{CZ}^\tau(\gamma^k) = 2\alpha_-^\tau(\gamma^k) + p(\gamma)$, this amounts to asking that $\mu_{CZ}^\tau(\gamma^k) = 0$ if $\gamma ^k$ is even, and $\mu_{CZ}^{\tau}(\gamma^k) = 1$ if $\gamma^k$ is odd. Now in our particular setup, we know that odd orbits are elliptic, and even orbits are positive hyperbolic. Moreover, we know that the energy of $u$ is bounded from above by some constant $E$, hence $k$ is also bounded from above. Recall that in the first part, we had natural trivialisations coming from the pages around elliptic and hyperbolic orbits. The condition we have here means the following : 
+\begin{itemize}
+    \item Around elliptic binding components, the Reeb vector field needs to turn "slow enough" so that the Conley-Zehnder index is small enough, so that in the natural trivialization given by the pages it is always $1$ for any possible value of $k$.
+    \item Around hyperbolic binding component, the trivialization follows the eigenspaces, hence the Conley-Zehnder index is always $0$ for any cover, so there is nothing to check.
+\end{itemize}
+Now the first condition can always be achieved up to changing locally the contact form $\lambda$, without changing the action of the binding orbits, which gives us what we wanted. \\
+This method only gives at first the equality : 
+$$2(u*u + 1) = \ind(u) + \#\Gamma_0 + 2\#\Gamma^2\in\{0,2\}$$
+
+To get our result, notice that if we had : $u*u = -1$, the we would have : $\ind(u) + \#\Gamma_0 = 0 $, hence : $\overline{\sigma}(u) - \#\Gamma = 1$. But we know that the previous argument tells us that $\overline{\sigma}(u) - \#\Gamma = \#\Gamma^2$, which is a contradiction because we also necessarily have $\#\Gamma^2 = 0$ in this situation. Hence $u*u = 0$.\\
+
+To get the last statement, use the formula : $2c_N(u) = \ind(u) - 2 + \#\Gamma_0(u)$ which works for a nicely embedded curve. By the previous formula, $\ind(u) + \#\Gamma_0(u) = 2 - 2\#\Gamma^2(u)$ so $c_N(u) = -\#\Gamma^2(u)$. If $\ind(u) > 0$, in particular : $\ind(u) > c_N(u) + Z(du)$ as $u$ is embedded, so the automatic transversality criterion is verified and $u$ is regular.
+
+\color{red}Beaucoup de choses à préciser ici\color{black}
+    
+\end{proof}
+
+The next lemma is a variation of lemma 4.9 of \cite{SOBD2} in our setting.
+
+
+\begin{lemma}
+Suppose $u$ is a connected stable holomorphic building in $\R\times M$, without nodes, with arithmetic genus $0$, whose connected components are all covers of negative rigid leaves of $\F_+$, or of trivial cylinders over binding orbits. Denote by $\{\omega_i\}_{i\in I}$ the levels corresponding to branch covers over negative rigid leaves, and by $p_i$ the associated leave. Then :
+$$\ind(u) = - 2 + \#\Gamma_0 ^+ + 2\#\Gamma_1^+ + \#\Gamma_0^- + 2\sum_{i\in I}k_i(1-\#\Gamma_+(p_i))$$
+\end{lemma}
+
+\begin{proof}
+The first part is a consequence of the index formula. Recall that if $p_i$  is a rigid page, we can split $p_i^*TW$ as $T_{p_i}\oplus N_{p_i}$, with $N_{p_i}$ the generalized normal bundle, and we have : $c_1^\tau(p_i) = c_1^\tau(T_{p_i}) + c_1^{\tau}(N_{p_i}) = \chi(p_i)$ because $p_i$ is embedded, and in particular immersed. Now if one takes $\omega_i = p_i\circ \varphi_i$ to be a branched cover over $p_i$, we can look at the same decomposition, in the induced trivialization. We then have : $c_1^{\tau}(T_{\omega_i})= \chi(\dot\Sigma) + Z(d\varphi_i)$, using the computation (3.16) from \cite{wendl_automatic_2009}, and because the only critical points of $\omega_i$ are the branch points of $\varphi_i$. We also have : $c_1^\tau(N_{\omega_i}) = 0$, because there still exist a global non-vanishing section of this bundle. Moreover, by the Riemann-Hurwitz formula, we have that $\chi(\dot\Sigma) + Z(d\varphi_i)$ is equal to $k_i\chi(p_i)$, with $k_i$ the degree of $\varphi_i$. Finally, we know that $\chi(p_i) = 1- \#\Gamma_+(p_i)$ as it only has one negative end. Putting all this together, we get : 
+\begin{align*}
+\ind(u) &= - 2 + \#\Gamma + \#\Gamma_1^+(u) - \#\Gamma_1^-(u) + 2\sum_{i\in I}k_i(1-\#\Gamma_+(p_i))\\
+&= -2 + 2\#\Gamma_1^+(u) - \#\Gamma_1^-(u) + 2\sum_{i\in I}k_i(1 - \#\Gamma_+(p_i))
+\end{align*}
+\end{proof}
+
+\begin{remark}
+Unlike lemma $4.9$ of \cite{SOBD2}, this does not directly imply strong bounds on the index as negative rigid page may not be cylinders. For example, consider a negative rigid page which is a pair-of-pants, and a triple cover of it given by a surface with $2$ positive ends with branching index $3$, and $3$ negative ends, and not other branch points. Then the index of this cover is : $$\ind(u) = -2 + 2*2 + 3 + 2*3*(1-2) = 5 - 6 = -1$$
+hence it has negative Fredholm index and cannot be regular, which is something that cannot happen when all negative rigid pages are cylinders.
+\end{remark}
+
+
+Let us now fix $u^\infty$ a holomorphic building in $\overline{M}^{nice}(J)$. We will denote as $\Gamma$ the set of punctures, $\gamma_z$ the set of asymptotic orbits for $z\in\Gamma$, $\Gamma_0$ and $\Gamma_1$ the set of even and odd orbits punctures respectively, $\Gamma^m$ the set of punctures with covering multiplicity $m$. We assume that the bottommost level of $u^\infty$ is non-empty, hence that there is no component of $u^\infty$ which is a regular page of $\F_+$. Denote as $u_i = v_i\circ \varphi_i$ the connected components of the main level of $u^\infty$, each $u_i$ being a branched cover over a simple curve $v_i$, with branch covering $\varphi_i$, for i = 1,..., L. Denote as $k_i := deg(\varphi_i)$ the degree of $\varphi_i$, and by $k_z$ the branching order of $\varphi_i$ at $z$. We have the following relations, which are consequences of covering relations, Riemann-Hurwitz formula and the index formula : 
+$$\forall \zeta\in \Gamma(v_i),\,\,k_i = \sum_{z\in\varphi_i^{-1}(\zeta)}{k_z}$$
+$$Z(d\varphi_i) = \sum_{z\in Crit(\varphi_i)}{(k_z - 1)}$$
+$$\forall z\in\Gamma(u_i), \,\,\,\gamma_z = \gamma_{\varphi_i(z)}^{k_z}$$
+$$Z(d\varphi_i) + \sum_{z\in\Gamma(u_i)}(k_z-1) = 2(k_i - 1)$$
+$$\ind(u_i) = -2 + \#\Gamma(u_i) + \#\Gamma_1(u_i) + 2c_1(u_i)$$
+$$\ind(v_i) = -2  + \#\Gamma(v_i) + \#\Gamma_1(v_i) + 2c_1(v_i)$$
+
+Putting all of this together, we get the relation :
+
+\begin{align*}
+    \ind(u_i) &= k_i \ind(v_i) + Z(d\varphi_i) - \sum_{z\in\Gamma_1(u_i)}(k_z -1)\\
+    &= k_i[\ind(v_i)+\#\Gamma_0(v_i)] + Z(d\varphi_i) - \sum_{z\in\Gamma_1(u_i)}(k_z - 1) - \sum_{z\in\Gamma_0(u_i)}k_z
+\end{align*}
+
+
+
+Finally, using the previous lemmas, we have the relations :\\
+$\ind(v_i)\geq 0$ and : $\ind(u^\infty) = 2 - \#\Gamma_0(u^\infty) - 2\#\Gamma^2(u^\infty)$. 
+
+
+The last result of this part is Lemma 6.18 of \cite{SOBD2}, which will be the main ingredient to characterize all possible behaviours of limits of sequences of nicely embedded curves. Its proof is mostly the same, noticing that the additional terms that appear cancel out.
+
+
+\begin{lemma}
+If $u^\infty$ has no nodes, then :
+\begin{align*}
+&\ind(u^\infty) + \Gamma_0(u^\infty) + 2\sum_{m\geq 2}(m-1)\#\Gamma^m(u^\infty) \\ &= 2(L-1) + \sum_{i = 1}^L(k_i[\ind(v_i) + \#\Gamma_0(v_i)] + Z(d\varphi_i) + \sum_{\zeta\in\Gamma(v_i)}\sum_{z\in\varphi_i^{-1}(\zeta)}[k_z(2m_\zeta - 1)-1]
+\end{align*}
+\end{lemma}
+
+\begin{proof}
+Start by taking $u^+$ to be the (potentially unstable) building formed by all the upper levels of $u^\infty$, adding trivial cylinders if they are initially empty. Denote by $L_ +$ the number of connected components of $u_+$. For the same reason as in \cite{SOBD2}, which is just a combinatorial argument based on the fact that $u^\infty$ has arithmetic genus $0$, we have the relation :
+$$L_+ = -(L-1) + \sum_{i = 1}^L\#\Gamma(u_i)$$
+Combining this with the previous lemma, and using the fact that we have : $\#\Gamma_+(u_+) = \#\Gamma(u^\infty)$, we get the following relation :
+
+\begin{align*}
+\ind(u^+) &= - 2L_+ + \#\Gamma_0(u^\infty) + 2\#\Gamma_1(u^\infty) + \sum_{i= 1}^L\#\Gamma_0(u_i)+ 2\sum_{i\in I}k_i(1-\#\Gamma_+(p_i))\\
+&  = 2(L-1) - \sum_{i = 1}^L[\#\Gamma_0(u_i) + 2 \#\Gamma_1(u_i)] + \#\Gamma_0(u^\infty) + 2\#\Gamma_1(u^\infty) + 2\sum_{i\in I}k_i(1-\#\Gamma_+(p_i))
+\end{align*}
+
+Moreover, denoting by $m_z$ the degree of a puncture, we have the following relation : 
+$$\sum_{z\in \Gamma(u^{\infty})}{m_z} = \sum_{i = 1}^L\sum_{z\in\Gamma(u_i)}m_z + \sum_{i \in I}k_i(1 - \#\Gamma_+(p_i)) = \sum_{i = 1}^L\sum_{\zeta\in\Gamma(v_i)}\sum_{z\in\varphi_i^{-1}(\zeta)}k_z m_{\zeta} + \sum_{i \in I}k_i( \#\Gamma_+(p_i)-1)$$
+
+To see why we can this relation between the sum of multiplicities, observe that as all negative rigid curves and trivial cylinders that are considered have simple ends, this is indeed true for a simple parametrization of these : for a trivial cylinder, the multiplicity is $1$ for positive and negative ends, and for a negative rigid page, the multiplicity for positive ends is $\#\Gamma_+(p_i)$ and the multiplicity for negative ends is $1$, so the difference is $(1-\#\Gamma_+(p_i))$. Now taking a branched cover of one of these curves amounts to multiplying the sum of multiplicities for positive and negative ends by the degree of the covering map, and this does not depend on the presence or not of a branch point on a puncture. Hence the correction term is now $k_i(1- \#\Gamma_+(p_i))$ for each component which is a branched cover of a negative rigid curve $p_i$, and this gives the stated equality. Observe that unlike in \cite{SOBD2}, there is no need of a $\Sp^1$-symmetry to get these result, as all our rigid curves have simple ends.\\
+
+Now using this formula, we get the relation : 
+\begin{align*}
+\#\Gamma_0(u^\infty) + &2\sum_{m\geq 2}(m-1)\#\Gamma^m(u^\infty) \\
+&= \#\Gamma_0(u^\infty) + 2\sum_{z\in\Gamma(u^\infty)}m_z - 2\#\Gamma(u^\infty)\\
+&=-\#\Gamma_0(u^\infty) - 2\#\Gamma_1(u^\infty) + 2\sum_{i = 1}^L\sum_{\zeta\in\Gamma(v_i)}\sum_{z\in\varphi_i^{-1}(\zeta)}k_z m_{\zeta} + 2\sum_{i \in I}k_i(\#\Gamma_+(p_i)-1)
+\end{align*}
+
+Finally, we combine everything, and by writing $\ind(u^\infty) = \ind(u^+) + \displaystyle\sum_{i = 1}^L\ind(u_i)$, we get : 
+\begin{align*}
+\ind(u^\infty) + &\#\Gamma_0(u^\infty) + 2\sum_{m\geq 2}(m-1)\#\Gamma^m(u^\infty)\\
+&= 2(L-1) - \sum_{i = 1}^L[\#\Gamma_0(u_i) + 2 \#\Gamma_1(u_i)] + \#\Gamma_0(u^\infty) + 2\#\Gamma_1(u^\infty) + 2\sum_{i\in I}k_i(1-\#\Gamma_+(p_i))\\  
+&+ k_i[\ind(v_i)+\#\Gamma_0(v_i)] + Z(d\varphi_i) - \sum_{z\in\Gamma_1(u_i)}(k_z - 1) - \sum_{z\in\Gamma_0(u_i)}k_z\\
+&-\#\Gamma_0(u^\infty) - 2\#\Gamma_1(u^\infty) + 2\sum_{i = 1}^L\sum_{\zeta\in\Gamma(v_i)}\sum_{z\in\varphi_i^{-1}(\zeta)}k_z m_{\zeta} + 2\sum_{i \in I}k_i(\#\Gamma_+(p_i)-1)\\
+\end{align*}
+
+Now notice that the terms $2\displaystyle\sum_{i \in I}k_i(1 - \#\Gamma_+(p_i))$ cancel out, as well as the terms $\#\Gamma_0(u^\infty) + 2\#\Gamma_1(u^\infty)$. Putting together the terms inside the sums over $i$ and separating them according to the parity of the asymptotic orbits, we get the result.
+
+
+\end{proof}
+
+
+The last lemma of this section is lemma 6.21 of \cite{SOBD2}, and allows one to control the self-intersection of the building $u^\infty$.
+
+\begin{lemma}
+We have the relation :
+$$\sum_{i,j = 1}^{L}u_i*u_j = u^\infty*u^\infty$$
+where the term on the right is to be understood in the sense of the intersection product for buildings (see \cite{wendl_contact_2019} section C.5).
+\end{lemma}
+
+\begin{proof}
+For the same reason as in a previous lemma, up to choosing well the contact form, we can arrange the relations : $\alpha_-^\tau(\gamma^k) = 0$ for all "admissible" k, all binding orbits $\gamma$, and with $\tau$ the natural trivialisation. By lemma 2.7 of \cite{SOBD2}, this implies that : 
+$$u^\infty* u^\infty = u^\infty\bullet_\tau u^\infty$$
+where the right hand term is the actual intersection number computed from a perturbation given by the trivialisation $\tau$. Now take $u,v$ two components of $u^\infty$ leaving in upper levels $\R\times M$. They are covers of trivial cylinders or rigid curves, hence we can compute explicitly $u\bullet_\tau v $ : if one of them is a cover of a trivial cylinder, this is $0$ as we can remove intersections with the cylinder by pushing a little bit in a direction given by $\tau$. If they are covers of negative rigid pages, then we know that we have the relation $\tilde u\bullet_\tau v = d(u\bullet_{\tau}v)$ if $\tilde u$ is a d-fold cover of $u$. Hence it suffices to compute $u\bullet_\tau v$ for $u,v$ simple parametrizations of negative rigid curves. But by the same argument as before, this is $u* v$. We saw that this number was $0$, which concludes. 
+\end{proof}
+
+
+\subsubsection{Compactness}
+We got all the desired bounds and control to now state explicitly the possible objects appearing as the limit of sequences of nicely embedded curves of index 0, 1 or 2 in $\M^{\F,nice}(J)$. We refer to \cite{SOBD2}, proposition 6.13 for the complete list of possible degenerations. Morally, what we want to show is the following :
+\begin{proposition}
+If $u^\infty$ is an element of $\overline{\M}^{nice}_i(J),\,\,\, i = 0,1,2$, then the only possible singularities are : 
+\begin{itemize}
+    \item Lefschetz-type nodal degenerations, which is a transverse intersection of index-0 curves.
+    \item Buildings with 1 upper level, which consists of either : an index-1 curve below, and a simple negative rigid page upstairs ;  or of an index-0 curve below and 2 simple negative rigid pages upstairs. The breaking orbit are broken binding components of the broken book.
+    \item Exotic fibers, i.e buildings which consist of an index-0 curve in $\widehat{W}$, and a double cover of a trivial cylinder over an elliptic orbit on the first level.
+\end{itemize}
+In every case, all the curves except for the double cover of the trivial cylinder are nicely embedded ; and every other element in $\overline{\M}^{nice}_i(J)$ is also a simple nicely embedded curve. All the curves considered are also Fredholm regular.
+\end{proposition}
+
+In order to show this, we first sum up the consequences of the last part, which correspond to lemmas 6.19, 6.20, 6.23 of \cite{SOBD2}. Lemma 6.22 is not necessary as we showed that we always had $u^\infty *u ^\infty = 0$. The proofs are mostly "combinatorials", and base on the lemmas and formulas we showed in the previous part, so they work exactly the same in our setting and nothing need to be changed. All of these can be summarized as follow :
+
+\begin{lemma}
+Take $u^\infty\in\overline{\M}^{nice}(J)$ as before. Then the main level of $u^\infty$ either has $2$ component which are both nicely embedded curves intersecting transversely at a node and with odd asymptotic orbits, or has $1$ component which is also a nicely embedded curve, and can be :
+\begin{itemize}
+    \item An index $2$ curve with only odd ends.
+    \item An index $1$ curve with any number of odd ends, and exactly one even end.
+    \item An index $0$ curve with any number of odd ends, and exactly two even ends.
+    \item An index $0$ curve with only odd ends, but one of them exactly is doubly covered.
+\end{itemize}
+\end{lemma}
+
+\begin{remark}
+The first case corresponds to Lefschetz-type singularities, and the different options in the second case correspond respectively to : regular pages, (positive) rigid pages, intersection between "walls" of rigid pages and exotic fibers.
+\end{remark}
+
+We will refer to the previous possibilities as $1, 2.a,2.b,2.c$ and $2.d$ respectively.\\
+In order to conclude on the possible type of curves we get, it remains to show that the upper levels are easy to understand. 
+
+\begin{lemma}
+The upper levels of $u^\infty$ are the following :
+\begin{itemize}
+    \item In case $1$ and $2.a$, there are none.
+    \item In case $2.b$ and $2.c$ there is $1$ or $2$ simple parametrizations of negative rigid curves, "glued" to the main level on the even hyperbolic orbits.
+    \item In case $2.d$, there is a branched double cover of a trivial cylinder over the elliptic orbit the is doubly covered by an end of the main level.
+\end{itemize}
+\end{lemma}
+
+\begin{proof}
+First notice that if all odd orbits asymptotic to the curves in the main level are simply covered, then for genus reason, all the curves in upper levels are simply covered. Moreover, we saw that they had to be covers of leaves, and we assumed that there was no cover of regular pages or positive rigid pages (in these cases, we know exactly what happens already). Hence they are either covers of trivial cylinders of of negative rigid pages. Hence in cases $1$, $2.a$, $2.b$ and $2.c$, the only possible behaviours are : no upper levels in case $1$ and $2.a$, $1$ upper level in case $2.b$ with a single simply covered negative rigid page in it, and $1$ upper level in case $2.c$ with two simply covered negative rigid pages in it. \\
+Now in case $2.d$, as there is no even orbit, the only thing that can appear in an upper level is a double cover of a trivial cylinder over an elliptic binding orbit. The possible double covers are : an unbranched double cover of a trivial cylinder, or a branched double cover of a pair of pants with one negative end and two positive ends over a trivial cylinder. Moreover, we know that $u^\infty$ has at most $1$ upper level. In the first case, the index of $u^\infty$ is $0$. However, we know that ${\M}^{nice}_0(J)$ consists of a finite set of points, as these are non-intersecting isolated curve ; hence it coincides with $\overline{\M}^{nice}_0(J)$ and there can be no building with index $0$ and an upper level in $\overline{\M}^{nice}(J)$, so this first case cannot happen. In the case of a branched double cover, the index of the upper level is $2$, hence the total index of $u^\infty$ is also $2$ which is possible, and corresponds to the last case listed above. Finally, note that in this last cast, the upper curve is a branched double cover of a pair-of pants over a trivial cylinder : the curve has index $2$, has $1$ critical point has the trivial cylinder has none and the covering map has one, and its normal Chern number is, by definition :
+$$c_N(u) = \ind(u) - 2 + 2g + \#\Gamma_0(u) = \ind(u) - 2 = 0$$
+Hence we have the inequality : $\ind(u) > Z(du) + c_N(u)$, so the automatic transversality criterion of \cite{wendl_automatic_2009} is verified and even this double cover is Fredholm regular.
+\end{proof}
+
+\begin{remark}
+This last precision about the regularity of the double cover is actually important in what will follow, as it allows one apply a gluing theorem to this curve.
+\end{remark}
+
+This concludes the classification of possible degenerations. 
+
+
+\subsubsection{Extension of the foliation}
+Now that we have seen how nicely embedded curves degenerate in our setting, we are ready to show that the initial curves of the foliation "spread" through the filling and eventually foliate the whole space, with specific singularities that we are able to describe. \\
+
+\begin{lemma}
+If $[u]\in \widehat\M^{\F,nice}_2(J)$, then there exists an open neighbourhood of $[u]$ inside $\widehat{\M}^{\F}(J)$ such that it forms a 2-parameter family of curves whose main levels are disjoint index-2 nicely embedded curves that foliate an open set of $\widehat{W}$.
+\end{lemma}
+
+\begin{proof}
+This follows as in \cite{SOBD2} from the following facts : let $v$ be the main level, it is nicely embedded and has index $2$, so : $2 = \ind(v) + \#\Gamma_0(v) + 2\#\Gamma^2(v)$, so $\#\Gamma_0(v) = 0$. Moreover, one has that $2c_N(v) = \#\Gamma_0(v) = 0$, and $v$ is embedded so : $\ind(v) > c_N(v) + Z(dv)$ which means the automatic transversality criterion is verified. This means that there is an open set around $v$ in $\M^{nice}_2(J)$ which are disjoint curves (because $v*v = 0$ as noticed previously), foliating an open subset of $\widehat{W}$. From this, we can get an open subset in $\widehat\M^{\F}(J)$ because $u$ cannot have non-trivial upper levels, as all the ends of $v$ are simple and elliptic, and by the asymptotic conditions imposed on the curves in $\M^{\F_+}(J_+)$. 
+
+% Weird ? From this, we can get an open subset in $\widehat\M^{\F}(J)$ because we can glue the curves in the main level with the upper levels of $[u]$ (making a choice of such upper levels), as they are all regular (indeed, all the ends of $v$ are simple, hence there are no multiple covers in upper levels, and by the genericity assumption on $J$ they are regular).
+\end{proof} 
+
+\begin{lemma}
+If $[u]\in\widehat{\M}^{\F,nice}_1(J)$, then there is an open neighbourhood $\U$ of $[u]$ in $\widehat{\M}^{\F}(J)$ and a homeomorphism : $\Psi : \, ]-1,1[^2 \,\rightarrow \U$ such that : $\forall (x,y)\in ]-1,1[^2$, $\Psi(0,y)\in \widehat{\M}^{\F,nice}_1(J)$ and $\Psi(x,y)\in \widehat{\M}^{\F,nice}_2(J)$ if $x \neq 0$. Moreover, we also have that the main levels of these curves are disjoint and foliate an open subset of $\widehat{W}$.
+\end{lemma}
+
+\begin{proof}
+The argument is the same than in \cite{SOBD2}. The only difference is that here, we will glue the pair of negative rigid pages to the main level in order to get the index-2 curves in each side of the "wall". Note that by the condition that the broken book is balanced, this gives curves with the same energy. \\
+For the sake of completeness, let us sum up again the arguments : \\
+First we use the same argument than in the proof of the last lemma. This is, we have : $2 = \ind(v) + \#\Gamma_0(v) + 2\#\Gamma^2(v)$ hence $\#\Gamma_0(v) = 1$, and $2c_N(v) = -1 + 1 = 0$ again. $v$ is also again regular, and we get a $1$-parameter family of disjoint curves. Now $v$ has one end at a hyperbolic broken orbit, hence there are $2$ negative regular pages in the symplectization that can be glued to $v$ (all the curves are regular). This gives index-2 nicely embedded curves, because the glued curves verify : $w*w = 0$, by doing the same intersection computations as before, and $\delta (w) = \delta _\infty(w)$ (for example because of the adjunction formula). Hence using the previous lemma, a neighbourhood of the 3-dimensional "wall" is foliated by these index $2$ curves, which gives the stated result. \\
+
+\end{proof}
+
+We now look at $\widehat{\M}^{\F,nice}(J)$, which is the closure of the union of the previously studied spaces, minus the curves of $\M^{\F_+}(J_+)$ (these are curves or building of the initial foliation, without a main level). Now elements of $\widehat{\M}^{\F,nice}(J)$ which are not curves in $\widehat{\M}^{\F,nice}_1(J)$ or $\widehat{\M}^{\F,nice}_2(J)$ have been studied in the last part as they are limits of nicely embedded curves. Hence these can only be curves of building, which corresponds to cases $1., 2.c, 2.d$ which we studied before. These are exactly the elements inside $\M^{\F,nice}_ 0(J)$.
+
+\begin{lemma}
+$\widehat{\M}^{\F,nice}(J) = \widehat{M}^{\F}(J)\backslash (\widehat{\M}^{\F_+}(J_+))$ and all buildings in this moduli space satisfy $u * u' = 0$.
+\end{lemma}
+
+\begin{proof}
+Once again the proof is exactly the same as in \cite{SOBD2} and will not be reproduced in full details here. It simply relies on the fact that the only thing remaining to show is that an open neighborhood in $\widehat{\M}^{\F}(J)$ of Lefschetz singularities, rigid nicely embedded curves with 2 even ends, and exotic fibers, is composed exclusively of nicely embedded curves. For Lefschetz fibers, this is true as there is a degenerating 2-parameter family of nicely embedded curves that foliate a neighbourhood of the fiber ; for rigid curves this is also true because the only possible choices for upper levels respecting the asymptotic condition are the $2$ negative rigid pages of the corresponding pair, and gluing any of these (or both) gives a nicely embedded curve. Finally, for exotic fibers, we saw that automatic transversality still applied on the double branched cover of a trivial cylinder in the upper level, which is the only possibility of upper level that respects the asymptotic conditions, hence we can glue and once again, and this still gives a nicely embedded curve by invariance of the intersection product.
+\end{proof}
+
+Finally, we get the conclusion we wanted : 
+
+\begin{lemma}
+Every point of $\widehat{W}$ is in the image of a unique curve of $\widehat{\M}^{\F,nice}(J)$.
+\end{lemma}
+
+
+
+\subsubsection{Structure on the filling}
+Finally, we explain how to get the structure of SNBLF on the filling from what we got in the previous parts. This will also justify the definition that was chosen for a SNBLF, as a generalization of NBLF. \\
+
+Define the projection $\hat\pi : \widehat{W}\rightarrow \widehat{\M}^{\F}(J)$ to be the projection which sends each point to the curve that goes through that point. This can be restricted to an extension of $W$, denoted $W_R$, see \cite{SOBD2} for the construction. We can assume that all nodal singularities are inside the interior of $W_R$. We denote as $\pi : W_R \rightarrow \M_0$ the restriction of $\hat\pi$ to this domain.  
+
+\begin{lemma}
+There exists a smooth structure on $\widehat{\M}^{\F}(J)$ such that $\pi$ is smooth, and $\M_0$ is a compact oriented surface with boundary. Moreover, we can choose $W_R$ such that its boundary naturally comes with a broken book decomposition, with symplectic fibers ?
+\end{lemma}
+
+
+
+\begin{proof}
+The first part of this lemma follows from what was showed before, for the same reason as in \cite{SOBD2}. Namely, one can use the holomorphic foliation obtained before in order to define smooth charts on $\M^{\F}(J)$. \\
+
+A neighbourhood of nodal singularities then looks like Lefschetz singularities.\\ 
+
+Moreover, we can use the model from \cite{min_spinal_2024} to study a neighbourhood of exotic fibers (note that here there is no condition such as Lefschetz amenability that could allow one to exclude such fibers from existing). Specifically, propostion 4.9 which describes the local model around an exotic fiber still applies, which allows us to describe locally near the intersection of such an exotic fiber with $\partial_hW$ the holomorphic foliation as the level sets of : 
+\begin{align*}
+\pi : &(\C\backslash\{0\})\times \C\rightarrow \C\\
+     &(z_1,z_2)\mapsto z_2^2 - z_1
+\end{align*}
+
+
+Finally, it remains to describe how the foliation behaves on $\partial_hW$, in particular near the walls. Like for exotic fibers, while initial holomorphic walls consisted of $1$-parameter family of index-1 holomorphic curves, here we truncate $\widehat{W}$ which result of a "thickening" of the walls. These are indeed not visible in the case of spinal open books because negative rigid pages are always cylinders, however in our case this creates the apparition of singularities in the horizontal boundary.
+
+    
+\end{proof}
+
+
+\begin{remark}
+In particular, this implies that $\M_0$ is a connected surface (and so is $\widehat{\M}^{\F}(J)$) which was not obvious from the definition.
+\end{remark}
+
+\begin{remark}
+In fact, one could rule out the existence of \textit{certain} exotic fibers in the previous construction. Suppose there exists a maximal generalized spine component which is simple. Recall this means that all negative rigid pages inside it are cylinders, i.e that we are working with a domain of the form $\Sigma\times \Sp^1$. Then one can use the "Lefschetz-amenability condition" in order to rule out the existence of exotic fibers with an end in this spine component. Namely, for any strong filling, there cannot be exotic fibers with ends inside this component if the following condition is verified:\\
+"For any compact oriented surface $\Sigma_0$ such that $\#\partial\Sigma_0 = \#\pi_0(M_0)$, 
+\end{remark}
+
+\begin{question}
+Can a weakly planar contact 3-manifold $(M,\xi)$ be strongly fillable if one of the following situations happens?
+\begin{itemize}
+    \item $\xi$ is not supported by a strongly balanced planar broken book. 
+    \item $\xi$ is not supported by a balanced planar broken book.
+    \item $\xi$ is supported by a (strongly balanced) planar broken book, with a cylindrical negative rigid page having a non-trivial characteristic foliation.
+\end{itemize}
+Note that for now there does not even exist any explicit example of a contact manifold verifying one of these conditions.
+\end{question}
+
+
+\end{document}
+
+
+
+
