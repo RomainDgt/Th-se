@@ -4,8 +4,8 @@
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1787305308 "/home/romain/Documents/GitHub/Rédaction thèse/Planar_broken_book_decomposition(4)/main.tex" "main.pdf" "main" 1787305308
-  "/dev/null" 1787300767 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1787496190 "/home/romain/Documents/GitHub/Rédaction thèse/Planar_broken_book_decomposition(4)/main.tex" "main.pdf" "main" 1787496190
+  "/dev/null" 1787495568 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1721831426 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/romain/Documents/GitHub/Rédaction thèse/Planar_broken_book_decomposition(4)/main.tex" 1787303989 3473 3a2c19f795489c607064ffa7f532df8f ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -213,8 +213,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1787242674 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1787242691 2800968 91587575ff691af556163a002fe313cd ""
-  "main.aux" 1787305308 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "main.bbl" 1787305305 60386 3320d986968ce763d52b538f4408f448 "biber main"
+  "main.aux" 1787496190 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "main.bbl" 1787496188 60386 3320d986968ce763d52b538f4408f448 "biber main"
   "main.out" 0 -1 0 "pdflatex"
   "main.run.xml" 0 -1 0 "pdflatex"
   "main.tex" 1787303989 3473 3a2c19f795489c607064ffa7f532df8f ""
@@ -225,7 +225,7 @@
   "sections/VIII_Conclusion.tex" 1787296588 131 fae2748469222b29e4c5c22523cef14a ""
   "sections/VII_Examples.tex" 1787296588 8165 53ff5aeed096763c4c119f697fe461ec ""
   "sections/VI_Weinstein and OBG.tex" 1787296588 17601 d31ab027072dffdc7ed0a33138e74650 ""
-  "sections/V_Fillings of BBD.tex" 1787296588 60706 4cfb70d5189a0b98c4ccdba75f02fcfa ""
+  "sections/V_Fillings of BBD.tex" 1787495870 60706 4cfb70d5189a0b98c4ccdba75f02fcfa ""
   (generated)
   "main.aux"
   "main.bcf"

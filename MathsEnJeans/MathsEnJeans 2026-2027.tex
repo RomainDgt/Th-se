@@ -1,0 +1,290 @@
+\documentclass[a4paper,11pt]{article}
+
+
+\usepackage{amssymb,amsmath}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hhline}
+\usepackage{enumerate}
+\usepackage{a4wide}
+\usepackage{graphicx}
+
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+
+
+\def\om{\omega}
+\def\eps{\varepsilon}
+\def\DR{\mathcal{C}^\infty_c(\R)}
+
+\DeclareMathOperator{\supp}{supp}
+
+% lignes epaisses
+\def\ligne#1{\leaders\hrule height #1\linethickness \hfill}
+
+%-------------------environnements-----------------------------
+\newcount\numexo
+\numexo=1
+
+\newenvironment{exercice}{\noindent\textbf{Exercice \number\numexo.---}}{\global\advance\numexo by 1}
+\newenvironment{pb}{\noindent\textbf{Probl\`eme}}
+
+
+\frenchspacing
+
+
+
+%\usepackage{lmodern}
+%
+\usepackage{scrextend}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{rotating}
+%
+\thispagestyle{empty}
+%
+%\usepackage{inconsolata}
+%
+%
+%\newcommand{\bigsize}{\fontsize{16pt}{20pt}\selectfont}
+
+\usepackage{setspace}
+\onehalfspacing
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% quelques symboles utiles en mathematiques
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\PP}{\mathbb{P}}
+%\newcommand{\E}{\mathbb{E}}
+%\newcommand{\N}{\mathbb{N}}
+%\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\sh}{{\mathop{\rm sh}}}
+\newcommand{\ch}{{\mathop{\rm ch}}}
+%\newcommand{\th}{{\mathop{\rm th}}}%commande deja d馭inie
+\newcommand{\var}{\mathop{\rm Var}}
+\newcommand{\cov}{\mathop{\rm Cov}}
+
+                
+
+
+
+\oddsidemargin  -0.25cm
+\evensidemargin -0.25cm
+\textwidth      17cm
+%\headheight     0.in
+%\headheight     -.25in
+\topmargin      -2.5cm
+\textheight     27cm
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% les lettres grecques
+\def\a{\alpha}
+\def\b{\beta}
+\def\l{\lambda}
+%\newcommand{\a}{\alpha}\newcommand{\b}{\beta}\newcommand{\l}{\lambda}
+%deja definies ailleurs
+\newcommand{\g}{\gamma}
+\newcommand{\m}{\mu}
+\newcommand{\G}{{\Gamma}}
+
+
+
+%%%%%%%%%%%%%% pour les lettres calligraphi仔s
+
+\newcommand{\Arond}{{\mathcal A}}
+\newcommand{\Brond}{{\mathcal B}}
+\newcommand{\Crond}{{\mathcal C}}
+\newcommand{\Drond}{{\mathcal D}}
+\newcommand{\Erond}{{\mathcal E}}
+\newcommand{\Frond}{{\mathcal F}}
+\newcommand{\Grond}{{\mathcal G}}
+\newcommand{\Hrond}{{\mathcal H}}
+\newcommand{\Irond}{{\mathcal I}}
+\newcommand{\Jrond}{{\mathcal J}}
+\newcommand{\Krond}{{\mathcal K}}
+\newcommand{\Lrond}{{\mathcal L}}
+\newcommand{\Mrond}{{\mathcal M}}
+\newcommand{\Nrond}{{\mathcal N}}
+\newcommand{\Orond}{{\mathcal O}}
+\newcommand{\Prond}{{\mathcal P}}
+\newcommand{\Qrond}{{\mathcal Q}}
+\newcommand{\Rrond}{{\mathcal R}}
+\newcommand{\Srond}{{\mathcal S}}
+\newcommand{\Trond}{{\mathcal T}}
+\newcommand{\Urond}{{\mathcal U}}
+\newcommand{\Vrond}{{\mathcal V}}
+\newcommand{\Wrond}{{\mathcal W}}
+\newcommand{\Xrond}{{\mathcal X}}
+\newcommand{\Yrond}{{\mathcal Y}}
+\newcommand{\Zrond}{{\mathcal Z}}
+
+
+
+
+
+
+
+
+
+
+
+
+ \def \qed {{\hspace*{\fill}$\halmos$\medskip}}
+ \def \Z {{\mathbb Z}}
+ \def \R {{\mathbb R}}
+ \def \C {{\mathbb C}}
+ \def \N {{\mathbb N}}
+ \def \P {{\mathbb P}}
+ \def \E {{\mathbb E}}
+ \def \Q {{\mathbb Q}}
+ \def \ra {\rightarrow}
+ \def \da {\downarrow}
+ \def \ua {\uparrow}
+
+ \def \cO {{\mathcal O}}
+ \def \cW {{\mathcal W}}
+ \def \cD {{\mathcal D}}
+ \def \cL {{\mathcal L}}
+ \def \cI {{\mathcal I}}
+ \def \cJ {{\mathcal J}}
+ \def \cR {{\mathcal R}}
+ \def \cA {{\mathcal A}}
+ \def \cM {{\mathcal M}}
+ \def \cN {{\mathcal N}}
+ \def \cE {{\mathcal E}}
+ \def \cP {{\mathcal P}}
+ \def \cQ {{\mathcal Q}}
+ \def \cB {{\mathcal B}}
+ \def \cF {{\mathcal F}}
+ \def \cG {{\mathcal G}}
+ \def \cC {{\mathcal C}}
+ \def \cV {{\mathcal V}}
+ \def \cH {{\mathcal H}}
+ \def \cT {{\mathcal T}}
+ \def \cZ {{\mathcal Z}}
+ \def \cS {{\mathcal S}}
+
+
+\begin{document}
+
+ \begin{titlepage}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+%\text{}\\[2cm]
+\text{}
+\vspace{2cm}
+\center
+
+%\\[1cm]
+\HRule \\[0.15cm]
+{ \huge \bfseries Problèmes MATh.en.JEANS 2026-2027\\[0.15cm] }
+\HRule \\[1.5cm]
+
+
+%\\[1cm]
+\vspace{2cm}
+Lycée Honoré d'Estienne d'Orves - Carquefou\\
+Lycée Grand Air - La Baule
+\end{titlepage}
+
+\newpage
+
+\section{Un mélange parfait}
+
+On souhaite mélanger un paquet de cartes. Comment s'y prendre ?
+
+
+\newpage
+
+\section{Casse-tête en solitaire }
+
+
+Etude du Rubik's cube par la théorie des groupes.
+
+%%Remarque :  on peut aussi réfléchir au problème avec des polygones flexibles, mais encore + dur .
+\newpage
+
+\section{Billard Nantais}
+
+On se pose une question random sur un billard gênant.(compte comme le problème de géométrie ?)
+
+
+
+\newpage
+
+\section{}
+
+Problème sur un karaoké ? (Dénombrement de chansons ?)
+
+\newpage
+
+\section{}
+
+Sans alcool la fête est plus folle ? (oui mais quelles maths ? il reste un problème de graphes à mettre)
+ou alors
+
+
+% \newpage
+
+
+% \section{}
+
+% \textbf{Défi 1}\\
+
+% La traversée du désert (toutes les variantes de wikipédia possibles + complete refilling)\\
+
+% \textbf{Défi 2}\\
+
+% Le jeu du taquin : configurations possibles ou non, équivalence, que se passe-t-il lorsqu'on change la forme du taquin (configuration "garage", cf edouard lucas ) ?\\
+
+
+% \textbf{Défi 3}\\
+
+% Problème isopérimétrique : polygonal, approche d'une courbe par des polygones, preuve rigoureuse dans le cas triangulaire / polygonal ?
+
+
+% \textbf{Défi 4}\\
+
+% Des graphes et des lampes : 
+
+
+% \textbf{Défi 5}\\
+
+% Dénombrement nombres de catalan (photos de famille ?)
+
+
+
+% \textbf{Défi 6}\\
+
+
+
+
+% \textbf{Autres idées :}
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
