@@ -1,0 +1,297 @@
+\documentclass[a4paper,11pt]{article}
+
+
+\usepackage{amssymb,amsmath}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hhline}
+\usepackage{enumerate}
+\usepackage{a4wide}
+\usepackage{graphicx}
+
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
+
+
+\def\om{\omega}
+\def\eps{\varepsilon}
+\def\DR{\mathcal{C}^\infty_c(\R)}
+
+\DeclareMathOperator{\supp}{supp}
+
+% lignes epaisses
+\def\ligne#1{\leaders\hrule height #1\linethickness \hfill}
+
+%-------------------environnements-----------------------------
+\newcount\numexo
+\numexo=1
+
+\newenvironment{exercice}{\noindent\textbf{Exercice \number\numexo.---}}{\global\advance\numexo by 1}
+\newenvironment{pb}{\noindent\textbf{Probl\`eme}}
+
+
+\frenchspacing
+
+
+
+%\usepackage{lmodern}
+%
+\usepackage{scrextend}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{rotating}
+%
+\thispagestyle{empty}
+%
+%\usepackage{inconsolata}
+%
+%
+%\newcommand{\bigsize}{\fontsize{16pt}{20pt}\selectfont}
+
+\usepackage{setspace}
+\onehalfspacing
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% quelques symboles utiles en mathematiques
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\PP}{\mathbb{P}}
+%\newcommand{\E}{\mathbb{E}}
+%\newcommand{\N}{\mathbb{N}}
+%\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\sh}{{\mathop{\rm sh}}}
+\newcommand{\ch}{{\mathop{\rm ch}}}
+%\newcommand{\th}{{\mathop{\rm th}}}%commande deja d馭inie
+\newcommand{\var}{\mathop{\rm Var}}
+\newcommand{\cov}{\mathop{\rm Cov}}
+
+                
+
+
+
+\oddsidemargin  -0.25cm
+\evensidemargin -0.25cm
+\textwidth      17cm
+%\headheight     0.in
+%\headheight     -.25in
+\topmargin      -2.5cm
+\textheight     27cm
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% les lettres grecques
+\def\a{\alpha}
+\def\b{\beta}
+\def\l{\lambda}
+%\newcommand{\a}{\alpha}\newcommand{\b}{\beta}\newcommand{\l}{\lambda}
+%deja definies ailleurs
+\newcommand{\g}{\gamma}
+\newcommand{\m}{\mu}
+\newcommand{\G}{{\Gamma}}
+
+
+
+%%%%%%%%%%%%%% pour les lettres calligraphi仔s
+
+\newcommand{\Arond}{{\mathcal A}}
+\newcommand{\Brond}{{\mathcal B}}
+\newcommand{\Crond}{{\mathcal C}}
+\newcommand{\Drond}{{\mathcal D}}
+\newcommand{\Erond}{{\mathcal E}}
+\newcommand{\Frond}{{\mathcal F}}
+\newcommand{\Grond}{{\mathcal G}}
+\newcommand{\Hrond}{{\mathcal H}}
+\newcommand{\Irond}{{\mathcal I}}
+\newcommand{\Jrond}{{\mathcal J}}
+\newcommand{\Krond}{{\mathcal K}}
+\newcommand{\Lrond}{{\mathcal L}}
+\newcommand{\Mrond}{{\mathcal M}}
+\newcommand{\Nrond}{{\mathcal N}}
+\newcommand{\Orond}{{\mathcal O}}
+\newcommand{\Prond}{{\mathcal P}}
+\newcommand{\Qrond}{{\mathcal Q}}
+\newcommand{\Rrond}{{\mathcal R}}
+\newcommand{\Srond}{{\mathcal S}}
+\newcommand{\Trond}{{\mathcal T}}
+\newcommand{\Urond}{{\mathcal U}}
+\newcommand{\Vrond}{{\mathcal V}}
+\newcommand{\Wrond}{{\mathcal W}}
+\newcommand{\Xrond}{{\mathcal X}}
+\newcommand{\Yrond}{{\mathcal Y}}
+\newcommand{\Zrond}{{\mathcal Z}}
+
+
+
+
+
+
+
+
+
+
+
+
+ \def \qed {{\hspace*{\fill}$\halmos$\medskip}}
+ \def \Z {{\mathbb Z}}
+ \def \R {{\mathbb R}}
+ \def \C {{\mathbb C}}
+ \def \N {{\mathbb N}}
+ \def \P {{\mathbb P}}
+ \def \E {{\mathbb E}}
+ \def \Q {{\mathbb Q}}
+ \def \ra {\rightarrow}
+ \def \da {\downarrow}
+ \def \ua {\uparrow}
+
+ \def \cO {{\mathcal O}}
+ \def \cW {{\mathcal W}}
+ \def \cD {{\mathcal D}}
+ \def \cL {{\mathcal L}}
+ \def \cI {{\mathcal I}}
+ \def \cJ {{\mathcal J}}
+ \def \cR {{\mathcal R}}
+ \def \cA {{\mathcal A}}
+ \def \cM {{\mathcal M}}
+ \def \cN {{\mathcal N}}
+ \def \cE {{\mathcal E}}
+ \def \cP {{\mathcal P}}
+ \def \cQ {{\mathcal Q}}
+ \def \cB {{\mathcal B}}
+ \def \cF {{\mathcal F}}
+ \def \cG {{\mathcal G}}
+ \def \cC {{\mathcal C}}
+ \def \cV {{\mathcal V}}
+ \def \cH {{\mathcal H}}
+ \def \cT {{\mathcal T}}
+ \def \cZ {{\mathcal Z}}
+ \def \cS {{\mathcal S}}
+
+
+
+\begin{document}
+\title{Idées de recherche}
+\author{Romain Dugast}
+\maketitle
+
+
+\section{skein}
+
+To go through walls in parametric families of almost complex structures, use skein valued count from tobias Ekholm.
+Requires perturbation scheme -> probably close to what Russel had in mind.
+
+
+\section{mcduff manifolds}
+
+good examples of magnetic geodesic flows are given by mcduff domains (cf augustin moreno). Can we study such geodesic flow with sutured manifolds techniques ?
+
+
+\section{SSMS}
+
+We want to put a contact structure on moduli spaces. Assuming integrability of the complex
+structure, this is doable. But then what is the link between the Reeb flow on the moduli space and the initial Reeb flow ?
+Can we also extend this to acs homotopic to integrable ones ? How general is it ?
+
+\section{Polysymplectic geometry}
+
+Is there an analog of polysymplectic geometry for contact manifolds ?
+Can we extend polysymplectic geometry to higher dimensional manifolds using Clifford Algebras? (Apparently yes but the compactness theory gets really hard)
+
+\section{examples for broken books}
+
+Classes of examples :\\
+- Toric domains, convex toric domains (corresponds to manifold with a $T^2$ action,
+can be represented by a polytope in the first quadrant)
+- Boundary of plumbing of surfaces, fillability studied by ana reichtmann and others. 
+Maybe on can construct a broken book on a plumbing ? 
+However it seems like the boundary is often a lens space/a simple space.
+
+\section{Acu}
+Higer dimensional theory for open books, broken books, sutured contact manifolds. 
+Transversality theory should work mostly the same, by decomposition the normal bundle. 
+However, compactness may be different, with wilder possible behaviors. Could OBG still work ?
+Otherwise, skein valued count, see 1. Also, can one extract topological information in that case, for sutured contact manifolds ?
+THat is not so clear. Even in general, this method for extracting topological information is unclear. 
+
+\section{examples broken book by branched cover}
+to construct an example, use the construction of the counterexample and try to extract a maximal nontrivial knot from this.
+Is this possible ? This does not seem very likely, but who knows ?
+
+\section{symplectic reduction and holomorphic curves}
+
+Can we use holomorphic curves techniques on symplectic reductions ? I think it was already done in some cases. 
+Maybe I could try to use intersection theory ? 
+In a simple case : take a circle action on a 6 manifold, the symplectic reduction is a 
+4 dimensional manifold. Now we want it to have cylindrical ends. 
+How do symplectic fillings behave with respect to symplectic reduction ? Does symplectic reduction induce contact reduction on the boundary ?
+That would be cool. Is the symplectic reduction of the symplectization with a good action the symplectization of the contact reduction ?
+What to do with such reduction ? What kind of result do we expect ?
+
+
+\section{broken books as link singularities}
+
+Can broken book arrise as some "link singularities" ? Maybe for real polynomials ?
+Tbf that does not seem very likely as there is no symmetry. Although symmetry comes from 
+the fact that the singularity is complex in the classical case, so that may not be so bad.
+
+
+\section{Counterexample for the sutured conjecture}
+
+Using work of Nathalie Wahl, we have "computable" formulas for the trace of whitehead torsion.
+If we can find a sutured contact manifold, with no closed reeb orbit, and whose Dennis trace does not vanish,
+that gives a counterexample to the product conjecture for sutured manifolds in higher dimension.
+But this method does not seem very efficient: in order to construct a Reeb field with no closed periodic orbit,
+you probably need to know the manifold... 
+Another idea would be to suppose that the homotopy sutured conjecture is true but not the topological one.
+Then one would need to use cut and past techniques on a product sutured contact manifold, replacing a piece by a homotopy equivalent 
+one, without adding closed orbits. This seems plausible? But we need to find explicit contact structures on somehow topologically "exotic" manifolds 
+such as the Whitehead space or something like that. 
+In order to ensure the whole manifold is not a product, it might be interesting to use the torsion thing.
+I don't know if there would be a more direct argument.
+
+\section{Topological information from holomorphic curves}
+
+
+See recent work of Zenghi Zou. Using Rabinowitz Floer homology gives much more information
+Could I get Floer homological information from my foliation by holomorphic curves ? THat does not seem easy.
+Also he uses a trick to get simple connectedness using the universal cover + gromov witen invariant. 
+Maybe using my moduli space instead of gromov witten invariants, I could get the same results ? 
+
+
+\section{Symbolic dynamics and broken book decomposition}
+
+
+How to use symbolic dynamics from broken book decomposition ?
+Can we use Markov partitions/shift of finite type?
+Otherwise, could we use Markov chains with probability given by the area of rigid pgaes
+in order to extract dynamical informations about the Reeb flows ?
+
+
+\section{RFH}
+
+Can we define Rabinowitz Floer Homology ? What would be the goal ?
+Can you define Rabinowitz Floer homology for a general contact manifold in a symplectization ?
+What about symplectic homology ? Does it work when there are negative ends?
+ 
+
+
+
+\end{document}
